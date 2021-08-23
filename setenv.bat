@@ -28,6 +28,10 @@ set _GIT_PATH=
 call :deno
 if not %_EXITCODE%==0 goto end
 
+call :nmap
+@rem optional
+@rem if not %_EXITCODE%==0 goto end
+
 call :git
 if not %_EXITCODE%==0 goto end
 
@@ -225,6 +229,37 @@ if not exist "%_DENO_HOME%\deno.exe" (
 )
 goto :eof
 
+@rem output parameter: _NMAP_HOME
+:nmap
+set _NMAP_HOME=
+
+set __NCAT_CMD=
+for /f %%f in ('where ncat.exe 2^>NUL') do set "__NCAT_CMD=%%f"
+if defined __NCAT_CMD (
+    for %%i in ("%__NCAT_CMD%") do set "_NMAP_HOME=%%~dpi"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Ncat executable found in PATH 1>&2
+    goto :eof
+) else if defined NMAP_HOME (
+    set "_NMAP_HOME=%NMAP_HOME%"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using environment variable NMAP_HOME 1>&2
+) else (
+    set __PATH=C:\opt
+    if exist "!__PATH!\nmap\" ( set "_NMAP_HOME=!__PATH!\nmap"
+    ) else (
+        for /f %%f in ('dir /ad /b "!__PATH!\nmap-7*" 2^>NUL') do set "_NMAP_HOME=!__PATH!\%%f"
+        if not defined _NMAP_HOME (
+            set "__PATH=%ProgramFiles%"
+            for /f %%f in ('dir /ad /b "!__PATH!\nmap-7*" 2^>NUL') do set "_NMAP_HOME=!__PATH!\%%f"
+        )
+    )
+)
+if not exist "%_NMAP_HOME%\ncat.exe" (
+    echo %_ERROR_LABEL% Deno executable not found ^(%_NMAP_HOME%^) 1>&2
+    set _EXITCODE=1
+    goto :eof
+)
+goto :eof
+
 @rem output parameter: _GIT_HOME, _GIT_PATH
 :git
 set _GIT_HOME=
@@ -268,6 +303,11 @@ if %ERRORLEVEL%==0 (
     for /f "tokens=1,2,*" %%i in ('"%DENO_HOME%\deno.exe" --version ^| findstr deno') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% deno %%j,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%DENO_HOME%:deno.exe"
 )
+where /q "%NMAP_HOME%:ncat.exe"
+if %ERRORLEVEL%==0 (
+    for /f "tokens=1,2,3,*" %%i in ('"%NMAP_HOME%\ncat.exe" --version 2^>^&1') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% ncat %%k,"
+    set __WHERE_ARGS=%__WHERE_ARGS% "%NMAP_HOME%:ncat.exe"
+)
 where /q "%GIT_HOME%\bin:git.exe"
 if %ERRORLEVEL%==0 (
     for /f "tokens=1,2,*" %%i in ('"%GIT_HOME%\bin\git.exe" --version') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% git %%k,"
@@ -287,6 +327,7 @@ if %__VERBOSE%==1 if defined __WHERE_ARGS (
     echo Environment variables: 1>&2
     if defined DENO_HOME echo    "DENO_HOME=%DENO_HOME%" 1>&2
     if defined GIT_HOME echo    "GIT_HOME=%GIT_HOME%" 1>&2
+    if defined NMAP_HOME echo    "NMAP_HOME=%NMAP_HOME%" 1>&2
 )
 goto :eof
 
@@ -298,7 +339,8 @@ endlocal & (
     if %_EXITCODE%==0 (
         if not defined DENO_HOME set "DENO_HOME=%_DENO_HOME%"
         if not defined GIT_HOME set "GIT_HOME=%_GIT_HOME%"
-        set "PATH=%PATH%;%_DENO_HOME%%_GIT_PATH%;%~dp0bin"
+        if not defined NMAP_HOME set "NMAP_HOME=%_NMAP_HOME%"
+        set "PATH=%PATH%;%_DENO_HOME%%_GIT_PATH%;%NMAP_HOME%;%~dp0bin"
         call :print_env %_VERBOSE%
         if not "%CD:~0,2%"=="%_DRIVE_NAME%:" (
             if %_DEBUG%==1 echo %_DEBUG_LABEL% cd /d %_DRIVE_NAME%: 1>&2

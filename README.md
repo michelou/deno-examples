@@ -15,17 +15,21 @@
 
 This project depends on two external software for the **Microsoft Windows** plaform:
 
-- [Deno 1.13][deno_downloads] ([*release notes*][deno_relnotes])
+- [Deno 1.13][deno_downloads] <sup id="anchor_01"><a href="#footnote_01">[1]</a></sup> ([*release notes*][deno_relnotes])
 - [Git 2.33][git_downloads] ([*release notes*][git_relnotes])
 
+Optionally one may also install the following software:
+
+- [Nmap 7.92][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">[2]</a></sup> ([*change log*][nmap_changelog])
 
 > **:mag_right:** Git for Windows provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (August 2021) <sup id="anchor_02"><a href="#footnote_02">[2]</a></sup>:
+For instance our development environment looks as follows (August 2021) <sup id="anchor_03"><a href="#footnote_03">[3]</a></sup>:
 
 <pre style="font-size:80%;">
-C:\opt\deno-1.13.1\   <i>( 54.7 MB)</i>
-C:\opt\Git-2.33.0\    <i>(279.0 MB)</i>
+C:\opt\deno-1.13.1\   <i>( 54 MB)</i>
+C:\opt\Git-2.33.0\    <i>(279 MB)</i>
+C:\opt\nmap-7.92\     <i>( 41 MB)</i>
 </pre>
 
 > **&#9755;** ***Installation policy***<br/>
@@ -38,6 +42,7 @@ This project is organized as follows:
 examples\
 README.md
 <a href="RESOURCES.md">RESOURCES.md</a>
+<a href="TYPESCRIPT.md">TYPESCRIPT.md</a>
 <a href="setenv.bat">setenv.bat</a>
 </pre>
 
@@ -46,6 +51,7 @@ where
 - directory [**`examples\`**](examples/) contains [Deno][deno_land] code examples grabbed from various websites.
 - file [**`README.md`**](README.md) is the [Markdown][github_markdown] document for this page.
 - file [**`RESOURCES.md`**](RESOURCES.md) gathers [Deno][deno_land] related informations.
+- file [**`TYPESCRIPT.md`**](TYPESCRIPT.md) gathers [TypeScript][microsoft_ts] related informations.
 - file [**`setenv.bat`**](setenv.bat) is the batch script for setting up our environment.
 
 We also define a virtual drive **`O:`** in our working environment in order to reduce/hide the real path of our project directory (see article ["Windows command prompt limitation"][windows_limitation] from Microsoft Support).
@@ -59,13 +65,33 @@ We also define a virtual drive **`O:`** in our working environment in order to r
 
 ## <span id="footnotes">Footnotes</span>
 
-<span name="footnote_02">[2]</span> ***Downloads*** [↩](#anchor_02)
+<span name="footnote_01">[1]</span> ***Deno TypeScript*** [↩](#anchor_01)
+
+<p style="margin:0 0 1em 20px;">
+<a href="https://deno.land/" rel="external">Deno</a> 1.13 support <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-3/" rel="external">TypeScript 4.3</a>
+</p>
+
+<pre style="margin:0 0 1em 20px; font-size:80%;">
+<b>&gt; deno.exe --version</b>
+deno 1.13.1 (release, x86_64-pc-windows-msvc)
+v8 9.3.345.11
+typescript 4.3.5
+</pre>
+
+<span name="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
+
+<p style="margin:0 0 1em 20px;">
+We are mostly interested in the <a href="https://nmap.org/ncat/guide/"><code>Ncat</code></a> tool for reading, writing, redirecting, and encrypting data across a network. <a href="https://nmap.org/ncat/guide/"><code>Ncat</code></a> operates in one of two modes: in connect mode, <a href="https://nmap.org/ncat/guide/"><code>Ncat</code></a> works as a client, in listen mode it is a server,
+</p>
+
+<span name="footnote_03">[3]</span> ***Downloads*** [↩](#anchor_03)
 
 <p style="margin:0 0 1em 20px;">
 In our case we downloaded the following installation files (see <a href="#proj_deps">section 1</a>):
 </p>
 <pre style="margin:0 0 1em 20px; font-size:80%;">
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
+<a href="https://nmap.org/download.html">nmap-7.92-win32.zip</a>               <i>(22 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.33.0-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
 
@@ -97,6 +123,9 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [man1_rmdir]: https://www.linux.org/docs/man1/rmdir.html
 [man1_sed]: https://www.linux.org/docs/man1/sed.html
 [man1_wc]: https://www.linux.org/docs/man1/wc.html
+[microsoft_ts]: https://devblogs.microsoft.com/typescript/
+[nmap_changelog]: https://nmap.org/changelog
+[nmap_downloads]: https://nmap.org/download.html
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [scala3_examples]: https://github.com/michelou/dotty-examples
 [trufflesqueak_examples]: https://github.com/michelou/trufflesqueak-examples
