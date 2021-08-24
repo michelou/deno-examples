@@ -29,9 +29,11 @@ call :deno
 if not %_EXITCODE%==0 goto end
 
 call :nmap
-@rem optional
-@rem if not %_EXITCODE%==0 goto end
-
+if not %_EXITCODE%==0 (
+    @rem optional installation
+    echo %_WARNING_LABEL% Nmap installation directory not found 1>&2
+    set _EXITCODE=0
+)
 call :git
 if not %_EXITCODE%==0 goto end
 
@@ -222,6 +224,7 @@ if defined __DENO_CMD (
         )
     )
 )
+dir /a-d %_DENO_HOME%\deno.exe
 if not exist "%_DENO_HOME%\deno.exe" (
     echo %_ERROR_LABEL% Deno executable not found ^(%_DENO_HOME%^) 1>&2
     set _EXITCODE=1
@@ -254,7 +257,7 @@ if defined __NCAT_CMD (
     )
 )
 if not exist "%_NMAP_HOME%\ncat.exe" (
-    echo %_ERROR_LABEL% Deno executable not found ^(%_NMAP_HOME%^) 1>&2
+    echo %_ERROR_LABEL% Ncat executable not found ^(%_NMAP_HOME%^) 1>&2
     set _EXITCODE=1
     goto :eof
 )
