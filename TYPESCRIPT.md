@@ -29,6 +29,7 @@
 
 ## <span id="tutorials">Tutorials</span>
 
+- [TypeScript Cheat Sheet](https://droces.github.io/TypeScript-Cheat-Sheet/) (*for TypeScript v3.9+*).
 - [TypeScript Deep Dive][tutorial_basarat] (online book).
    - [TypeScript's Type System](https://basarat.gitbook.io/typescript/type-system.)
 

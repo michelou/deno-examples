@@ -23,6 +23,7 @@ if %_HELP%==1 (
     exit /b !_EXITCODE!
 )
 
+set _CARGO_PATH=
 set _GIT_PATH=
 
 call :deno
@@ -34,6 +35,9 @@ if not %_EXITCODE%==0 (
     echo %_WARNING_LABEL% Nmap installation directory not found 1>&2
     set _EXITCODE=0
 )
+call :rust
+if not %_EXITCODE%==0 goto end
+
 call :git
 if not %_EXITCODE%==0 goto end
 
@@ -224,7 +228,6 @@ if defined __DENO_CMD (
         )
     )
 )
-dir /a-d %_DENO_HOME%\deno.exe
 if not exist "%_DENO_HOME%\deno.exe" (
     echo %_ERROR_LABEL% Deno executable not found ^(%_DENO_HOME%^) 1>&2
     set _EXITCODE=1
@@ -261,6 +264,33 @@ if not exist "%_NMAP_HOME%\ncat.exe" (
     set _EXITCODE=1
     goto :eof
 )
+goto :eof
+
+@rem output parameters: _CARGO_HOME, _CARGO_PATH
+:rust
+set _CARGO_HOME=
+set _CARGO_PATH=
+
+set __CARGO_CMD=
+for /f %%f in ('where cargo.exe 2^>NUL') do set "__CARGO_CMD=%%f"
+if defined __CARGO_CMD (
+    for %%i in ("%__CARGO_CMD%") do set "__CARGO_BIN_DIR=%%~dpi"
+    for %%f in ("!__CARGO_BIN_DIR!\.") do set "_CARGO_HOME=%%~dpf"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Rust executable found in PATH 1>&2
+    goto :eof
+) else if defined CARGO_HOME (
+    set "_CARGO_HOME=%CARGO_HOME%"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using environment variable CARGO_HOME 1>&2
+) else if exist "%USERPROFILE%\.cargo\bin\cargo.exe" (
+    set "_CARGO_HOME=%USERPROFILE%\.cargo"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using default Rust installation directory "!_CARGO_HOME!" 1>&2
+)
+if not exist "%_CARGO_HOME%\bin\cargo.exe" (
+    echo %_ERROR_LABEL% Cargo executable not found ^(%_CARGO_HOME%^) 1>&2
+    set _EXITCODE=1
+    goto :eof
+)
+set "_CARGO_PATH=;%_CARGO_HOME%\bin"
 goto :eof
 
 @rem output parameter: _GIT_HOME, _GIT_PATH
@@ -328,6 +358,7 @@ if %__VERBOSE%==1 if defined __WHERE_ARGS (
     echo Tool paths: 1>&2
     for /f "tokens=*" %%p in ('where %__WHERE_ARGS%') do echo    %%p 1>&2
     echo Environment variables: 1>&2
+    if defined CARGO_HOME echo    "CARGO_HOME=%CARGO_HOME%" 1>&2
     if defined DENO_HOME echo    "DENO_HOME=%DENO_HOME%" 1>&2
     if defined GIT_HOME echo    "GIT_HOME=%GIT_HOME%" 1>&2
     if defined NMAP_HOME echo    "NMAP_HOME=%NMAP_HOME%" 1>&2
@@ -340,10 +371,11 @@ goto :eof
 :end
 endlocal & (
     if %_EXITCODE%==0 (
+        if not defined CARGO_HOME set "CARGO_HOME=%_CARGO_HOME%"
         if not defined DENO_HOME set "DENO_HOME=%_DENO_HOME%"
         if not defined GIT_HOME set "GIT_HOME=%_GIT_HOME%"
         if not defined NMAP_HOME set "NMAP_HOME=%_NMAP_HOME%"
-        set "PATH=%PATH%;%_DENO_HOME%%_GIT_PATH%;%NMAP_HOME%;%~dp0bin"
+        set "PATH=%PATH%;%_DENO_HOME%%NMAP_HOME%;%_CARGO_PATH%%_GIT_PATH%;%~dp0bin"
         call :print_env %_VERBOSE%
         if not "%CD:~0,2%"=="%_DRIVE_NAME%:" (
             if %_DEBUG%==1 echo %_DEBUG_LABEL% cd /d %_DRIVE_NAME%: 1>&2

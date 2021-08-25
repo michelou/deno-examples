@@ -25,8 +25,20 @@
 
 ## <span id="books">Books</span>
 
+- [The Internals of Deno](https://choubey.gitbook.io/internals-of-deno/) (*online book*) by Mayank Choubey.
+- [A Guide to Deno Core](https://denolib.gitbook.io/guide/) (*online book*) by Kevin Qian and Yingchen Xue.
 - [Deno Web Development][book_portela] by Alexandre Portela, Packt, March 2021.<br/><span style="font-size:80%;">(310 pp. ISBN 9781800205666)</span>
 - [Introducing Deno][book_doglio] by Fernando Doglio, Apress, 2020.
+
+## <span id="tools">Tools and Frameworks</span>
+
+- [Cliffy](https://github.com/c4spar/deno-cliffy) - a command line framework for [Deno][deno_land].
+- [Oak][tool_aok] - a middleware framework for handling HTTP with [Deno][deno_land].
+- [Tokio](https://github.com/tokio-rs/tokio) - a runtime for writing reliable asynchronous applications with [Rust](https://www.rust-lang.org/).
+
+## <span id="tutorials">Tutorials</span>
+
+- [Deno Cheat Sheet](https://droces.github.io/Deno-Cheat-Sheet/).
 
 ***
 
@@ -46,3 +58,5 @@
 [blog_yuan]: https://developpaper.com/how-to-call-rust-function-in-deno-application/
 [book_doglio]: https://www.apress.com/gp/book/9781484261965
 [book_portela]: https://www.packtpub.com/product/deno-web-development/9781800205666
+[deno_land]: https://deno.land/
+[tool_aok]: https://oakserver.github.io/oak/
