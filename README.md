@@ -9,7 +9,7 @@
   </tr>
 </table>
 
-[GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Scala 3][scala3_examples] and [TruffleSqueak][trufflesqueak_examples] are other trending topics we are currently monitoring.
+[GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples] and [TruffleSqueak][trufflesqueak_examples] are other trending topics we are currently monitoring.
 
 ## <span id="proj_deps">Project dependencies</span>
 
@@ -27,7 +27,7 @@ Optionally one may also install the following software:
 For instance our development environment looks as follows (September 2021) <sup id="anchor_03"><a href="#footnote_03">[3]</a></sup>:
 
 <pre style="font-size:80%;">
-%USERPROFILE%\.deno\  <i>(&lt; 1 MB)</i>
+<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\  <i>(&lt; 1 MB)</i>
 C:\opt\deno-1.13.2\   <i>( 54 MB)</i>
 C:\opt\Git-2.33.0\    <i>(279 MB)</i>
 C:\opt\nmap-7.92\     <i>( 41 MB)</i>
@@ -66,7 +66,7 @@ We also define a virtual drive **`O:`** in our working environment in order to r
 > **:mag_right:** We use the Windows external command [**`subst`**][windows_subst] to create virtual drives; for instance:
 >
 > <pre style="font-size:80%;">
-> <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/subst">subst</a> O: %USERPROFILE%\workspace\deno-examples</b>
+> <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/subst">subst</a> O: <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\workspace\deno-examples</b>
 > </pre>
 
 
@@ -135,6 +135,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nmap_changelog]: https://nmap.org/changelog
 [nmap_downloads]: https://nmap.org/download.html
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
+[rust_examples]: https://github.com/michelou/rust-examples
 [scala3_examples]: https://github.com/michelou/dotty-examples
 [trufflesqueak_examples]: https://github.com/michelou/trufflesqueak-examples
 [windows_limitation]: https://support.microsoft.com/en-gb/help/830473/command-prompt-cmd-exe-command-line-string-limitation
