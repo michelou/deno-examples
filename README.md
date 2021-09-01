@@ -2,7 +2,7 @@
 
 <table style="font-family:Helvetica,Arial;font-size:14px;line-height:1.6;">
   <tr>
-  <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://deno.land/" rel="external"><img style="border:0;" src="https://deno.land/logo.svg" width="100" alt="Deno logo"/></a></td>
+  <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://deno.land/" rel="external"><img style="border:0;" src="./docs/deno.svg" width="100" alt="Deno logo"/></a></td>
   <td style="border:0;padding:0;vertical-align:text-top;">This repository gathers <a href="https://deno.land/" rel="external">Deno</a> code examples coming from various websites and books.<br/>
   It also includes several <a href="https://en.wikibooks.org/wiki/Windows_Batch_Scripting">batch files</a> for experimenting with <a href="https://deno.land/" rel="external">Deno</a> on the <b>Microsoft Windows</b> platform..
   </td>
@@ -24,9 +24,10 @@ Optionally one may also install the following software:
 
 > **:mag_right:** Git for Windows provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (August 2021) <sup id="anchor_03"><a href="#footnote_03">[3]</a></sup>:
+For instance our development environment looks as follows (September 2021) <sup id="anchor_03"><a href="#footnote_03">[3]</a></sup>:
 
 <pre style="font-size:80%;">
+%USERPROFILE%\.deno\  <i>(&lt; 1 MB)</i>
 C:\opt\deno-1.13.2\   <i>( 54 MB)</i>
 C:\opt\Git-2.33.0\    <i>(279 MB)</i>
 C:\opt\nmap-7.92\     <i>( 41 MB)</i>
@@ -39,8 +40,11 @@ C:\opt\nmap-7.92\     <i>( 41 MB)</i>
 
 This project is organized as follows:
 <pre style="font-size:80%;">
-examples\
+<a href="docs/">docs\</a>
+<a href="examples/">examples\</a>
+<a href="portela-examples/">portela-examples\</a>
 README.md
+<a href="QUICKREF.md">QUICKREF.md</a>
 <a href="RESOURCES.md">RESOURCES.md</a>
 <a href="TYPESCRIPT.md">TYPESCRIPT.md</a>
 <a href="setenv.bat">setenv.bat</a>
@@ -48,8 +52,11 @@ README.md
 
 where
 
+- directory [**`docs\`**](docs/) contains [Deno][deno_land] related papers/articles.
 - directory [**`examples\`**](examples/) contains [Deno][deno_land] code examples grabbed from various websites.
+- directory [**`portela-examples\`**](portela-examples/) contains [Deno][deno_land] code examples from Portela's book [*Deno Web Development*][book_portela].
 - file [**`README.md`**](README.md) is the [Markdown][github_markdown] document for this page.
+- file [**`QUICKREF.md`**](QUICKREF.md) is our quick [Deno][deno_land] reference.
 - file [**`RESOURCES.md`**](RESOURCES.md) gathers [Deno][deno_land] related informations.
 - file [**`TYPESCRIPT.md`**](TYPESCRIPT.md) gathers [TypeScript][microsoft_ts] related informations.
 - file [**`setenv.bat`**](setenv.bat) is the batch script for setting up our environment.
@@ -97,11 +104,12 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2021* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/September 2021* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
 
+[book_portela]: https://www.packtpub.com/product/deno-web-development/9781800205666
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
 [git_docs]: https://git-scm.com/docs/git

@@ -24,6 +24,7 @@ if %_HELP%==1 (
 )
 
 set _CARGO_PATH=
+set _DENO_PATH=
 set _GIT_PATH=
 
 call :deno
@@ -35,6 +36,9 @@ if not %_EXITCODE%==0 (
     echo %_WARNING_LABEL% Nmap installation directory not found 1>&2
     set _EXITCODE=0
 )
+call :node 14
+if not %_EXITCODE%==0 goto end
+
 call :rust
 if not %_EXITCODE%==0 goto end
 
@@ -204,9 +208,10 @@ echo   %__BEG_P%Subcommands:%__END%
 echo     %__BEG_O%help%__END%        display this help message
 goto :eof
 
-@rem output parameter: _DENO_HOME
+@rem output parameters: _DENO_HOME, _DENO_PATH
 :deno
 set _DENO_HOME=
+set _DENO_PATH=
 
 set __DENO_CMD=
 for /f %%f in ('where deno.exe 2^>NUL') do set "__DENO_CMD=%%f"
@@ -232,6 +237,10 @@ if not exist "%_DENO_HOME%\deno.exe" (
     echo %_ERROR_LABEL% Deno executable not found ^(%_DENO_HOME%^) 1>&2
     set _EXITCODE=1
     goto :eof
+)
+set "_DENO_PATH=;%_DENO_HOME%"
+if exist "%USERPROFILE%\.deno\bin\" (
+    set "_DENO_PATH=%_DENO_PATH%;%USERPROFILE%\.deno\bin\"
 )
 goto :eof
 
@@ -266,6 +275,54 @@ if not exist "%_NMAP_HOME%\ncat.exe" (
 )
 goto :eof
 
+@rem input parameter: %1=major version
+@rem output parameter: _NODE14_HOME (resp. _NODE16_HOME)
+:node
+set __NODE_MAJOR=%~1
+set "_NODE!__NODE_MAJOR!_HOME="
+
+set __NODE_CMD=
+for /f %%f in ('where node.exe 2^>NUL') do set "__NODE_CMD=%%f"
+if defined __NODE_CMD (
+    for /f "delims=. tokens=1,*" %%i in ('"%__NODE_CMD%" --version') do (
+        if not "%%i"=="v%__NODE_MAJOR%" set __NODE_CMD=
+    )
+)
+set "__NODE_HOME=%NODE_HOME%"
+if defined __NODE_HOME (
+    for /f "delims=. tokens=1,*" %%i in ('"%__NODE_HOME%\node.exe" --version') do (
+        if not "%%i"=="v%__NODE_MAJOR%" set __NODE_HOME=
+    )
+)
+if defined __NODE_CMD (
+    for /f "delims=" %%i in ("%__NODE_CMD%") do set "_NODE!__NODE_MAJOR!_HOME=%%~dpi"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of npm executable found in PATH 1>&2
+    goto :eof
+) else if defined __NODE_HOME (
+    set "_NODE_HOME=%__NODE_HOME%"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using environment variable NODE_HOME 1>&2
+) else (
+    set __PATH=C:\opt
+    for /f %%f in ('dir /ad /b "!__PATH!\node-v%__NODE_MAJOR%*" 2^>NUL') do set "_NODE_HOME=!__PATH!\%%f"
+    if not defined _NODE_HOME (
+        set "__PATH=%ProgramFiles%"
+        for /f %%f in ('dir /ad /b "!__PATH!\node-v%__NODE_MAJOR%*" 2^>NUL') do set "_NODE_HOME=!__PATH!\%%f"
+    )
+)
+if not exist "%_NODE_HOME%\nodevars.bat" (
+    echo %_ERROR_LABEL% Node installation directory not found ^(%_NODE_HOME%^) 1>&2
+    set _EXITCODE=1
+    goto :eof
+)
+if not exist "%_NODE_HOME%\node.exe" (
+    echo %_ERROR_LABEL% Node executable not found ^(%_NODE_HOME%^) 1>&2
+    set _EXITCODE=1
+    goto :eof
+)
+set "_NODE!__NODE_MAJOR!_HOME=%_NODE_HOME%"
+@rem call "%NODE_HOME%\nodevars.bat"
+goto :eof
+
 @rem output parameters: _CARGO_HOME, _CARGO_PATH
 :rust
 set _CARGO_HOME=
@@ -293,7 +350,7 @@ if not exist "%_CARGO_HOME%\bin\cargo.exe" (
 set "_CARGO_PATH=;%_CARGO_HOME%\bin"
 goto :eof
 
-@rem output parameter: _GIT_HOME, _GIT_PATH
+@rem output parameters: _GIT_HOME, _GIT_PATH
 :git
 set _GIT_HOME=
 set _GIT_PATH=
@@ -336,6 +393,11 @@ if %ERRORLEVEL%==0 (
     for /f "tokens=1,2,*" %%i in ('"%DENO_HOME%\deno.exe" --version ^| findstr deno') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% deno %%j,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%DENO_HOME%:deno.exe"
 )
+where /q "%USERPROFILE%\.deno\bin:deployctl.cmd"
+if %ERRORLEVEL%==0 (
+    for /f "tokens=1,*" %%i in ('"%USERPROFILE%\.deno\bin\deployctl.cmd" --version') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% deployctl %%j,"
+    set __WHERE_ARGS=%__WHERE_ARGS% "%USERPROFILE%\.deno\bin:deployctl.cmd"
+)
 where /q "%NMAP_HOME%:ncat.exe"
 if %ERRORLEVEL%==0 (
     for /f "tokens=1,2,3,*" %%i in ('"%NMAP_HOME%\ncat.exe" --version 2^>^&1') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% ncat %%k,"
@@ -362,6 +424,7 @@ if %__VERBOSE%==1 if defined __WHERE_ARGS (
     if defined DENO_HOME echo    "DENO_HOME=%DENO_HOME%" 1>&2
     if defined GIT_HOME echo    "GIT_HOME=%GIT_HOME%" 1>&2
     if defined NMAP_HOME echo    "NMAP_HOME=%NMAP_HOME%" 1>&2
+    if defined NODE_HOME echo    "NODE_HOME=%NODE_HOME%" 1>&2
 )
 goto :eof
 
@@ -375,7 +438,8 @@ endlocal & (
         if not defined DENO_HOME set "DENO_HOME=%_DENO_HOME%"
         if not defined GIT_HOME set "GIT_HOME=%_GIT_HOME%"
         if not defined NMAP_HOME set "NMAP_HOME=%_NMAP_HOME%"
-        set "PATH=%PATH%;%_DENO_HOME%%NMAP_HOME%;%_CARGO_PATH%%_GIT_PATH%;%~dp0bin"
+        if not defined NODE_HOME set "NODE_HOME=%_NODE14_HOME%"
+        set "PATH=%PATH%%_DENO_PATH%;%_NODE14_HOME%;%_NMAP_HOME%%_CARGO_PATH%%_GIT_PATH%;%~dp0bin"
         call :print_env %_VERBOSE%
         if not "%CD:~0,2%"=="%_DRIVE_NAME%:" (
             if %_DEBUG%==1 echo %_DEBUG_LABEL% cd /d %_DRIVE_NAME%: 1>&2
