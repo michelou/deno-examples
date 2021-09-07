@@ -23,6 +23,7 @@
 - [Deploying and Using WebAssembly Under Deno on the Server Side Using Travis CI][blog_mendy] by Montana Mendy, January 2021.
 - [Deno Introduction with Practical Examples][blog_olasheni] by Erisan Olasheni and Dylan Schiemann, October 2020.
 - [Deno vs Node - comparison][blog_torrao] by Ricardo Torrao, October 2020.
+- [Creating a CRUD Server with Deno and Mongo][blog_piyush] by Piyush, May 2020.
 - [The Deno Handbook: A TypeScript Runtime Tutorial with Code Examples][blog_copes] by Flavio Copes, May 2020.
 
 ## <span id="books">Books</span>
@@ -32,12 +33,18 @@
 - [Deno Web Development][book_portela] by Alexandre Portela, March 2021.<br/><span style="font-size:90%;">(Packt, ISBN 978-1-8002-0566-6, 310 pages)</span>
 - [Introducing Deno][book_doglio] by Fernando Doglio, 2020.<br/><span style="font-size:90%;">(Apress, ISBN 978-1-4842-6196-5, 141 pages)</span>
 
+## <span id="news">News</span>
+
+- [Changelog++](https://changelog.com): [Deno News and Podcasts](https://changelog.com/topic/deno).
+- [Deno Weekly](https://denoweekly.com/)
+
 ## <span id="tools">Tools and Frameworks</span>
 
 - [Cliffy](https://github.com/c4spar/deno-cliffy) - a command line framework for [Deno][deno_land].
 - [Deno Deploy](https://deno.com/deploy) - a globally distributed JavaScript VM.
 - [Oak][tool_aok] - a middleware framework for handling HTTP with [Deno][deno_land].
 - [Tokio](https://github.com/tokio-rs/tokio) - a runtime for writing reliable asynchronous applications with [Rust](https://www.rust-lang.org/).
+- [Ultra](https://github.com/exhibitionist-digital/ultra) - a web framework ([Deno][deno_land]+React) with no build, no bundle, all streaming.
 
 ## <span id="tutorials">Tutorials</span>
 
@@ -59,6 +66,7 @@
 [blog_goyal]: https://blog.logrocket.com/how-to-create-a-deno-plugin-in-rust/
 [blog_mendy]: https://blog.travis-ci.com/2021-01-04-wasm
 [blog_olasheni]: https://www.infoq.com/articles/deno-introduction-practical-examples/
+[blog_piyush]: https://medium.com/@me.piyush/creating-a-crud-server-with-deno-and-mongo-199e4ef939df
 [blog_souza]: https://blog.logrocket.com/creating-your-first-rest-api-with-deno-and-postgres/
 [blog_torrao]: https://www.imaginarycloud.com/blog/deno-vs-node/
 [blog_yuan]: https://developpaper.com/how-to-call-rust-function-in-deno-application/

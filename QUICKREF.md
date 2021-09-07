@@ -15,7 +15,7 @@ https://alanstorm.com/comparing-a-deno-and-node-js-hello-world-program/
 1. CommonJS vs. ECMAScript modules
 
 <p style="margin:0 0 0 40px;">
-<a href="https://deno.land/">Deno</a> supports <i>only</i> the ECMAScript modules while <a href="https://nodejs.org/">Node.js</a> supports both formats for the CommonJS and ECMAScript modules.
+<a href="https://deno.land/">Deno</a> supports <i>only</i> the ECMAScript modules (short <i>ES modules</i>) while <a href="https://nodejs.org/">Node.js</a> supports both formats for the CommonJS and ECMAScript modules.
 </p>
 <pre style="margin:0 0 8px 40px;font-size:80%;">
 <b>const</b> http = require('http'); <span style="color:green;">/* CommonJS */</span>
@@ -26,6 +26,11 @@ https://alanstorm.com/comparing-a-deno-and-node-js-hello-world-program/
 
 <p style="margin:0 0 0 40px;">Unlike Node.js <a href="https://deno.land/">Deno</a> has a lightweight built-in runtime of around 130 methods, functions and classes.
 </p>
+
+## <span id="runtime">Deno Runtime</span>
+
+<!-- Deno Web Development, p.59 -->
+- Two types of functions are available on Deno without any imports: [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) and the Deno built-in API. Code written using Web APIs can be bundled and run in the browser with no transformations.
 
 ## <span id="subcommands">Deno Subcommands</span>
 
