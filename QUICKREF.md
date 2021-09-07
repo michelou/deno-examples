@@ -14,23 +14,16 @@ https://alanstorm.com/comparing-a-deno-and-node-js-hello-world-program/
 -->
 1. CommonJS vs. ECMAScript modules
 
-<p style="margin:0 0 0 40px;">
-<a href="https://deno.land/">Deno</a> supports <i>only</i> the ECMAScript modules (short <i>ES modules</i>) while <a href="https://nodejs.org/">Node.js</a> supports both formats for the CommonJS and ECMAScript modules.
-</p>
-<pre style="margin:0 0 8px 40px;font-size:80%;">
-<b>const</b> http = require('http'); <span style="color:green;">/* CommonJS */</span>
-<b>import</b> { serve } <b>from</b> "https://deno.land/std/http/server.ts"; <span style="color:green;">/* ECMAScript */</span>
-</pre>
+   <a href="https://deno.land/">Deno</a> supports <i>only</i> the ECMAScript modules (short <i>ES modules</i>) while <a href="https://nodejs.org/">Node.js</a> supports both formats for the CommonJS and ECMAScript modules.
+
+   <pre style="font-size:80%;">
+   <b>const</b> http = require('http'); <span style="color:green;">/* CommonJS */</span>
+   <b>import</b> { serve } <b>from</b> "https://deno.land/std/http/server.ts"; <span style="color:green;">/* ECMAScript */</span>
+   </pre>
 
 2. Runtime vs. Standard library
 
-<p style="margin:0 0 0 40px;">Unlike Node.js <a href="https://deno.land/">Deno</a> has a lightweight built-in runtime of around 130 methods, functions and classes.
-</p>
-
-## <span id="runtime">Deno Runtime</span>
-
-<!-- Deno Web Development, p.59 -->
-- Two types of functions are available on Deno without any imports: [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) and the Deno built-in API. Code written using Web APIs can be bundled and run in the browser with no transformations.
+   Unlike Node.js <a href="https://deno.land/">Deno</a> has a lightweight built-in runtime of around 130 methods, functions and classes.
 
 ## <span id="subcommands">Deno Subcommands</span>
 
@@ -46,7 +39,7 @@ a parameter to the `--reload` flag.
 The following command displays the documentation for method `serve` of the standard library's HTTP module.
 
 <pre style="font-size:80%;">
-<b> &gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc https://deno.land/std@0.106.0/http/<a href="https://deno.land/std@0.106.0/http/server.ts">server.ts</a> serve</b>
+<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc https://deno.land/std@0.106.0/http/<a href="https://deno.land/std@0.106.0/http/server.ts">server.ts</a> serve</b>
 Defined in https://deno.land/std@0.106.0/http/server.ts:299:0
 
 function serve(addr: string | HTTPOptions): Server
@@ -81,6 +74,110 @@ function writeFile(path: string | URL, data: Uint8Array, options?: WriteFileOpti
 
   Requires `allow-write` permission, and `allow-read` if `options.create` is `false`.
 </pre>
+
+## <span id="runtime">Deno Runtime</span>
+
+<!-- Deno Web Development, p.59 -->
+Two types of functions are available on Deno without any imports: [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) and the Deno built-in API. Code written using Web APIs can be bundled and run in the browser with no transformations.
+
+1. `WebAssembly` namespace
+
+   Interfaces in the `WebAssembly` namespace are:
+   <pre style="font-size:80%;">
+   <b>&gt; set NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin WebAssembly |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]interface"</b>
+   interface GlobalDescriptor
+   interface MemoryDescriptor
+   interface ModuleExportDescriptor
+   interface ModuleImportDescriptor
+   interface TableDescriptor
+   interface WebAssemblyInstantiatedSource
+   </pre>
+
+   Functions in the `WebAsssembly` namepspace are:
+   <pre style="font-size:80%;">
+   <b>&gt; set NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin WebAssembly |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]function"</b>
+   function compile(bytes: BufferSource): Promise<Module>
+   function compileStreaming(source: Response | Promise<Response>): Promise<Module>
+   function instantiate(bytes: BufferSource, importObject?: Imports): Promise<WebAssemblyInstantiatedSource>
+   function instantiate(moduleObject: Module, importObject?: Imports): Promise<Instance>
+   function instantiateStreaming(response: Response | PromiseLike<Response>, importObject?: Imports): Promise<WebAssemblyInstantiatedSource>
+   function validate(bytes: BufferSource): boolean
+   </pre>
+   > **:mag_right:** The above functions are defined in the [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly#static_methods).
+
+2. `Deno` namespace
+
+   Interfaces in the `Deno` namespace are:
+   <pre style="font-size:80%;">
+   <b>&gt; set NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin Deno |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]interface"</b>
+   interface <a href="https://doc.deno.land/builtin/stable#Deno.MemoryUsage">MemoryUsage</a>
+   interface TestDefinition
+   interface Reader
+   interface ReaderSync
+   interface Writer
+   interface WriterSync
+   interface Closer
+   interface Seeker
+   interface SeekerSync
+   interface OpenOptions
+   interface ReadFileOptions
+   interface MkdirOptions
+   interface MakeTempOptions
+   interface RemoveOptions
+   interface FileInfo
+   interface DirEntry
+   interface WriteFileOptions
+   interface <a href="https://doc.deno.land/builtin/stable#Deno.Metrics">Metrics</a>
+   interface FsEvent
+   interface FsWatcher extends AsyncIterable<FsEvent>
+   interface RunOptions
+   [...]
+   </pre>
+
+   `read` functions in the `Deno` namespace are:
+   <pre style="font-size:80%;">
+   <b>&gt; set NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin Deno |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]function read"</b>
+   function readSync(rid: number, buffer: Uint8Array): number | null
+   function read(rid: number, buffer: Uint8Array): Promise<number | null>
+   function readAll(r: Reader): Promise<Uint8Array>
+   function readAllSync(r: ReaderSync): Uint8Array
+   function readTextFileSync(path: string | URL): string
+   function <a href="https://doc.deno.land/builtin/stable#Deno.readTextFile">readTextFile</a>(path: string | URL, options?: ReadFileOptions): Promise<string>
+   function readFileSync(path: string | URL): Uint8Array
+   function readFile(path: string | URL, options?: ReadFileOptions): Promise<Uint8Array>
+   function readDirSync(path: string | URL): Iterable<DirEntry>
+   function readDir(path: string | URL): AsyncIterable<DirEntry>
+   function readLinkSync(path: string | URL): string
+   function <a href="https://doc.deno.land/builtin/stable#Deno.readLink">readLink</a>(path: string | URL): Promise<string>
+   </pre>
+   > [**:mag_right:**] We can evaluate the code example presented in the [`readTextFile`](https://doc.deno.land/builtin/stable#Deno.readTextFile) documentation: 
+   > <pre style="font-size:80%;">
+   > <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin <a href="https://doc.deno.land/builtin/stable#Deno.readTextFile">Deno.readTextFile</a></b>
+   > Defined in lib.deno.d.ts:1430:2
+   >&nbsp;
+   > function readFile(path: string | URL, options?: ReadFileOptions):  Promise<Uint8Array>
+   >   Reads and resolves to the entire contents of a file as an array of bytes.
+   >   `TextDecoder` can be used to transform the bytes to string if required.
+   >   Reading a directory returns an empty data array.
+   >&nbsp;
+   >   ```ts
+   >   const data = await Deno.readTextFile("hello.txt");
+   >   console.log(data);
+   >    ```
+   >&nbsp;
+   >   Requires `allow-read` permission.
+   > </pre>
+   > For instance:
+   > <pre style="font-size:80%;">
+   > <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "onst data = await Deno.readTextFile('.gitignore'); console.log(data);"</b>
+   > .idea/
+   > .project
+   > .settings/
+   > .vscode/
+   > *_LOCAL/
+   > out/
+   > target/
+   > </pre>
 
 ***
 

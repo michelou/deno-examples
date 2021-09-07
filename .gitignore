@@ -1,17 +1,7 @@
-.bloop-config
-.classpath
-.dotty-ide*
-.bloop/
-.bsp/
-.gradle/
 .idea/
 .project
 .settings/
 .vscode/
 *_LOCAL/
-bazel-*/
-lib/
-nightly-jars/
 out/
-/project/
 target/

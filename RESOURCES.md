@@ -16,9 +16,10 @@
 
 ## <span id="blogs">Blogs</span>
 
-- [Foreign function interface: Calling C functions from Deno][blog_choubey] by Mayank Choubey, August 2021.
+- [Foreign function interface: Calling C functions from Deno][blog_choubey2] by Mayank Choubey, August 2021.
 - [How to create a Deno plugin in Rust][blog_goyal] by Anshul Goyal, June 2021.
 - [How to call Rust function in Deno application][blog_yuan] by Michael Yuan, March 2021.
+- [Run shell commands in Deno][blog_choubey] by Mayank Choubey, March 2021.
 - [Creating REST APIs with Deno and Postgres][blog_souza] by Diogo Souza, March 2021.
 - [Deploying and Using WebAssembly Under Deno on the Server Side Using Travis CI][blog_mendy] by Montana Mendy, January 2021.
 - [Deno Introduction with Practical Examples][blog_olasheni] by Erisan Olasheni and Dylan Schiemann, October 2020.
@@ -61,7 +62,8 @@
 [article_rivero]: https://startfunction.com/rust-webassembly-deno/
 [article_sayfan]: https://blog.sessionstack.com/how-javascript-works-introduction-to-deno-a3b1153b1855
 [article_son]: https://opensource.com/article/21/3/deno-programming
-[blog_choubey]: https://medium.com/deno-the-complete-reference/foreign-function-interface-calling-c-functions-from-deno-357ec4f5f793
+[blog_choubey]: https://medium.com/deno-the-complete-reference/run-shell-commands-in-deno-26c3e9b72e03
+[blog_choubey2]: https://medium.com/deno-the-complete-reference/foreign-function-interface-calling-c-functions-from-deno-357ec4f5f793
 [blog_copes]: https://www.freecodecamp.org/news/the-deno-handbook/
 [blog_goyal]: https://blog.logrocket.com/how-to-create-a-deno-plugin-in-rust/
 [blog_mendy]: https://blog.travis-ci.com/2021-01-04-wasm
