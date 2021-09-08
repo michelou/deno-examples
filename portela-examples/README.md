@@ -8,11 +8,11 @@
   </tr>
 </table>
 
-## <span id="chapter_01">Chapter 1</span>
+## <span id="chapter01">Chapter 1</span>
 
 ### `http-server`
 
-In example [`http-server.ts`](./http-server/http-server.ts) we make use of the function `serve` from the remote [`std/http`](https://deno.land/std@0.106.0/http) library. The import clauses looks as follows:
+Example [`http-server.ts`](./Chaper01/http-server/http-server.ts) makes use of the function `serve` from the remote [`std/http`](https://deno.land/std@0.106.0/http) library. The import clauses looks as follows:
 
 <pre style="font-size:80%;">
 <span style="color:green;">// file: http-server.ts</span>
@@ -23,29 +23,44 @@ In example [`http-server.ts`](./http-server/http-server.ts) we make use of the f
 }
 </pre>
 
-Below we run the batch file [`http-server.bat`](./http-server/http-server.bat) two times; not that the server process is started only once (and must be stopped manually) :
+We can run `http-server` either from the Windows prompt or from a Unix shell:
 
-<pre style="font-size:80%;">
-<b>&gt; <a href="./http-server/http-server.bat">http-server.bat</a></b>
-[INFO] Start process listening on port 8080
-[INFO] Respond to the cURL request on port 8080
-Hello deno
-&nbsp;
-<b>&gt; <a href="./http-server/http-server.bat">http-server.bat</a></b>
-[INFO] Respond to the cURL request on port 8080
-Hello deno
-</pre>
+- We run the batch file [`http-server.bat`](./Chapter01/http-server/http-server.bat) from the Windows prompt. Note that the server process is started only once (it must be stopped manually) when we run the batch file several times:
 
-### `http-server-lock`
+  <pre style="font-size:80%;">
+  <b>&gt; <a href="./Chaper01/http-server/http-server.bat">http-server.bat</a></b>
+  [INFO] Start process listening on port 8080
+  [INFO] Respond to the cURL request on port 8080
+  Hello deno
+  &nbsp;
+  <b>&gt; <a href="./Chaper01/http-server/http-server.bat">http-server.bat</a></b>
+  [INFO] Respond to the cURL request on port 8080
+  Hello deno
+  </pre>
+
+- We run the shell script [`http-server.sh`](./Chapter01/http-server/http-server.sh) from a Unix shell (Cygwin, MingW or Unix).
+
+  <pre style="font-size:80%;">
+  <b>&gt; <a href="./Chaper01/http-server/http-server.sh">./http-server.sh</a></b>
+  [INFO] Start process listening on port 8080
+  [INFO] Respond to the cURL request on port 8080
+  Hello deno
+  &nbsp;
+  <b>&gt; <a href="./Chaper01/http-server/http-server.sh">./http-server.sh</a></b>
+  [INFO] Respond to the cURL request on port 8080
+  Hello deno
+  </pre>
+
+### `http-server-deps`
 
 In this first variant of the above example we split the code into two files:
 
-- we add the file [`deps.ts`](http-server-lock/deps.ts) which contains the original import clause(s)
+- we add the file [`deps.ts`](./Chapter01/http-server-deps/deps.ts) which contains the original import clause(s)
    <pre style="font-size:80%;">
    <span style="color:green;">// file: deps.ts</span>
    <b>import</b> { serve } <b>from</b> "https://deno.land/std@0.106.0/http/server.ts"</pre>
 
-- we modify the file [`https-server.ts`](http-server-lock/http-server.ts) which now refers to [`deps.ts`](http-server-lock/deps.ts) in the import clause (thus hiding the details of the remote [`std/http`](https://deno.land/std@0.106.0/http) library):
+- we modify the file [`https-server.ts`](./Chapter01/http-server-deps/http-server.ts) which now refers to [`deps.ts`](./Chapter01/http-server-deps/deps.ts) in the import clause (thus hiding the details of the remote [`std/http`](https://deno.land/std@0.106.0/http) library):
    <pre style="font-size:80%;">
    <span style="color:green;">// file: http-server.ts</span>
    <b>import</b> { serve } <b>from</b> "./deps.ts"
@@ -54,7 +69,7 @@ In this first variant of the above example we split the code into two files:
      req.respond({ body: "Hello deno" })
    }</pre>
 
-### `http-server-lock-import`
+### `http-server-import-maps`
 
 In the second variant of the original example we introduce another file:
 
@@ -68,9 +83,26 @@ In the second variant of the original example we introduce another file:
 
 - we update the file [`deps.ts`](http-server-lock-import/deps.ts) with a *user-defined name* for the `http` library.
    <pre style="font-size:80%;">
+   <span style="color:green;">// file: deps.ts</span>
    <b>export</b> { serve } <b>from</b> "http/server.ts"</pre>
 
-## <span id="chapter_02">Chapter 2</span>
+### `fetch-deno-logo`
+
+Example [`fetch-deno-logo`](./Chapter01/fetch-deno-logo/fetch-deno-logo.ts) download a SVG image (e.g. the Deno logo) from the Internet and prints the HTML code with the embedded image.
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="./Chapter01/fetch-deno-logo/fetch-deno-logo.bat">fetch-deno-logo.bat</a></b>
+&lt;html&gt;
+&lt;img src="data:image/svg+xml;base64,PHN2ZwogIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICB3aWR0aD0iNTEyIgogIGhlaWdodD0iNTEyIgogIHZpZXdCb3g9IjAgMCA1MTIgNTEyIgo+CiAgPHRpdGxlPkRlbm8gbG9nbzwvdGl0bGU+CiAgPG1hc2sgaWQ9ImEiPgogICAgPGNpcmNsZSBmaWxsPSJ3aGl0ZSIgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMjMwIiAvPgogIDwvbWFzaz4KICA8Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjI1NiIgLz4KICA8cGF0aAogICAgbWFzaz0idXJsKCNhKSIKICAgIHN0cm9rZT0id2hpdGUiCiAgICBzdHJva2Utd2lkdGg9IjI1IgogICAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogICAgZD0iTTcxIDMxOWwxNy02M00xMDcuOTY0IDE2MS4wOTVsMTctNjNNMzYuOTMgMjIxbDE3LTYzTTEyNS45NjQgMzg1bDE3LTYzTTE2MC4zNzIgNDg2LjgyOWwxNy02M00yMzAgNDU2LjMyOWwxNy02M00yMDYuMjU3IDkyLjU4N2wxNy02M00zMjYuMzk1IDE3My4wMDRsMTctNjNNNDUyLjE4MiAzMDQuNjkzbDE3LTYzTTQwOS4xMjQgMjIxbDE3LTYzTTI5OS4wMjcgNTQuNTU4bDE3LTYzTTQwMC42MjQgODYuMDU4bDE3LTYzIgogIC8+CiAgPHBhdGgKICAgIG1hc2s9InVybCgjYSkiCiAgICBmaWxsPSJ3aGl0ZSIKICAgIHN0cm9rZT0iYmxhY2siCiAgICBzdHJva2Utd2lkdGg9IjEyIgogICAgZD0iTTI1Mi4yMjUgMzQ0LjQxOGMtODYuNjUgMi42MS0xNDQuNTc2LTM0LjUtMTQ0LjU3Ni05NC4zNjMgMC02MS40OTQgNjAuMzMtMTExLjE0NSAxMzguMzUxLTExMS4xNDUgMzcuNjgzIDAgNjkuNTMyIDEwLjY1IDk0LjM5MiAzMC4wOTIgMjEuODgyIDE3LjExMyAzNy41MjEgNDAuNTI2IDQ1LjUxOSA2Ni4zMTIgMi41NzQgOC4zMDEgMjIuODYzIDgzLjc2NyA2MS4xMTIgMjI3LjI5NWwxLjI5NSA0Ljg2LTE1OS43OTMgNzQuNDQzLTEuMTAxLTguMDYzYy04Ljg1LTY0Ljc3OC0xNi41NDYtMTEzLjMzOC0yMy4wNzYtMTQ1LjYzNC0zLjIzNy0xNi4wMDQtNi4xNzgtMjcuOTYtOC43OS0zNS43OTQtMS4yMjctMy42ODItMi4zNTUtNi4zNjEtMy4zMDMtNy45NTJhMTIuNTYgMTIuNTYgMCAwMC0uMDMtLjA1eiIKICAvPgogIDxjaXJjbGUgbWFzaz0idXJsKCNhKSIgY3g9IjI2MiIgY3k9IjIwMyIgcj0iMTYiIC8+Cjwvc3ZnPg==" /&gt;
+&lt;/html&gt;
+</pre>
+
+## <span id="chapter02">Chapter 2</span>
+
+<i>WIP</i>
+
+
+## <span id="chapter04">Chapter 4</span>
 
 <i>WIP</i>
 
