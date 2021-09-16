@@ -18,9 +18,11 @@
 
 - [Foreign function interface: Calling C functions from Deno][blog_choubey2] by Mayank Choubey, August 2021.
 - [How to create a Deno plugin in Rust][blog_goyal] by Anshul Goyal, June 2021.
+- [Guide to server-side rendering with Deno and React][blog_olususi] by Oluyemi Olususi, June 2021.
 - [How to call Rust function in Deno application][blog_yuan] by Michael Yuan, March 2021.
 - [Run shell commands in Deno][blog_choubey] by Mayank Choubey, March 2021.
 - [Creating REST APIs with Deno and Postgres][blog_souza] by Diogo Souza, March 2021.
+- [Introduction to Aleph - The React Framework in Deno][blog_sebhastian] by Nathan Sebhastian, January 2021.
 - [Deploying and Using WebAssembly Under Deno on the Server Side Using Travis CI][blog_mendy] by Montana Mendy, January 2021.
 - [Deno Introduction with Practical Examples][blog_olasheni] by Erisan Olasheni and Dylan Schiemann, October 2020.
 - [Deno vs Node - comparison][blog_torrao] by Ricardo Torrao, October 2020.
@@ -70,7 +72,9 @@
 [blog_goyal]: https://blog.logrocket.com/how-to-create-a-deno-plugin-in-rust/
 [blog_mendy]: https://blog.travis-ci.com/2021-01-04-wasm
 [blog_olasheni]: https://www.infoq.com/articles/deno-introduction-practical-examples/
+[blog_olususi]: https://www.sanity.io/guides/server-side-rendering-deno-react
 [blog_piyush]: https://medium.com/@me.piyush/creating-a-crud-server-with-deno-and-mongo-199e4ef939df
+[blog_sebhastian]: https://blog.bitsrc.io/introduction-to-aleph-the-react-framework-in-deno-322ec26d0fa9
 [blog_souza]: https://blog.logrocket.com/creating-your-first-rest-api-with-deno-and-postgres/
 [blog_torrao]: https://www.imaginarycloud.com/blog/deno-vs-node/
 [blog_yuan]: https://developpaper.com/how-to-call-rust-function-in-deno-application/

@@ -21,6 +21,8 @@ https://alanstorm.com/comparing-a-deno-and-node-js-hello-world-program/
    <b>import</b> { serve } <b>from</b> "https://deno.land/std/http/server.ts"; <span style="color:green;">/* ECMAScript */</span>
    </pre>
 
+   > **:mag_right:** Deno supports the `@deno-types` compiler hint to specify a type definition file when type checking instead of the imported JavaScript file (see "[Providing types when importing](https://deno.land/manual@v1.9.2/typescript/types#providing-types-when-importing)").
+
 2. Runtime vs. Standard library
 
    Unlike Node.js <a href="https://deno.land/">Deno</a> has a lightweight built-in runtime of around 130 methods, functions and classes.
