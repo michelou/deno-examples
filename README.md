@@ -75,7 +75,7 @@ We also define a virtual drive **`O:`** in our working environment in order to r
 <span name="footnote_01">[1]</span> ***Deno TypeScript*** [↩](#anchor_01)
 
 <p style="margin:0 0 1em 20px;">
-Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-3/" rel="external"><code>4.3.5</code></a> in our case:
+Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-4/" rel="external"><code>4.4.2</code></a> in our case:
 </p>
 
 <pre style="margin:0 0 1em 20px; font-size:80%;">

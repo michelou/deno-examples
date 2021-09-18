@@ -171,7 +171,7 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
    > </pre>
    > For instance:
    > <pre style="font-size:80%;">
-   > <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "onst data = await Deno.readTextFile('.gitignore'); console.log(data);"</b>
+   > <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "const data = await Deno.readTextFile('.gitignore'); console.log(data);"</b>
    > .idea/
    > .project
    > .settings/
