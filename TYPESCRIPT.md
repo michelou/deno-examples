@@ -30,15 +30,29 @@
 ## <span id="books">Books</span>
 
 - [TypeScript 4 Design Patterns and Best Practices][book_despoudis] by Theo Despoudis, September 2021.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8005-6342-1, 306 pages)</span>
-- [Mastering TypeScript ][book_rozentals] (2<sup>nd</sup> Ed.) by Nathan Rozentals , April 2021.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8005-6473-2, 538 pages)</span>
+- [Mastering TypeScript ][book_rozentals] (4<sup>th</sup> Ed.) by Nathan Rozentals, April 2021.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8005-6473-2, 538 pages)</span>
 - [Essential TypeScript 4][book_freeman] by Adam Freeman, April 2021.<br/><span style="font-size:80%;">(Apress, ISBN 978-1-4842-7010-3, 580 pages)</span>
 - [TypeScript Quickly][book_fain] by Yakov Fain and Anton Moiseev, February 2020.<br/><span style="font-size:80%;">([Manning](https://www.manning.com/), ISBN 978-1-6172-9594-2, 488 pages)</span>
+
+## <span id="community">Community</span>
+
+- [Basarat Ali Syed](https://github.com/basarat) (GitHub).
+
+## <span id="style_guides">Style Guides</span>
+
+- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
+- [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html).
+- [Vanilla Coding Standard - TypeScript](https://success.vanillaforums.com/kb/articles/226-coding-standard-typescript) by Todd, April 2020.
 
 ## <span id="tutorials">Tutorials</span>
 
 - [TypeScript Cheat Sheet](https://droces.github.io/TypeScript-Cheat-Sheet/) (*for TypeScript v3.9+*).
 - [TypeScript Deep Dive][tutorial_basarat] (online book).
    - [TypeScript's Type System](https://basarat.gitbook.io/typescript/type-system.)
+
+## <span id="videos">Videos</span>
+
+- [Utility Types - Advanced TypeScript][video_danylov] by Dmytro Danylov, October 2019.
 
 ***
 
@@ -64,3 +78,4 @@
 [book_freeman]: https://www.apress.com/gp/book/9781484270103
 [book_rozentals]: https://www.packtpub.com/product/mastering-typescript-fourth-edition/9781800564732
 [tutorial_basarat]: https://basarat.gitbook.io/typescript/
+[video_danylov]: https://www.youtube.com/watch?v=Fgcu_iB2X04

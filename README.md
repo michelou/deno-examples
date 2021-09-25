@@ -1,10 +1,12 @@
 # <span id="top">Playing with Deno on Windows</span> <span style="size:25%;"><a href="README.md">↩</a></span>
-
+<!--
+Deno is is a simple, modern and secure runtime for JavaScript and TypeScript that uses the V8 JavaScript engine and is built in Rust.
+-->
 <table style="font-family:Helvetica,Arial;font-size:14px;line-height:1.6;">
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://deno.land/" rel="external"><img style="border:0;" src="./docs/deno.svg" width="100" alt="Deno logo"/></a></td>
   <td style="border:0;padding:0;vertical-align:text-top;">This repository gathers <a href="https://deno.land/" rel="external">Deno</a> code examples coming from various websites and books.<br/>
-  It also includes several <a href="https://en.wikibooks.org/wiki/Windows_Batch_Scripting">batch files</a> for experimenting with <a href="https://deno.land/" rel="external">Deno</a> on the <b>Microsoft Windows</b> platform..
+  It also includes several <a href="https://en.wikibooks.org/wiki/Windows_Batch_Scripting">batch files</a> for experimenting with <a href="https://deno.land/" rel="external">Deno</a> on the <b>Microsoft Windows</b> platform.
   </td>
   </tr>
 </table>
@@ -28,7 +30,7 @@ For instance our development environment looks as follows (September 2021) <sup 
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\  <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.14.0\   <i>( 54 MB)</i>
+C:\opt\deno-1.14.1\   <i>( 54 MB)</i>
 C:\opt\Git-2.33.0\    <i>(279 MB)</i>
 C:\opt\nmap-7.92\     <i>( 41 MB)</i>
 </pre>
@@ -80,7 +82,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 
 <pre style="margin:0 0 1em 20px; font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.14.0 (release, x86_64-pc-windows-msvc)
+deno 1.14.1 (release, x86_64-pc-windows-msvc)
 v8 9.4.146.15
 typescript 4.4.2
 </pre>
@@ -113,7 +115,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
 [git_docs]: https://git-scm.com/docs/git
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.14.0
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.14.1
 [git_downloads]: https://git-scm.com/download/win
 [git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.33.0.txt
 [github_markdown]: https://github.github.com/gfm/
