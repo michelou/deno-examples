@@ -1,4 +1,4 @@
-# <span id="top">Playing with Deno on Windows</span> <span style="size:25%;"><a href="README.md">↩</a></span>
+# <span id="top">Playing with Deno on Windows</span>
 <!--
 Deno is is a simple, modern and secure runtime for JavaScript and TypeScript that uses the V8 JavaScript engine and is built in Rust.
 -->
@@ -58,7 +58,7 @@ where
 - directory [**`examples\`**](examples/) contains [Deno][deno_land] code examples grabbed from various websites.
 - directory [**`portela-examples\`**](portela-examples/) contains [Deno][deno_land] code examples from Portela's book [*Deno Web Development*][book_portela].
 - file [**`README.md`**](README.md) is the [Markdown][github_markdown] document for this page.
-- file [**`QUICKREF.md`**](QUICKREF.md) is our quick [Deno][deno_land] reference.
+- file [**`QUICKREF.md`**](QUICKREF.md) is our [Deno][deno_land] quick reference.
 - file [**`RESOURCES.md`**](RESOURCES.md) gathers [Deno][deno_land] related informations.
 - file [**`TYPESCRIPT.md`**](TYPESCRIPT.md) gathers [TypeScript][microsoft_ts] related informations.
 - file [**`setenv.bat`**](setenv.bat) is the batch script for setting up our environment.
