@@ -26,11 +26,11 @@ Optionally one may also install the following software:
 
 > **:mag_right:** Git for Windows provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (September 2021) <sup id="anchor_03"><a href="#footnote_03">[3]</a></sup>:
+For instance our development environment looks as follows (October 2021) <sup id="anchor_03"><a href="#footnote_03">[3]</a></sup>:
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\  <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.14.1\   <i>( 54 MB)</i>
+C:\opt\deno-1.14.2\   <i>( 54 MB)</i>
 C:\opt\Git-2.33.0\    <i>(279 MB)</i>
 C:\opt\nmap-7.92\     <i>( 41 MB)</i>
 </pre>
@@ -82,8 +82,8 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 
 <pre style="margin:0 0 1em 20px; font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.14.1 (release, x86_64-pc-windows-msvc)
-v8 9.4.146.15
+deno 1.14.2 (release, x86_64-pc-windows-msvc)
+v8 9.4.146.16
 typescript 4.4.2
 </pre>
 
@@ -106,7 +106,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/September 2021* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/October 2021* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -115,7 +115,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
 [git_docs]: https://git-scm.com/docs/git
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.14.1
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.14.2
 [git_downloads]: https://git-scm.com/download/win
 [git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.33.0.txt
 [github_markdown]: https://github.github.com/gfm/

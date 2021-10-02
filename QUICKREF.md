@@ -8,7 +8,9 @@
   </tr>
 </table>
 
-## Deno versus Node.js
+Covered topics include: [Deno versus Node.js](#nodejs), [Deno subcommands](#subcommands), [Deno runtime](#runtime), [Windows specific fixes](#fixes).
+
+## <span id="nodejs">Deno versus Node.js</span>
 <!--
 https://alanstorm.com/comparing-a-deno-and-node-js-hello-world-program/
 -->
@@ -86,7 +88,7 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
 
    Interfaces in the `WebAssembly` namespace are:
    <pre style="font-size:80%;">
-   <b>&gt; set NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin WebAssembly |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]interface"</b>
+   <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/set_1">set</a> NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin WebAssembly |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]interface"</b>
    interface GlobalDescriptor
    interface MemoryDescriptor
    interface ModuleExportDescriptor
@@ -97,7 +99,7 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
 
    Functions in the `WebAsssembly` namepspace are:
    <pre style="font-size:80%;">
-   <b>&gt; set NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin WebAssembly |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]function"</b>
+   <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/set_1">set</a> NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin WebAssembly |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]function"</b>
    function compile(bytes: BufferSource): Promise<Module>
    function compileStreaming(source: Response | Promise<Response>): Promise<Module>
    function instantiate(bytes: BufferSource, importObject?: Imports): Promise<WebAssemblyInstantiatedSource>
@@ -138,7 +140,7 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
 
    `read` functions in the `Deno` namespace are:
    <pre style="font-size:80%;">
-   <b>&gt; set NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin Deno |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]function read"</b>
+   <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/set_1">set</a> NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin Deno |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]function read"</b>
    function readSync(rid: number, buffer: Uint8Array): number | null
    function read(rid: number, buffer: Uint8Array): Promise<number | null>
    function readAll(r: Reader): Promise<Uint8Array>
@@ -181,9 +183,15 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
    > target/
    > </pre>
 
+## <span id="win_fixes">Windows specific fixes</span>
+
+### [**1.14.2**](https://github.com/denoland/deno/releases/tag/v1.14.2) (2021.09.28)
+
+- fix: subprocess kill support on windows ([#12134](https://github.com/denoland/deno/pull/12134)).
+
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/September 2021* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/October 2021* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
