@@ -4,7 +4,7 @@
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://deno.land/" rel="external"><img style="border:0;" src="https://deno.land/logo.svg" width="100" alt="Deno logo"/></a></td>
   <td style="border:0;padding:0;vertical-align:text-top;">
-    Directory <strong><code>examples\</code></strong> contains <a href="https://deno.land/" rel="external">Deno</a> code examples coming from various websites - mostly from the <a href="https://deno.land/" rel="external">Deno project</a> - or written by the author.
+    Directory <strong><code>examples\</code></strong> contains <a href="https://deno.land/" rel="external">Deno</a> code examples coming from various websites - mostly from the <a href="https://deno.land/" rel="external">Deno project</a> - or written by ourself.
   </td>
   </tr>
 </table>
@@ -21,7 +21,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "console.log(Deno.version)"</b>
-{ deno: "1.14.3", v8: "9.4.146.19", typescript: "4.4.2" }
+{ deno: "1.15.1", v8: "9.5.172.19"", typescript: "4.4.2" }
 </pre>
 
 <pre style="font-size:80%;">
@@ -37,7 +37,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "console.log(Deno.env.get('DENO_HOME'))"</b>
-C:\opt\deno-1.14.3
+C:\opt\deno-1.15.1
 </pre>
 
 <pre style="font-size:80%;">

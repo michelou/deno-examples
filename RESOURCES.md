@@ -16,9 +16,12 @@
 
 ## <span id="blogs">Blogs</span>
 
-- [Foreign function interface: Calling C functions from Deno][blog_choubey2] by Mayank Choubey, August 2021.
+- [Exploring Velociraptor, Deno’s npm-style script runner][blog_nawo] by Arek Nawo, September 2021.
+- [Foreign function interface: Calling C functions from Deno][blog_choubey3] by Mayank Choubey, August 2021.
 - [How to create a Deno plugin in Rust][blog_goyal] by Anshul Goyal, June 2021.
 - [Guide to server-side rendering with Deno and React][blog_olususi] by Oluyemi Olususi, June 2021.
+- [Testing with Deno — Part 2 Advanced][blog_choubey2] by Mayank Choubey, May 2021.
+- [Testing with Deno — Part 1 Basics][blog_choubey1] by Mayank Choubey, May 2021.
 - [How to call Rust function in Deno application][blog_yuan] by Michael Yuan, March 2021.
 - [Run shell commands in Deno][blog_choubey] by Mayank Choubey, March 2021.
 - [Creating REST APIs with Deno and Postgres][blog_souza] by Diogo Souza, March 2021.
@@ -38,8 +41,9 @@
 
 ## <span id="news">News</span>
 
+- [Deno World](https://medium.com/deno-the-complete-reference).
 - [Changelog++](https://changelog.com): [Deno News and Podcasts](https://changelog.com/topic/deno).
-- [Deno Weekly](https://denoweekly.com/)
+- [Deno Weekly](https://denoweekly.com/).
 
 ## <span id="tools">Tools and Frameworks</span>
 
@@ -50,6 +54,7 @@
 - [Servest](https://servestjs.org/) - a progressive http server for [Deno][deno_land].
 - [Tokio](https://github.com/tokio-rs/tokio) - a runtime for writing reliable asynchronous applications with [Rust](https://www.rust-lang.org/).
 - [Ultra](https://github.com/exhibitionist-digital/ultra) - a web framework ([Deno][deno_land]+React) with no build, no bundle, all streaming.
+- [Velociraptor](https://github.com/jurassiscripts/velociraptor) - the npm-style script runner for [Deno][deno_land].
 
 ## <span id="tutorials">Tutorials</span>
 
@@ -66,8 +71,11 @@
 [article_rivero]: https://startfunction.com/rust-webassembly-deno/
 [article_sayfan]: https://blog.sessionstack.com/how-javascript-works-introduction-to-deno-a3b1153b1855
 [article_son]: https://opensource.com/article/21/3/deno-programming
+[blog_nawo]: https://blog.logrocket.com/exploring-velociraptor-deno-npm-style-script-runner/
 [blog_choubey]: https://medium.com/deno-the-complete-reference/run-shell-commands-in-deno-26c3e9b72e03
-[blog_choubey2]: https://medium.com/deno-the-complete-reference/foreign-function-interface-calling-c-functions-from-deno-357ec4f5f793
+[blog_choubey3]: https://medium.com/deno-the-complete-reference/foreign-function-interface-calling-c-functions-from-deno-357ec4f5f793
+[blog_choubey2]: https://medium.com/deno-the-complete-reference/testing-with-deno-part-2-advanced-2d10ac1dd145
+[blog_choubey1]: https://medium.com/deno-the-complete-reference/testing-with-deno-part-1-basics-375aa90c5cb5
 [blog_copes]: https://www.freecodecamp.org/news/the-deno-handbook/
 [blog_goyal]: https://blog.logrocket.com/how-to-create-a-deno-plugin-in-rust/
 [blog_mendy]: https://blog.travis-ci.com/2021-01-04-wasm
