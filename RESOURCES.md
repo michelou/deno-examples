@@ -10,6 +10,7 @@
 
 ## <span id="articles">Articles</span>
 
+- [Dissecting Deno][article_baumgartner] by Stefan Baumgartner, September 2021.
 - [Start programming in Deno, an alternative to Node.js][article_son] by Bryant Son, March 2021.
 - [How to compile Rust into WebAssembly and run it in Deno][article_rivero] by Elia Rivero, July 2020.
 - [How JavaScript works: introduction to Deno][article_sayfan] by Gigi Sayfan, May 2020.
@@ -48,6 +49,7 @@
 ## <span id="tools">Tools and Frameworks</span>
 
 - [Cliffy](https://github.com/c4spar/deno-cliffy) - a command line framework for [Deno][deno_land].
+- [Deno AST](https://github.com/denoland/deno_ast) - a ES2021 lexer/parser written in Rust.
 - [Deno Deploy](https://deno.com/deploy) - a globally distributed JavaScript VM.
 - [Drash](https://github.com/drashland/deno-drash) - a REST microframework for [Deno][deno_land]'s HTTP server.
 - [Oak][tool_aok] - a middleware framework for handling HTTP with [Deno][deno_land].
@@ -68,6 +70,7 @@
 
 <!-- link refs -->
 
+[article_baumgartner]: https://fettblog.eu/dissecting-deno/
 [article_rivero]: https://startfunction.com/rust-webassembly-deno/
 [article_sayfan]: https://blog.sessionstack.com/how-javascript-works-introduction-to-deno-a3b1153b1855
 [article_son]: https://opensource.com/article/21/3/deno-programming

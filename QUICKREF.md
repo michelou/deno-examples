@@ -14,9 +14,9 @@ Covered topics include: [Deno versus Node.js](#nodejs), [Deno subcommands](#subc
 <!--
 https://alanstorm.com/comparing-a-deno-and-node-js-hello-world-program/
 -->
-1. CommonJS vs. ECMAScript modules
+1. CommonJS versus ECMAScript modules
 
-   <a href="https://deno.land/">Deno</a> supports <i>only</i> the ECMAScript modules (short <i>ES modules</i>) while <a href="https://nodejs.org/">Node.js</a> supports both formats for the CommonJS and ECMAScript modules.
+   <a href="https://deno.land/">Deno</a> supports <i>only</i> the ECMAScript modules (short <i>ES modules</i> or <i>ESM</i>) while <a href="https://nodejs.org/">Node.js</a> supports both formats for the CommonJS and ECMAScript modules.
 
    <pre style="font-size:80%;">
    <b>const</b> http = require('http'); <span style="color:green;">/* CommonJS */</span>
@@ -25,9 +25,9 @@ https://alanstorm.com/comparing-a-deno-and-node-js-hello-world-program/
 
    > **:mag_right:** Deno supports the `@deno-types` compiler hint to specify a type definition file when type checking instead of the imported JavaScript file (see "[Providing types when importing](https://deno.land/manual@v1.9.2/typescript/types#providing-types-when-importing)").
 
-2. Runtime vs. Standard library
+2. Runtime versus Standard library
 
-   Unlike Node.js <a href="https://deno.land/">Deno</a> has a lightweight built-in runtime of around 130 methods, functions and classes.
+   Unlike Node.js <a href="https://deno.land/">Deno</a> has a lightweight built-in runtime of around 130 methods, functions and classes. See section [Deno Runtime](#runtime) for more details.
 
 ## <span id="subcommands">Deno Subcommands</span>
 
