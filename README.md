@@ -11,7 +11,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
   </tr>
 </table>
 
-[GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples] and [TruffleSqueak][trufflesqueak_examples] are other trending topics we are currently monitoring.
+[GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other trending topics we are currently monitoring.
 <!--
 > &#9757; ***Motivation***<br/>
 > Our interest in [Deno][deno_land] is mainly driven by our past work with [Node.js][nodejs] (full stack projects).
@@ -20,7 +20,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 
 This project depends on two external software for the **Microsoft Windows** plaform:
 
-- [Deno 1.15][deno_downloads] <sup id="anchor_01"><a href="#footnote_01">[1]</a></sup> ([*release notes*][deno_relnotes])
+- [Deno 1.16][deno_downloads] <sup id="anchor_01"><a href="#footnote_01">[1]</a></sup> ([*release notes*][deno_relnotes])
 - [Git 2.33][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
@@ -34,7 +34,7 @@ For instance our development environment looks as follows (October 2021) <sup id
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.15.3\            <i>( 54 MB)</i>
+C:\opt\deno-1.16.1\            <i>( 54 MB)</i>
 C:\opt\Git-2.33.1\             <i>(279 MB)</i>
 C:\opt\nmap-7.92\              <i>( 41 MB)</i>
 C:\opt\node-v14.18.1-win-x64\  <i>( 75 MB)</i>
@@ -87,8 +87,8 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 
 <pre style="margin:0 0 1em 20px; font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.15.3 (release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 9.5.172.19
+deno 1.16.1 (release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 9.7.106.2
 typescript 4.4.2
 </pre>
 
@@ -111,7 +111,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/October 2021* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/November 2021* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -120,7 +120,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
 [git_docs]: https://git-scm.com/docs/git
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.15.3
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.16.1
 [git_downloads]: https://git-scm.com/download/win
 [git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.33.1.txt
 [github_markdown]: https://github.github.com/gfm/
@@ -150,4 +150,5 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [trufflesqueak_examples]: https://github.com/michelou/trufflesqueak-examples
 [windows_limitation]: https://support.microsoft.com/en-gb/help/830473/command-prompt-cmd-exe-command-line-string-limitation
 [windows_subst]: https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/subst
+[wix_examples]: https://github.com/michelou/wix-examples
 [zip_archive]: https://www.howtogeek.com/178146/htg-explains-everything-you-need-to-know-about-zipped-files/
