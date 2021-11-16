@@ -46,6 +46,11 @@
 - [Changelog++](https://changelog.com): [Deno News and Podcasts](https://changelog.com/topic/deno).
 - [Deno Weekly](https://denoweekly.com/).
 
+## <span id="projects">Projects</span>
+
+- [Snel](https://github.com/crewdevio/Snel) - a cybernetical framework for [Svelte][svelte_dev] applications in [Deno][deno_land].
+- [swapi-deno](https://github.com/davidjsalazarmoreno/swapi-deno) - a SWAPI clone but using [Deno][deno_land] and [Svelte][svelte_dev]. 
+
 ## <span id="tools">Tools and Frameworks</span>
 
 - [Cliffy](https://github.com/c4spar/deno-cliffy) - a command line framework for [Deno][deno_land].
@@ -92,4 +97,5 @@
 [book_doglio]: https://www.apress.com/gp/book/9781484261965
 [book_portela]: https://www.packtpub.com/product/deno-web-development/9781800205666
 [deno_land]: https://deno.land/
+[svelte_dev]: https://svelte.dev/
 [tool_aok]: https://oakserver.github.io/oak/
