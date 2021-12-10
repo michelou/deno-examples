@@ -113,7 +113,7 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
 
    Interfaces in the `Deno` namespace are:
    <pre style="font-size:80%;">
-   <b>&gt; set NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin Deno |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]interface"</b>
+   <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/set_1">set</a> NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin Deno |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]interface"</b>
    interface <a href="https://doc.deno.land/builtin/stable#Deno.MemoryUsage">MemoryUsage</a>
    interface TestDefinition
    interface Reader
@@ -191,7 +191,7 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/November 2021* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/December 2021* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

@@ -21,7 +21,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 This project depends on two external software for the **Microsoft Windows** plaform:
 
 - [Deno 1.16][deno_downloads] <sup id="anchor_01"><a href="#footnote_01">[1]</a></sup> ([*release notes*][deno_relnotes])
-- [Git 2.33][git_downloads] ([*release notes*][git_relnotes])
+- [Git 2.34][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
@@ -30,14 +30,14 @@ Optionally one may also install the following software:
 
 > **:mag_right:** Git for Windows provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (October 2021) <sup id="anchor_03"><a href="#footnote_03">[3]</a></sup>:
+For instance our development environment looks as follows (December 2021) <sup id="anchor_03"><a href="#footnote_03">[3]</a></sup>:
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.16.1\            <i>( 54 MB)</i>
-C:\opt\Git-2.33.1\             <i>(279 MB)</i>
+C:\opt\deno-1.16.4\            <i>( 54 MB)</i>
+C:\opt\Git-2.34.1\             <i>(279 MB)</i>
 C:\opt\nmap-7.92\              <i>( 41 MB)</i>
-C:\opt\node-v14.18.1-win-x64\  <i>( 75 MB)</i>
+C:\opt\node-v14.18.2-win-x64\  <i>( 75 MB)</i>
 </pre>
 
 > **&#9755;** ***Installation policy***<br/>
@@ -87,8 +87,8 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 
 <pre style="margin:0 0 1em 20px; font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.16.1 (release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 9.7.106.2
+deno 1.16.4 (release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 9.7.106.15
 typescript 4.4.2
 </pre>
 
@@ -106,12 +106,13 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <pre style="margin:0 0 1em 20px; font-size:80%;">
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.92-win32.zip</a>               <i>(22 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.33.1-64-bit.7z.exe</a>  <i>(41 MB)</i>
+<a href="https://nodejs.org/dist/latest-v14.x/">node-v14.18.2-win-x64.zip</a>         <i>(27 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.34.1-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/November 2021* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/December 2021* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -120,9 +121,9 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
 [git_docs]: https://git-scm.com/docs/git
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.16.1
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.16.4
 [git_downloads]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.33.1.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.34.1.txt
 [github_markdown]: https://github.github.com/gfm/
 [graalvm_examples]: https://github.com/michelou/graalvm-examples
 [haskell_examples]: https://github.com/michelou/haskell-examples
