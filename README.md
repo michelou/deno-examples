@@ -11,7 +11,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
   </tr>
 </table>
 
-[GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other trending topics we are currently monitoring.
+[GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other trending topics we are continuously monitoring.
 <!--
 > &#9757; ***Motivation***<br/>
 > Our interest in [Deno][deno_land] is mainly driven by our past work with [Node.js][nodejs] (full stack projects).
@@ -20,17 +20,17 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 
 This project depends on two external software for the **Microsoft Windows** plaform:
 
-- [Deno 1.16][deno_downloads] <sup id="anchor_01"><a href="#footnote_01">[1]</a></sup> ([*release notes*][deno_relnotes])
+- [Deno 1.16][deno_downloads] <sup id="anchor_01"><a href="#footnote_01">1</a></sup> ([*release notes*][deno_relnotes])
 - [Git 2.34][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
-- [Nmap 7.92][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">[2]</a></sup> ([*change log*][nmap_changelog])
+- [Nmap 7.92][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 14.x LTS][nodejs14_downloads] ([*change log*][nodejs14_changelog])
 
 > **:mag_right:** Git for Windows provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (December 2021) <sup id="anchor_03"><a href="#footnote_03">[3]</a></sup>:
+For instance our development environment looks as follows (December 2021) <sup id="anchor_03"><a href="#footnote_03">3</a></sup>:
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
@@ -48,8 +48,8 @@ C:\opt\node-v14.18.2-win-x64\  <i>( 75 MB)</i>
 This project is organized as follows:
 <pre style="font-size:80%;">
 <a href="docs/">docs\</a>
-<a href="examples/">examples\</a>
-<a href="portela-examples/">portela-examples\</a>
+<a href="examples/">examples\</a>{<a href="examples/README.md">README.md</a>}
+<a href="portela-examples/">portela-examples\</a>{<a href="portela-examples/README.md">README.md</a>, <a href="portela-examples/Chapter01/">Chapter01</a>}
 README.md
 <a href="QUICKREF.md">QUICKREF.md</a>
 <a href="RESOURCES.md">RESOURCES.md</a>
@@ -79,7 +79,7 @@ We also define a virtual drive **`O:`** in our working environment in order to r
 
 ## <span id="footnotes">Footnotes</span>
 
-<span name="footnote_01">[1]</span> ***Deno TypeScript*** [↩](#anchor_01)
+<span id="footnote_01">[1]</span> ***Deno TypeScript*** [↩](#anchor_01)
 
 <p style="margin:0 0 1em 20px;">
 Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-4/" rel="external"><code>4.4.2</code></a> in our case:
@@ -92,13 +92,13 @@ deno 1.16.4 (release, x86_64-pc-windows-msvc)
 typescript 4.4.2
 </pre>
 
-<span name="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
+<span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
 <p style="margin:0 0 1em 20px;">
 We are mostly interested in the <a href="https://nmap.org/ncat/guide/"><code>Ncat</code></a> tool for reading, writing, redirecting, and encrypting data across a network. <a href="https://nmap.org/ncat/guide/"><code>Ncat</code></a> operates in one of two modes: in connect mode, <a href="https://nmap.org/ncat/guide/"><code>Ncat</code></a> works as a client, in listen mode it is a server,
 </p>
 
-<span name="footnote_03">[3]</span> ***Downloads*** [↩](#anchor_03)
+<span id="footnote_03">[3]</span> ***Downloads*** [↩](#anchor_03)
 
 <p style="margin:0 0 1em 20px;">
 In our case we downloaded the following installation files (see <a href="#proj_deps">section 1</a>):
