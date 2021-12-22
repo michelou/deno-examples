@@ -20,7 +20,7 @@ https://alanstorm.com/comparing-a-deno-and-node-js-hello-world-program/
 
    <pre style="font-size:80%;">
    <b>const</b> http = require('http'); <span style="color:green;">/* CommonJS */</span>
-   <b>import</b> { serve } <b>from</b> "https://deno.land/std/http/server.ts"; <span style="color:green;">/* ECMAScript */</span>
+   <b>import</b> { serve } <b>from</b> "https://deno.land/std/http/<a href="https://deno.land/std/http/server.ts">server.ts</a>"; <span style="color:green;">/* ECMAScript */</span>
    </pre>
 
    > **:mag_right:** Deno supports the `@deno-types` compiler hint to specify a type definition file when type checking instead of the imported JavaScript file (see "[Providing types when importing](https://deno.land/manual@v1.9.2/typescript/types#providing-types-when-importing)").

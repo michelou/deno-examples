@@ -17,6 +17,7 @@
 
 - [The Definitive TypeScript 4.3 Guide][blog_sitepen_4_3] by Sitepen, July 2021.
 - [Microsoft TypeScript DevBlog][blog_microsoft]
+   - [Announcing TypeScript 4.5][blog_rosenwasser_4_5] by Daniel Rosenwasser, November 2021.
    - [Announcing TypeScript 4.4][blog_rosenwasser_4_4] by Daniel Rosenwasser, August 2021.
    - [Announcing TypeScript 4.3][blog_rosenwasser_4_3] by Daniel Rosenwasser, May 2021.
    - [Announcing TypeScript 4.2][blog_rosenwasser_4_2] by Daniel Rosenwasser, February 2021.
@@ -71,6 +72,7 @@
 [blog_rosenwasser_4_2]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-2/
 [blog_rosenwasser_4_3]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-3/
 [blog_rosenwasser_4_4]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-4/
+[blog_rosenwasser_4_5]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-5/
 [blog_sitepen]: https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
 [blog_sitepen_4_3]: https://www.sitepen.com/blog/update-the-definitive-typescript-guide
 [book_despoudis]: https://www.packtpub.com/product/typescript-4-design-patterns-and-best-practices/9781800563421
