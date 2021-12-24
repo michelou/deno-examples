@@ -21,7 +21,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "console.log(Deno.version)"</b>
-{ deno: "1.17.0", v8: "9.7.106.15", typescript: "4.5.2" }
+{ deno: "1.17.1", v8: "9.7.106.15", typescript: "4.5.2" }
 </pre>
 
 <pre style="font-size:80%;">
@@ -37,7 +37,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "console.log(Deno.env.get('DENO_HOME'))"</b>
-C:\opt\deno-1.16.1
+C:\opt\deno-1.17.1
 </pre>
 
 <pre style="font-size:80%;">
@@ -50,7 +50,7 @@ README.md    TYPESCRIPT.md  docs_LOCAL  examples  react-examples    setenv.sh
 > 
 > <pre style="font-size:80%;">
 > <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/type">type</a> eval.ts</b>
-> const p=Deno.run({ cmd: ['ls', '.'] })
+> const p = Deno.run({ cmd: ['ls', '.'] })
 > await p.status()
 > p.close()
 > &nbsp;

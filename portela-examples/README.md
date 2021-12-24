@@ -10,10 +10,11 @@
 
 ## <span id="chapter01">Chapter 1</span>
 
-### `http-server`
+### <span id="http-server">`http-server`</span>
 
-Example [`http-server.ts`](./Chaper01/http-server/http-server.ts) makes use of the function `serve` from the remote [`std/http`](https://deno.land/std@0.106.0/http) library. The import clauses looks as follows:
+Example [`http-server.ts`](./Chapter01/http-server/http-server.ts) makes use of the function `serve` from the remote [`http`](https://deno.land/std@0.106.0/http) library. The import clauses looks as follows:
 
+<div class="hightlight highlight-source-js">
 <pre style="font-size:80%;">
 <span style="color:green;">// file: http-server.ts</span>
 <b>import</b> { serve } <b>from</b> "https://deno.land/std@0.106.0/http/server.ts"
@@ -22,36 +23,37 @@ Example [`http-server.ts`](./Chaper01/http-server/http-server.ts) makes use of t
   req.respond({ body: "Hello deno" })
 }
 </pre>
+</div>
 
 We can run `http-server` either from the Windows prompt or from a Unix shell:
 
 - We run the batch file [`http-server.bat`](./Chapter01/http-server/http-server.bat) from the Windows prompt. Note that the server process is started only once (it must be stopped manually) when we run the batch file several times:
 
   <pre style="font-size:80%;">
-  <b>&gt; <a href="./Chaper01/http-server/http-server.bat">http-server.bat</a></b>
+  <b>&gt; <a href="./Chapter01/http-server/http-server.bat">http-server.bat</a></b>
   [INFO] Start process listening on port 8080
   [INFO] Respond to the cURL request on port 8080
   Hello deno
   &nbsp;
-  <b>&gt; <a href="./Chaper01/http-server/http-server.bat">http-server.bat</a></b>
+  <b>&gt; <a href="./Chapter01/http-server/http-server.bat">http-server.bat</a></b>
   [INFO] Respond to the cURL request on port 8080
   Hello deno
   </pre>
 
-- We run the shell script [`http-server.sh`](./Chapter01/http-server/http-server.sh) from a Unix shell (Cygwin, MingW or Unix).
+- We run the shell script [`http-server.sh`](./Chapter01/http-server/http-server.sh) from a Unix shell ([Cygwin](https://www.cygwin.com/), [MinGW](https://www.mingw-w64.org/) or Unix).
 
   <pre style="font-size:80%;">
-  <b>&gt; <a href="./Chaper01/http-server/http-server.sh">./http-server.sh</a></b>
+  <b>&gt; <a href="./Chapter01/http-server/http-server.sh">./http-server.sh</a></b>
   [INFO] Start process listening on port 8080
   [INFO] Respond to the cURL request on port 8080
   Hello deno
   &nbsp;
-  <b>&gt; <a href="./Chaper01/http-server/http-server.sh">./http-server.sh</a></b>
+  <b>&gt; <a href="./Chapter01/http-server/http-server.sh">./http-server.sh</a></b>
   [INFO] Respond to the cURL request on port 8080
   Hello deno
   </pre>
 
-### `http-server-deps`
+### <span id="http-server-deps">`http-server-deps`</span>
 
 In this first variant of the above example we split the code into two files:
 
@@ -74,19 +76,23 @@ In this first variant of the above example we split the code into two files:
 In the second variant of the original example we introduce another file:
 
 - we add the file [`import_map.json`](http-server-lock-import/import_map.json)
+   <div class="hightlight highlight-source-js">
    <pre style="font-size:80%;">
    {
      "imports": {
        "http/": "https://deno.land/std@0.106.0/http/"
      }
    }</pre>
+   </div>
 
 - we update the file [`deps.ts`](http-server-lock-import/deps.ts) with a *user-defined name* for the `http` library.
+   <div class="hightlight highlight-source-js">
    <pre style="font-size:80%;">
    <span style="color:green;">// file: deps.ts</span>
    <b>export</b> { serve } <b>from</b> "http/server.ts"</pre>
+   </div>
 
-### `fetch-deno-logo`
+### <span id="fetch-deno-logo">`fetch-deno-logo`</span>
 
 Example [`fetch-deno-logo`](./Chapter01/fetch-deno-logo/fetch-deno-logo.ts) download a SVG image (e.g. the Deno logo) from the Internet and prints the HTML code with the embedded image.
 

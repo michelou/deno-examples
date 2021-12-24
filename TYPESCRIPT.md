@@ -53,7 +53,10 @@
 
 ## <span id="videos">Videos</span>
 
-- [Utility Types - Advanced TypeScript][video_danylov] by Dmytro Danylov, October 2019.
+- Dmytro Danylov's YouTube Channel
+  - [Mapped Types - Advanced TypeScript][video_danylov_may2020], May 2020.
+  - [Conditional Types - Advanced TypeScript][video_danylov_apr2020], April 2020.
+  - [Utility Types - Advanced TypeScript][video_danylov_oct2019], October 2019.
 
 ***
 
@@ -80,4 +83,6 @@
 [book_freeman]: https://www.apress.com/gp/book/9781484270103
 [book_rozentals]: https://www.packtpub.com/product/mastering-typescript-fourth-edition/9781800564732
 [tutorial_basarat]: https://basarat.gitbook.io/typescript/
-[video_danylov]: https://www.youtube.com/watch?v=Fgcu_iB2X04
+[video_danylov_oct2019]: https://www.youtube.com/watch?v=Fgcu_iB2X04
+[video_danylov_apr2020]: https://www.youtube.com/watch?v=QFWrbNehKk0
+[video_danylov_may2020]: https://www.youtube.com/watch?v=RjQpep8fBdo
