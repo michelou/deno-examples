@@ -45,6 +45,10 @@
 - [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html).
 - [Vanilla Coding Standard - TypeScript](https://success.vanillaforums.com/kb/articles/226-coding-standard-typescript) by Todd, April 2020.
 
+## <span id="tools">Tools</span>
+
+- [`typesync`](https://github.com/jeffijoe/typesync) - Install missing TypeScript typings for dependencies in your package.json.
+
 ## <span id="tutorials">Tutorials</span>
 
 - [TypeScript Cheat Sheet](https://droces.github.io/TypeScript-Cheat-Sheet/) (*for TypeScript v3.9+*).
@@ -54,6 +58,7 @@
 ## <span id="videos">Videos</span>
 
 - Dmytro Danylov's YouTube Channel
+  - [TypeScript: Type Compatibility][video_danylov_nov2020], November 2020.
   - [Mapped Types - Advanced TypeScript][video_danylov_may2020], May 2020.
   - [Conditional Types - Advanced TypeScript][video_danylov_apr2020], April 2020.
   - [Utility Types - Advanced TypeScript][video_danylov_oct2019], October 2019.
@@ -86,3 +91,4 @@
 [video_danylov_oct2019]: https://www.youtube.com/watch?v=Fgcu_iB2X04
 [video_danylov_apr2020]: https://www.youtube.com/watch?v=QFWrbNehKk0
 [video_danylov_may2020]: https://www.youtube.com/watch?v=RjQpep8fBdo
+[video_danylov_nov2020]: https://www.youtube.com/watch?v=wqm5ibtCSf0

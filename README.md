@@ -11,7 +11,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
   </tr>
 </table>
 
-[GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other trending topics we are continuously monitoring.
+[Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other trending topics we are continuously monitoring.
 <!--
 > &#9757; ***Motivation***<br/>
 > Our interest in [Deno][deno_land] is mainly driven by our past work with [Node.js][nodejs] (full stack projects).
@@ -82,7 +82,7 @@ We also define a virtual drive **`O:`** in our working environment in order to r
 <span id="footnote_01">[1]</span> ***Deno TypeScript*** [↩](#anchor_01)
 
 <dl><dd>
-Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-4/" rel="external"><code>4.4.2</code></a> in our case:
+Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-5/" rel="external"><code>4.5.2</code></a> in our case:
 </dd>
 <dd>
 <pre style="font-size:80%;">
@@ -123,11 +123,12 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [book_portela]: https://www.packtpub.com/product/deno-web-development/9781800205666
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[git_docs]: https://git-scm.com/docs/git
 [deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.17.1
+[git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.34.1.txt
 [github_markdown]: https://github.github.com/gfm/
+[golang_examples]: https://github.com/michelou/golang-examples
 [graalvm_examples]: https://github.com/michelou/graalvm-examples
 [haskell_examples]: https://github.com/michelou/haskell-examples
 [kotlin_examples]: https://github.com/michelou/kotlin-examples

@@ -9,7 +9,7 @@
   </tr>
 </table>
 
-> **:mag_right:** The Deno Standard Library includes [Deno examples](https://deno.land/std/examples) which the user can execute directly from the command prompt, e.g.
+> **:mag_right:** The Deno Standard Library <sup id="anchor_01"><a href="#footnote_01">1</a></sup> includes [Deno examples](https://deno.land/std/examples) which the user can execute directly from the command prompt, e.g.
 >
 > <pre style="font-size:80%;">
 > <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> run https://demo.land/std/examples/welcome.ts</b>
@@ -59,6 +59,15 @@ README.md    TYPESCRIPT.md  docs_LOCAL  examples  react-examples    setenv.sh
 > QUICKREF.md  RESOURCES.md   docs        eval.ts   portela-examples  setenv.bat
 > README.md    TYPESCRIPT.md  docs_LOCAL  examples  react-examples    setenv.sh
 > </pre>
+
+
+## <span id="footnotes">Footnotes</span>
+
+<span id="footnote_01">[1]</span> **`std`** [↩](#anchor_01)
+
+<dl><dd>
+<a href="https://deno.land/manual/contributing/style_guide#codestdcode"><code>https://deno.land/std/</code></a> provides the baseline functionality that all Deno programs can rely on.
+</dd></dl>
 
 ***
 
