@@ -1,4 +1,4 @@
-name: Manual workflow
+name: Default workflow
 
 on:
   push:
@@ -12,5 +12,6 @@ jobs:
     - name: Print environment
       run: |
         Write-host "Print environment"
-        $psversiontable
-        get-computerinfo
+        # $psversiontable
+        Get-Computerinfo -property 'OsArchitecture','OsLocale','OsProductType','OsName','OsVersion','TimeZone' | Format-List
+        Get-ChildItem env:* | Sort-Object Name
