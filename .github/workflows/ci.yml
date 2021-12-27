@@ -41,8 +41,9 @@ jobs:
     runs-on: windows-latest
     
     steps:
-    - name: Chapter 1 examples
+    - name: Checkout
       uses: actions/checkout@v2
+    - name: Chapter 1 examples
       shell: cmd
       run: |
         dir "Chapter01\http-server\http-server.bat"
