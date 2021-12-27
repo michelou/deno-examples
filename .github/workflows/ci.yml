@@ -47,4 +47,8 @@ jobs:
     - name: Chapter 1 examples
       shell: cmd
       run: |
-        dir "%RUNNER_WORKSPACE%\Chapter01\http-server\http-server.bat"
+        @echo dir "%GITHUB_WORKSPACE%"
+        dir "%GITHUB_WORKSPACE%"
+        @echo dir "%RUNNER_WORKSPACE%"
+        dir "%RUNNER_WORKSPACE%"
+        # dir "%RUNNER_WORKSPACE%\Chapter01\http-server\http-server.bat"
