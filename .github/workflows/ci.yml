@@ -19,6 +19,7 @@ jobs:
       shell: cmd
       run: |
         where curl.exe
+        @echo Current directory: "%CD%"
 
   setenv:
     needs: printenv
@@ -46,4 +47,4 @@ jobs:
     - name: Chapter 1 examples
       shell: cmd
       run: |
-        dir "Chapter01\http-server\http-server.bat"
+        dir "%RUNNER_WORKSPACE%\Chapter01\http-server\http-server.bat"
