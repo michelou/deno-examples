@@ -50,5 +50,4 @@ jobs:
       run: |
         @echo "GITHUB_WORKSPACE=%GITHUB_WORKSPACE%"
         @echo "CWD=%CD%"
-        "%GITHUB_WORKSPACE%\portela-examples\Chapter01\http-server\http-server.bat"
-        "%GITHUB_WORKSPACE%\portela-examples\Chapter01\http-server\http-server.bat"
+        type "%GITHUB_WORKSPACE%\portela-examples\Chapter01\http-server\http-server.bat"
