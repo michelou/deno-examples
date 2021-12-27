@@ -14,4 +14,17 @@ jobs:
         Write-host "Print environment"
         # $psversiontable
         Get-Computerinfo -property 'OsArchitecture','OsLocale','OsProductType','OsName','OsVersion','TimeZone' | Format-List
-        Get-ChildItem env:* | Sort-Object Name
+        Get-ChildItem env:*HOME* | Sort-Object Name
+
+  setenv:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Set up Deno
+      uses: denoland/setup-deno@v1
+      with:
+        deno-version: v1.17
+    - name: Print Deno environment
+      run: |
+        deno --version
+        deno run https://demo.land/std/examples/welcome.ts
