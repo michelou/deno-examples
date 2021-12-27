@@ -1,0 +1,13 @@
+name: Manual workflow
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  printenv:
+    runs-on: windows-latest
+
+    steps:
+    - name: Print environment
+      run: echo Hello %USERPROFILE%
