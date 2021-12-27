@@ -17,6 +17,7 @@ jobs:
         Get-ChildItem env:*HOME* | Sort-Object Name
 
   setenv:
+    needs: printenv
     runs-on: windows-latest
     
     steps:
@@ -24,7 +25,9 @@ jobs:
       uses: denoland/setup-deno@v1
       with:
         deno-version: v1.17
-    - name: Print Deno environment
+    - name: Print Deno version
       run: |
         deno --version
+        # https://deno.land/manual/getting_started/permissions#permissions-list
         deno run https://demo.land/std/examples/welcome.ts
+        deno eval "console.log(Deno.version)"

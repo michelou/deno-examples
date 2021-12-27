@@ -12,7 +12,7 @@
 > **:mag_right:** The Deno Standard Library <sup id="anchor_01"><a href="#footnote_01">1</a></sup> includes [Deno examples](https://deno.land/std/examples) which the user can execute directly from the command prompt, e.g.
 >
 > <pre style="font-size:80%;">
-> <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> run https://demo.land/std/examples/welcome.ts</b>
+> <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> run https://deno.land/std/examples/welcome.ts</b>
 > Check https://deno.land/std/examples/welcome.ts
 > Welcome to Deno!
 > </pre>
