@@ -10,4 +10,7 @@ jobs:
 
     steps:
     - name: Print environment
-      run: echo Hello %USERPROFILE%
+      run: |
+        Write-host "Print environment"
+        $psversiontable
+        get-computerinfo
