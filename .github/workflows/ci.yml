@@ -15,6 +15,10 @@ jobs:
         # $psversiontable
         Get-Computerinfo -property 'OsArchitecture','OsLocale','OsProductType','OsName','OsVersion','TimeZone' | Format-List
         Get-ChildItem env:*HOME* | Sort-Object Name
+    - name: Print environment (cmd)
+      shell: cmd
+      run: |
+        where curl.exe
 
   setenv:
     needs: printenv
@@ -31,3 +35,14 @@ jobs:
         # https://deno.land/manual/getting_started/permissions#permissions-list
         deno run https://deno.land/std/examples/welcome.ts
         deno eval "console.log(Deno.version)"
+
+  portela-examples:
+    needs: setenv
+    runs-on: windows-latest
+    
+    steps:
+    - name: Chapter 1 examples
+      uses: actions/checkout@v2
+      shell: cmd
+      run: |
+        dir "Chapter01\http-server\http-server.bat"
