@@ -29,5 +29,5 @@ jobs:
       run: |
         deno --version
         # https://deno.land/manual/getting_started/permissions#permissions-list
-        deno run https://demo.land/std/examples/welcome.ts
+        deno run https://deno.land/std/examples/welcome.ts
         deno eval "console.log(Deno.version)"
