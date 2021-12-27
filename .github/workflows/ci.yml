@@ -40,6 +40,7 @@ jobs:
   portela-examples:
     needs: setenv
     runs-on: windows-latest
+    timeout-minutes: 2
     
     steps:
     - name: Checkout
@@ -47,6 +48,6 @@ jobs:
     - name: Chapter 1 examples
       shell: cmd
       run: |
-        dir "%GITHUB_WORKSPACE%"
-        dir "%RUNNER_WORKSPACE%\Chapter01\http-server\http-server.bat"
-        dir "%RUNNER_WORKSPACE%\deno-examples"
+        dir /b "%GITHUB_WORKSPACE%"
+        "%RUNNER_WORKSPACE%\portela-examples\Chapter01\http-server\http-server.bat"
+        "%RUNNER_WORKSPACE%\portela-examples\Chapter01\http-server\http-server.bat"
