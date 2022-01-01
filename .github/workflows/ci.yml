@@ -30,16 +30,22 @@ jobs:
       uses: denoland/setup-deno@v1
       with:
         deno-version: v1.17
-    - name: Print Deno version
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - name: Check environment setup
       run: |
         deno --version
         # https://deno.land/manual/getting_started/permissions#permissions-list
         deno run https://deno.land/std/examples/welcome.ts
         deno eval "console.log(Deno.version)"
+        node --version
 
   portela-examples:
     needs: setenv
     runs-on: windows-latest
+    # The default timeout for each task is 360 minutes.
     timeout-minutes: 2
     
     steps:

@@ -34,6 +34,8 @@
 - [Mastering TypeScript ][book_rozentals] (4<sup>th</sup> Ed.) by Nathan Rozentals, April 2021.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8005-6473-2, 538 pages)</span>
 - [Essential TypeScript 4][book_freeman] by Adam Freeman, April 2021.<br/><span style="font-size:80%;">(Apress, ISBN 978-1-4842-7010-3, 580 pages)</span>
 - [TypeScript Quickly][book_fain] by Yakov Fain and Anton Moiseev, February 2020.<br/><span style="font-size:80%;">([Manning](https://www.manning.com/), ISBN 978-1-6172-9594-2, 488 pages)</span>
+- [Effective TypeScript][book_vanderkam] by Dan Vanderkam, October 2019.<br/><span style="font-size:80%;">(O'Reilly Media, ISBN 978-1-4920-5374-3, 0 pages)</span>
+- [Refactoring TypeScript][book_hickey] by James Hickey, October 2019.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8392-1804-0, 120 pages)</span>
 
 ## <span id="community">Community</span>
 
@@ -65,7 +67,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/December 2021* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/January 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -86,7 +88,9 @@
 [book_despoudis]: https://www.packtpub.com/product/typescript-4-design-patterns-and-best-practices/9781800563421
 [book_fain]: https://www.manning.com/books/typescript-quickly
 [book_freeman]: https://www.apress.com/gp/book/9781484270103
+[book_hickey]: https://www.packtpub.com/product/refactoring-typescript/9781839218040
 [book_rozentals]: https://www.packtpub.com/product/mastering-typescript-fourth-edition/9781800564732
+[book_vanderkam]: https://www.oreilly.com/library/view/effective-typescript/9781492053736/
 [tutorial_basarat]: https://basarat.gitbook.io/typescript/
 [video_danylov_oct2019]: https://www.youtube.com/watch?v=Fgcu_iB2X04
 [video_danylov_apr2020]: https://www.youtube.com/watch?v=QFWrbNehKk0
