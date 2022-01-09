@@ -34,7 +34,7 @@ For instance our development environment looks as follows (January 2022) <sup id
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.17.1\            <i>( 54 MB)</i>
+C:\opt\deno-1.17.2\            <i>( 54 MB)</i>
 C:\opt\Git-2.34.1\             <i>(279 MB)</i>
 C:\opt\nmap-7.92\              <i>( 41 MB)</i>
 C:\opt\node-v14.18.2-win-x64\  <i>( 75 MB)</i>
@@ -87,7 +87,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.17.1 (release, x86_64-pc-windows-msvc)
+deno 1.17.2 (release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 9.7.106.15
 typescript 4.5.2
 </pre>
@@ -123,7 +123,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [book_portela]: https://www.packtpub.com/product/deno-web-development/9781800205666
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.17.1
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.17.2
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.34.1.txt

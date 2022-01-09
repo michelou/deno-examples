@@ -21,7 +21,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "console.log(Deno.version)"</b>
-{ deno: "1.17.1", v8: "9.7.106.15", typescript: "4.5.2" }
+{ deno: "1.17.2", v8: "9.7.106.15", typescript: "4.5.2" }
 </pre>
 
 <pre style="font-size:80%;">
@@ -37,7 +37,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "console.log(Deno.env.get('DENO_HOME'))"</b>
-C:\opt\deno-1.17.1
+C:\opt\deno-1.17.2
 </pre>
 
 <pre style="font-size:80%;">
@@ -60,6 +60,29 @@ README.md    TYPESCRIPT.md  docs_LOCAL  examples  react-examples    setenv.sh
 > README.md    TYPESCRIPT.md  docs_LOCAL  examples  react-examples    setenv.sh
 > </pre>
 
+## <span id="cat">`cat` Example</span>
+
+We present three variations of the `cat` example :
+- Firstly [`cat.bat`](cat/cat.bat) runs the *remote* file [`cat.ts`](https://deno.land/std@0.120.0/examples/cat.ts) from the `std` library.
+- Secondly [`cat.bat`](cat_2/cat.bat) runs the same file [`cat.ts`](cat_2/cat.ts) *locally*.
+- Finally, [`cat.bat`](cat_3/cat.bat) runs the modified local file [`cat.ts`](cat_3/cat.ts) with its dependencies defined in the separate file [`import_map.json`](cat_3/import_map.json). 
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="cat_3/cat.bat">cat.bat</a></b>
+&nbsp;
+<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> run --allow-read "--importmap=O:\examples\cat_3\import_map.json" "O:\examples\cat_3\cat.ts" "O:\examples\cat_3\cat.bat"</b>
+Check file:///O:/examples/cat_3/cat.ts
+@set _BASENAME=%~n0
+@set "_ROOT_DIR=%~dp0"
+
+@set "_IMPORT_FILE=%_ROOT_DIR%import_map.json"
+@set "_SCRIPT_FILE=%_ROOT_DIR%%_BASENAME%.ts"
+@set _SCRIPT_ARGS="%_ROOT_DIR%%_BASENAME%.bat"
+
+@set _RUN_OPTS=--allow-read "--importmap=%_IMPORT_FILE%"
+
+deno run %_RUN_OPTS% "%_SCRIPT_FILE%" %_SCRIPT_ARGS%
+</pre>
 
 ## <span id="footnotes">Footnotes</span>
 
