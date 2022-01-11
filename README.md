@@ -11,7 +11,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
   </tr>
 </table>
 
-[Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other trending topics we are continuously monitoring.
+[Ada][ada_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other trending topics we are continuously monitoring.
 <!--
 > &#9757; ***Motivation***<br/>
 > Our interest in [Deno][deno_land] is mainly driven by our past work with [Node.js][nodejs] (full stack projects).
@@ -120,6 +120,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 <!-- link refs -->
 
+[ada_examples]: https://github.com/michelou/ada-examples
 [book_portela]: https://www.packtpub.com/product/deno-web-development/9781800205666
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
