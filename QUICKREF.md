@@ -29,7 +29,7 @@ https://alanstorm.com/comparing-a-deno-and-node-js-hello-world-program/
 
    Unlike Node.js <a href="https://deno.land/">Deno</a> has a lightweight built-in runtime of around 130 methods, functions and classes. See section [Deno Runtime](#runtime) for more details.
 
-## <span id="subcommands">Deno Subcommands</span> <sup style="font-size:60%;">[**&#9650;**](#top)</sup>
+## <span id="subcommands">Deno Subcommands</span> [**&#9650;**](#top)
 
 ### **`deno cache`**
 
@@ -79,7 +79,7 @@ function writeFile(path: string | URL, data: Uint8Array, options?: WriteFileOpti
   Requires `allow-write` permission, and `allow-read` if `options.create` is `false`.
 </pre>
 
-## <span id="runtime">Deno Runtime</span> <sup style="font-size:60%;">[**&#9650;**](#top)</sup>
+## <span id="runtime">Deno Runtime</span> [**&#9650;**](#top)
 
 <!-- Deno Web Development, p.59 -->
 Two types of functions are available on Deno without any imports: [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) and the Deno built-in API. Code written using Web APIs can be bundled and run in the browser with no transformations.
