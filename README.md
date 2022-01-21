@@ -20,7 +20,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 
 This project depends on two external software for the **Microsoft Windows** plaform:
 
-- [Deno 1.17][deno_downloads] <sup id="anchor_01"><a href="#footnote_01">1</a></sup> ([*release notes*][deno_relnotes])
+- [Deno 1.18][deno_downloads] <sup id="anchor_01"><a href="#footnote_01">1</a></sup> ([*release notes*][deno_relnotes])
 - [Git 2.34][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
@@ -34,7 +34,7 @@ For instance our development environment looks as follows (January 2022) <sup id
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.17.3\            <i>( 54 MB)</i>
+C:\opt\deno-1.18.0\            <i>( 54 MB)</i>
 C:\opt\Git-2.34.1\             <i>(279 MB)</i>
 C:\opt\nmap-7.92\              <i>( 41 MB)</i>
 C:\opt\node-v14.18.2-win-x64\  <i>( 75 MB)</i>
@@ -87,11 +87,13 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.17.3 (release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 9.7.106.15
+deno 1.18.0 (release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 9.8.177.6
 typescript 4.5.2
 </pre>
 </dd></dl>
+<!-- deno 1.17.3: v8 9.7.106.15, typescript 4.5.2 -->
+<!-- deno 1.18.0: v8 9.8.177.6,  typescript 4.5.2 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
