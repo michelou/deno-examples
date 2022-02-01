@@ -21,7 +21,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 This project depends on two external software for the **Microsoft Windows** plaform:
 
 - [Deno 1.18][deno_downloads] <sup id="anchor_01"><a href="#footnote_01">1</a></sup> ([*release notes*][deno_relnotes])
-- [Git 2.34][git_downloads] ([*release notes*][git_relnotes])
+- [Git 2.35][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
@@ -30,14 +30,14 @@ Optionally one may also install the following software:
 
 > **:mag_right:** Git for Windows provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (January 2022) <sup id="anchor_03">[3](#footnote_03)</sup>:
+For instance our development environment looks as follows (February 2022) <sup id="anchor_03">[3](#footnote_03)</sup>:
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
 C:\opt\deno-1.18.0\            <i>( 54 MB)</i>
-C:\opt\Git-2.34.1\             <i>(279 MB)</i>
+C:\opt\Git-2.35.1\             <i>(282 MB)</i>
 C:\opt\nmap-7.92\              <i>( 41 MB)</i>
-C:\opt\node-v14.18.2-win-x64\  <i>( 75 MB)</i>
+C:\opt\node-v14.18.3-win-x64\  <i>( 75 MB)</i>
 </pre>
 
 > **&#9755;** ***Installation policy***<br/>
@@ -110,14 +110,14 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <pre style="font-size:80%;">
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.92-win32.zip</a>               <i>(22 MB)</i>
-<a href="https://nodejs.org/dist/latest-v14.x/">node-v14.18.2-win-x64.zip</a>         <i>(27 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.34.1-64-bit.7z.exe</a>  <i>(41 MB)</i>
+<a href="https://nodejs.org/dist/latest-v14.x/">node-v14.18.3-win-x64.zip</a>         <i>(27 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.35.1-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
 </dd></dl>
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/January 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/February 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -129,7 +129,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.17.3
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.34.1.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.35.1.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples
 [graalvm_examples]: https://github.com/michelou/graalvm-examples
