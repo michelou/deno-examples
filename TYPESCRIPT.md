@@ -2,8 +2,8 @@
 
 <table style="font-family:Helvetica,Arial;font-size:14px;line-height:1.6;">
   <tr>
-  <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://www.typescriptlang.org/" rel="external"><img style="border:0;" src="./docs/ts-logo-round-128.png" width="100" alt="Deno logo"/></a></td>
-  <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://www.typescriptlang.org/" rel="external">TypeScript</a> related resources we have collected so far.
+  <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://www.typescriptlang.org/" rel="external"><img style="border:0;" src="./docs/images/ts-logo-round-128.png" width="100" alt="TypeScript project"/></a></td>
+  <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://www.typescriptlang.org/" rel="external">TypeScript</a> related resources that caught our attention.
   </td>
   </tr>
 </table>
@@ -17,6 +17,7 @@
 
 - [The Definitive TypeScript 4.3 Guide][blog_sitepen_4_3] by Sitepen, July 2021.
 - [Microsoft TypeScript DevBlog][blog_microsoft]
+   - [Announcing TypeScript 4.6][blog_rosenwasser_4_6] by Daniel Rosenwasser, January 2022.
    - [Announcing TypeScript 4.5][blog_rosenwasser_4_5] by Daniel Rosenwasser, November 2021.
    - [Announcing TypeScript 4.4][blog_rosenwasser_4_4] by Daniel Rosenwasser, August 2021.
    - [Announcing TypeScript 4.3][blog_rosenwasser_4_3] by Daniel Rosenwasser, May 2021.
@@ -83,6 +84,7 @@
 [blog_rosenwasser_4_3]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-3/
 [blog_rosenwasser_4_4]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-4/
 [blog_rosenwasser_4_5]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-5/
+[blog_rosenwasser_4_6]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-6-beta/
 [blog_sitepen]: https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
 [blog_sitepen_4_3]: https://www.sitepen.com/blog/update-the-definitive-typescript-guide
 [book_despoudis]: https://www.packtpub.com/product/typescript-4-design-patterns-and-best-practices/9781800563421

@@ -2,7 +2,7 @@
 
 <table style="font-family:Helvetica,Arial;font-size:14px;line-height:1.6;">
   <tr>
-  <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://deno.land/" rel="external"><img style="border:0;" src="./docs/deno.svg" width="100" alt="Deno logo"/></a></td>
+  <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://deno.land/" rel="external"><img style="border:0;" src="./docs/images/deno.svg" width="100" alt="Deno logo"/></a></td>
   <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://deno.land/" rel="external">Deno</a> hints and tips.
   </td>
   </tr>
@@ -46,11 +46,11 @@ The following command displays the documentation for method `serve` of the stand
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc https://deno.land/std@0.106.0/http/<a href="https://deno.land/std@0.106.0/http/server.ts">server.ts</a> serve</b>
 Defined in https://deno.land/std@0.106.0/http/server.ts:299:0
 
-function serve(addr: string | HTTPOptions): Server
+<b>function</b> serve(addr: string | HTTPOptions): Server
   Create a HTTP server
 
       import { serve } from "https://deno.land/std/http/server.ts";
-      const body = "Hello World\n";
+      <b>const</b> body = "Hello World\n";
       const server = serve({ port: 8000 });
       for await (const req of server) {
         req.respond({ body });

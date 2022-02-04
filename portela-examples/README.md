@@ -105,16 +105,20 @@ Example [`fetch-deno-logo`](./Chapter01/fetch-deno-logo/fetch-deno-logo.ts) down
 
 ## <span id="chapter02">Chapter 2</span>
 
-<i>WIP</i>
+<i>wip</i>
 
 
 ## <span id="chapter04">Chapter 4</span>
 
-<i>WIP</i>
+<i>wip</i>
+
+## <span id="chapter05">Chapter 5</span>
+
+<i>wip</i>
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/January 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/February 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
