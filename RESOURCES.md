@@ -35,7 +35,7 @@
 
 ## <span id="books">Books</span>
 
-- [The Internals of Deno](https://choubey.gitbook.io/internals-of-deno/) (*online book*) by Mayank Choubey.
+- &#128077; [The Internals of Deno](https://choubey.gitbook.io/internals-of-deno/) (*online book*) by Mayank Choubey, December 2021.
 - [A Guide to Deno Core](https://denolib.gitbook.io/guide/) (*online book*) by Kevin Qian and Yingchen Xue.
 - [Deno Web Development][book_portela] by Alexandre Portela, March 2021.<br/><span style="font-size:90%;">(Packt, ISBN 978-1-8002-0566-6, 310 pages)</span>
 - [Introducing Deno][book_doglio] by Fernando Doglio, 2020.<br/><span style="font-size:90%;">(Apress, ISBN 978-1-4842-6196-5, 141 pages)</span>
