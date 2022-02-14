@@ -10,6 +10,11 @@
 
 ## <span id="articles">Articles</span>
 
+- &#128077; [**fettblog.eu**](https://fettblog.eu) Articles:
+   - [TypeScript: The humble function overload][article_baumgartner_overload] by Stefan Baumgartner, November 2021.
+    [TypeScript: In defense of any][article_baumgartner_any] by Stefan Baumgartner, September 2021.
+   - [TypeScript: Array.includes on narrow types][article_baumgartner_array] by Stefan Baumgartner, July 2021.
+   - [TypeScript: Unexpected intersections][article_baumgartner] by Stefan Baumgartner, July 2021.
 - [C# Corner](https://www.c-sharpcorner.com/) - [TypeScript articles](https://www.c-sharpcorner.com/technologies/typescript-articles).
 - [Really Advanced TypeScript Types][article_weber] by Rick Weber, April 2021.
 
@@ -73,6 +78,10 @@
 
 <!-- link refs -->
 
+[article_baumgartner]: https://fettblog.eu/typescript-unexpected-intersections/
+[article_baumgartner_any]: https://fettblog.eu/typescript-any-is-ok/
+[article_baumgartner_array]: https://fettblog.eu/typescript-array-includes/
+[article_baumgartner_overload]: https://fettblog.eu/typescript-function-overload/
 [article_weber]: https://engineering.tableau.com/really-advanced-typescript-types-c590eee59a12
 [blog_isaiah]: https://blog.logrocket.com/typescript-4-1-new-features-and-improvements/
 [blog_microsoft]: https://devblogs.microsoft.com/typescript/
