@@ -56,6 +56,7 @@
 - [Cliffy](https://github.com/c4spar/deno-cliffy) - a command line framework for [Deno][deno_land].
 - [Deno AST](https://github.com/denoland/deno_ast) - a ES2021 lexer/parser written in Rust.
 - [Deno Deploy](https://deno.com/deploy) - a globally distributed JavaScript VM.
+- [dnt](https://github.com/denoland/dnt) - a Deno to npm package build tool.
 - [Drash](https://github.com/drashland/deno-drash) - a REST microframework for [Deno][deno_land]'s HTTP server.
 - [Oak][tool_aok] - a middleware framework for handling HTTP with [Deno][deno_land].
 - [Servest](https://servestjs.org/) - a progressive http server for [Deno][deno_land].
