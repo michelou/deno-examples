@@ -48,6 +48,7 @@
 
 ## <span id="projects">Projects</span>
 
+- [Drash Land](https://github.com/drashland/) - a collection of modules for [Deno][deno_land].
 - [Snel](https://github.com/crewdevio/Snel) - a cybernetical framework for [Svelte][svelte_dev] applications in [Deno][deno_land].
 - [swapi-deno](https://github.com/davidjsalazarmoreno/swapi-deno) - a SWAPI clone but using [Deno][deno_land] and [Svelte][svelte_dev]. 
 
@@ -56,6 +57,7 @@
 - [Cliffy](https://github.com/c4spar/deno-cliffy) - a command line framework for [Deno][deno_land].
 - [Deno AST](https://github.com/denoland/deno_ast) - a ES2021 lexer/parser written in Rust.
 - [Deno Deploy](https://deno.com/deploy) - a globally distributed JavaScript VM.
+- [denon](https://github.com/denosaurs/denon) - a [Deno][deno_land] replacement for [nodemon][nodemon_io] (Node.js).
 - [dnt](https://github.com/denoland/dnt) - a Deno to npm package build tool.
 - [Drash](https://github.com/drashland/deno-drash) - a REST microframework for [Deno][deno_land]'s HTTP server.
 - [Oak][tool_aok] - a middleware framework for handling HTTP with [Deno][deno_land].
@@ -71,7 +73,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/February 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/March 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -98,5 +100,6 @@
 [book_doglio]: https://www.apress.com/gp/book/9781484261965
 [book_portela]: https://www.packtpub.com/product/deno-web-development/9781800205666
 [deno_land]: https://deno.land/
+[nodemon_io]: https://nodemon.io/
 [svelte_dev]: https://svelte.dev/
 [tool_aok]: https://oakserver.github.io/oak/
