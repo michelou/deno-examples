@@ -11,7 +11,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other trending topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other trending topics we are continuously monitoring.
 
 ## <span id="proj_deps">Project dependencies</span>
 
@@ -31,7 +31,7 @@ For instance our development environment looks as follows (March 2022) <sup id="
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.19.2\            <i>( 55 MB)</i>
+C:\opt\deno-1.19.3\            <i>( 55 MB)</i>
 C:\opt\Git-2.35.1\             <i>(282 MB)</i>
 C:\opt\nmap-7.92\              <i>( 41 MB)</i>
 C:\opt\node-v14.19.0-win-x64\  <i>( 75 MB)</i>
@@ -84,8 +84,8 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.19.2 (release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 9.9.115.7
+deno 1.19.3 (release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 9.9.115.8
 typescript 4.5.2
 </pre>
 </dd></dl>
@@ -94,6 +94,7 @@ typescript 4.5.2
 <!-- deno 1.18.2: v8 9.8.177.6,  typescript 4.5.2 -->
 <!-- deno 1.19.0: v8 9.9.115.7,  typescript 4.5.2 -->
 <!-- deno 1.19.2: v8 9.9.115.7,  typescript 4.5.2 -->
+<!-- deno 1.19.3: v8 9.9.115.8,  typescript 4.5.2 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -125,9 +126,10 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [ada_examples]: https://github.com/michelou/ada-examples
 [akka_examples]: https://github.com/michelou/akka-examples
 [book_portela]: https://www.packtpub.com/product/deno-web-development/9781800205666
+[cpp_examples]: https://github.com/michelou/cpp-examples
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.19.2
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.19.3
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.35.1.txt
