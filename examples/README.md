@@ -21,7 +21,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "console.log(Deno.version)"</b>
-{ deno: "1.20.1", v8: "10.0.139.6", typescript: "4.6.2" }
+{ deno: "1.20.3", v8: "10.0.139.6", typescript: "4.6.2" }
 </pre>
 
 <pre style="font-size:80%;">
@@ -37,7 +37,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "console.log(Deno.env.get('DENO_HOME'))"</b>
-C:\opt\deno-1.20.1
+C:\opt\deno-1.20.3
 </pre>
 
 <pre style="font-size:80%;">

@@ -31,10 +31,10 @@ For instance our development environment looks as follows (March 2022) <sup id="
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.20.1\            <i>( 56 MB)</i>
+C:\opt\deno-1.20.3\            <i>( 56 MB)</i>
 C:\opt\Git-2.35.1\             <i>(282 MB)</i>
 C:\opt\nmap-7.92\              <i>( 41 MB)</i>
-C:\opt\node-v14.19.0-win-x64\  <i>( 75 MB)</i>
+C:\opt\node-v14.19.1-win-x64\  <i>( 75 MB)</i>
 </pre>
 
 > **&#9755;** ***Installation policy***<br/>
@@ -79,12 +79,12 @@ We also define a virtual drive **`O:`** in our working environment in order to r
 <span id="footnote_01">[1]</span> ***Deno TypeScript*** [↩](#anchor_01)
 
 <dl><dd>
-Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-5/" rel="external"><code>4.5.2</code></a> in our case:
+Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-6/" rel="external"><code>4.6.2</code></a> in our case:
 </dd>
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.20.1 (release, x86_64-pc-windows-msvc)
+deno 1.20.3 (release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 10.0.139.6
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-6/" rel="external">4.6.2</a>
 </pre>
@@ -96,6 +96,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.19.2: v8  9.9.115.7,  typescript 4.5.2 -->
 <!-- deno 1.19.3: v8  9.9.115.8,  typescript 4.5.2 -->
 <!-- deno 1.20.1: v8 10.0.139.6,  typescript 4.6.2 -->
+<!-- deno 1.20.3: v8 10.0.139.6,  typescript 4.6.2 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -112,7 +113,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <pre style="font-size:80%;">
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.92-win32.zip</a>               <i>(22 MB)</i>
-<a href="https://nodejs.org/dist/latest-v14.x/">node-v14.19.0-win-x64.zip</a>         <i>(27 MB)</i>
+<a href="https://nodejs.org/dist/latest-v14.x/">node-v14.19.1-win-x64.zip</a>         <i>(27 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.35.1-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
 </dd></dl>
@@ -130,7 +131,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [cpp_examples]: https://github.com/michelou/cpp-examples
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.20.1
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.20.3
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.35.1.txt
@@ -154,7 +155,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nmap_changelog]: https://nmap.org/changelog
 [nmap_downloads]: https://nmap.org/download.html
 [nodejs]: https://nodejs.org/en/
-[nodejs14_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V14.md#14.19.0
+[nodejs14_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V14.md#14.19.1
 [nodejs14_downloads]: https://nodejs.org/dist/latest-v14.x/
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [rust_examples]: https://github.com/michelou/rust-examples

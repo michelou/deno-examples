@@ -111,6 +111,7 @@ goto :eof
 @rem input parameter: %*
 @rem output parameter: _HELP, _VERBOSE
 :args
+set _BASH=0
 set _HELP=0
 set _VERBOSE=0
 set __N=0
@@ -120,7 +121,8 @@ if not defined __ARG goto args_done
 
 if "%__ARG:~0,1%"=="-" (
     @rem option
-    if "%__ARG%"=="-debug" ( set _DEBUG=1
+    if "%__ARG%"=="-bash" ( set _BASH=1
+    ) else if "%__ARG%"=="-debug" ( set _DEBUG=1
     ) else if "%__ARG%"=="-verbose" ( set _VERBOSE=1
     ) else (
         echo %_ERROR_LABEL% Unknown option %__ARG% 1>&2
@@ -143,8 +145,9 @@ goto args_loop
 call :subst %_DRIVE_NAME% "%_ROOT_DIR%"
 if not %_EXITCODE%==0 goto :eof
 if %_DEBUG%==1 (
-    echo %_DEBUG_LABEL% Options  : _HELP=%_HELP% _VERBOSE=%_VERBOSE% 1>&2
-    echo %_DEBUG_LABEL% Variables: _DRIVE_NAME=%_DRIVE_NAME% 1>&2
+    echo %_DEBUG_LABEL% Options    : _BASH=%_BASH% _HELP=%_HELP% _VERBOSE=%_VERBOSE% 1>&2
+    echo %_DEBUG_LABEL% Subcommands: _HELP=%_HELP% 1>&2
+    echo %_DEBUG_LABEL% Variables  : _DRIVE_NAME=%_DRIVE_NAME% 1>&2
 )
 goto :eof
 
@@ -448,7 +451,10 @@ endlocal & (
         if not defined NODE_HOME set "NODE_HOME=%_NODE14_HOME%"
         set "PATH=%PATH%%_DENO_PATH%;%_NODE14_HOME%;%_NMAP_HOME%;%_CARGO_PATH%%_GIT_PATH%;%~dp0bin"
         call :print_env %_VERBOSE%
-        if not "%CD:~0,2%"=="%_DRIVE_NAME%:" (
+        if %_BASH%==1 (
+            if %_DEBUG%==1 echo %_DEBUG_LABEL% %_GIT_HOME%\usr\bin\bash.exe --login 1>&2
+            cmd.exe /c "%_GIT_HOME%\usr\bin\bash.exe --login"
+        ) else if not "%CD:~0,2%"=="%_DRIVE_NAME%:" (
             if %_DEBUG%==1 echo %_DEBUG_LABEL% cd /d %_DRIVE_NAME%: 1>&2
             cd /d %_DRIVE_NAME%:
         )
