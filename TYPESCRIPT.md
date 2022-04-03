@@ -29,6 +29,12 @@
    - [Announcing TypeScript 4.2][blog_rosenwasser_4_2] by Daniel Rosenwasser, February 2021.
    - [Announcing TypeScript 4.1][blog_rosenwasser_4_1] by Daniel Rosenwasser, November 2020.
    - [Announcing TypeScript 4.0][blog_rosenwasser_4_0] by Daniel Rosenwasser, August 2020.
+   - [Type | Treat - Wrap-up][blog_therox_6] by Orta Therox, October 2021.
+   - [Type | Treat - Day 5][blog_therox_5] by Orta Therox, October 2021.
+   - [Type | Treat 2021 - Day 4][blog_therox_4] by Orta Therox, October 2021.
+   - [Type | Treat 2021 - Day 3][blog_therox_3] by Orta Therox, October 2021.
+   - [Type | Treat 2021 - Day 2][blog_therox_2] by Orta Therox, October 2021.
+   - [Type | Treat 2021 - Day 1][blog_therox_1] by Orta Therox, October 2021.
 - [Introduction to Mixins in TypeScript][blog_nwose] by Victor Nwose, February 2021.
 - [TypeScript 4.1: New features and improvements][blog_isaiah] by Isaiah Ayooluwa, December 2020.
 - [Advanced TypeScript 4.2 Concepts: Classes and Types][blog_sitepen] by Sitepen, September 2020.
@@ -73,7 +79,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/March 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/April 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -96,6 +102,12 @@
 [blog_rosenwasser_4_6]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-6/
 [blog_sitepen]: https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
 [blog_sitepen_4_3]: https://www.sitepen.com/blog/update-the-definitive-typescript-guide
+[blog_therox_1]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-1/
+[blog_therox_2]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-2/
+[blog_therox_3]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-3/
+[blog_therox_4]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-4/
+[blog_therox_5]: https://devblogs.microsoft.com/typescript/type-treat-day-5/
+[blog_therox_6]: https://devblogs.microsoft.com/typescript/type-treat-wrap-up/
 [book_despoudis]: https://www.packtpub.com/product/typescript-4-design-patterns-and-best-practices/9781800563421
 [book_fain]: https://www.manning.com/books/typescript-quickly
 [book_freeman]: https://www.apress.com/gp/book/9781484270103
