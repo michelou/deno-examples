@@ -22,6 +22,7 @@
 
 - [The Definitive TypeScript 4.3 Guide][blog_sitepen_4_3] by Sitepen, July 2021.
 - [Microsoft TypeScript DevBlog][blog_microsoft]
+   - [Announcing TypeScript 4.7][blog_danielr_4_7] by Daniel R, April 2022.
    - [Announcing TypeScript 4.6][blog_rosenwasser_4_6] by Daniel Rosenwasser, February 2022.
    - [Announcing TypeScript 4.5][blog_rosenwasser_4_5] by Daniel Rosenwasser, November 2021.
    - [Announcing TypeScript 4.4][blog_rosenwasser_4_4] by Daniel Rosenwasser, August 2021.
@@ -89,6 +90,7 @@
 [article_baumgartner_array]: https://fettblog.eu/typescript-array-includes/
 [article_baumgartner_overload]: https://fettblog.eu/typescript-function-overload/
 [article_weber]: https://engineering.tableau.com/really-advanced-typescript-types-c590eee59a12
+[blog_danielr_4_7]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-7-beta/
 [blog_isaiah]: https://blog.logrocket.com/typescript-4-1-new-features-and-improvements/
 [blog_microsoft]: https://devblogs.microsoft.com/typescript/
 [blog_moon]: https://betterprogramming.pub/whats-new-in-typescript-4-fe8d50f08e31

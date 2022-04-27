@@ -30,6 +30,7 @@
 - [Deploying and Using WebAssembly Under Deno on the Server Side Using Travis CI][blog_mendy] by Montana Mendy, January 2021.
 - [Deno Introduction with Practical Examples][blog_olasheni] by Erisan Olasheni and Dylan Schiemann, October 2020.
 - [Deno vs Node - comparison][blog_torrao] by Ricardo Torrao, October 2020.
+- [Publishing Your Deno Modules using GitHub][blog_dolgio] by Fernando Doglio, June 2020.
 - [Creating a CRUD Server with Deno and Mongo][blog_piyush] by Piyush, May 2020.
 - [The Deno Handbook: A TypeScript Runtime Tutorial with Code Examples][blog_copes] by Flavio Copes, May 2020.
 
@@ -88,6 +89,7 @@
 [blog_choubey2]: https://medium.com/deno-the-complete-reference/testing-with-deno-part-2-advanced-2d10ac1dd145
 [blog_choubey1]: https://medium.com/deno-the-complete-reference/testing-with-deno-part-1-basics-375aa90c5cb5
 [blog_copes]: https://www.freecodecamp.org/news/the-deno-handbook/
+[blog_dolgio]: https://blog.bitsrc.io/publishing-your-deno-modules-using-github-f2bd86173392
 [blog_goyal]: https://blog.logrocket.com/how-to-create-a-deno-plugin-in-rust/
 [blog_mendy]: https://blog.travis-ci.com/2021-01-04-wasm
 [blog_olasheni]: https://www.infoq.com/articles/deno-introduction-practical-examples/

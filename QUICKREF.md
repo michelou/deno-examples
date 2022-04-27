@@ -16,14 +16,14 @@ https://alanstorm.com/comparing-a-deno-and-node-js-hello-world-program/
 -->
 1. CommonJS versus ECMAScript modules
 
-   <a href="https://deno.land/">Deno</a> supports <i>only</i> the ECMAScript modules (short <i>ES modules</i> or <i>ESM</i>) while <a href="https://nodejs.org/">Node.js</a> supports both formats for the CommonJS and ECMAScript modules.
+   <a href="https://deno.land/manual/node#interoperating-with-node-and-npm" rel="external">Deno</a> supports <i>only</i> the ECMAScript modules (short <i>ES modules</i> or <i>ESM</i>) while <a href="https://nodejs.org/">Node.js</a> supports both formats for the CommonJS and ECMAScript modules.
 
    <pre style="font-size:80%;">
    <b>const</b> http = require('http'); <span style="color:green;">/* CommonJS */</span>
-   <b>import</b> { serve } <b>from</b> "https://deno.land/std/http/<a href="https://deno.land/std/http/server.ts">server.ts</a>"; <span style="color:green;">/* ECMAScript */</span>
+   <b>import</b> { serve } <b>from</b> "https://deno.land/std/http/<a href="https://deno.land/std/http/server.ts" rel="external">server.ts</a>"; <span style="color:green;">/* ECMAScript */</span>
    </pre>
 
-   > **:mag_right:** Deno supports the `@deno-types` compiler hint to specify a type definition file when type checking instead of the imported JavaScript file (see "[Providing types when importing](https://deno.land/manual@v1.9.2/typescript/types#providing-types-when-importing)").
+   > **:mag_right:** Deno supports the `@deno-types` compiler hint to specify a type definition file when type checking instead of the imported JavaScript file (see "[Providing types when importing](https://deno.land/manual@v1.21.0/typescript/types#providing-types-when-importing)").
 
 2. Runtime versus Standard library
 
@@ -43,25 +43,24 @@ a parameter to the `--reload` flag.
 The following command displays the documentation for method `serve` of the standard library's HTTP module.
 
 <pre style="font-size:80%;">
-<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc https://deno.land/std@0.106.0/http/<a href="https://deno.land/std@0.106.0/http/server.ts">server.ts</a> serve</b>
-Defined in https://deno.land/std@0.106.0/http/server.ts:299:0
+<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc https://deno.land/std@0.136.0/http/<a href="https://deno.land/std@0.136.0/http/server.ts">server.ts</a> serve</b>
+Defined in https://deno.land/std@0.136.0/http/server.ts:542:0
 
 <b>function</b> serve(addr: string | HTTPOptions): Server
-  Create a HTTP server
+  Serves HTTP requests with the given handler.
 
-      import { serve } from "https://deno.land/std/http/server.ts";
-      <b>const</b> body = "Hello World\n";
-      const server = serve({ port: 8000 });
-      for await (const req of server) {
-        req.respond({ body });
-      }
+  You can specify an object with a port and hostname option, which is the address to listen on.
+  The default is port 8000 on hostname "0.0.0.0".
+
+  The below example serves with the port 8000.
+  [...]
 </pre>
 
 The following command displays the documentation for method `writeFile` of the Deno built-in API:
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin Deno.writeFile</b>
-Defined in lib.deno.d.ts:1724:2
+Defined in lib.deno.d.ts:2048:2
 
 function writeFile(path: string | URL, data: Uint8Array, options?: WriteFileOptions): Promise<void>
   Write `data` to the given `path`, by default creating a new file if needed,
@@ -154,10 +153,10 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
    function readLinkSync(path: string | URL): string
    function <a href="https://doc.deno.land/builtin/stable#Deno.readLink">readLink</a>(path: string | URL): Promise<string>
    </pre>
-   > [**:mag_right:**] We can evaluate the code example presented in the [`readTextFile`](https://doc.deno.land/builtin/stable#Deno.readTextFile) documentation: 
+   > **:mag_right:** We can evaluate the code example presented in the [`readTextFile`](https://doc.deno.land/builtin/stable#Deno.readTextFile) documentation: 
    > <pre style="font-size:80%;">
    > <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin <a href="https://doc.deno.land/builtin/stable#Deno.readTextFile">Deno.readTextFile</a></b>
-   > Defined in lib.deno.d.ts:1430:2
+   > Defined in lib.deno.d.ts:1725:2
    >&nbsp;
    > function readFile(path: string | URL, options?: ReadFileOptions):  Promise<Uint8Array>
    >   Reads and resolves to the entire contents of a file as an array of bytes.

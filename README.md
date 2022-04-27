@@ -17,8 +17,8 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 
 This project depends on two external software for the **Microsoft Windows** plaform:
 
-- [Deno 1.20][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
-- [Git 2.35][git_downloads] ([*release notes*][git_relnotes])
+- [Deno 1.21][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
+- [Git 2.36][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
@@ -31,8 +31,8 @@ For instance our development environment looks as follows (April 2022) <sup id="
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.20.5\            <i>( 56 MB)</i>
-C:\opt\Git-2.35.1\             <i>(282 MB)</i>
+C:\opt\deno-1.21.0\            <i>( 56 MB)</i>
+C:\opt\Git-2.36.0\             <i>(282 MB)</i>
 C:\opt\nmap-7.92\              <i>( 41 MB)</i>
 C:\opt\node-v14.19.1-win-x64\  <i>( 75 MB)</i>
 </pre>
@@ -116,7 +116,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.92-win32.zip</a>               <i>(22 MB)</i>
 <a href="https://nodejs.org/dist/latest-v14.x/">node-v14.19.1-win-x64.zip</a>         <i>(27 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.35.1-64-bit.7z.exe</a>  <i>(41 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.36.0-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
 </dd></dl>
 
@@ -133,10 +133,10 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [cpp_examples]: https://github.com/michelou/cpp-examples
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.20.5
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.21.0
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.35.1.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.36.0.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples
 [graalvm_examples]: https://github.com/michelou/graalvm-examples
