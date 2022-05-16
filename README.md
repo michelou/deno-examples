@@ -11,7 +11,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other trending topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other trending topics we are continuously monitoring.
 
 ## <span id="proj_deps">Project dependencies</span>
 
@@ -31,8 +31,8 @@ For instance our development environment looks as follows (May 2022) <sup id="an
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.21.2\            <i>( 56 MB)</i>
-C:\opt\Git-2.36.1\             <i>(282 MB)</i>
+C:\opt\deno-1.21.3\            <i>( 57 MB)</i>
+C:\opt\Git-2.36.1\             <i>(286 MB)</i>
 C:\opt\nmap-7.92\              <i>( 41 MB)</i>
 C:\opt\node-v14.19.2-win-x64\  <i>( 75 MB)</i>
 </pre>
@@ -84,7 +84,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.21.2 (release, x86_64-pc-windows-msvc)
+deno 1.21.3 (release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 10.0.139.17
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-6/" rel="external">4.6.2</a>
 </pre>
@@ -100,6 +100,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.20.4: v8 10.0.139.6,  typescript 4.6.2 -->
 <!-- deno 1.20.5: v8 10.0.139.6,  typescript 4.6.2 -->
 <!-- deno 1.21.2: v8 10.0.139.17, typescript 4.6.2 -->
+<!-- deno 1.21.3: v8 10.0.139.17, typescript 4.6.2 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -134,7 +135,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [cpp_examples]: https://github.com/michelou/cpp-examples
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.21.2
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.21.3
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.36.1.txt
@@ -163,6 +164,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [rust_examples]: https://github.com/michelou/rust-examples
 [scala3_examples]: https://github.com/michelou/dotty-examples
+[spark_examples]: https://github.com/michelou/spark-examples
 [spring_examples]: https://github.com/michelou/spring-examples
 [trufflesqueak_examples]: https://github.com/michelou/trufflesqueak-examples
 [typescript_4_6]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-6/

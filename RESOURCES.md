@@ -10,6 +10,7 @@
 
 ## <span id="articles">Articles</span>
 
+- [Netlify chooses Deno rather than Node.js to power new Edge Functions][article_anderson] by Tim Anderson, April 2022.
 - [Dissecting Deno][article_baumgartner] by Stefan Baumgartner, September 2021.
 - [Start programming in Deno, an alternative to Node.js][article_son] by Bryant Son, March 2021.
 - [How to compile Rust into WebAssembly and run it in Deno][article_rivero] by Elia Rivero, July 2020.
@@ -43,6 +44,7 @@
 
 ## <span id="news">News</span>
 
+- [CVE Details - Deno](https://www.cvedetails.com/google-search-results.php?q=Deno&sa=Search).
 - [Deno World](https://medium.com/deno-the-complete-reference).
 - [Changelog++](https://changelog.com): [Deno News and Podcasts](https://changelog.com/topic/deno).
 - [Deno Weekly](https://denoweekly.com/).
@@ -79,6 +81,7 @@
 
 <!-- link refs -->
 
+[article_anderson]: https://devclass.com/2022/04/19/netlify-chooses-deno-rather-than-node-js-to-power-new-edge-functions/
 [article_baumgartner]: https://fettblog.eu/dissecting-deno/
 [article_rivero]: https://startfunction.com/rust-webassembly-deno/
 [article_sayfan]: https://blog.sessionstack.com/how-javascript-works-introduction-to-deno-a3b1153b1855
