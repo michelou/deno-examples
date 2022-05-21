@@ -17,7 +17,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 
 This project depends on two external software for the **Microsoft Windows** plaform:
 
-- [Deno 1.21][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
+- [Deno 1.22][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
 - [Git 2.36][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
@@ -31,10 +31,10 @@ For instance our development environment looks as follows (May 2022) <sup id="an
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.21.3\            <i>( 57 MB)</i>
+C:\opt\deno-1.22.0\            <i>( 58 MB)</i>
 C:\opt\Git-2.36.1\             <i>(286 MB)</i>
 C:\opt\nmap-7.92\              <i>( 41 MB)</i>
-C:\opt\node-v14.19.2-win-x64\  <i>( 75 MB)</i>
+C:\opt\node-v14.19.3-win-x64\  <i>( 76 MB)</i>
 </pre>
 
 > **&#9755;** ***Installation policy***<br/>
@@ -84,7 +84,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.21.3 (release, x86_64-pc-windows-msvc)
+deno 1.22.0 (release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 10.0.139.17
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-6/" rel="external">4.6.2</a>
 </pre>
@@ -101,11 +101,12 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.20.5: v8 10.0.139.6,  typescript 4.6.2 -->
 <!-- deno 1.21.2: v8 10.0.139.17, typescript 4.6.2 -->
 <!-- deno 1.21.3: v8 10.0.139.17, typescript 4.6.2 -->
+<!-- deno 1.22.0: v8 10.0.139.17, typescript 4.6.2 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
 <dl><dd>
-We are mostly interested in the <a href="https://nmap.org/ncat/guide/"><code>Ncat</code></a> tool for reading, writing, redirecting, and encrypting data across a network. <a href="https://nmap.org/ncat/guide/"><code>Ncat</code></a> operates in one of two modes: in connect mode, <a href="https://nmap.org/ncat/guide/"><code>Ncat</code></a> works as a client, in listen mode it is a server,
+We are mostly interested in the <a href="https://nmap.org/ncat/guide/" rel="external"><code>Ncat</code></a> tool for reading, writing, redirecting, and encrypting data across a network. <a href="https://nmap.org/ncat/guide/" rel="external"><code>Ncat</code></a> operates in one of two modes: in connect mode, <a href="https://nmap.org/ncat/guide/" rel="external"><code>Ncat</code></a> works as a client, in listen mode it is a server,
 </dd></dl>
 
 <span id="footnote_03">[3]</span> ***Downloads*** [↩](#anchor_03)
@@ -117,7 +118,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <pre style="font-size:80%;">
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.92-win32.zip</a>               <i>(22 MB)</i>
-<a href="https://nodejs.org/dist/latest-v14.x/">node-v14.19.2-win-x64.zip</a>         <i>(27 MB)</i>
+<a href="https://nodejs.org/dist/latest-v14.x/">node-v14.19.3-win-x64.zip</a>         <i>(27 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.36.1-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
 </dd></dl>
@@ -135,7 +136,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [cpp_examples]: https://github.com/michelou/cpp-examples
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.21.3
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.22.0
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.36.1.txt
@@ -159,7 +160,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nmap_changelog]: https://nmap.org/changelog
 [nmap_downloads]: https://nmap.org/download.html
 [nodejs]: https://nodejs.org/en/
-[nodejs14_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V14.md#14.19.2
+[nodejs14_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V14.md#14.19.3
 [nodejs14_downloads]: https://nodejs.org/dist/latest-v14.x/
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [rust_examples]: https://github.com/michelou/rust-examples

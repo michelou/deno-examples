@@ -12,7 +12,7 @@
 > **:mag_right:** The Deno Standard Library <sup id="anchor_01"><a href="#footnote_01">1</a></sup> includes [Deno examples](https://deno.land/std/examples) which the user can execute directly from the command prompt, e.g.
 >
 > <pre style="font-size:80%;">
-> <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> run https://deno.land/std/examples/welcome.ts</b>
+> <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> run https://deno.land/std/examples/welcome.ts</b>
 > Check https://deno.land/std/examples/welcome.ts
 > Welcome to Deno!
 > </pre>
@@ -20,8 +20,8 @@
 ## <span id="basic">Basic `eval` Examples</span>
 
 <pre style="font-size:80%;">
-<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "console.log(Deno.version)"</b>
-{ deno: "1.21.3", v8: "10.0.139.17", typescript: "4.6.2" }
+<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.version)"</b>
+{ deno: "1.22.0", v8: "10.0.139.17", typescript: "4.6.2" }
 </pre>
 
 <pre style="font-size:80%;">
@@ -36,12 +36,12 @@
 </pre>
 
 <pre style="font-size:80%;">
-<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "console.log(Deno.env.get('DENO_HOME'))"</b>
+<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.env.get('DENO_HOME'))"</b>
 C:\opt\deno-1.21.3
 </pre>
 
 <pre style="font-size:80%;">
-<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "const p=Deno.run({ cmd: ['ls', '.'] });await p.status();p.close();"</b>
+<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "const p=Deno.run({ cmd: ['ls', '.'] });await p.status();p.close();"</b>
 QUICKREF.md  RESOURCES.md   docs        eval.ts   portela-examples  setenv.bat
 README.md    TYPESCRIPT.md  docs_LOCAL  examples  react-examples    setenv.sh
 </pre>
@@ -49,12 +49,12 @@ README.md    TYPESCRIPT.md  docs_LOCAL  examples  react-examples    setenv.sh
 > **:mag_right:** Option `--allow-run` is required when executing the same program from a TypeScript source file, e.g. `eval.ts` (see section [Creating a subprocess](https://deno.land/manual/examples/subprocess) of the online [Deno Manual](https://deno.land/manual)).
 > 
 > <pre style="font-size:80%;">
-> <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/type">type</a> eval.ts</b>
+> <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/type" rel="external">type</a> eval.ts</b>
 > const p = Deno.run({ cmd: ['ls', '.'] })
 > await p.status()
 > p.close()
 > &nbsp;
-> <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> run --allow-run eval.ts</b>
+> <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> run --allow-run eval.ts</b>
 > Check file:///O:/eval.ts
 > QUICKREF.md  RESOURCES.md   docs        eval.ts   portela-examples  setenv.bat
 > README.md    TYPESCRIPT.md  docs_LOCAL  examples  react-examples    setenv.sh
@@ -70,7 +70,7 @@ We present three variations of the `cat` example :
 <pre style="font-size:80%;">
 <b>&gt; <a href="cat_3/cat.bat">cat.bat</a></b>
 &nbsp;
-<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> run --allow-read "--importmap=O:\examples\cat_3\import_map.json" "O:\examples\cat_3\cat.ts" "O:\examples\cat_3\cat.bat"</b>
+<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> run --allow-read "--importmap=O:\examples\cat_3\import_map.json" "O:\examples\cat_3\cat.ts" "O:\examples\cat_3\cat.bat"</b>
 Check file:///O:/examples/cat_3/cat.ts
 @set _BASENAME=%~n0
 @set "_ROOT_DIR=%~dp0"
@@ -89,7 +89,7 @@ deno run %_RUN_OPTS% "%_SCRIPT_FILE%" %_SCRIPT_ARGS%
 <span id="footnote_01">[1]</span> **`std`** [↩](#anchor_01)
 
 <dl><dd>
-<a href="https://deno.land/manual/contributing/style_guide#codestdcode"><code>https://deno.land/std/</code></a> provides the baseline functionality that all Deno programs can rely on.
+<a href="https://deno.land/manual/contributing/style_guide#codestdcode" rel="external"><code>https://deno.land/std/</code></a> provides the baseline functionality that all Deno programs can rely on.
 </dd></dl>
 
 ***

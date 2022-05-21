@@ -16,7 +16,7 @@ https://alanstorm.com/comparing-a-deno-and-node-js-hello-world-program/
 -->
 1. CommonJS versus ECMAScript modules
 
-   <a href="https://deno.land/manual/node#interoperating-with-node-and-npm" rel="external">Deno</a> supports <i>only</i> the ECMAScript modules (short <i>ES modules</i> or <i>ESM</i>) while <a href="https://nodejs.org/">Node.js</a> supports both formats for the CommonJS and ECMAScript modules.
+   <a href="https://deno.land/manual/node#interoperating-with-node-and-npm" rel="external">Deno</a> supports <i>only</i> the ECMAScript modules (short <i>ES modules</i> or <i>ESM</i>) while <a href="https://nodejs.org/" rel="external">Node.js</a> supports both formats for the CommonJS and ECMAScript modules.
 
    <pre style="font-size:80%;">
    <b>const</b> http = require('http'); <span style="color:green;">/* CommonJS */</span>
@@ -87,7 +87,7 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
 
    Interfaces in the `WebAssembly` namespace are:
    <pre style="font-size:80%;">
-   <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/set_1">set</a> NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin WebAssembly |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]interface"</b>
+   <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/set_1">set</a> NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin WebAssembly |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> /r /c:"^[ ][ ]interface"</b>
    interface GlobalDescriptor
    interface MemoryDescriptor
    interface ModuleExportDescriptor
@@ -155,7 +155,7 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
    </pre>
    > **:mag_right:** We can evaluate the code example presented in the [`readTextFile`](https://doc.deno.land/builtin/stable#Deno.readTextFile) documentation: 
    > <pre style="font-size:80%;">
-   > <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin <a href="https://doc.deno.land/builtin/stable#Deno.readTextFile">Deno.readTextFile</a></b>
+   > <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> doc --builtin <a href="https://doc.deno.land/builtin/stable#Deno.readTextFile">Deno.readTextFile</a></b>
    > Defined in lib.deno.d.ts:1725:2
    >&nbsp;
    > function readFile(path: string | URL, options?: ReadFileOptions):  Promise<Uint8Array>
@@ -172,7 +172,7 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
    > </pre>
    > For instance:
    > <pre style="font-size:80%;">
-   > <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> eval "const data = await Deno.readTextFile('.gitignore'); console.log(data);"</b>
+   > <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "const data = await Deno.readTextFile('.gitignore'); console.log(data);"</b>
    > .idea/
    > .project
    > .settings/

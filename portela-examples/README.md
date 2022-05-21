@@ -3,7 +3,7 @@
 <table style="font-family:Helvetica,Arial;font-size:14px;line-height:1.6;">
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://deno.land/" rel="external"><img style="border:0;" src="https://deno.land/logo.svg" width="100" alt="Deno logo"/></a></td>
-  <td style="border:0;padding:0;vertical-align:text-top;">Directory <code>portela-examples\</code> contains <a href="https://www.typescriptlang.org/" rel="external">TypeScript</a> examples presented in Portela's book <a href="https://www.packtpub.com/product/deno-web-development/9781800205666"><i>Deno Web Development</i></a> (<a href="https://www.packtpub.com/">Packt</a>, 2021).
+  <td style="border:0;padding:0;vertical-align:text-top;">Directory <code>portela-examples\</code> contains <a href="https://www.typescriptlang.org/" rel="external">TypeScript</a> examples presented in Portela's book <a href="https://www.packtpub.com/product/deno-web-development/9781800205666"><i>Deno Web Development</i></a> (<a href="https://www.packtpub.com/" rel="external">Packt</a>, 2021).
   </td>
   </tr>
 </table>
