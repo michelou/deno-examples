@@ -8,6 +8,8 @@
   </tr>
 </table>
 
+> **:mag_right:** TypeScript specific resources are listed in document [`TYPESCRIPT.md`](./TYPESCRIPT.md).
+
 ## <span id="articles">Articles</span>
 
 - [Netlify chooses Deno rather than Node.js to power new Edge Functions][article_anderson] by Tim Anderson, April 2022.
@@ -18,14 +20,17 @@
 
 ## <span id="blogs">Blogs</span>
 
+- [Mayank Choubey](https://medium.com/@choubey) blog posts :
+  - [Oak middleware to log HTTP transaction][blog_choubey5], May 2022.
+  - [Deno HTTP Server in 2 ways][blog_choubey4], September 2021.
+  - [Foreign function interface: Calling C functions from Deno][blog_choubey3], August 2021.
+  - [Testing with Deno — Part 2 Advanced][blog_choubey2], May 2021.
+  - [Testing with Deno — Part 1 Basics][blog_choubey1], May 2021.
+  - [Run shell commands in Deno][blog_choubey0], March 2021.
 - [Exploring Velociraptor, Deno’s npm-style script runner][blog_nawo] by Arek Nawo, September 2021.
-- [Foreign function interface: Calling C functions from Deno][blog_choubey3] by Mayank Choubey, August 2021.
 - [How to create a Deno plugin in Rust][blog_goyal] by Anshul Goyal, June 2021.
 - [Guide to server-side rendering with Deno and React][blog_olususi] by Oluyemi Olususi, June 2021.
-- [Testing with Deno — Part 2 Advanced][blog_choubey2] by Mayank Choubey, May 2021.
-- [Testing with Deno — Part 1 Basics][blog_choubey1] by Mayank Choubey, May 2021.
 - [How to call Rust function in Deno application][blog_yuan] by Michael Yuan, March 2021.
-- [Run shell commands in Deno][blog_choubey] by Mayank Choubey, March 2021.
 - [Creating REST APIs with Deno and Postgres][blog_souza] by Diogo Souza, March 2021.
 - [Introduction to Aleph - The React Framework in Deno][blog_sebhastian] by Nathan Sebhastian, January 2021.
 - [Deploying and Using WebAssembly Under Deno on the Server Side Using Travis CI][blog_mendy] by Montana Mendy, January 2021.
@@ -87,10 +92,12 @@
 [article_sayfan]: https://blog.sessionstack.com/how-javascript-works-introduction-to-deno-a3b1153b1855
 [article_son]: https://opensource.com/article/21/3/deno-programming
 [blog_nawo]: https://blog.logrocket.com/exploring-velociraptor-deno-npm-style-script-runner/
-[blog_choubey]: https://medium.com/deno-the-complete-reference/run-shell-commands-in-deno-26c3e9b72e03
+[blog_choubey5]: https://medium.com/deno-the-complete-reference/deno-nuggets-oak-middleware-to-log-http-transaction-18658a4f2f68
+[blog_choubey4]: https://medium.com/deno-the-complete-reference/deno-http-server-in-2-ways-3821098d942f
 [blog_choubey3]: https://medium.com/deno-the-complete-reference/foreign-function-interface-calling-c-functions-from-deno-357ec4f5f793
 [blog_choubey2]: https://medium.com/deno-the-complete-reference/testing-with-deno-part-2-advanced-2d10ac1dd145
 [blog_choubey1]: https://medium.com/deno-the-complete-reference/testing-with-deno-part-1-basics-375aa90c5cb5
+[blog_choubey0]: https://medium.com/deno-the-complete-reference/run-shell-commands-in-deno-26c3e9b72e03
 [blog_copes]: https://www.freecodecamp.org/news/the-deno-handbook/
 [blog_dolgio]: https://blog.bitsrc.io/publishing-your-deno-modules-using-github-f2bd86173392
 [blog_goyal]: https://blog.logrocket.com/how-to-create-a-deno-plugin-in-rust/

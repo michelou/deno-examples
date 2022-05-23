@@ -30,7 +30,7 @@ Optionally one may also install the following software:
 For instance our development environment looks as follows (May 2022) <sup id="anchor_03">[3](#footnote_03)</sup>:
 
 <pre style="font-size:80%;">
-<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
+<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
 C:\opt\deno-1.22.0\            <i>( 58 MB)</i>
 C:\opt\Git-2.36.1\             <i>(286 MB)</i>
 C:\opt\nmap-7.92\              <i>( 41 MB)</i>
@@ -73,6 +73,48 @@ We also define a virtual drive **`O:`** in our working environment in order to r
 > <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/subst">subst</a> O: <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\workspace\deno-examples</b>
 > </pre>
 
+## <span id="commands">Batch commands</span>
+
+### **`setenv.bat`**
+
+Command [**`setenv`**](setenv.bat) is executed once to setup our development environment; it makes external tools such as [**`deno.cmd`**][deno_cli], [**`node.exe`**][node_cli], [**`rustc.exe`**][rustc_cli] and [**`git.exe`**][git_cli] directly available from the command prompt.
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
+Tool versions:
+   deno 1.22.0, deployctl 0.4.0, ncat 7.92, rustc 1.60.0,
+   git 2.36.1.windows.1, diff 3.8
+Tool paths:
+   C:\opt\deno-1.22.0\deno.exe
+   <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
+   C:\opt\nmap-7.92\ncat.exe
+   %USERPROFILE%\.cargo\bin\rustc.exe
+   C:\opt\Git-2.36.1\bin\git.exe
+   C:\opt\Git-2.36.1\usr\bin\diff.exe
+Environment variables:
+   "CARGO_HOME=%USERPROFILE%\.cargo"
+   "DENO_HOME=C:\opt\deno-1.22.0"
+   "GIT_HOME=C:\opt\Git-2.36.1"
+   "NMAP_HOME=C:\opt\nmap-7.92"
+   "NODE_HOME=C:\opt\node-v14.19.3-win-x64"
+
+<b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno</b>
+C:\opt\deno-1.22.0\deno.exe
+</pre>
+
+> **:mag_right:** Subcommand `help` prints the following help message :
+>   <pre style="font-size:80%;">
+>   <b>&gt; <a href="setenv.bat">setenv</a> help</b>
+>   Usage: setenv { &lt;option&gt; | &lt;subcommand&gt; }
+>   &nbsp;
+>     Options:
+>       -bash       start Git bash shell instead of Windows command prompt
+>       -debug      show commands executed by this script
+>       -verbose    display environment settings
+>   &nbsp;
+>     Subcommands:
+>       help        display this help message
+>   </pre>
 
 ## <span id="footnotes">Footnotes</span>
 
@@ -134,9 +176,11 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [akka_examples]: https://github.com/michelou/akka-examples
 [book_portela]: https://www.packtpub.com/product/deno-web-development/9781800205666
 [cpp_examples]: https://github.com/michelou/cpp-examples
+[deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
 [deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.22.0
+[git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.36.1.txt
@@ -159,11 +203,13 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [microsoft_ts]: https://devblogs.microsoft.com/typescript/
 [nmap_changelog]: https://nmap.org/changelog
 [nmap_downloads]: https://nmap.org/download.html
+[node_cli]: https://nodejs.org/api/cli.html
 [nodejs]: https://nodejs.org/en/
 [nodejs14_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V14.md#14.19.3
 [nodejs14_downloads]: https://nodejs.org/dist/latest-v14.x/
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [rust_examples]: https://github.com/michelou/rust-examples
+[rustc_cli]: https://doc.rust-lang.org/rustc/command-line-arguments.html
 [scala3_examples]: https://github.com/michelou/dotty-examples
 [spark_examples]: https://github.com/michelou/spark-examples
 [spring_examples]: https://github.com/michelou/spring-examples
