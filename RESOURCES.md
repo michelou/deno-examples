@@ -40,7 +40,7 @@
 - [Creating a CRUD Server with Deno and Mongo][blog_piyush] by Piyush, May 2020.
 - [The Deno Handbook: A TypeScript Runtime Tutorial with Code Examples][blog_copes] by Flavio Copes, May 2020.
 
-## <span id="books">Books</span>
+## <span id="books">Books</span>[**&#x25B4;**](#top)
 
 - &#128077; [The Internals of Deno](https://choubey.gitbook.io/internals-of-deno/) (*online book*) by Mayank Choubey, December 2021.
 - [A Guide to Deno Core](https://denolib.gitbook.io/guide/) (*online book*) by Kevin Qian and Yingchen Xue.
@@ -54,7 +54,7 @@
 - [Changelog++](https://changelog.com): [Deno News and Podcasts](https://changelog.com/topic/deno).
 - [Deno Weekly](https://denoweekly.com/).
 
-## <span id="projects">Projects</span>
+## <span id="projects">Projects</span>[**&#x25B4;**](#top)
 
 - [Drash Land](https://github.com/drashland/) - a collection of modules for [Deno][deno_land].
 - [Snel](https://github.com/crewdevio/Snel) - a cybernetical framework for [Svelte][svelte_dev] applications in [Deno][deno_land].
@@ -81,7 +81,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/May 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/June 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

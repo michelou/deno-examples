@@ -43,8 +43,8 @@ a parameter to the `--reload` flag.
 The following command displays the documentation for method `serve` of the standard library's HTTP module.
 
 <pre style="font-size:80%;">
-<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc https://deno.land/std@0.136.0/http/<a href="https://deno.land/std@0.136.0/http/server.ts">server.ts</a> serve</b>
-Defined in https://deno.land/std@0.136.0/http/server.ts:542:0
+<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc https://deno.land/std@0.141.0/http/<a href="https://deno.land/std@0.141.0/http/server.ts">server.ts</a> serve</b>
+Defined in https://deno.land/std@0.141.0/http/server.ts:572:0
 
 <b>function</b> serve(addr: string | HTTPOptions): Server
   Serves HTTP requests with the given handler.
@@ -78,7 +78,7 @@ function writeFile(path: string | URL, data: Uint8Array, options?: WriteFileOpti
   Requires `allow-write` permission, and `allow-read` if `options.create` is `false`.
 </pre>
 
-## <span id="runtime">Deno Runtime</span> <sup><sub>[**&#9650;**](#top)</sub></sup>
+## <span id="runtime">Deno Runtime</span>[**&#x25B4;**](#top)
 
 <!-- Deno Web Development, p.59 -->
 Two types of functions are available on Deno without any imports: [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) and the Deno built-in API. Code written using Web APIs can be bundled and run in the browser with no transformations.
@@ -190,7 +190,7 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/May 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/June 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
