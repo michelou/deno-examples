@@ -23,14 +23,15 @@
 
 - [The Definitive TypeScript 4.3 Guide][blog_sitepen_4_3] by Sitepen, July 2021.
 - [Microsoft TypeScript DevBlog][blog_microsoft]
-   - [Announcing TypeScript 4.7][blog_danielr_4_7] by Daniel R, April 2022.
-   - [Announcing TypeScript 4.6][blog_rosenwasser_4_6] by Daniel Rosenwasser, February 2022.
-   - [Announcing TypeScript 4.5][blog_rosenwasser_4_5] by Daniel Rosenwasser, November 2021.
-   - [Announcing TypeScript 4.4][blog_rosenwasser_4_4] by Daniel Rosenwasser, August 2021.
-   - [Announcing TypeScript 4.3][blog_rosenwasser_4_3] by Daniel Rosenwasser, May 2021.
-   - [Announcing TypeScript 4.2][blog_rosenwasser_4_2] by Daniel Rosenwasser, February 2021.
-   - [Announcing TypeScript 4.1][blog_rosenwasser_4_1] by Daniel Rosenwasser, November 2020.
-   - [Announcing TypeScript 4.0][blog_rosenwasser_4_0] by Daniel Rosenwasser, August 2020.
+   - [Announcing TypeScript 4.8][blog_danielr_4_8] by Daniel Rosenwasser, June 2022.
+   - [Announcing TypeScript 4.7][blog_danielr_4_7] by Daniel Rosenwasser, April 2022.
+   - [Announcing TypeScript 4.6][blog_danielr_4_6] by Daniel Rosenwasser, February 2022.
+   - [Announcing TypeScript 4.5][blog_danielr_4_5] by Daniel Rosenwasser, November 2021.
+   - [Announcing TypeScript 4.4][blog_danielr_4_4] by Daniel Rosenwasser, August 2021.
+   - [Announcing TypeScript 4.3][blog_danielr_4_3] by Daniel Rosenwasser, May 2021.
+   - [Announcing TypeScript 4.2][blog_danielr_4_2] by Daniel Rosenwasser, February 2021.
+   - [Announcing TypeScript 4.1][blog_danielr_4_1] by Daniel Rosenwasser, November 2020.
+   - [Announcing TypeScript 4.0][blog_danielr_4_0] by Daniel Rosenwasser, August 2020.
    - [Type | Treat - Wrap-up][blog_therox_6] by Orta Therox, October 2021.
    - [Type | Treat - Day 5][blog_therox_5] by Orta Therox, October 2021.
    - [Type | Treat 2021 - Day 4][blog_therox_4] by Orta Therox, October 2021.
@@ -81,7 +82,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/June 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/July 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -92,18 +93,19 @@
 [article_baumgartner_iterating]: https://fettblog.eu/typescript-iterating-over-objects/
 [article_baumgartner_overload]: https://fettblog.eu/typescript-function-overload/
 [article_weber]: https://engineering.tableau.com/really-advanced-typescript-types-c590eee59a12
-[blog_danielr_4_7]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-7-beta/
 [blog_isaiah]: https://blog.logrocket.com/typescript-4-1-new-features-and-improvements/
 [blog_microsoft]: https://devblogs.microsoft.com/typescript/
 [blog_moon]: https://betterprogramming.pub/whats-new-in-typescript-4-fe8d50f08e31
 [blog_nwose]: https://www.telerik.com/blogs/introduction-mixins-typescript
-[blog_rosenwasser_4_0]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-0/
-[blog_rosenwasser_4_1]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-1/
-[blog_rosenwasser_4_2]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-2/
-[blog_rosenwasser_4_3]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-3/
-[blog_rosenwasser_4_4]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-4/
-[blog_rosenwasser_4_5]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-5/
-[blog_rosenwasser_4_6]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-6/
+[blog_danielr_4_0]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-0/
+[blog_danielr_4_1]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-1/
+[blog_danielr_4_2]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-2/
+[blog_danielr_4_3]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-3/
+[blog_danielr_4_4]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-4/
+[blog_danielr_4_5]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-5/
+[blog_danielr_4_6]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-6/
+[blog_danielr_4_7]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-7/
+[blog_danielr_4_8]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-8-beta/
 [blog_sitepen]: https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
 [blog_sitepen_4_3]: https://www.sitepen.com/blog/update-the-definitive-typescript-guide
 [blog_therox_1]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-1/
