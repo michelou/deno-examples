@@ -31,7 +31,7 @@ For instance our development environment looks as follows (July 2022) <sup id="a
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.24.0\            <i>( 59 MB)</i>
+C:\opt\deno-1.24.2\            <i>( 60 MB)</i>
 C:\opt\Git-2.37.1\             <i>(286 MB)</i>
 C:\opt\nmap-7.92\              <i>( 41 MB)</i>
 C:\opt\node-v14.20.0-win-x64\  <i>( 76 MB)</i>
@@ -82,10 +82,10 @@ Command [**`setenv`**](setenv.bat) is executed once to setup our development env
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.24.0, deployctl 0.4.0, ncat 7.92, rustc 1.62.0,
+   deno 1.24.2, deployctl 0.4.0, ncat 7.92, rustc 1.62.0,
    git 2.37.1.windows.1, diff 3.8
 Tool paths:
-   C:\opt\deno-1.24.0\deno.exe
+   C:\opt\deno-1.24.2\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
    C:\opt\nmap-7.92\ncat.exe
    %USERPROFILE%\.cargo\bin\rustc.exe
@@ -93,13 +93,13 @@ Tool paths:
    C:\opt\Git-2.37.1\usr\bin\diff.exe
 Environment variables:
    "CARGO_HOME=%USERPROFILE%\.cargo"
-   "DENO_HOME=C:\opt\deno-1.24.0"
+   "DENO_HOME=C:\opt\deno-1.24.2"
    "GIT_HOME=C:\opt\Git-2.37.1"
    "NMAP_HOME=C:\opt\nmap-7.92"
    "NODE_HOME=C:\opt\node-v14.20.0-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno</b>
-C:\opt\deno-1.24.0\deno.exe
+C:\opt\deno-1.24.2\deno.exe
 </pre>
 
 > **:mag_right:** Subcommand `help` prints the following help message :
@@ -126,7 +126,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.24.0 (release, x86_64-pc-windows-msvc)
+deno 1.24.2 (release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 10.4.132.20
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-7/" rel="external">4.7.4</a>
 </pre>
@@ -148,6 +148,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.23.3: v8 10.4.132.8,  typescript 4.7.4 -->
 <!-- deno 1.23.4: v8 10.4.132.8,  typescript 4.7.4 -->
 <!-- deno 1.24.0: v8 10.4.132.8,  typescript 4.7.4 -->
+<!-- deno 1.24.2: v8 10.4.132.20, typescript 4.7.4 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -171,7 +172,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/July 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -183,7 +184,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.24.0
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.24.2
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win

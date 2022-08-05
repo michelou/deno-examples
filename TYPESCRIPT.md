@@ -21,7 +21,8 @@
 
 ## <span id="blogs">Blogs</span>
 
-- [The Definitive TypeScript 4.3 Guide][blog_sitepen_4_3] by Sitepen, July 2021.
+- [LogRocket](https://blog.logrocket.com/) Blog:
+  - [How to extend enums in TypeScript](https://blog.logrocket.com/extend-enums-typescript/), June 2022.
 - [Microsoft TypeScript DevBlog][blog_microsoft]
    - [Announcing TypeScript 4.8][blog_danielr_4_8] by Daniel Rosenwasser, June 2022.
    - [Announcing TypeScript 4.7][blog_danielr_4_7] by Daniel Rosenwasser, April 2022.
@@ -38,6 +39,7 @@
    - [Type | Treat 2021 - Day 3][blog_therox_3] by Orta Therox, October 2021.
    - [Type | Treat 2021 - Day 2][blog_therox_2] by Orta Therox, October 2021.
    - [Type | Treat 2021 - Day 1][blog_therox_1] by Orta Therox, October 2021.
+- [The Definitive TypeScript 4.3 Guide][blog_sitepen_4_3] by Sitepen, July 2021.
 - [Introduction to Mixins in TypeScript][blog_nwose] by Victor Nwose, February 2021.
 - [TypeScript 4.1: New features and improvements][blog_isaiah] by Isaiah Ayooluwa, December 2020.
 - [Advanced TypeScript 4.2 Concepts: Classes and Types][blog_sitepen] by Sitepen, September 2020.
@@ -82,7 +84,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/July 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
