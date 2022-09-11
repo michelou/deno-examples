@@ -94,7 +94,7 @@ deno run %_RUN_OPTS% "%_SCRIPT_FILE%" %_SCRIPT_ARGS%
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/September 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
