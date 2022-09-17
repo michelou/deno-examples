@@ -21,6 +21,9 @@
 
 ## <span id="blogs">Blogs</span>
 
+- [everyday: Development Log](https://www.huy.rocks/everyday)
+  - [TypeScript / Mocking File and FileList in Jest](https://www.huy.rocks/everyday/08-28-2022-typescript-mocking-file-and-filelist-in-jest), August 2022.
+  - [TypeScript / How the compiler compiles](https://www.huy.rocks/everyday/04-01-2022-typescript-how-the-compiler-compiles), January 2022.
 - [LogRocket](https://blog.logrocket.com/) Blog:
   - [How to extend enums in TypeScript](https://blog.logrocket.com/extend-enums-typescript/), June 2022.
 - [Microsoft TypeScript DevBlog][blog_microsoft]
@@ -57,6 +60,7 @@
 ## <span id="community">Community</span>
 
 - [Basarat Ali Syed](https://github.com/basarat) (GitHub).
+- [TypeScript Roadmap](https://github.com/microsoft/TypeScript/wiki/Roadmap) ([Microsoft](https://github.com/microsoft))
 
 ## <span id="style_guides">Style Guides</span>
 
