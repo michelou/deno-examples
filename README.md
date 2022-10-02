@@ -22,7 +22,7 @@ This project depends on two external software for the **Microsoft Windows** plaf
 
 Optionally one may also install the following software:
 
-- [Nmap 7.92][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
+- [Nmap 7.93][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 14.x LTS][nodejs14_downloads] ([*change log*][nodejs14_changelog])
 
 > **:mag_right:** Git for Windows provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
@@ -33,7 +33,7 @@ For instance our development environment looks as follows (October 2022) <sup id
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
 C:\opt\deno-1.26.0\            <i>( 63 MB)</i>
 C:\opt\Git-2.37.3\             <i>(289 MB)</i>
-C:\opt\nmap-7.92\              <i>( 41 MB)</i>
+C:\opt\nmap-7.93\              <i>( 41 MB)</i>
 C:\opt\node-v14.20.1-win-x64\  <i>( 76 MB)</i>
 </pre>
 
@@ -82,12 +82,12 @@ Command [**`setenv`**](setenv.bat) is executed once to setup our development env
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.26.0, deployctl 0.4.0, ncat 7.92, rustc 1.62.0,
+   deno 1.26.0, deployctl 0.4.0, ncat 7.93, rustc 1.62.0,
    git 2.37.3.windows.1, diff 3.8
 Tool paths:
    C:\opt\deno-1.26.0\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
-   C:\opt\nmap-7.92\ncat.exe
+   C:\opt\nmap-7.93\ncat.exe
    %USERPROFILE%\.cargo\bin\rustc.exe
    C:\opt\Git-2.37.3\bin\git.exe
    C:\opt\Git-2.37.3\usr\bin\diff.exe
@@ -95,7 +95,7 @@ Environment variables:
    "CARGO_HOME=%USERPROFILE%\.cargo"
    "DENO_HOME=C:\opt\deno-1.26.0"
    "GIT_HOME=C:\opt\Git-2.37.3"
-   "NMAP_HOME=C:\opt\nmap-7.92"
+   "NMAP_HOME=C:\opt\nmap-7.93"
    "NODE_HOME=C:\opt\node-v14.20.1-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno</b>
@@ -121,7 +121,7 @@ C:\opt\deno-1.26.0\deno.exe
 <span id="footnote_01">[1]</span> ***Deno TypeScript*** [↩](#anchor_01)
 
 <dl><dd>
-Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-7/" rel="external"><code>4.7</code></a> in our case:
+Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-8/" rel="external"><code>4.8</code></a> in our case:
 </dd>
 <dd>
 <pre style="font-size:80%;">
@@ -150,8 +150,9 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.24.0: v8 10.4.132.8,  typescript 4.7.4 -->
 <!-- deno 1.24.2: v8 10.4.132.20, typescript 4.7.4 -->
 <!-- deno 1.24.3: v8 10.4.132.20, typescript 4.7.4 -->
-<!-- deno 1.25.2: v8 10.6.194.5 , typescript 4.7.4 -->
-<!-- deno 1.26.0: v8 10.6.194.5 , typescript 4.7.4 -->
+<!-- deno 1.25.2: v8 10.6.194.5,  typescript 4.7.4 -->
+<!-- deno 1.25.3: v8 10.6.194.5,  typescript 4.7.4 -->
+<!-- deno 1.26.0: v8 10.7.193.3,  typescript 4.8.3 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -167,7 +168,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <dd>
 <pre style="font-size:80%;">
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
-<a href="https://nmap.org/download.html">nmap-7.92-win32.zip</a>               <i>(22 MB)</i>
+<a href="https://nmap.org/download.html">nmap-7.93-win32.zip</a>               <i>(22 MB)</i>
 <a href="https://nodejs.org/dist/latest-v14.x/">node-v14.20.1-win-x64.zip</a>         <i>(27 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.37.3-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
