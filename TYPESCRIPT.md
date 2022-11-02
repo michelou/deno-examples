@@ -49,7 +49,7 @@
 - [Advanced TypeScript 4.2 Concepts: Classes and Types][blog_sitepen] by Sitepen, September 2020.
 - [What’s New in TypeScript 4][blog_moon] by Moon, August 2020.
 
-## <span id="books">Books</span>[**&#x25B4;**](#top)
+## <span id="books">Books</span> [**&#x25B4;**](#top)
 
 - [TypeScript 4 Design Patterns and Best Practices][book_despoudis] by Theo Despoudis, September 2021.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8005-6342-1, 306 pages)</span>
 - [Mastering TypeScript ][book_rozentals] (4<sup>th</sup> Ed.) by Nathan Rozentals, April 2021.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8005-6473-2, 538 pages)</span>
@@ -69,7 +69,7 @@
 - [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html).
 - [Vanilla Coding Standard - TypeScript](https://success.vanillaforums.com/kb/articles/226-coding-standard-typescript) by Todd, April 2020.
 
-## <span id="tools">Tools</span>[**&#x25B4;**](#top)
+## <span id="tools">Tools</span> [**&#x25B4;**](#top)
 
 - [`typesync`](https://github.com/jeffijoe/typesync) - Install missing TypeScript typings for dependencies in your package.json.
 
@@ -89,7 +89,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/October 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/November 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

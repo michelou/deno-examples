@@ -11,13 +11,13 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX][wix_examples] are other trending topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX Toolset][wix_examples] are other trending topics we are continuously monitoring.
 
 ## <span id="proj_deps">Project dependencies</span>
 
 This project depends on two external software for the **Microsoft Windows** plaform:
 
-- [Deno 1.26][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
+- [Deno 1.27][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
 - [Git 2.38][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
@@ -27,18 +27,18 @@ Optionally one may also install the following software:
 
 > **:mag_right:** Git for Windows provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (October 2022) <sup id="anchor_03">[3](#footnote_03)</sup>:
+For instance our development environment looks as follows (November 2022) <sup id="anchor_03">[3](#footnote_03)</sup>:
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.26.1\            <i>( 63 MB)</i>
-C:\opt\Git-2.38.0\             <i>(289 MB)</i>
+C:\opt\deno-1.27.0\            <i>( 64 MB)</i>
+C:\opt\Git-2.38.1\             <i>(317 MB)</i>
 C:\opt\nmap-7.93\              <i>( 41 MB)</i>
 C:\opt\node-v14.20.1-win-x64\  <i>( 76 MB)</i>
 </pre>
 
 > **&#9755;** ***Installation policy***<br/>
-> When possible we install software from a [Zip archive][zip_archive] rather than via a Windows installer. In our case we defined **`C:\opt\`** as the installation directory for optional software tools (*in reference to* the [`/opt/`][linux_opt] directory on Unix).
+> When possible we install software from a [Zip archive][zip_archive] rather than via a Windows installer. In our case we defined **`C:\opt\`** as the installation directory for optional software tools (*in reference to* the [**`/opt/`**][linux_opt] directory on Unix).
 
 ## <span id="structure">Directory structure</span>
 
@@ -82,24 +82,24 @@ Command [**`setenv`**](setenv.bat) is executed once to setup our development env
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.26.1, deployctl 0.4.0, ncat 7.93, rustc 1.62.0,
-   git 2.38.0.windows.1, diff 3.8
+   deno 1.27.0, deployctl 0.4.0, ncat 7.93, rustc 1.62.0,
+   git 2.38.1.windows.1, diff 3.8
 Tool paths:
-   C:\opt\deno-1.26.1\deno.exe
+   C:\opt\deno-1.27.0\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
    C:\opt\nmap-7.93\ncat.exe
    %USERPROFILE%\.cargo\bin\rustc.exe
-   C:\opt\Git-2.38.0\bin\git.exe
-   C:\opt\Git-2.38.0\usr\bin\diff.exe
+   C:\opt\Git-2.38.1\bin\git.exe
+   C:\opt\Git-2.38.1\usr\bin\diff.exe
 Environment variables:
    "CARGO_HOME=%USERPROFILE%\.cargo"
-   "DENO_HOME=C:\opt\deno-1.26.1"
-   "GIT_HOME=C:\opt\Git-2.38.0"
+   "DENO_HOME=C:\opt\deno-1.27.0"
+   "GIT_HOME=C:\opt\Git-2.38.1"
    "NMAP_HOME=C:\opt\nmap-7.93"
    "NODE_HOME=C:\opt\node-v14.20.1-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno</b>
-C:\opt\deno-1.26.1\deno.exe
+C:\opt\deno-1.27.0\deno.exe
 </pre>
 
 > **:mag_right:** Subcommand `help` prints the following help message :
@@ -126,8 +126,8 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.26.1 (release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 10.7.193.3
+deno 1.27.0 (release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 10.8.168.4
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-8/" rel="external">4.8.3</a>
 </pre>
 </dd></dl>
@@ -153,6 +153,8 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.25.2: v8 10.6.194.5,  typescript 4.7.4 -->
 <!-- deno 1.25.3: v8 10.6.194.5,  typescript 4.7.4 -->
 <!-- deno 1.26.1: v8 10.7.193.3,  typescript 4.8.3 -->
+<!-- deno 1.26.2: v8 10.7.193.16, typescript 4.8.3 -->
+<!-- deno 1.27.0: v8 10.8.168.4,  typescript 4.8.3 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -170,13 +172,13 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.93-win32.zip</a>               <i>(22 MB)</i>
 <a href="https://nodejs.org/dist/latest-v14.x/">node-v14.20.1-win-x64.zip</a>         <i>(27 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.38.0-64-bit.7z.exe</a>  <i>(41 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.38.1-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
 </dd></dl>
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/October 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/November 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -188,12 +190,12 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.26.1
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.27.0
 [flix_examples]: https://github.com/michelou/flix-examples
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.38.0.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.38.1.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples
 [graalvm_examples]: https://github.com/michelou/graalvm-examples
