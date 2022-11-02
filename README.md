@@ -77,7 +77,7 @@ We also define a virtual drive **`O:`** in our working environment in order to r
 
 ### **`setenv.bat`**
 
-Command [**`setenv`**](setenv.bat) is executed once to setup our development environment; it makes external tools such as [**`deno.cmd`**][deno_cli], [**`node.exe`**][node_cli], [**`rustc.exe`**][rustc_cli] and [**`git.exe`**][git_cli] directly available from the command prompt.
+Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development environment; it makes external tools such as [**`deno.cmd`**][deno_cli], [**`node.exe`**][node_cli], [**`rustc.exe`**][rustc_cli] and [**`git.exe`**][git_cli] directly available from the command prompt.
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
