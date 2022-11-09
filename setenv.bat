@@ -449,7 +449,8 @@ endlocal & (
         if not defined GIT_HOME set "GIT_HOME=%_GIT_HOME%"
         if not defined NMAP_HOME set "NMAP_HOME=%_NMAP_HOME%"
         if not defined NODE_HOME set "NODE_HOME=%_NODE14_HOME%"
-        set "PATH=%PATH%%_DENO_PATH%;%_NODE14_HOME%;%_NMAP_HOME%;%_CARGO_PATH%%_GIT_PATH%;%~dp0bin"
+        @rem We prepend %_GIT_HOME%\bin to hide C:\Windows\System32\bash.exe
+        set "PATH=%_GIT_HOME%\bin;%PATH%%_DENO_PATH%;%_NODE14_HOME%;%_NMAP_HOME%;%_CARGO_PATH%%_GIT_PATH%;%~dp0bin"
         call :print_env %_VERBOSE%
         if %_BASH%==1 (
             if %_DEBUG%==1 echo %_DEBUG_LABEL% %_GIT_HOME%\usr\bin\bash.exe --login 1>&2

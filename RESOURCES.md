@@ -54,7 +54,7 @@
 - [Changelog++](https://changelog.com): [Deno News and Podcasts](https://changelog.com/topic/deno).
 - [Deno Weekly](https://denoweekly.com/).
 
-## <span id="projects">Projects</span>[**&#x25B4;**](#top)
+## <span id="projects">Projects</span> [**&#x25B4;**](#top)
 
 - [Drash Land](https://github.com/drashland/) - a collection of modules for [Deno][deno_land].
 - [Snel](https://github.com/crewdevio/Snel) - a cybernetical framework for [Svelte][svelte_dev] applications in [Deno][deno_land].
