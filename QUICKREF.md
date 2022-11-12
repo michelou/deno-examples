@@ -88,23 +88,23 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
    Interfaces in the `WebAssembly` namespace are:
    <pre style="font-size:80%;">
    <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/set_1">set</a> NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin WebAssembly |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> /r /c:"^[ ][ ]interface"</b>
-   interface GlobalDescriptor
-   interface MemoryDescriptor
-   interface ModuleExportDescriptor
-   interface ModuleImportDescriptor
-   interface TableDescriptor
-   interface WebAssemblyInstantiatedSource
+   interface <a href="https://deno.land/api?s=WebAssembly.GlobalDescriptor" rel="external">GlobalDescriptor</a>
+   interface <a href="https://deno.land/api?s=WebAssembly.MemoryDescriptor" rel="external">MemoryDescriptor</a>
+   interface <a href="https://deno.land/api?s=WebAssembly.ModuleExportDescriptor" rel="external">ModuleExportDescriptor</a>
+   interface <a href="https://deno.land/api?s=WebAssembly.ModuleImportDescriptor" rel="external">ModuleImportDescriptor</a>
+   interface <a href="https://deno.land/api?s=WebAssembly.TableDescriptor" rel="external">TableDescriptor</a>
+   interface <a href="https://deno.land/api?s=WebAssembly.WebAssemblyInstantiatedSource" rel="external">WebAssemblyInstantiatedSource</a>
    </pre>
 
    Functions in the `WebAsssembly` namepspace are:
    <pre style="font-size:80%;">
    <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/set_1">set</a> NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin WebAssembly |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]function"</b>
-   function compile(bytes: BufferSource): Promise<Module>
+   function <a href="https://deno.land/api?s=WebAssembly.compile" rel="external">compile</a>(bytes: BufferSource): Promise<Module>
    function compileStreaming(source: Response | Promise<Response>): Promise<Module>
-   function instantiate(bytes: BufferSource, importObject?: Imports): Promise<WebAssemblyInstantiatedSource>
+   function <a href="https://deno.land/api?s=WebAssembly.instantiate" rel="external">instantiate</a>(bytes: BufferSource, importObject?: Imports): Promise<WebAssemblyInstantiatedSource>
    function instantiate(moduleObject: Module, importObject?: Imports): Promise<Instance>
    function instantiateStreaming(response: Response | PromiseLike<Response>, importObject?: Imports): Promise<WebAssemblyInstantiatedSource>
-   function validate(bytes: BufferSource): boolean
+   function <a href="https://deno.land/api?s=WebAssembly.validate" rel="external">validate</a>(bytes: BufferSource): boolean
    </pre>
    > **:mag_right:** The above functions are defined in the [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly#static_methods).
 
@@ -113,10 +113,10 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
    Interfaces in the `Deno` namespace are:
    <pre style="font-size:80%;">
    <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/set_1">set</a> NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin Deno |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]interface"</b>
-   interface <a href="https://doc.deno.land/builtin/stable#Deno.MemoryUsage">MemoryUsage</a>
-   interface TestDefinition
-   interface Reader
-   interface ReaderSync
+   interface <a href="https://deno.land/api?s=Deno.memoryUsage">MemoryUsage</a>
+   interface <a href="https://deno.land/api?s=Deno.TestDefinition" rel="external">TestDefinition</a>
+   interface <a href="https://deno.land/api?s=Deno.Reader" rel="external">Reader</a>
+   interface <a href="https://deno.land/api?s=Deno.ReaderSync" rel="external">ReaderSync</a>
    interface Writer
    interface WriterSync
    interface Closer
@@ -130,17 +130,17 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
    interface FileInfo
    interface DirEntry
    interface WriteFileOptions
-   interface <a href="https://doc.deno.land/builtin/stable#Deno.Metrics">Metrics</a>
-   interface FsEvent
-   interface FsWatcher extends AsyncIterable<FsEvent>
-   interface RunOptions
+   interface <a href="https://deno.land/api?s=Deno.Metrics">Metrics</a>
+   interface <a href="https://deno.land/api?s=Deno.FsEvent" rel="external">FsEvent</a>
+   interface <a href="https://deno.land/api?s=Deno.FsWatcher" rel="external">FsWatcher</a> extends AsyncIterable<FsEvent>
+   interface <a href="https://deno.land/api?s=Deno.RunOptions" rel="external">RunOptions</a>
    [...]
    </pre>
 
    `read` functions in the `Deno` namespace are:
    <pre style="font-size:80%;">
    <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/set_1">set</a> NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin Deno |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]function read"</b>
-   function readSync(rid: number, buffer: Uint8Array): number | null
+   function <a href="https://deno.land/api?s=Deno.readSync" rel="external">readSync</a>(rid: number, buffer: Uint8Array): number | null
    function read(rid: number, buffer: Uint8Array): Promise<number | null>
    function readAll(r: Reader): Promise<Uint8Array>
    function readAllSync(r: ReaderSync): Uint8Array

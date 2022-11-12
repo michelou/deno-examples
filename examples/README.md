@@ -21,7 +21,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.version)"</b>
-{ deno: "1.26.1", v8: "10.7.193.3", typescript: "4.8.3" }
+{ deno: "1.27.2", v8: "10.8.168.4", typescript: "4.8.3" }
 </pre>
 
 <pre style="font-size:80%;">
@@ -37,7 +37,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.env.get('DENO_HOME'))"</b>
-C:\opt\deno-1.26.0
+C:\opt\deno-1.27.2
 </pre>
 
 <pre style="font-size:80%;">
@@ -89,7 +89,7 @@ deno run %_RUN_OPTS% "%_SCRIPT_FILE%" %_SCRIPT_ARGS%
 <span id="footnote_01">[1]</span> **`std`** [↩](#anchor_01)
 
 <dl><dd>
-<a href="https://deno.land/manual/contributing/style_guide#codestdcode" rel="external"><code>https://deno.land/std/</code></a> provides the baseline functionality that all Deno programs can rely on.
+<a href="https://deno.land/std/" rel="external"><code>https://deno.land/std/</code></a> provides the baseline functionality that all Deno programs can rely on.
 </dd></dl>
 
 ***
