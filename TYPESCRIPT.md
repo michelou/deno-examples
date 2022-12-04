@@ -89,7 +89,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/November 2022* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/December 2022* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -113,7 +113,7 @@
 [blog_danielr_4_6]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-6/
 [blog_danielr_4_7]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-7/
 [blog_danielr_4_8]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-8/
-[blog_danielr_4_9]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-9-rc/
+[blog_danielr_4_9]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-9/
 [blog_sitepen]: https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
 [blog_sitepen_4_3]: https://www.sitepen.com/blog/update-the-definitive-typescript-guide
 [blog_therox_1]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-1/
