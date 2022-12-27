@@ -78,7 +78,7 @@ function writeFile(path: string | URL, data: Uint8Array, options?: WriteFileOpti
   Requires `allow-write` permission, and `allow-read` if `options.create` is `false`.
 </pre>
 
-## <span id="runtime">Deno Runtime</span>[**&#x25B4;**](#top)
+## <span id="runtime">Deno Runtime</span> [**&#x25B4;**](#top)
 
 <!-- Deno Web Development, p.59 -->
 Two types of functions are available on Deno without any imports: [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) and the Deno built-in API. Code written using Web APIs can be bundled and run in the browser with no transformations.

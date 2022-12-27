@@ -12,14 +12,14 @@
 
 ### <span id="http-server">`http-server`</span>
 
-Example [`http-server.ts`](./Chapter01/http-server/http-server.ts) makes use of the function `serve` from the remote [`http`](https://deno.land/std@0.167.0/http) library. The import clauses looks as follows:
+Example [`http-server.ts`](./Chapter01/http-server/http-server.ts) makes use of the function `serve` from the remote [`http`](https://deno.land/std@0.170.0/http) library. The import clauses looks as follows:
 
 <div class="hightlight highlight-source-js">
 <pre style="font-size:80%;">
 <span style="color:green;">// file: http-server.ts</span>
-<b>import</b> { <a href="https://deno.land/std@0.166.0/http/server.ts?s=serve" rel="external">serve</a> } <b>from</b> "https://deno.land/std@0.167.0/http/server.ts"
+<b>import</b> { <a href="https://deno.land/std@0.166.0/http/server.ts?s=serve" rel="external">serve</a> } <b>from</b> "https://deno.land/std@0.170.0/http/server.ts"
 &nbsp;
-<b>for await</b> (<b>const</b> req of <a href="https://deno.land/std@0.166.0/http/server.ts?s=serve" rel="external">serve</a>(":8080")) {
+<b>for await</b> (<b>const</b> req of <a href="https://deno.land/std@0.170.0/http/server.ts?s=serve" rel="external">serve</a>(":8080")) {
   req.respond({ body: "Hello deno" })
 }
 </pre>
@@ -60,9 +60,9 @@ In this first variant of the above example we split the code into two files:
 - we add the file [`deps.ts`](./Chapter01/http-server-deps/deps.ts) which contains the original import clause(s)
    <pre style="font-size:80%;">
    <span style="color:green;">// file: deps.ts</span>
-   <b>import</b> { serve } <b>from</b> "https://deno.land/std@0.167.0/http/server.ts"</pre>
+   <b>import</b> { serve } <b>from</b> "https://deno.land/std@0.170.0/http/server.ts"</pre>
 
-- we modify the file [`https-server.ts`](./Chapter01/http-server-deps/http-server.ts) which now refers to [`deps.ts`](./Chapter01/http-server-deps/deps.ts) in the import clause (thus hiding the details of the remote [`std/http`](https://deno.land/std@0.167.0/http) library):
+- we modify the file [`https-server.ts`](./Chapter01/http-server-deps/http-server.ts) which now refers to [`deps.ts`](./Chapter01/http-server-deps/deps.ts) in the import clause (thus hiding the details of the remote [`std/http`](https://deno.land/std@0.170.0/http) library):
    <pre style="font-size:80%;">
    <span style="color:green;">// file: http-server.ts</span>
    <b>import</b> { serve } <b>from</b> "./deps.ts"
@@ -80,7 +80,7 @@ In the second variant of the original example we introduce another file:
    <pre style="font-size:80%;">
    {
      "imports": {
-       "http/": "https://deno.land/std@0.167.0/http/"
+       "http/": "https://deno.land/std@0.170.0/http/"
      }
    }</pre>
    </div>
