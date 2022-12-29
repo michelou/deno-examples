@@ -17,13 +17,13 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 
 This project depends on two external software for the **Microsoft Windows** plaform:
 
-- [Deno 1.28][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
-- [Git 2.38][git_downloads] ([*release notes*][git_relnotes])
+- [Deno 1.29][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
+- [Git 2.39][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
 - [Nmap 7.93][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
-- [Node.js 16x LTS][nodejs16_downloads] ([*change log*][nodejs16_changelog])
+- [Node.js 18.x LTS][nodejs18_downloads] ([*change log*][nodejs18_changelog])
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
@@ -34,7 +34,7 @@ For instance our development environment looks as follows (December 2022) <sup i
 C:\opt\deno-1.29.1\            <i>( 68 MB)</i>
 C:\opt\Git-2.39.0\             <i>(317 MB)</i>
 C:\opt\nmap-7.93\              <i>( 29 MB)</i>
-C:\opt\node-v16.19.0-win-x64\  <i>( 78 MB)</i>
+C:\opt\node-v18.12.1-win-x64\  <i>( 78 MB)</i>
 </pre>
 
 > **&#9755;** ***Installation policy***<br/>
@@ -82,7 +82,7 @@ Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.29.1, deployctl 0.4.0, ncat 7.93, rustc 1.64.0,
+   deno 1.29.1, deployctl 0.4.0, ncat 7.93, rustc 1.65.0,
    git 2.39.0.windows.1, diff 3.8
 Tool paths:
    C:\opt\deno-1.29.1\deno.exe
@@ -96,7 +96,7 @@ Environment variables:
    "DENO_HOME=C:\opt\deno-1.29.1"
    "GIT_HOME=C:\opt\Git-2.39.0"
    "NMAP_HOME=C:\opt\nmap-7.93"
-   "NODE_HOME=C:\opt\node-v16.19.0-win-x64"
+   "NODE_HOME=C:\opt\node-v18.12.1-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno</b>
 C:\opt\deno-1.29.1\deno.exe
@@ -172,7 +172,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <pre style="font-size:80%;">
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.93-setup.zip</a>               <i>(28 MB)</i>
-<a href="https://nodejs.org/dist/latest-v16.x/">node-v16.19.0-win-x64.zip</a>         <i>(27 MB)</i>
+<a href="https://nodejs.org/dist/latest-v16.x/">node-v18.12.1-win-x64.zip</a>         <i>(27 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.39.0-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
 </dd></dl>
@@ -218,10 +218,12 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nmap_downloads]: https://nmap.org/download.html
 [node_cli]: https://nodejs.org/api/cli.html
 [nodejs]: https://nodejs.org/en/
-[nodejs14_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V14.md#16.19.0
+[nodejs14_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V14.md#18.12.1
 [nodejs14_downloads]: https://nodejs.org/dist/latest-v14.x/
-[nodejs16_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md#16.19.0
+[nodejs16_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md#18.12.1
 [nodejs16_downloads]: https://nodejs.org/dist/latest-v16.x/
+[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.12.1
+[nodejs18_downloads]: https://nodejs.org/dist/latest-v18.x/
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [rust_examples]: https://github.com/michelou/rust-examples
 [rustc_cli]: https://doc.rust-lang.org/rustc/command-line-arguments.html

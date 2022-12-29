@@ -33,10 +33,9 @@ if not %_EXITCODE%==0 goto end
 call :nmap
 if not %_EXITCODE%==0 (
     @rem optional installation
-    echo %_WARNING_LABEL% Nmap installation directory not found 1>&2
     set _EXITCODE=0
 )
-call :node 14
+call :node 18
 if not %_EXITCODE%==0 goto end
 
 call :rust
@@ -272,14 +271,14 @@ if defined __NCAT_CMD (
     )
 )
 if not exist "%_NMAP_HOME%\ncat.exe" (
-    echo %_ERROR_LABEL% Ncat executable not found ^(%_NMAP_HOME%^) 1>&2
+    echo %_WARNING_LABEL% Ncat executable not found ^(%_NMAP_HOME%^) 1>&2
     set _EXITCODE=1
     goto :eof
 )
 goto :eof
 
 @rem input parameter: %1=major version
-@rem output parameter: _NODE14_HOME (resp. _NODE16_HOME)
+@rem output parameter: _NODE18_HOME (resp. _NODE16_HOME)
 :node
 set __NODE_MAJOR=%~1
 set "_NODE!__NODE_MAJOR!_HOME="
@@ -448,7 +447,7 @@ endlocal & (
         if not defined DENO_HOME set "DENO_HOME=%_DENO_HOME%"
         if not defined GIT_HOME set "GIT_HOME=%_GIT_HOME%"
         if not defined NMAP_HOME set "NMAP_HOME=%_NMAP_HOME%"
-        if not defined NODE_HOME set "NODE_HOME=%_NODE14_HOME%"
+        if not defined NODE_HOME set "NODE_HOME=%_NODE18_HOME%"
         @rem We prepend %_GIT_HOME%\bin to hide C:\Windows\System32\bash.exe
         set "PATH=%_GIT_HOME%\bin;%PATH%%_DENO_PATH%;%_NODE14_HOME%;%_NMAP_HOME%;%_CARGO_PATH%%_GIT_PATH%;%~dp0bin"
         call :print_env %_VERBOSE%

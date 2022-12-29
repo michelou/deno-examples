@@ -4,7 +4,7 @@ set "_ROOT_DIR=%~dp0"
 
 set _RUN_OPTS=--allow-net
 
-set _SERVER_PORT=8080
+set _SERVER_PORT=8081
 for %%i in ("%_ROOT_DIR%.") do set "_SERVER_TITLE=%%~ni:%_SERVER_PORT%"
 set _SERVER_PID=
 for /f "tokens=1,2,*" %%i in ('tasklist /nh /fi "windowtitle eq %_SERVER_TITLE%" /fi "imagename eq deno.exe"^|findstr deno.exe') do @(
@@ -19,5 +19,7 @@ if not defined _SERVER_PID (
     timeout /nobreak /t 5 1>NUL
 )
 @rem client request
+set "_CURL_CMD=%GIT_HOME%\mingw64\bin\curl.exe"
+
 echo [INFO] Respond to the cURL request on port %_SERVER_PORT% 1>&2
-curl localhost:%_SERVER_PORT%
+"%_CURL_CMD%" localhost:%_SERVER_PORT%
