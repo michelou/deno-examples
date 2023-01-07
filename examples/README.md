@@ -17,11 +17,11 @@
 > Welcome to Deno!
 > </pre>
 
-## <span id="basic">Basic `eval` Examples</span>
+## <span id="basic">Basic Examples with `eval`</span>
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.version)"</b>
-{ deno: "1.29.1", v8: "10.9.194.5", typescript: "4.9.4" }
+{ deno: "1.29.2", v8: "10.9.194.5", typescript: "4.9.4" }
 </pre>
 
 <pre style="font-size:80%;">
@@ -37,7 +37,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.env.get('DENO_HOME'))"</b>
-C:\opt\deno-1.29.1
+C:\opt\deno-1.29.2
 </pre>
 
 <pre style="font-size:80%;">
@@ -60,12 +60,12 @@ README.md    TYPESCRIPT.md  docs_LOCAL  examples  react-examples    setenv.sh
 > README.md    TYPESCRIPT.md  docs_LOCAL  examples  react-examples    setenv.sh
 > </pre>
 
-## <span id="cat">`cat` Example</span>
+## <span id="cat">Example `cat`</span> [**&#x25B4;**](#top)
 
 We present three variations of the `cat` example :
-- Firstly [`cat.bat`](cat/cat.bat) runs the *remote* file [`cat.ts`](https://deno.land/std@0.120.0/examples/cat.ts) from the `std` library.
-- Secondly [`cat.bat`](cat_2/cat.bat) runs the same file [`cat.ts`](cat_2/cat.ts) *locally*.
-- Finally, [`cat.bat`](cat_3/cat.bat) runs the modified local file [`cat.ts`](cat_3/cat.ts) with its dependencies defined in the separate file [`import_map.json`](cat_3/import_map.json). 
+- Firstly [`cat.bat`](cat/cat.bat) runs the *remote* script file [`cat.ts`](https://deno.land/std@0.120.0/examples/cat.ts) from the `std` library.
+- Secondly [`cat.bat`](cat_2/cat.bat) runs the same script file [`cat.ts`](cat_2/cat.ts) *locally*.
+- Finally, [`cat.bat`](cat_3/cat.bat) runs the modified local script file [`cat.ts`](cat_3/cat.ts) with its dependencies defined in the separate file [`import_map.json`](cat_3/import_map.json). 
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="cat_3/cat.bat">cat.bat</a></b>
@@ -82,6 +82,38 @@ Check file:///O:/examples/cat_3/cat.ts
 @set _RUN_OPTS=--allow-read "--importmap=%_IMPORT_FILE%"
 
 deno run %_RUN_OPTS% "%_SCRIPT_FILE%" %_SCRIPT_ARGS%
+</pre>
+
+## <span id="file_search">Example `file_search`</span>
+
+Command [`file_search.bat`](./file_search/file_search.bat) with no option launches the script [`file_search.ts`](./file_search/file_search.ts) which displays the options :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="./file_search/file_search.bat">file_search.bat</a></b>
+
+O:\examples\file_search>deno run --allow-read "O:\examples\file_search\file_search.ts"
+Options:
+  --help       Show help                                               [boolean]
+  --version    Show version number                                     [boolean]
+  --text       the text to search for within the current directory    [required]
+  --extension  a file extension to match against
+  --replace    the text to replace any matches with
+
+Missing required argument: text
+</pre>
+
+Command [`file_search.bat`](./file_search/file_search.bat) with option `--text await` launches the script [`file_search.ts`](./file_search/file_search.ts) which searches for text `await` within the current directory:
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="./file_search/file_search.bat">file_search.bat</a> --text await</b>
+
+O:\examples\file_search>deno run --allow-read "O:\examples\file_search\file_search.ts" --text await
+O:\examples\file_search\file_search.ts
+=> 35 for await (const fileOrFolder of Deno.readDir(directory)) {
+=> 42 const nestedFiles = await getFilesList(
+=> 62 const files = await getFilesList(Deno.cwd(), {
+=> 74 const contents = await Deno.readTextFile(file);
+=> 93 await Deno.writeTextFile(file, newContents);
 </pre>
 
 ## <span id="footnotes">Footnotes</span>

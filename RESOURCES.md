@@ -21,6 +21,7 @@
 ## <span id="blogs">Blogs</span>
 
 - [Mayank Choubey](https://medium.com/@choubey) blog posts :
+  - [Run a child process or execute shell commands in Deno][blog_choubey6], January 2023.
   - [Oak middleware to log HTTP transaction][blog_choubey5], May 2022.
   - [Deno HTTP Server in 2 ways][blog_choubey4], September 2021.
   - [Foreign function interface: Calling C functions from Deno][blog_choubey3], August 2021.
@@ -92,6 +93,7 @@
 [article_sayfan]: https://blog.sessionstack.com/how-javascript-works-introduction-to-deno-a3b1153b1855
 [article_son]: https://opensource.com/article/21/3/deno-programming
 [blog_nawo]: https://blog.logrocket.com/exploring-velociraptor-deno-npm-style-script-runner/
+[blog_choubey6]: https://medium.com/deno-the-complete-reference/run-a-child-process-or-execute-shell-commands-in-deno-4c29a5be6773
 [blog_choubey5]: https://medium.com/deno-the-complete-reference/deno-nuggets-oak-middleware-to-log-http-transaction-18658a4f2f68
 [blog_choubey4]: https://medium.com/deno-the-complete-reference/deno-http-server-in-2-ways-3821098d942f
 [blog_choubey3]: https://medium.com/deno-the-complete-reference/foreign-function-interface-calling-c-functions-from-deno-357ec4f5f793
