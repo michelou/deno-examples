@@ -17,9 +17,9 @@ Example [`http-server.ts`](./Chapter01/http-server/http-server.ts) makes use of 
 <div class="hightlight highlight-source-js">
 <pre style="font-size:80%;">
 <span style="color:green;">// file: http-server.ts</span>
-<b>import</b> { <a href="https://deno.land/std@0.166.0/http/server.ts?s=serve" rel="external">serve</a> } <b>from</b> "https://deno.land/std@0.170.0/http/server.ts"
+<b>import</b> { <a href="https://deno.land/std@0.166.0/http/server.ts?s=serve" rel="external">serve</a> } <b>from</b> "https://deno.land/std@0.173.0/http/server.ts"
 &nbsp;
-<b>for await</b> (<b>const</b> req of <a href="https://deno.land/std@0.170.0/http/server.ts?s=serve" rel="external">serve</a>(":8080")) {
+<b>for await</b> (<b>const</b> req of <a href="https://deno.land/std@0.173.0/http/server.ts?s=serve" rel="external">serve</a>(":8080")) {
   req.respond({ body: "Hello deno" })
 }
 </pre>
