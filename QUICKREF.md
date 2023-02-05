@@ -81,7 +81,7 @@ function writeFile(path: string | URL, data: Uint8Array, options?: WriteFileOpti
 ## <span id="runtime">Deno Runtime</span> [**&#x25B4;**](#top)
 
 <!-- Deno Web Development, p.59 -->
-Two types of functions are available on Deno without any imports: [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) and the Deno built-in API. Code written using Web APIs can be bundled and run in the browser with no transformations.
+Two types of functions are available on [Deno][deno_land] without any imports: [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) and the Deno built-in API. Code written using Web APIs can be bundled and run in the browser with no transformations.
 
 1. `WebAssembly` namespace
 
@@ -117,20 +117,20 @@ Two types of functions are available on Deno without any imports: [Web APIs](htt
    interface <a href="https://deno.land/api?s=Deno.TestDefinition" rel="external">TestDefinition</a>
    interface <a href="https://deno.land/api?s=Deno.Reader" rel="external">Reader</a>
    interface <a href="https://deno.land/api?s=Deno.ReaderSync" rel="external">ReaderSync</a>
-   interface Writer
-   interface WriterSync
-   interface Closer
-   interface Seeker
-   interface SeekerSync
-   interface OpenOptions
-   interface ReadFileOptions
-   interface MkdirOptions
-   interface MakeTempOptions
-   interface RemoveOptions
-   interface FileInfo
-   interface DirEntry
-   interface WriteFileOptions
-   interface <a href="https://deno.land/api?s=Deno.Metrics">Metrics</a>
+   interface <a href="https://deno.land/api?s=Deno.Writer" rel="external">Writer</a>
+   interface <a href="https://deno.land/api?s=Deno.WriterSync">WriterSync</a>
+   interface <a href="https://deno.land/api?s=Deno.Close">Closer</a>
+   interface <a href="https://deno.land/api?s=Deno.Seeker">Seeker</a>
+   interface <a href="https://deno.land/api?s=Deno.SeekerSync">SeekerSync</a>
+   interface <a href="https://deno.land/api?s=Deno.OpenOptions">OpenOptions</a>
+   interface <a href="https://deno.land/api?s=Deno.ReadFileOptions">ReadFileOptions</a>
+   interface <a href="https://deno.land/api?s=Deno.MkdirOptions">MkdirOptions</a>
+   interface <a href="https://deno.land/api?s=Deno.MakeTempOptions">MakeTempOptions</a>
+   interface <a href="https://deno.land/api?s=Deno.RemoveOptions">RemoveOptions</a>
+   interface <a href="https://deno.land/api?s=Deno.FileInfo">FileInfo</a>
+   interface <a href="https://deno.land/api?s=Deno.DirEntry">DirEntry</a>
+   interface <a href="https://deno.land/api?s=Deno.WriteFileOptions">WriteFileOptions</a>
+   interface <a href="https://deno.land/api?s=Deno.Metrics" rel="external">Metrics</a>
    interface <a href="https://deno.land/api?s=Deno.FsEvent" rel="external">FsEvent</a>
    interface <a href="https://deno.land/api?s=Deno.FsWatcher" rel="external">FsWatcher</a> extends AsyncIterable<FsEvent>
    interface <a href="https://deno.land/api?s=Deno.RunOptions" rel="external">RunOptions</a>

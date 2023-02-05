@@ -10,7 +10,7 @@
 
 ## <span id="chapter01">Chapter 1</span>
 
-### <span id="http-server">`http-server`</span>
+### <span id="http-server">`http-server` Example</span>
 
 Example [`http-server.ts`](./Chapter01/http-server/http-server.ts) makes use of the function `serve` from the remote [`http`](https://deno.land/std@0.170.0/http) library. The import clauses looks as follows:
 
@@ -53,7 +53,7 @@ We can run `http-server` either from the Windows prompt or from a Unix shell:
   Hello deno
   </pre>
 
-### <span id="http-server-deps">`http-server-deps`</span>
+### <span id="http-server-deps">`http-server-deps` Example</span> [**&#x25B4;**](#top)
 
 In this first variant of the above example we split the code into two files:
 
@@ -92,7 +92,7 @@ In the second variant of the original example we introduce another file:
    <b>export</b> { serve } <b>from</b> "http/server.ts"</pre>
    </div>
 
-### <span id="fetch-deno-logo">`fetch-deno-logo`</span>
+### <span id="fetch-deno-logo">`fetch-deno-logo` Example</span> [**&#x25B4;**](#top)
 
 Example [`fetch-deno-logo`](./Chapter01/fetch-deno-logo/fetch-deno-logo.ts) download a SVG image (e.g. the Deno logo) from the Internet and prints the HTML code with the embedded image.
 

@@ -21,7 +21,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.version)"</b>
-{ deno: "1.30.0", v8: "10.9.194.5", typescript: "4.9.4" }
+{ deno: "1.30.2", v8: "10.9.194.5", typescript: "4.9.4" }
 </pre>
 
 <pre style="font-size:80%;">
@@ -37,7 +37,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.env.get('DENO_HOME'))"</b>
-C:\opt\deno-1.30.0
+C:\opt\deno-1.30.2
 </pre>
 
 <pre style="font-size:80%;">
@@ -60,7 +60,7 @@ README.md    TYPESCRIPT.md  docs_LOCAL  examples  react-examples    setenv.sh
 > README.md    TYPESCRIPT.md  docs_LOCAL  examples  react-examples    setenv.sh
 > </pre>
 
-## <span id="cat">Example `cat`</span> [**&#x25B4;**](#top)
+## <span id="cat">`cat` Example</span> [**&#x25B4;**](#top)
 
 We present three variations of the `cat` example :
 - Firstly [`cat.bat`](cat/cat.bat) runs the *remote* script file [`cat.ts`](https://deno.land/std@0.120.0/examples/cat.ts) from the `std` library.
@@ -84,7 +84,7 @@ Check file:///O:/examples/cat_3/cat.ts
 deno run %_RUN_OPTS% "%_SCRIPT_FILE%" %_SCRIPT_ARGS%
 </pre>
 
-## <span id="file_search">Example `file_search`</span>
+## <span id="file_search">`file_search` Example</span>
 
 Command [`file_search.bat`](./file_search/file_search.bat) with no option launches the script [`file_search.ts`](./file_search/file_search.ts) which displays the options :
 

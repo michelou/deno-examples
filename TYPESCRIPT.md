@@ -72,7 +72,7 @@
 
 ## <span id="tools">Tools</span> [**&#x25B4;**](#top)
 
-- [`typesync`](https://github.com/jeffijoe/typesync) - Install missing TypeScript typings for dependencies in your package.json.
+- [`typesync`](https://github.com/jeffijoe/typesync) - Install missing TypeScript typings for dependencies in your `package.json`.
 
 ## <span id="tutorials">Tutorials</span>
 
