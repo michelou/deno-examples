@@ -31,10 +31,10 @@ For instance our development environment looks as follows (*February 2023*) <sup
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.30.2\            <i>( 68 MB)</i>
-C:\opt\Git-2.39.1\             <i>(317 MB)</i>
+C:\opt\deno-1.30.3\            <i>( 68 MB)</i>
+C:\opt\Git-2.39.2\             <i>(317 MB)</i>
 C:\opt\nmap-7.93\              <i>( 29 MB)</i>
-C:\opt\node-v18.14.0-win-x64\  <i>( 78 MB)</i>
+C:\opt\node-v18.14.2-win-x64\  <i>( 78 MB)</i>
 </pre>
 
 > **&#9755;** ***Installation policy***<br/>
@@ -82,24 +82,24 @@ Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.30.2, deployctl 0.4.0, ncat 7.93, rustc 1.67.0,
-   git 2.39.1.windows.1, diff 3.8
+   deno 1.30.3, deployctl 0.4.0, ncat 7.93, rustc 1.67.1,
+   git 2.39.2.windows.1, diff 3.8
 Tool paths:
-   C:\opt\deno-1.30.2\deno.exe
+   C:\opt\deno-1.30.3\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
    C:\opt\nmap-7.93\ncat.exe
    %USERPROFILE%\.cargo\bin\rustc.exe
-   C:\opt\Git-2.39.1\bin\git.exe
-   C:\opt\Git-2.39.1\usr\bin\diff.exe
+   C:\opt\Git-2.39.2\bin\git.exe
+   C:\opt\Git-2.39.2\usr\bin\diff.exe
 Environment variables:
    "CARGO_HOME=%USERPROFILE%\.cargo"
-   "DENO_HOME=C:\opt\deno-1.30.2"
-   "GIT_HOME=C:\opt\Git-2.39.1"
+   "DENO_HOME=C:\opt\deno-1.30.3"
+   "GIT_HOME=C:\opt\Git-2.39.2"
    "NMAP_HOME=C:\opt\nmap-7.93"
-   "NODE_HOME=C:\opt\node-v18.14.0-win-x64"
+   "NODE_HOME=C:\opt\node-v18.14.2-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno</b>
-C:\opt\deno-1.30.2\deno.exe
+C:\opt\deno-1.30.3\deno.exe
 </pre>
 
 > **:mag_right:** Subcommand `help` prints the following help message :
@@ -126,7 +126,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.30.2 (release, x86_64-pc-windows-msvc)
+deno 1.30.3 (release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 10.9.194.5
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-4-9/" rel="external">4.9.4</a>
 </pre>
@@ -158,7 +158,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.29.2: v8 10.9.194.5,  typescript 4.8.3 -->
 <!-- deno 1.29.4: v8 10.9.194.5,  typescript 4.8.3 -->
 <!-- deno 1.30.0: v8 10.9.194.5,  typescript 4.9.4 -->
-<!-- deno 1.30.2: v8 10.9.194.5,  typescript 4.9.4 -->
+<!-- deno 1.30.3: v8 10.9.194.5,  typescript 4.9.4 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -175,8 +175,8 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <pre style="font-size:80%;">
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.93-setup.zip</a>               <i>(28 MB)</i>
-<a href="https://nodejs.org/dist/latest-v16.x/">node-v18.14.0-win-x64.zip</a>         <i>(27 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.39.1-64-bit.7z.exe</a>  <i>(41 MB)</i>
+<a href="https://nodejs.org/dist/latest-v16.x/">node-v18.14.2-win-x64.zip</a>         <i>(27 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.39.2-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
 </dd></dl>
 
@@ -195,12 +195,12 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.30.2
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.30.3
 [flix_examples]: https://github.com/michelou/flix-examples
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.39.1.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.39.2.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples
 [graalvm_examples]: https://github.com/michelou/graalvm-examples
@@ -227,7 +227,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nodejs14_downloads]: https://nodejs.org/dist/latest-v14.x/
 [nodejs16_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md#16.19.0
 [nodejs16_downloads]: https://nodejs.org/dist/latest-v16.x/
-[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.14.0
+[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.14.2
 [nodejs18_downloads]: https://nodejs.org/dist/latest-v18.x/
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [rust_examples]: https://github.com/michelou/rust-examples
