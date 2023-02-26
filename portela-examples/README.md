@@ -71,11 +71,11 @@ In this first variant of the above example we split the code into two files:
      req.respond({ body: "Hello deno" })
    }</pre>
 
-### `http-server-import-maps`
+### <span id="">`http-server-import-maps` Example</span>
 
-In the second variant of the original example we introduce another file:
+Example `http-server-import-maps` is the second variant of the original example presented earlier. Besides the two files [`http-server.ts`](./Chapter01/http-server-import-maps/http-server.ts) and [`http-server.bat`](./Chapter01/http-server-import-maps/http-server.bat) we also :
 
-- we add the file [`import_map.json`](http-server-lock-import/import_map.json)
+- add the file [`import_map.json`](./Chapter01/http-server-lock-import/import_map.json)
    <div class="hightlight highlight-source-js">
    <pre style="font-size:80%;">
    {
@@ -85,7 +85,7 @@ In the second variant of the original example we introduce another file:
    }</pre>
    </div>
 
-- we update the file [`deps.ts`](http-server-lock-import/deps.ts) with a *user-defined name* for the `http` library.
+- and update the file [`deps.ts`](http-server-lock-import/deps.ts) with a *user-defined name* for the `http` library.
    <div class="hightlight highlight-source-js">
    <pre style="font-size:80%;">
    <span style="color:green;">// file: deps.ts</span>
