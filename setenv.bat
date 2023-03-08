@@ -400,6 +400,11 @@ if %ERRORLEVEL%==0 (
     for /f "tokens=1,*" %%i in ('"%USERPROFILE%\.deno\bin\deployctl.cmd" --version') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% deployctl %%j,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%USERPROFILE%\.deno\bin:deployctl.cmd"
 )
+where /q "%NODE_HOME%:node.exe"
+if %ERRORLEVEL%==0 (
+    for /f %%i in ('"%NODE_HOME%\node.exe" --version') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% node %%i,"
+    set __WHERE_ARGS=%__WHERE_ARGS% "%NODE_HOME%:node.exe"
+)
 where /q "%NMAP_HOME%:ncat.exe"
 if %ERRORLEVEL%==0 (
     for /f "tokens=1,2,3,*" %%i in ('"%NMAP_HOME%\ncat.exe" --version 2^>^&1') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% ncat %%k,"

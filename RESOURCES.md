@@ -1,6 +1,6 @@
 # <span id="top">Deno Resources</span> <span style="size:25%;"><a href="README.md">↩</a></span>
 
-<table style="font-family:Helvetica,Arial;font-size:14px;line-height:1.6;">
+<table style="font-family:Helvetica,Arial;line-height:1.6;">
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://deno.land/" rel="external"><img style="border:0;" src="./docs/images/deno.svg" width="100" alt="Deno project"/></a></td>
   <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://deno.land/" rel="external">Deno</a> related resources that caught our attention.
@@ -20,6 +20,7 @@
 
 ## <span id="blogs">Blogs</span>
 
+- [<3 Deno][blog_kladov] by Alex Kladov, February 2023.
 - [Mayank Choubey](https://medium.com/@choubey) blog posts :
   - [Run a child process or execute shell commands in Deno][blog_choubey6], January 2023.
   - [Oak middleware to log HTTP transaction][blog_choubey5], May 2022.
@@ -81,7 +82,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/February 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/March 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -102,6 +103,7 @@
 [blog_copes]: https://www.freecodecamp.org/news/the-deno-handbook/
 [blog_dolgio]: https://blog.bitsrc.io/publishing-your-deno-modules-using-github-f2bd86173392
 [blog_goyal]: https://blog.logrocket.com/how-to-create-a-deno-plugin-in-rust/
+[blog_kladov]: https://matklad.github.io/2023/02/12/a-love-letter-to-deno.html
 [blog_mendy]: https://blog.travis-ci.com/2021-01-04-wasm
 [blog_olasheni]: https://www.infoq.com/articles/deno-introduction-practical-examples/
 [blog_olususi]: https://www.sanity.io/guides/server-side-rendering-deno-react

@@ -27,14 +27,14 @@ Optionally one may also install the following software:
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (*February 2023*) <sup id="anchor_03">[3](#footnote_03)</sup>:
+For instance our development environment looks as follows (*March 2023*) <sup id="anchor_03">[3](#footnote_03)</sup>:
 
 <pre style="font-size:80%;">
-<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\           <i>(&lt; 1 MB)</i>
+<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
 C:\opt\deno-1.31.1\            <i>( 67 MB)</i>
 C:\opt\Git-2.39.2\             <i>(314 MB)</i>
 C:\opt\nmap-7.93\              <i>( 29 MB)</i>
-C:\opt\node-v18.14.2-win-x64\  <i>( 78 MB)</i>
+C:\opt\node-v18.15.0-win-x64\  <i>( 79 MB)</i>
 </pre>
 
 > **&#9755;** ***Installation policy***<br/>
@@ -82,7 +82,7 @@ Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.31.1, deployctl 0.4.0, ncat 7.93, rustc 1.67.1,
+   deno 1.31.1, deployctl 1.5.0, node v18.15.0, ncat 7.93, rustc 1.67.1,
    git 2.39.2.windows.1, diff 3.8
 Tool paths:
    C:\opt\deno-1.31.1\deno.exe
@@ -96,7 +96,7 @@ Environment variables:
    "DENO_HOME=C:\opt\deno-1.31.1"
    "GIT_HOME=C:\opt\Git-2.39.2"
    "NMAP_HOME=C:\opt\nmap-7.93"
-   "NODE_HOME=C:\opt\node-v18.14.2-win-x64"
+   "NODE_HOME=C:\opt\node-v18.15.0-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno</b>
 C:\opt\deno-1.31.1\deno.exe
@@ -176,14 +176,20 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <pre style="font-size:80%;">
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.93-setup.zip</a>               <i>(28 MB)</i>
-<a href="https://nodejs.org/dist/latest-v16.x/">node-v18.14.2-win-x64.zip</a>         <i>(27 MB)</i>
+<a href="https://nodejs.org/dist/latest-v16.x/">node-v18.15.0-win-x64.zip</a>         <i>(27 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.39.2-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
 </dd></dl>
 
+<span id="footnote_04">[4]</span> ***Deployctl*** [↩](#anchor_04)
+
+<dl><dd>
+<a href="https://github.com/denoland/deployctl" rel="external"><code>deployctl</code></a> is the command line tool for <a href="https://deno.com/deploy" rel="external">Deno Deploy</a>.
+</dd></dl>
+
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/February 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/March 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -228,7 +234,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nodejs14_downloads]: https://nodejs.org/dist/latest-v14.x/
 [nodejs16_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md#16.19.0
 [nodejs16_downloads]: https://nodejs.org/dist/latest-v16.x/
-[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.14.2
+[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.15.0
 [nodejs18_downloads]: https://nodejs.org/dist/latest-v18.x/
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [rust_examples]: https://github.com/michelou/rust-examples

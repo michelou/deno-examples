@@ -1,6 +1,6 @@
 # <span id="top">Book <i>Deno Web Development</i></span> <span style="size:25%;"><a href="../README.md">↩</a></span>
 
-<table style="font-family:Helvetica,Arial;font-size:14px;line-height:1.6;">
+<table style="font-family:Helvetica,Arial;line-height:1.6;">
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://deno.land/" rel="external"><img style="border:0;" src="https://deno.land/logo.svg" width="100" alt="Deno project"/></a></td>
   <td style="border:0;padding:0;vertical-align:text-top;">Directory <code>portela-examples\</code> contains <a href="https://www.typescriptlang.org/" rel="external">TypeScript</a> examples presented in Portela's book <a href="https://www.packtpub.com/product/deno-web-development/9781800205666"><i>Deno Web Development</i></a> (<a href="https://www.packtpub.com/" rel="external">Packt</a>, 2021).
@@ -118,7 +118,7 @@ Example [`fetch-deno-logo`](./Chapter01/fetch-deno-logo/fetch-deno-logo.ts) down
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/February 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/March 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

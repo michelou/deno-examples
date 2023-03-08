@@ -1,6 +1,6 @@
 # <span id="top">Deno Quick Reference</span> <span style="size:25%;"><a href="README.md">↩</a></span>
 
-<table style="font-family:Helvetica,Arial;font-size:14px;line-height:1.6;">
+<table style="font-family:Helvetica,Arial;line-height:1.6;">
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://deno.land/" rel="external"><img style="border:0;" src="./docs/images/deno.svg" width="100" alt="Deno project"/></a></td>
   <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://deno.land/" rel="external">Deno</a> hints and tips.
@@ -62,12 +62,12 @@ The following command displays the documentation for method `writeFile` of the D
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin Deno.writeFile</b>
 Defined in lib.deno.d.ts:2048:2
 
-function writeFile(path: string | URL, data: Uint8Array, options?: WriteFileOptions): Promise<void>
+<b>function</b> writeFile(path: string | URL, data: Uint8Array, options?: WriteFileOptions): Promise<void>
   Write `data` to the given `path`, by default creating a new file if needed,
   else overwriting.
 
   ```ts
-  const encoder = new TextEncoder();
+  <b>const</b> encoder = new TextEncoder();
   const data = encoder.encode("Hello world\n");
   await Deno.writeFile("hello1.txt", data);  // overwrite "hello1.txt" or create it
   await Deno.writeFile("hello2.txt", data, {create: false});  // only works if "hello2.txt" exists
@@ -141,8 +141,8 @@ Two types of functions are available on [Deno][deno_land] without any imports: [
    <pre style="font-size:80%;">
    <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/set_1">set</a> NO_COLOR=true & <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc --builtin Deno |<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">findstr</a> /r /c:"^[ ][ ]function read"</b>
    function <a href="https://deno.land/api?s=Deno.readSync" rel="external">readSync</a>(rid: number, buffer: Uint8Array): number | null
-   function read(rid: number, buffer: Uint8Array): Promise<number | null>
-   function readAll(r: Reader): Promise<Uint8Array>
+   function <a href="https://deno.land/api?s=Deno.read" rel="external">read</a>(rid: number, buffer: Uint8Array): Promise&lt;number | null&gt;
+   function <a href="https://deno.land/std/streams/read_all.ts?s=readAll">readAll</a>(r: Reader): Promise&lt;Uint8Array&gt;
    function readAllSync(r: ReaderSync): Uint8Array
    function readTextFileSync(path: string | URL): string
    function <a href="https://doc.deno.land/builtin/stable#Deno.readTextFile">readTextFile</a>(path: string | URL, options?: ReadFileOptions): Promise<string>
@@ -190,7 +190,7 @@ Two types of functions are available on [Deno][deno_land] without any imports: [
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/February 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/March 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
