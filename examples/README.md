@@ -17,11 +17,11 @@
 > Welcome to Deno!
 > </pre>
 
-## <span id="basic">Basic Examples with `eval`</span>
+## <span id="basic">Basic Examples with `eval`</span> [**&#x25B4;**](#top)
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.version)"</b>
-{ deno: "1.31.1", v8: "11.0.226.13", typescript: "4.9.4" }
+{ deno: "1.32.1", v8: "11.2.214.9", typescript: "5.0.2" }
 </pre>
 
 <pre style="font-size:80%;">
@@ -84,7 +84,7 @@ Check file:///O:/examples/cat_3/cat.ts
 deno run %_RUN_OPTS% "%_SCRIPT_FILE%" %_SCRIPT_ARGS%
 </pre>
 
-## <span id="file_search">`file_search` Example</span>
+## <span id="file_search">`file_search` Example</span> [**&#x25B4;**](#top)
 
 Command [`file_search.bat`](./file_search/file_search.bat) with no option launches the script [`file_search.ts`](./file_search/file_search.ts) which displays the options :
 
@@ -116,7 +116,7 @@ O:\examples\file_search\file_search.ts
 => 93 await Deno.writeTextFile(file, newContents);
 </pre>
 
-## <span id="footnotes">Footnotes</span>
+## <span id="footnotes">Footnotes</span> [**&#x25B4;**](#top)
 
 <span id="footnote_01">[1]</span> **`std`** [↩](#anchor_01)
 
@@ -126,7 +126,7 @@ O:\examples\file_search\file_search.ts
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/March 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/April 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

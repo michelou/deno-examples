@@ -1,6 +1,6 @@
 # <span id="top">TypeScript Resources</span> <span style="size:25%;"><a href="README.md">↩</a></span>
 
-<table style="font-family:Helvetica,Arial;font-size:14px;line-height:1.6;">
+<table style="font-family:Helvetica,Arial;line-height:1.6;">
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://www.typescriptlang.org/" rel="external"><img style="border:0;" src="./docs/images/ts-logo-round-128.png" width="100" alt="TypeScript project"/></a></td>
   <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://www.typescriptlang.org/" rel="external">TypeScript</a> related resources that caught our attention.
@@ -90,7 +90,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/March 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/April 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

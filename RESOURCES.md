@@ -20,6 +20,7 @@
 
 ## <span id="blogs">Blogs</span>
 
+- [Why We Added package.json Support to Deno][blog_dahl] by Ryan Dahl, March 2023.
 - [<3 Deno][blog_kladov] by Alex Kladov, February 2023.
 - [Mayank Choubey](https://medium.com/@choubey) blog posts :
   - [Run a child process or execute shell commands in Deno][blog_choubey6], January 2023.
@@ -54,6 +55,7 @@
 - [CVE Details - Deno](https://www.cvedetails.com/google-search-results.php?q=Deno&sa=Search).
 - [Deno World](https://medium.com/deno-the-complete-reference).
 - [Changelog++](https://changelog.com): [Deno News and Podcasts](https://changelog.com/topic/deno).
+- [JavaScript Weekly](https://javascriptweekly.com/latest).
 
 ## <span id="projects">Projects</span> [**&#x25B4;**](#top)
 
@@ -82,7 +84,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/March 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/April 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -101,6 +103,7 @@
 [blog_choubey1]: https://medium.com/deno-the-complete-reference/testing-with-deno-part-1-basics-375aa90c5cb5
 [blog_choubey0]: https://medium.com/deno-the-complete-reference/run-shell-commands-in-deno-26c3e9b72e03
 [blog_copes]: https://www.freecodecamp.org/news/the-deno-handbook/
+[blog_dahl]: https://deno.com/blog/package-json-support
 [blog_dolgio]: https://blog.bitsrc.io/publishing-your-deno-modules-using-github-f2bd86173392
 [blog_goyal]: https://blog.logrocket.com/how-to-create-a-deno-plugin-in-rust/
 [blog_kladov]: https://matklad.github.io/2023/02/12/a-love-letter-to-deno.html
