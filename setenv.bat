@@ -39,8 +39,10 @@ call :node 18
 if not %_EXITCODE%==0 goto end
 
 call :rust
-if not %_EXITCODE%==0 goto end
-
+if not %_EXITCODE%==0 (
+    @rem optional installation
+    set _EXITCODE=0
+)
 call :git
 if not %_EXITCODE%==0 goto end
 
@@ -181,7 +183,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% subst "%__DRIVE_NAME%" "%__GIVEN_PATH%" 1>&
 ) else if %_VERBOSE%==1 ( echo Assign path %__GIVEN_PATH% to drive %__DRIVE_NAME% 1>&2
 )
 subst "%__DRIVE_NAME%" "%__GIVEN_PATH%"
-if not %ERRORLEVEL%==0 (
+if not errorlevel 0 (
     echo %_ERROR_LABEL% Failed to assigned drive %__DRIVE_NAME% to path 1>&2
     set _EXITCODE=1
     goto :eof
@@ -203,7 +205,7 @@ if %_VERBOSE%==1 (
 echo Usage: %__BEG_O%%_BASENAME% { ^<option^> ^| ^<subcommand^> }%__END%
 echo.
 echo   %__BEG_P%Options:%__END%
-echo     %__BEG_O%-debug%__END%      show commands executed by this script
+echo     %__BEG_O%-debug%__END%      display commands executed by this script
 echo     %__BEG_O%-verbose%__END%    display progress messages
 echo.
 echo   %__BEG_P%Subcommands:%__END%
@@ -271,7 +273,7 @@ if defined __NCAT_CMD (
     )
 )
 if not exist "%_NMAP_HOME%\ncat.exe" (
-    echo %_WARNING_LABEL% Ncat executable not found ^(%_NMAP_HOME%^) 1>&2
+    echo %_WARNING_LABEL% Ncat executable not found 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -345,7 +347,7 @@ if defined __CARGO_CMD (
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using default Rust installation directory "!_CARGO_HOME!" 1>&2
 )
 if not exist "%_CARGO_HOME%\bin\cargo.exe" (
-    echo %_ERROR_LABEL% Cargo executable not found ^(%_CARGO_HOME%^) 1>&2
+    echo %_WARNING_LABEL% Cargo executable not found 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -391,37 +393,37 @@ set "__VERSIONS_LINE1=  "
 set "__VERSIONS_LINE2=  "
 set __WHERE_ARGS=
 where /q "%DENO_HOME%:deno.exe"
-if %ERRORLEVEL%==0 (
+if errorlevel 0 (
     for /f "tokens=1,2,*" %%i in ('"%DENO_HOME%\deno.exe" --version ^| findstr deno') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% deno %%j,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%DENO_HOME%:deno.exe"
 )
 where /q "%USERPROFILE%\.deno\bin:deployctl.cmd"
-if %ERRORLEVEL%==0 (
+if errorlevel 0 (
     for /f "tokens=1,*" %%i in ('"%USERPROFILE%\.deno\bin\deployctl.cmd" --version') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% deployctl %%j,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%USERPROFILE%\.deno\bin:deployctl.cmd"
 )
 where /q "%NODE_HOME%:node.exe"
-if %ERRORLEVEL%==0 (
+if errorlevel 0 (
     for /f %%i in ('"%NODE_HOME%\node.exe" --version') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% node %%i,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%NODE_HOME%:node.exe"
 )
 where /q "%NMAP_HOME%:ncat.exe"
-if %ERRORLEVEL%==0 (
+if errorlevel 0 (
     for /f "tokens=1,2,3,*" %%i in ('"%NMAP_HOME%\ncat.exe" --version 2^>^&1') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% ncat %%k,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%NMAP_HOME%:ncat.exe"
 )
 where /q "%CARGO_HOME%\bin:rustc.exe"
-if %ERRORLEVEL%==0 (
+if errorlevel 0 (
     for /f "tokens=1,2,*" %%i in ('"%CARGO_HOME%\bin\rustc.exe" --version') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% rustc %%j,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%CARGO_HOME%\bin:rustc.exe"
 )
 where /q "%GIT_HOME%\bin:git.exe"
-if %ERRORLEVEL%==0 (
+if errorlevel 0 (
     for /f "tokens=1,2,*" %%i in ('"%GIT_HOME%\bin\git.exe" --version') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% git %%k,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%GIT_HOME%\bin:git.exe"
 )
 where /q "%GIT_HOME%\usr\bin:diff.exe"
-if %ERRORLEVEL%==0 (
+if errorlevel 0 (
    for /f "tokens=1-3,*" %%i in ('"%GIT_HOME%\usr\bin\diff.exe" --version ^| findstr diff') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% diff %%l"
     set __WHERE_ARGS=%__WHERE_ARGS% "%GIT_HOME%\usr\bin:diff.exe"
 )
