@@ -21,7 +21,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.version)"</b>
-{ deno: "1.32.1", v8: "11.2.214.9", typescript: "5.0.2" }
+{ deno: "1.32.5", v8: "11.2.214.9", typescript: "5.0.3" }
 </pre>
 
 <pre style="font-size:80%;">
@@ -37,7 +37,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.env.get('DENO_HOME'))"</b>
-C:\opt\deno-1.30.2
+C:\opt\deno-1.30.5
 </pre>
 
 <pre style="font-size:80%;">
@@ -86,7 +86,7 @@ deno run %_RUN_OPTS% "%_SCRIPT_FILE%" %_SCRIPT_ARGS%
 
 ## <span id="file_search">`file_search` Example</span> [**&#x25B4;**](#top)
 
-Command [`file_search.bat`](./file_search/file_search.bat) with no option launches the script [`file_search.ts`](./file_search/file_search.ts) which displays the options :
+Command [**`file_search.bat`**](./file_search/file_search.bat) with no option launches the script [`file_search.ts`](./file_search/file_search.ts) which displays the options :
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="./file_search/file_search.bat">file_search.bat</a></b>
@@ -102,7 +102,7 @@ Options:
 Missing required argument: text
 </pre>
 
-Command [`file_search.bat`](./file_search/file_search.bat) with option `--text await` launches the script [`file_search.ts`](./file_search/file_search.ts) which searches for text `await` within the current directory:
+Command [**`file_search.bat`**](./file_search/file_search.bat) with option `--text await` launches the script [`file_search.ts`](./file_search/file_search.ts) which searches for text `await` within the current directory:
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="./file_search/file_search.bat">file_search.bat</a> --text await</b>
