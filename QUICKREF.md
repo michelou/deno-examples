@@ -43,8 +43,8 @@ a parameter to the `--reload` flag.
 The following command displays the documentation for method `serve` of the standard library's HTTP module.
 
 <pre style="font-size:80%;">
-<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc https://deno.land/std@0.170.0/http/<a href="https://deno.land/std@0.170.0/http/server.ts">server.ts</a> serve</b>
-Defined in https://deno.land/std@0.170.0/http/server.ts:572:0
+<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc https://deno.land/std@0.185.0/http/<a href="https://deno.land/std@0.170.0/http/server.ts">server.ts</a> serve</b>
+Defined in https://deno.land/std@0.185.0/http/server.ts:572:0
 
 <b>function</b> serve(addr: string | HTTPOptions): Server
   Serves HTTP requests with the given handler.
@@ -144,14 +144,14 @@ Two types of functions are available on [Deno][deno_land] without any imports: [
    function <a href="https://deno.land/api?s=Deno.read" rel="external">read</a>(rid: number, buffer: Uint8Array): Promise&lt;number | null&gt;
    function <a href="https://deno.land/std/streams/read_all.ts?s=readAll">readAll</a>(r: Reader): Promise&lt;Uint8Array&gt;
    function readAllSync(r: ReaderSync): Uint8Array
-   function readTextFileSync(path: string | URL): string
-   function <a href="https://doc.deno.land/builtin/stable#Deno.readTextFile">readTextFile</a>(path: string | URL, options?: ReadFileOptions): Promise<string>
+   function <a href="https://deno.land/api?s=Deno.readTextFileSync">readTextFileSync</a>(path: string | URL): string
+   function <a href="https://deno.land/api?s=Deno.readTextFile">readTextFile</a>(path: string | URL, options?: ReadFileOptions): Promise<string>
    function readFileSync(path: string | URL): Uint8Array
    function readFile(path: string | URL, options?: ReadFileOptions): Promise<Uint8Array>
-   function readDirSync(path: string | URL): Iterable<DirEntry>
-   function readDir(path: string | URL): AsyncIterable<DirEntry>
-   function readLinkSync(path: string | URL): string
-   function <a href="https://doc.deno.land/builtin/stable#Deno.readLink">readLink</a>(path: string | URL): Promise<string>
+   function <a href="https://deno.land/api?s=Deno.readDirSync">readDirSync</a>(path: string | URL): Iterable<DirEntry>
+   function <a href="https://deno.land/api?s=Deno.readDir">readDir</a>(path: string | URL): AsyncIterable<DirEntry>
+   function <a href="https://deno.land/api?s=Deno.readLinkSync">readLinkSync</a>(path: string | URL): string
+   function <a href="https://deno.land/api?s=Deno.readLink">readLink</a>(path: string | URL): Promise<string>
    </pre>
    > **:mag_right:** We can evaluate the code example presented in the [`readTextFile`](https://doc.deno.land/builtin/stable#Deno.readTextFile) documentation: 
    > <pre style="font-size:80%;">
@@ -190,7 +190,7 @@ Two types of functions are available on [Deno][deno_land] without any imports: [
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/April 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/May 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
