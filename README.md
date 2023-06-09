@@ -18,7 +18,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 This project depends on two external software for the **Microsoft Windows** platform:
 
 - [Deno 1.34][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
-- [Git 2.40][git_downloads] ([*release notes*][git_relnotes])
+- [Git 2.41][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 

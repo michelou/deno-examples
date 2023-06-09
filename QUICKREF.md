@@ -43,8 +43,8 @@ a parameter to the `--reload` flag.
 The following command displays the documentation for method `serve` of the standard library's HTTP module.
 
 <pre style="font-size:80%;">
-<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc https://deno.land/std@0.185.0/http/<a href="https://deno.land/std@0.170.0/http/server.ts">server.ts</a> serve</b>
-Defined in https://deno.land/std@0.185.0/http/server.ts:572:0
+<b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> doc https://deno.land/std@0.191.0/http/<a href="https://deno.land/std@0.170.0/http/server.ts">server.ts</a> serve</b>
+Defined in https://deno.land/std@0.191.0/http/server.ts:572:0
 
 <b>function</b> serve(addr: string | HTTPOptions): Server
   Serves HTTP requests with the given handler.

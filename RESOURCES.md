@@ -20,6 +20,7 @@
 
 ## <span id="blogs">Blogs</span>
 
+- [Deno Frameworks: Building Faster, More Secure Applications][blog_ivanovs] by Alex Ivanovsv, May 2023.
 - [Why We Added package.json Support to Deno][blog_dahl] by Ryan Dahl, March 2023.
 - [<3 Deno][blog_kladov] by Alex Kladov, February 2023.
 - [Mayank Choubey](https://medium.com/@choubey) blog posts :
@@ -106,6 +107,7 @@
 [blog_dahl]: https://deno.com/blog/package-json-support
 [blog_dolgio]: https://blog.bitsrc.io/publishing-your-deno-modules-using-github-f2bd86173392
 [blog_goyal]: https://blog.logrocket.com/how-to-create-a-deno-plugin-in-rust/
+[blog_ivanovs]: https://stackdiary.com/deno-frameworks/
 [blog_kladov]: https://matklad.github.io/2023/02/12/a-love-letter-to-deno.html
 [blog_mendy]: https://blog.travis-ci.com/2021-01-04-wasm
 [blog_olasheni]: https://www.infoq.com/articles/deno-introduction-practical-examples/
