@@ -31,8 +31,8 @@ For instance our development environment looks as follows (*June 2023*) <sup id=
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.34.1\            <i>( 69 MB)</i>
-C:\opt\Git-2.40.1\             <i>(315 MB)</i>
+C:\opt\deno-1.34.3\            <i>( 69 MB)</i>
+C:\opt\Git-2.41.0\             <i>(315 MB)</i>
 C:\opt\nmap-7.93\              <i>( 29 MB)</i>
 C:\opt\node-v18.16.0-win-x64\  <i>( 79 MB)</i>
 </pre>
@@ -62,7 +62,7 @@ where
 - file [**`README.md`**](README.md) is the [Markdown][github_markdown] document for this page.
 - file [**`QUICKREF.md`**](QUICKREF.md) is our [Deno][deno_land] quick reference.
 - file [**`RESOURCES.md`**](RESOURCES.md) gathers [Deno][deno_land] related informations.
-- file [**`TYPESCRIPT.md`**](TYPESCRIPT.md) gathers [TypeScript][microsoft_ts] related informations.
+- file [**`TYPESCRIPT.md`**](TYPESCRIPT.md) gathers [TypeScript] related informations.
 - file [**`setenv.bat`**](setenv.bat) is the batch script for setting up our environment.
 
 We also define a virtual drive **`O:`** in our working environment in order to reduce/hide the real path of our project directory (see article ["Windows command prompt limitation"][windows_limitation] from Microsoft Support).
@@ -82,24 +82,24 @@ Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.34.1, deployctl 1.5.0, node v18.16.0, ncat 7.93, rustc 1.68.1,
-   git 2.40.1.windows.1, diff 3.9
+   deno 1.34.3, deployctl 1.5.0, node v18.16.0, ncat 7.93, rustc 1.68.1,
+   git 2.41.0.windows.1, diff 3.9
 Tool paths:
-   C:\opt\deno-1.34.1\deno.exe
+   C:\opt\deno-1.34.3\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
    C:\opt\nmap-7.93\ncat.exe
    %USERPROFILE%\.cargo\bin\rustc.exe
-   C:\opt\Git-2.40.1\bin\git.exe
-   C:\opt\Git-2.40.1\usr\bin\diff.exe
+   C:\opt\Git-2.41.0\bin\git.exe
+   C:\opt\Git-2.41.0\usr\bin\diff.exe
 Environment variables:
    "CARGO_HOME=%USERPROFILE%\.cargo"
-   "DENO_HOME=C:\opt\deno-1.34.1"
-   "GIT_HOME=C:\opt\Git-2.40.1"
+   "DENO_HOME=C:\opt\deno-1.34.3"
+   "GIT_HOME=C:\opt\Git-2.41.0"
    "NMAP_HOME=C:\opt\nmap-7.93"
    "NODE_HOME=C:\opt\node-v18.16.0-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno</b>
-C:\opt\deno-1.34.1\deno.exe
+C:\opt\deno-1.34.3\deno.exe
 </pre>
 
 > **:mag_right:** Subcommand `help` prints the following help message :
@@ -126,7 +126,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.34.1 (release, x86_64-pc-windows-msvc)
+deno 1.34.3 (release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 11.2.214.9
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/" rel="external">5.0.3</a>
 </pre>
@@ -162,7 +162,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.31.1: v8 11.0.226.13, typescript 4.9.4 -->
 <!-- deno 1.32.2: v8 11.2.214.9,  typescript 5.0.2 -->
 <!-- deno 1.32.3: v8 11.2.214.9,  typescript 5.0.3 -->
-<!-- deno 1.34.1: v8 11.2.214.9 , typescript 5.0.3 -->
+<!-- deno 1.34.3: v8 11.2.214.9 , typescript 5.0.3 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -180,7 +180,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.93-setup.zip</a>               <i>(28 MB)</i>
 <a href="https://nodejs.org/dist/latest-v18.x/">node-v18.16.0-win-x64.zip</a>         <i>(27 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.40.1-64-bit.7z.exe</a>  <i>(41 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.41.0-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
 </dd></dl>
 
@@ -205,12 +205,12 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.34.1
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.34.3
 [flix_examples]: https://github.com/michelou/flix-examples
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.40.1.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.41.0.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples
 [graalvm_examples]: https://github.com/michelou/graalvm-examples
@@ -246,7 +246,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [spark_examples]: https://github.com/michelou/spark-examples
 [spring_examples]: https://github.com/michelou/spring-examples
 [trufflesqueak_examples]: https://github.com/michelou/trufflesqueak-examples
-[typescript_4_6]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-6/
+[typescript]: https://devblogs.microsoft.com/typescript/
 [windows_limitation]: https://support.microsoft.com/en-gb/help/830473/command-prompt-cmd-exe-command-line-string-limitation
 [windows_subst]: https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/subst
 [wix_examples]: https://github.com/michelou/wix-examples
