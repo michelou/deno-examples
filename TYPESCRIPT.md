@@ -21,6 +21,7 @@
 
 ## <span id="blogs">Blogs</span>
 
+- [What’s New in TypeScript 5.0: Declarators, Const Type, Enums Improvement, Speed, and Much More!](https://kinsta.com/blog/typescript-5-0/) by Joel Olawanle, April 2023.
 - [everyday: Development Log](https://www.huy.rocks/everyday)
   - [TypeScript / Mocking File and FileList in Jest](https://www.huy.rocks/everyday/08-28-2022-typescript-mocking-file-and-filelist-in-jest), August 2022.
   - [TypeScript / How the compiler compiles](https://www.huy.rocks/everyday/04-01-2022-typescript-how-the-compiler-compiles), January 2022.
@@ -59,6 +60,7 @@
 - [TypeScript Quickly][book_fain] by Yakov Fain and Anton Moiseev, February 2020.<br/><span style="font-size:80%;">([Manning](https://www.manning.com/), ISBN 978-1-6172-9594-2, 488 pages)</span>
 - [Effective TypeScript][book_vanderkam] by Dan Vanderkam, October 2019.<br/><span style="font-size:80%;">(O'Reilly Media, ISBN 978-1-4920-5374-3, 0 pages)</span>
 - [Refactoring TypeScript][book_hickey] by James Hickey, October 2019.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8392-1804-0, 120 pages)</span>
+- [Programming TypeScript][book_cherny] by Boris Cherny, May 2019.<br/><span style="font-size:80%;">(O'Reilly, ISBN 978-1-4920-3765-1)</span>
 
 ## <span id="community">Community</span>
 
@@ -127,6 +129,7 @@
 [blog_therox_4]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-4/
 [blog_therox_5]: https://devblogs.microsoft.com/typescript/type-treat-day-5/
 [blog_therox_6]: https://devblogs.microsoft.com/typescript/type-treat-wrap-up/
+[book_cherny]: https://www.oreilly.com/library/view/programming-typescript/9781492037644/
 [book_despoudis]: https://www.packtpub.com/product/typescript-4-design-patterns-and-best-practices/9781800563421
 [book_fain]: https://www.manning.com/books/typescript-quickly
 [book_freeman]: https://www.apress.com/gp/book/9781484270103

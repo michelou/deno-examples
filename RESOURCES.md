@@ -83,6 +83,12 @@
 - [Deno Cheat Sheet](https://droces.github.io/Deno-Cheat-Sheet/).
 - [Woolha Deno Tutorials](https://www.woolha.com/tutorials/categories/deno).
 
+<!--
+## <span id="git">Git</span>
+
+- [Advanced Git: Power Commands Beyond the Basics](https://kinsta.com/blog/advanced-git/) by Jeremy Holcombe, June 2023.
+-->
+
 ***
 
 *[mics](https://lampwww.epfl.ch/~michelou/)/June 2023* [**&#9650;**](#top)
