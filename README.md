@@ -17,7 +17,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 
 This project depends on two external software for the **Microsoft Windows** platform:
 
-- [Deno 1.34][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
+- [Deno 1.35][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
 - [Git 2.41][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
@@ -27,14 +27,14 @@ Optionally one may also install the following software:
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (*June 2023*) <sup id="anchor_03">[3](#footnote_03)</sup>:
+For instance our development environment looks as follows (*July 2023*) <sup id="anchor_03">[3](#footnote_03)</sup>:
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.34.3\            <i>( 69 MB)</i>
+C:\opt\deno-1.35.1\            <i>( 69 MB)</i>
 C:\opt\Git-2.41.0\             <i>(315 MB)</i>
 C:\opt\nmap-7.93\              <i>( 29 MB)</i>
-C:\opt\node-v18.16.1-win-x64\  <i>( 79 MB)</i>
+C:\opt\node-v18.17.0-win-x64\  <i>( 79 MB)</i>
 </pre>
 
 > **&#9755;** ***Installation policy***<br/>
@@ -82,10 +82,10 @@ Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.34.3, deployctl 1.5.0, node v18.16.1, ncat 7.93, rustc 1.70.0,
+   deno 1.35.1, deployctl 1.5.0, node v18.17.0, ncat 7.93, rustc 1.70.0,
    git 2.41.0.windows.1, diff 3.9
 Tool paths:
-   C:\opt\deno-1.34.3\deno.exe
+   C:\opt\deno-1.35.1\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
    C:\opt\nmap-7.93\ncat.exe
    %USERPROFILE%\.cargo\bin\rustc.exe
@@ -93,13 +93,13 @@ Tool paths:
    C:\opt\Git-2.41.0\usr\bin\diff.exe
 Environment variables:
    "CARGO_HOME=%USERPROFILE%\.cargo"
-   "DENO_HOME=C:\opt\deno-1.34.3"
+   "DENO_HOME=C:\opt\deno-1.35.1"
    "GIT_HOME=C:\opt\Git-2.41.0"
    "NMAP_HOME=C:\opt\nmap-7.93"
-   "NODE_HOME=C:\opt\node-v18.16.1-win-x64"
+   "NODE_HOME=C:\opt\node-v18.17.0-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno</b>
-C:\opt\deno-1.34.3\deno.exe
+C:\opt\deno-1.35.1\deno.exe
 </pre>
 
 > **:mag_right:** Subcommand `help` prints the following help message :
@@ -121,14 +121,14 @@ C:\opt\deno-1.34.3\deno.exe
 <span id="footnote_01">[1]</span> ***Deno TypeScript*** [↩](#anchor_01)
 
 <dl><dd>
-Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/" rel="external"><code>5.0</code></a> in our case:
+Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-1/" rel="external"><code>5.1</code></a> in our case:
 </dd>
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.34.3 (release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 11.5.150.2
-typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/" rel="external">5.0.4</a>
+deno 1.35.1 (release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 11.6.189.7
+typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-1/" rel="external">5.1.6</a>
 </pre>
 </dd></dl>
 <!-- deno 1.17.3: v8  9.7.106.15, typescript 4.5.2 -->
@@ -163,6 +163,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.32.2: v8 11.2.214.9,  typescript 5.0.2 -->
 <!-- deno 1.32.3: v8 11.2.214.9,  typescript 5.0.3 -->
 <!-- deno 1.34.3: v8 11.5.150.2 , typescript 5.0.4 -->
+<!-- deno 1.35.1: v8 11.6.189.7 , typescript 5.1.6 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -179,7 +180,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <pre style="font-size:80%;">
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.93-setup.zip</a>               <i>(28 MB)</i>
-<a href="https://nodejs.org/dist/latest-v18.x/">node-v18.16.1-win-x64.zip</a>         <i>(27 MB)</i>
+<a href="https://nodejs.org/dist/latest-v18.x/">node-v18.17.0-win-x64.zip</a>         <i>(27 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.41.0-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
 </dd></dl>
@@ -192,7 +193,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/June 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/July 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -205,7 +206,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.34.3
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.35.1
 [flix_examples]: https://github.com/michelou/flix-examples
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
@@ -237,7 +238,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nodejs14_downloads]: https://nodejs.org/dist/latest-v14.x/
 [nodejs16_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md#16.19.0
 [nodejs16_downloads]: https://nodejs.org/dist/latest-v16.x/
-[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.16.1
+[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.17.0
 [nodejs18_downloads]: https://nodejs.org/dist/latest-v18.x/
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [rust_examples]: https://github.com/michelou/rust-examples

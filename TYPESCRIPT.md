@@ -11,6 +11,7 @@
 ## <span id="articles">Articles</span>
 
 - &#128077; [**fettblog.eu**](https://fettblog.eu) articles by Stefan Baumgartner :
+   - [5 Inconvenient Truths about TypeScript][article_baumgartner_truths], July 2023.
    - [TypeScript: Iterating over objects][article_baumgartner_iterating], May 2022.
    - [TypeScript: The humble function overload][article_baumgartner_overload], November 2021.
     [TypeScript: In defense of any][article_baumgartner_any], September 2021.
@@ -28,6 +29,7 @@
 - [LogRocket](https://blog.logrocket.com/) Blog:
   - [How to extend enums in TypeScript](https://blog.logrocket.com/extend-enums-typescript/), June 2022.
 - [Microsoft TypeScript DevBlog][blog_microsoft]
+   - [Announcing TypeScript 5.2][blog_danielr_5_2] by Daniel Rosenwasser, June 2023.
    - [Announcing TypeScript 5.1][blog_danielr_5_1] by Daniel Rosenwasser, June 2023.
    - [Announcing TypeScript 5.0][blog_danielr_5_0] by Daniel Rosenwasser, January 2023.
    - [Announcing TypeScript 4.9][blog_danielr_4_9] by Daniel Rosenwasser, November 2022.
@@ -62,7 +64,7 @@
 - [Refactoring TypeScript][book_hickey] by James Hickey, October 2019.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8392-1804-0, 120 pages)</span>
 - [Programming TypeScript][book_cherny] by Boris Cherny, May 2019.<br/><span style="font-size:80%;">(O'Reilly, ISBN 978-1-4920-3765-1)</span>
 
-## <span id="community">Community</span>
+## <span id="community">Community</span> [**&#x25B4;**](#top)
 
 - [Basarat Ali Syed](https://github.com/basarat) (GitHub).
 - [TypeScript Roadmap](https://github.com/microsoft/TypeScript/wiki/Roadmap) ([Microsoft](https://github.com/microsoft))
@@ -76,6 +78,7 @@
 ## <span id="tools">Tools</span> [**&#x25B4;**](#top)
 
 - [Deno KV](https://deno.com/kv) &ndash; a Global Database for Global Apps.
+- [typescrpit-eslint](https://typescript-eslint.io/) &ndash; enables ESLint and Prettier to run on TypeScript code.
 - [`typesync`](https://github.com/jeffijoe/typesync) &ndash; Install missing TypeScript typings for dependencies in your `package.json`.
 
 ## <span id="tutorials">Tutorials</span>
@@ -94,7 +97,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/June 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/July 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -104,6 +107,7 @@
 [article_baumgartner_array]: https://fettblog.eu/typescript-array-includes/
 [article_baumgartner_iterating]: https://fettblog.eu/typescript-iterating-over-objects/
 [article_baumgartner_overload]: https://fettblog.eu/typescript-function-overload/
+[article_baumgartner_truths]: https://fettblog.eu/5-truths-about-typescript/
 [article_weber]: https://engineering.tableau.com/really-advanced-typescript-types-c590eee59a12
 [blog_isaiah]: https://blog.logrocket.com/typescript-4-1-new-features-and-improvements/
 [blog_microsoft]: https://devblogs.microsoft.com/typescript/
@@ -121,6 +125,7 @@
 [blog_danielr_4_9]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-9/
 [blog_danielr_5_0]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/
 [blog_danielr_5_1]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-1/
+[blog_danielr_5_2]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-2-beta/
 [blog_sitepen]: https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
 [blog_sitepen_4_3]: https://www.sitepen.com/blog/update-the-definitive-typescript-guide
 [blog_therox_1]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-1/
