@@ -11,7 +11,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [Dart][dart_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX Toolset][wix_examples] are other trending topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [Dart][dart_examples], [Docker][docker_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX Toolset][wix_examples] are other trending topics we are continuously monitoring.
 
 ## <span id="proj_deps">Project dependencies</span>
 
@@ -31,7 +31,7 @@ For instance our development environment looks as follows (*July 2023*) <sup id=
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.35.1\            <i>( 69 MB)</i>
+C:\opt\deno-1.35.2\            <i>( 69 MB)</i>
 C:\opt\Git-2.41.0\             <i>(315 MB)</i>
 C:\opt\nmap-7.93\              <i>( 29 MB)</i>
 C:\opt\node-v18.17.0-win-x64\  <i>( 79 MB)</i>
@@ -82,10 +82,10 @@ Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.35.1, deployctl 1.5.0, node v18.17.0, ncat 7.93, rustc 1.70.0,
+   deno 1.35.2, deployctl 1.5.0, node v18.17.0, ncat 7.93, rustc 1.70.0,
    git 2.41.0.windows.1, diff 3.9
 Tool paths:
-   C:\opt\deno-1.35.1\deno.exe
+   C:\opt\deno-1.35.2\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
    C:\opt\nmap-7.93\ncat.exe
    %USERPROFILE%\.cargo\bin\rustc.exe
@@ -93,13 +93,13 @@ Tool paths:
    C:\opt\Git-2.41.0\usr\bin\diff.exe
 Environment variables:
    "CARGO_HOME=%USERPROFILE%\.cargo"
-   "DENO_HOME=C:\opt\deno-1.35.1"
+   "DENO_HOME=C:\opt\deno-1.35.2"
    "GIT_HOME=C:\opt\Git-2.41.0"
    "NMAP_HOME=C:\opt\nmap-7.93"
    "NODE_HOME=C:\opt\node-v18.17.0-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno</b>
-C:\opt\deno-1.35.1\deno.exe
+C:\opt\deno-1.35.2\deno.exe
 </pre>
 
 > **:mag_right:** Subcommand `help` prints the following help message :
@@ -126,7 +126,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.35.1 (release, x86_64-pc-windows-msvc)
+deno 1.35.2 (release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 11.6.189.7
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-1/" rel="external">5.1.6</a>
 </pre>
@@ -164,6 +164,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.32.3: v8 11.2.214.9,  typescript 5.0.3 -->
 <!-- deno 1.34.3: v8 11.5.150.2 , typescript 5.0.4 -->
 <!-- deno 1.35.1: v8 11.6.189.7 , typescript 5.1.6 -->
+<!-- deno 1.35.2: v8 11.6.189.7 , typescript 5.1.6 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -206,7 +207,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.35.1
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.35.2
 [flix_examples]: https://github.com/michelou/flix-examples
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
