@@ -22,7 +22,7 @@ This project depends on two external software for the **Microsoft Windows** plat
 
 Optionally one may also install the following software:
 
-- [Nmap 7.93][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
+- [Nmap 7.94][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 18.x LTS][nodejs18_downloads] ([*change log*][nodejs18_changelog])
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
@@ -31,9 +31,9 @@ For instance our development environment looks as follows (*July 2023*) <sup id=
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
-C:\opt\deno-1.35.2\            <i>( 69 MB)</i>
+C:\opt\deno-1.35.2\            <i>( 74 MB)</i>
 C:\opt\Git-2.41.0\             <i>(315 MB)</i>
-C:\opt\nmap-7.93\              <i>( 29 MB)</i>
+C:\opt\nmap-7.94\              <i>( 29 MB)</i>
 C:\opt\node-v18.17.0-win-x64\  <i>( 79 MB)</i>
 </pre>
 
@@ -65,7 +65,7 @@ where
 - file [**`TYPESCRIPT.md`**](TYPESCRIPT.md) gathers [TypeScript] related informations.
 - file [**`setenv.bat`**](setenv.bat) is the batch script for setting up our environment.
 
-We also define a virtual drive **`O:`** in our working environment in order to reduce/hide the real path of our project directory (see article ["Windows command prompt limitation"][windows_limitation] from Microsoft Support).
+We also define a virtual drive &ndash; e.g. drive **`O:`** &ndash; in our working environment in order to reduce/hide the real path of our project directory (see article ["Windows command prompt limitation"][windows_limitation] from Microsoft Support).
 
 > **:mag_right:** We use the Windows external command [**`subst`**][windows_subst] to create virtual drives; for instance:
 >
@@ -82,12 +82,12 @@ Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.35.2, deployctl 1.5.0, node v18.17.0, ncat 7.93, rustc 1.70.0,
+   deno 1.35.2, deployctl 1.5.0, node v18.17.0, ncat 7.94, rustc 1.70.0,
    git 2.41.0.windows.1, diff 3.9
 Tool paths:
    C:\opt\deno-1.35.2\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
-   C:\opt\nmap-7.93\ncat.exe
+   C:\opt\nmap-7.94\ncat.exe
    %USERPROFILE%\.cargo\bin\rustc.exe
    C:\opt\Git-2.41.0\bin\git.exe
    C:\opt\Git-2.41.0\usr\bin\diff.exe
@@ -95,7 +95,7 @@ Environment variables:
    "CARGO_HOME=%USERPROFILE%\.cargo"
    "DENO_HOME=C:\opt\deno-1.35.2"
    "GIT_HOME=C:\opt\Git-2.41.0"
-   "NMAP_HOME=C:\opt\nmap-7.93"
+   "NMAP_HOME=C:\opt\nmap-7.94"
    "NODE_HOME=C:\opt\node-v18.17.0-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno</b>
@@ -180,7 +180,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <dd>
 <pre style="font-size:80%;">
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
-<a href="https://nmap.org/download.html">nmap-7.93-setup.zip</a>               <i>(28 MB)</i>
+<a href="https://nmap.org/download.html">nmap-7.94-setup.zip</a>               <i>(28 MB)</i>
 <a href="https://nodejs.org/dist/latest-v18.x/">node-v18.17.0-win-x64.zip</a>         <i>(27 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.41.0-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
