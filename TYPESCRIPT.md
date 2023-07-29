@@ -25,6 +25,7 @@
 - [What’s New in TypeScript 5.0: Declarators, Const Type, Enums Improvement, Speed, and Much More!](https://kinsta.com/blog/typescript-5-0/) by Joel Olawanle, April 2023.
 - [everyday: Development Log](https://www.huy.rocks/everyday)
   - [TypeScript / Mocking File and FileList in Jest](https://www.huy.rocks/everyday/08-28-2022-typescript-mocking-file-and-filelist-in-jest), August 2022.
+  - [TypeScript / Use String As Enum Key](https://www.huy.rocks/everyday/typescript-use-string-as-enum-key), April 2022.
   - [TypeScript / How the compiler compiles](https://www.huy.rocks/everyday/04-01-2022-typescript-how-the-compiler-compiles), January 2022.
 - [LogRocket](https://blog.logrocket.com/) Blog:
   - [How to extend enums in TypeScript](https://blog.logrocket.com/extend-enums-typescript/), June 2022.
@@ -97,7 +98,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/July 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
