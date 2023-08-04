@@ -109,7 +109,7 @@ set _STRONG_BG_BLUE=[104m
 goto :eof
 
 @rem input parameter: %*
-@rem output parameter: _HELP, _VERBOSE
+@rem output parameters: _BASH, _HELP, _VERBOSE
 :args
 set _BASH=0
 set _HELP=0
@@ -152,9 +152,11 @@ if %_DEBUG%==1 (
 goto :eof
 
 @rem input parameter: %1: path to be substituted
-@rem output parameter: _DRIVE_NAME
+@rem output parameter: _DRIVE_NAME (2 characters: letter + ':')
 :drive_name
 set "__GIVEN_PATH=%~1"
+@rem remove trailing path separator if present
+if "%__GIVEN_PATH:~-1,1%"=="\" set "__GIVEN_PATH=%__GIVEN_PATH:~0,-1%"
 
 @rem https://serverfault.com/questions/62578/how-to-get-a-list-of-drive-letters-on-a-system-through-a-windows-shell-bat-cmd
 set __DRIVE_NAMES=F:G:H:I:J:K:L:M:N:O:P:Q:R:S:T:U:V:W:X:Y:Z:
@@ -163,7 +165,7 @@ for /f %%i in ('wmic logicaldisk get deviceid ^| findstr :') do (
 )
 if %_DEBUG%==1 echo %_DEBUG_LABEL% __DRIVE_NAMES=%__DRIVE_NAMES% ^(WMIC^) 1>&2
 if not defined __DRIVE_NAMES (
-    echo %_ERROR_LABEL% No more free drive letter 1>&2
+    echo %_ERROR_LABEL% No more free drive name 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -199,15 +201,17 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% subst "%_DRIVE_NAME%" "%__GIVEN_PATH%" 1>&2
 )
 subst "%_DRIVE_NAME%" "%__GIVEN_PATH%"
 if not %ERRORLEVEL%==0 (
-    echo %_ERROR_LABEL% Failed to assigned drive %_DRIVE_NAME% to path 1>&2
+    echo %_ERROR_LABEL% Failed to assign drive %_DRIVE_NAME% to path 1>&2
     set _EXITCODE=1
     goto :eof
 )
 goto :eof
 
+@rem input parameter: %1=Used drive name
+@rem output parameter: __DRIVE_NAMES
 :drive_names
-set "__USED=%~1"
-set "__DRIVE_NAMES=!__DRIVE_NAMES:%__USED%=!"
+set "__USED_NAME=%~1"
+set "__DRIVE_NAMES=!__DRIVE_NAMES:%__USED_NAME%=!"
 goto :eof
 
 :help
@@ -383,6 +387,12 @@ set __GIT_CMD=
 for /f %%f in ('where git.exe 2^>NUL') do set "__GIT_CMD=%%f"
 if defined __GIT_CMD (
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Git executable found in PATH 1>&2
+    for %%i in ("%__GIT_CMD%") do set "__GIT_BIN_DIR=%%~dpi"
+    for %%f in ("!__GIT_BIN_DIR!..") do set "_GIT_HOME=%%f"
+    @rem Executable git.exe is present both in bin\ and \mingw64\bin\
+    if not "!_GIT_HOME:mingw=!"=="!_GIT_HOME!" (
+        for %%f in ("!_GIT_HOME!\..") do set "_GIT_HOME=%%f"
+    )
     @rem keep _GIT_PATH undefined since executable already in path
     goto :eof
 ) else if defined GIT_HOME (
@@ -400,7 +410,7 @@ if defined __GIT_CMD (
     )
 )
 if not exist "%_GIT_HOME%\bin\git.exe" (
-    echo %_ERROR_LABEL% Git executable not found ^(%_GIT_HOME%^) 1>&2
+    echo %_ERROR_LABEL% Git executable not found ^("%_GIT_HOME%"^) 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -413,39 +423,44 @@ set "__VERSIONS_LINE1=  "
 set "__VERSIONS_LINE2=  "
 set __WHERE_ARGS=
 where /q "%DENO_HOME%:deno.exe"
-if errorlevel 0 (
+if %ERRORLEVEL%==0 (
     for /f "tokens=1,2,*" %%i in ('"%DENO_HOME%\deno.exe" --version ^| findstr deno') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% deno %%j,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%DENO_HOME%:deno.exe"
 )
 where /q "%USERPROFILE%\.deno\bin:deployctl.cmd"
-if errorlevel 0 (
+if %ERRORLEVEL%==0 (
     for /f "tokens=1,*" %%i in ('"%USERPROFILE%\.deno\bin\deployctl.cmd" --version') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% deployctl %%j,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%USERPROFILE%\.deno\bin:deployctl.cmd"
 )
 where /q "%NODE_HOME%:node.exe"
-if errorlevel 0 (
+if %ERRORLEVEL%==0 (
     for /f %%i in ('"%NODE_HOME%\node.exe" --version') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% node %%i,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%NODE_HOME%:node.exe"
 )
 where /q "%NMAP_HOME%:ncat.exe"
-if errorlevel 0 (
+if %ERRORLEVEL%==0 (
     for /f "tokens=1,2,3,*" %%i in ('"%NMAP_HOME%\ncat.exe" --version 2^>^&1') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% ncat %%k,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%NMAP_HOME%:ncat.exe"
 )
 where /q "%CARGO_HOME%\bin:rustc.exe"
-if errorlevel 0 (
+if %ERRORLEVEL%==0 (
     for /f "tokens=1,2,*" %%i in ('"%CARGO_HOME%\bin\rustc.exe" --version') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% rustc %%j,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%CARGO_HOME%\bin:rustc.exe"
 )
 where /q "%GIT_HOME%\bin:git.exe"
-if errorlevel 0 (
+if %ERRORLEVEL%==0 (
     for /f "tokens=1,2,*" %%i in ('"%GIT_HOME%\bin\git.exe" --version') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% git %%k,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%GIT_HOME%\bin:git.exe"
 )
 where /q "%GIT_HOME%\usr\bin:diff.exe"
-if errorlevel 0 (
-   for /f "tokens=1-3,*" %%i in ('"%GIT_HOME%\usr\bin\diff.exe" --version ^| findstr diff') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% diff %%l"
+if %ERRORLEVEL%==0 (
+   for /f "tokens=1-3,*" %%i in ('"%GIT_HOME%\usr\bin\diff.exe" --version ^| findstr diff') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% diff %%l,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%GIT_HOME%\usr\bin:diff.exe"
+)
+where /q "%GIT_HOME%\bin":bash.exe
+if %ERRORLEVEL%==0 (
+    for /f "tokens=1-3,4,*" %%i in ('"%GIT_HOME%\bin\bash.exe" --version ^| findstr bash') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% bash %%l"
+    set __WHERE_ARGS=%__WHERE_ARGS% "%GIT_HOME%\bin:bash.exe"
 )
 echo Tool versions:
 echo %__VERSIONS_LINE1%
@@ -483,6 +498,7 @@ endlocal & (
             cd /d %_DRIVE_NAME%
         )
         if %_BASH%==1 (
+            @rem see https://conemu.github.io/en/GitForWindows.html
             if %_DEBUG%==1 echo %_DEBUG_LABEL% %_GIT_HOME%\usr\bin\bash.exe --login 1>&2
             cmd.exe /c "%_GIT_HOME%\usr\bin\bash.exe --login"
         )

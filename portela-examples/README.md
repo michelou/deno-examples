@@ -12,14 +12,14 @@
 
 ### <span id="http-server">`http-server` Example</span>
 
-Example [`http-server.ts`](./Chapter01/http-server/http-server.ts) makes use of the function `serve` from the remote [`http`](https://deno.land/std@0.194.0/http) library. The import clauses looks as follows:
+Example [`http-server.ts`](./Chapter01/http-server/http-server.ts) makes use of the function `serve` from the remote [`http`](https://deno.land/std@0.197.0/http) library. The import clauses looks as follows:
 
 <div class="hightlight highlight-source-js">
 <pre style="font-size:80%;">
 <span style="color:green;">// file: http-server.ts</span>
-<b>import</b> { <a href="https://deno.land/std@0.194.0/http/server.ts?s=serve" rel="external">serve</a> } <b>from</b> "https://deno.land/std@0.194.0/http/server.ts"
+<b>import</b> { <a href="https://deno.land/std@0.197.0/http/server.ts?s=serve" rel="external">serve</a> } <b>from</b> "https://deno.land/std@0.197.0/http/server.ts"
 &nbsp;
-<b>for await</b> (<b>const</b> req of <a href="https://deno.land/std@0.194.0/http/server.ts?s=serve" rel="external">serve</a>(":8080")) {
+<b>for await</b> (<b>const</b> req of <a href="https://deno.land/std@0.197.0/http/server.ts?s=serve" rel="external">serve</a>(":8080")) {
   req.respond({ body: "Hello deno" })
 }
 </pre>
@@ -80,7 +80,7 @@ Example `http-server-import-maps` is the second variant of the original example 
    <pre style="font-size:80%;">
    {
      "imports": {
-       "http/": "https://deno.land/std@0.194.0/http/"
+       "http/": "https://deno.land/std@0.197.0/http/"
      }
    }</pre>
    </div>
