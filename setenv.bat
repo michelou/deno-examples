@@ -263,7 +263,7 @@ if defined __DENO_CMD (
     )
 )
 if not exist "%_DENO_HOME%\deno.exe" (
-    echo %_ERROR_LABEL% Deno executable not found ^(%_DENO_HOME%^) 1>&2
+    echo %_ERROR_LABEL% Deno executable not found ^("%_DENO_HOME%"^) 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -395,6 +395,12 @@ if defined __GIT_CMD (
         for %%f in ("!_GIT_HOME!\.") do set "_GIT_HOME=%%~dpf"
     )
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Git executable found in PATH 1>&2
+    for %%i in ("%__GIT_CMD%") do set "__GIT_BIN_DIR=%%~dpi"
+    for %%f in ("!__GIT_BIN_DIR!..") do set "_GIT_HOME=%%f"
+    @rem Executable git.exe is present both in bin\ and \mingw64\bin\
+    if not "!_GIT_HOME:mingw=!"=="!_GIT_HOME!" (
+        for %%f in ("!_GIT_HOME!\..") do set "_GIT_HOME=%%f"
+    )
     @rem keep _GIT_PATH undefined since executable already in path
     goto :eof
 ) else if defined GIT_HOME (
@@ -412,7 +418,7 @@ if defined __GIT_CMD (
     )
 )
 if not exist "%_GIT_HOME%\bin\git.exe" (
-    echo %_ERROR_LABEL% Git executable not found ^(%_GIT_HOME%^) 1>&2
+    echo %_ERROR_LABEL% Git executable not found ^("%_GIT_HOME%"^) 1>&2
     set _EXITCODE=1
     goto :eof
 )
