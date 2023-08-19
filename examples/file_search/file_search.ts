@@ -1,5 +1,5 @@
-import yargs from "https://deno.land/x/yargs@v17.6.2-deno/deno.ts";
-import * as path from "https://deno.land/std@0.171.0/path/mod.ts";
+import yargs from "https://deno.land/x/yargs@v17.7.2-deno/deno.ts";
+import * as path from "https://deno.land/std@0.198.0/path/mod.ts";
 
 interface Yargs<ArgvReturnType> {
   describe: (param: string, description: string) => Yargs<ArgvReturnType>;

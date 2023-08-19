@@ -109,7 +109,7 @@ set _STRONG_BG_BLUE=[104m
 goto :eof
 
 @rem input parameter: %*
-@rem output parameter: _HELP, _VERBOSE
+@rem output parameters: _BASH, _HELP, _VERBOSE
 :args
 set _BASH=0
 set _HELP=0
@@ -152,9 +152,11 @@ if %_DEBUG%==1 (
 goto :eof
 
 @rem input parameter: %1: path to be substituted
-@rem output parameter: _DRIVE_NAME
+@rem output parameter: _DRIVE_NAME (2 characters: letter + ':')
 :drive_name
 set "__GIVEN_PATH=%~1"
+@rem remove trailing path separator if present
+if "%__GIVEN_PATH:~-1,1%"=="\" set "__GIVEN_PATH=%__GIVEN_PATH:~0,-1%"
 
 @rem https://serverfault.com/questions/62578/how-to-get-a-list-of-drive-letters-on-a-system-through-a-windows-shell-bat-cmd
 set __DRIVE_NAMES=F:G:H:I:J:K:L:M:N:O:P:Q:R:S:T:U:V:W:X:Y:Z:
@@ -163,7 +165,7 @@ for /f %%i in ('wmic logicaldisk get deviceid ^| findstr :') do (
 )
 if %_DEBUG%==1 echo %_DEBUG_LABEL% __DRIVE_NAMES=%__DRIVE_NAMES% ^(WMIC^) 1>&2
 if not defined __DRIVE_NAMES (
-    echo %_ERROR_LABEL% No more free drive letter 1>&2
+    echo %_ERROR_LABEL% No more free drive name 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -171,7 +173,7 @@ for /f "tokens=1,2,*" %%f in ('subst') do (
     set "__SUBST_DRIVE=%%f"
     set "__SUBST_DRIVE=!__SUBST_DRIVE:~0,2!"
     set "__SUBST_PATH=%%h"
-    if "!__SUBST_DRiVE!"=="!__GIVEN_PATH:~0,2!" (
+    if "!__SUBST_DRIVE!"=="!__GIVEN_PATH:~0,2!" (
         set _DRIVE_NAME=!__SUBST_DRIVE:~0,2!
         if %_DEBUG%==1 ( echo %_DEBUG_LABEL% Select drive !_DRIVE_NAME! for which a substitution already exists 1>&2
         ) else if %_VERBOSE%==1 ( echo Select drive !_DRIVE_NAME! for which a substitution already exists 1>&2
@@ -195,19 +197,21 @@ set "_DRIVE_NAME=!__DRIVE_NAMES:~0,2!"
 if /i "%_DRIVE_NAME%"=="%__GIVEN_PATH:~0,2%" goto :eof
 
 if %_DEBUG%==1 ( echo %_DEBUG_LABEL% subst "%_DRIVE_NAME%" "%__GIVEN_PATH%" 1>&2
-) else if %_VERBOSE%==1 ( echo Assign path "%__GIVEN_PATH%" to drive %_DRIVE_NAME% 1>&2
+) else if %_VERBOSE%==1 ( echo Assign drive %_DRIVE_NAME% to path "%__GIVEN_PATH%" 1>&2
 )
 subst "%_DRIVE_NAME%" "%__GIVEN_PATH%"
 if not %ERRORLEVEL%==0 (
-    echo %_ERROR_LABEL% Failed to assigned drive %_DRIVE_NAME% to path 1>&2
+    echo %_ERROR_LABEL% Failed to assign drive %_DRIVE_NAME% to path "%__GIVEN_PATH%" 1>&2
     set _EXITCODE=1
     goto :eof
 )
 goto :eof
 
+@rem input parameter: %1=Used drive name
+@rem output parameter: __DRIVE_NAMES
 :drive_names
-set "__USED=%~1"
-set "__DRIVE_NAMES=!__DRIVE_NAMES:%__USED%=!"
+set "__USED_NAME=%~1"
+set "__DRIVE_NAMES=!__DRIVE_NAMES:%__USED_NAME%=!"
 goto :eof
 
 :help
@@ -225,6 +229,7 @@ if %_VERBOSE%==1 (
 echo Usage: %__BEG_O%%_BASENAME% { ^<option^> ^| ^<subcommand^> }%__END%
 echo.
 echo   %__BEG_P%Options:%__END%
+echo     %__BEG_O%-bash%__END%       start Git bash shell instead of Windows command prompt
 echo     %__BEG_O%-debug%__END%      display commands executed by this script
 echo     %__BEG_O%-verbose%__END%    display progress messages
 echo.
@@ -238,7 +243,7 @@ set _DENO_HOME=
 set _DENO_PATH=
 
 set __DENO_CMD=
-for /f %%f in ('where deno.exe 2^>NUL') do set "__DENO_CMD=%%f"
+for /f "delims=" %%f in ('where deno.exe 2^>NUL') do set "__DENO_CMD=%%f"
 if defined __DENO_CMD (
     for %%i in ("%__DENO_CMD%") do set "_DENO_HOME=%%~dpi"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Deno executable found in PATH 1>&2
@@ -253,7 +258,7 @@ if defined __DENO_CMD (
         for /f %%f in ('dir /ad /b "!__PATH!\deno-1*" 2^>NUL') do set "_DENO_HOME=!__PATH!\%%f"
         if not defined _DENO_HOME (
             set "__PATH=%ProgramFiles%"
-            for /f %%f in ('dir /ad /b "!__PATH!\deno-1*" 2^>NUL') do set "_DENO_HOME=!__PATH!\%%f"
+            for /f "delims=" %%f in ('dir /ad /b "!__PATH!\deno-1*" 2^>NUL') do set "_DENO_HOME=!__PATH!\%%f"
         )
     )
 )
@@ -273,7 +278,7 @@ goto :eof
 set _NMAP_HOME=
 
 set __NCAT_CMD=
-for /f %%f in ('where ncat.exe 2^>NUL') do set "__NCAT_CMD=%%f"
+for /f "delims=" %%f in ('where ncat.exe 2^>NUL') do set "__NCAT_CMD=%%f"
 if defined __NCAT_CMD (
     for %%i in ("%__NCAT_CMD%") do set "_NMAP_HOME=%%~dpi"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Ncat executable found in PATH 1>&2
@@ -288,7 +293,7 @@ if defined __NCAT_CMD (
         for /f %%f in ('dir /ad /b "!__PATH!\nmap-7*" 2^>NUL') do set "_NMAP_HOME=!__PATH!\%%f"
         if not defined _NMAP_HOME (
             set "__PATH=%ProgramFiles%"
-            for /f %%f in ('dir /ad /b "!__PATH!\nmap-7*" 2^>NUL') do set "_NMAP_HOME=!__PATH!\%%f"
+            for /f "delims=" %%f in ('dir /ad /b "!__PATH!\nmap-7*" 2^>NUL') do set "_NMAP_HOME=!__PATH!\%%f"
         )
     )
 )
@@ -306,7 +311,7 @@ set __NODE_MAJOR=%~1
 set "_NODE!__NODE_MAJOR!_HOME="
 
 set __NODE_CMD=
-for /f %%f in ('where node.exe 2^>NUL') do set "__NODE_CMD=%%f"
+for /f "delims=" %%f in ('where node.exe 2^>NUL') do set "__NODE_CMD=%%f"
 if defined __NODE_CMD (
     for /f "delims=. tokens=1,*" %%i in ('"%__NODE_CMD%" --version') do (
         if not "%%i"=="v%__NODE_MAJOR%" set __NODE_CMD=
@@ -330,7 +335,7 @@ if defined __NODE_CMD (
     for /f %%f in ('dir /ad /b "!__PATH!\node-v%__NODE_MAJOR%*" 2^>NUL') do set "_NODE_HOME=!__PATH!\%%f"
     if not defined _NODE_HOME (
         set "__PATH=%ProgramFiles%"
-        for /f %%f in ('dir /ad /b "!__PATH!\node-v%__NODE_MAJOR%*" 2^>NUL') do set "_NODE_HOME=!__PATH!\%%f"
+        for /f "delims=" %%f in ('dir /ad /b "!__PATH!\node-v%__NODE_MAJOR%*" 2^>NUL') do set "_NODE_HOME=!__PATH!\%%f"
     )
 )
 if not exist "%_NODE_HOME%\nodevars.bat" (
@@ -353,7 +358,7 @@ set _CARGO_HOME=
 set _CARGO_PATH=
 
 set __CARGO_CMD=
-for /f %%f in ('where cargo.exe 2^>NUL') do set "__CARGO_CMD=%%f"
+for /f "delims=" %%f in ('where cargo.exe 2^>NUL') do set "__CARGO_CMD=%%f"
 if defined __CARGO_CMD (
     for %%i in ("%__CARGO_CMD%") do set "__CARGO_BIN_DIR=%%~dpi"
     for %%f in ("!__CARGO_BIN_DIR!\.") do set "_CARGO_HOME=%%~dpf"
@@ -380,8 +385,15 @@ set _GIT_HOME=
 set _GIT_PATH=
 
 set __GIT_CMD=
-for /f %%f in ('where git.exe 2^>NUL') do set "__GIT_CMD=%%f"
+for /f "delims=" %%f in ('where git.exe 2^>NUL') do set "__GIT_CMD=%%f"
 if defined __GIT_CMD (
+    for /f "delims=" %%i in ("%__GIT_CMD%") do set "__GIT_BIN_DIR=%%~dpi"
+    for %%f in ("!__GIT_BIN_DIR!\.") do set "_GIT_HOME=%%~dpf"
+    set "_GIT_HOME=!_GIT_HOME:~0,-1!"
+    @rem Executable git.exe is present both in bin\ and \mingw64\bin\
+    if not "!_GIT_HOME:mingw=!"=="!_GIT_HOME!" (
+        for %%f in ("!_GIT_HOME!\.") do set "_GIT_HOME=%%~dpf"
+    )
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Git executable found in PATH 1>&2
     @rem keep _GIT_PATH undefined since executable already in path
     goto :eof
@@ -395,7 +407,7 @@ if defined __GIT_CMD (
         for /f %%f in ('dir /ad /b "!__PATH!\Git*" 2^>NUL') do set "_GIT_HOME=!__PATH!\%%f"
         if not defined _GIT_HOME (
             set "__PATH=%ProgramFiles%"
-            for /f %%f in ('dir /ad /b "!__PATH!\Git*" 2^>NUL') do set "_GIT_HOME=!__PATH!\%%f"
+            for /f "delims=" %%f in ('dir /ad /b "!__PATH!\Git*" 2^>NUL') do set "_GIT_HOME=!__PATH!\%%f"
         )
     )
 )
@@ -409,47 +421,52 @@ goto :eof
 
 :print_env
 set __VERBOSE=%1
-set "__VERSIONS_LINE1=  "
-set "__VERSIONS_LINE2=  "
+set __VERSIONS_LINE1=
+set __VERSIONS_LINE2=
 set __WHERE_ARGS=
 where /q "%DENO_HOME%:deno.exe"
-if errorlevel 0 (
+if %ERRORLEVEL%==0 (
     for /f "tokens=1,2,*" %%i in ('"%DENO_HOME%\deno.exe" --version ^| findstr deno') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% deno %%j,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%DENO_HOME%:deno.exe"
 )
 where /q "%USERPROFILE%\.deno\bin:deployctl.cmd"
-if errorlevel 0 (
+if %ERRORLEVEL%==0 (
     for /f "tokens=1,*" %%i in ('"%USERPROFILE%\.deno\bin\deployctl.cmd" --version') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% deployctl %%j,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%USERPROFILE%\.deno\bin:deployctl.cmd"
 )
 where /q "%NODE_HOME%:node.exe"
-if errorlevel 0 (
+if %ERRORLEVEL%==0 (
     for /f %%i in ('"%NODE_HOME%\node.exe" --version') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% node %%i,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%NODE_HOME%:node.exe"
 )
 where /q "%NMAP_HOME%:ncat.exe"
-if errorlevel 0 (
+if %ERRORLEVEL%==0 (
     for /f "tokens=1,2,3,*" %%i in ('"%NMAP_HOME%\ncat.exe" --version 2^>^&1') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% ncat %%k,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%NMAP_HOME%:ncat.exe"
 )
 where /q "%CARGO_HOME%\bin:rustc.exe"
-if errorlevel 0 (
+if %ERRORLEVEL%==0 (
     for /f "tokens=1,2,*" %%i in ('"%CARGO_HOME%\bin\rustc.exe" --version') do set "__VERSIONS_LINE1=%__VERSIONS_LINE1% rustc %%j,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%CARGO_HOME%\bin:rustc.exe"
 )
 where /q "%GIT_HOME%\bin:git.exe"
-if errorlevel 0 (
+if %ERRORLEVEL%==0 (
     for /f "tokens=1,2,*" %%i in ('"%GIT_HOME%\bin\git.exe" --version') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% git %%k,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%GIT_HOME%\bin:git.exe"
 )
 where /q "%GIT_HOME%\usr\bin:diff.exe"
-if errorlevel 0 (
-   for /f "tokens=1-3,*" %%i in ('"%GIT_HOME%\usr\bin\diff.exe" --version ^| findstr diff') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% diff %%l"
+if %ERRORLEVEL%==0 (
+    for /f "tokens=1-3,*" %%i in ('"%GIT_HOME%\usr\bin\diff.exe" --version ^| findstr diff') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% diff %%l,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%GIT_HOME%\usr\bin:diff.exe"
 )
+where /q "%GIT_HOME%\bin:bash.exe"
+if %ERRORLEVEL%==0 (
+    for /f "tokens=1-3,4,*" %%i in ('"%GIT_HOME%\bin\bash.exe" --version ^| findstr bash') do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% bash %%l"
+    set __WHERE_ARGS=%__WHERE_ARGS% "%GIT_HOME%\bin:bash.exe"
+)
 echo Tool versions:
-echo %__VERSIONS_LINE1%
-echo %__VERSIONS_LINE2%
+echo   %__VERSIONS_LINE1%
+echo   %__VERSIONS_LINE2%
 if %__VERBOSE%==1 if defined __WHERE_ARGS (
     echo Tool paths: 1>&2
     for /f "tokens=*" %%p in ('where %__WHERE_ARGS%') do echo    %%p 1>&2
@@ -483,6 +500,7 @@ endlocal & (
             cd /d %_DRIVE_NAME%
         )
         if %_BASH%==1 (
+            @rem see https://conemu.github.io/en/GitForWindows.html
             if %_DEBUG%==1 echo %_DEBUG_LABEL% %_GIT_HOME%\usr\bin\bash.exe --login 1>&2
             cmd.exe /c "%_GIT_HOME%\usr\bin\bash.exe --login"
         )

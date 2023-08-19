@@ -5,3 +5,8 @@
 *_LOCAL/
 out/
 target/
+
+*_LOCAL/
+*_LOCAL.md
+*_LOCAL.txt
+
