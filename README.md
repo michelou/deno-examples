@@ -18,23 +18,25 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 This project depends on two external software for the **Microsoft Windows** platform:
 
 - [Deno 1.36][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
-- [Git 2.41][git_downloads] ([*release notes*][git_relnotes])
+- [Git 2.42][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
 - [Nmap 7.94][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 18.x LTS][nodejs18_downloads] ([*change log*][nodejs18_changelog])
+- [Visual Studio Code 1.82][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (*August 2023*) <sup id="anchor_03">[3](#footnote_03)</sup>:
+For instance our development environment looks as follows (*September 2023*) <sup id="anchor_03">[3](#footnote_03)</sup>:
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
 C:\opt\deno\                   <i>( 75 MB)</i>
-C:\opt\Git-2.41.0\             <i>(315 MB)</i>
+C:\opt\Git\                    <i>(367 MB)</i>
 C:\opt\nmap-7.94\              <i>( 29 MB)</i>
 C:\opt\node-v18.17.1-win-x64\  <i>( 80 MB)</i>
+C:\opt\VSCode\                 <i>(341 MB)</i>
 </pre>
 
 > **&#9755;** ***Installation policy***<br/>
@@ -77,41 +79,33 @@ We also define a virtual drive &ndash; e.g. drive **`O:`** &ndash; in our workin
 
 ### **`setenv.bat`**
 
-Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development environment; it makes external tools such as [**`deno.cmd`**][deno_cli], [**`node.exe`**][node_cli], [**`rustc.exe`**][rustc_cli] and [**`git.exe`**][git_cli] directly available from the command prompt.
+We execute command [**`setenv.bat`**](setenv.bat) once to setup our development environment; it makes external tools such as [**`deno.cmd`**][deno_cli], [**`git.exe`**][git_cli], and [**`sh.exe`**][sh_cli] directly available from the command prompt.
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-<<<<<<< HEAD
-   deno 1.36.1, deployctl 1.5.0, node v18.17.1, ncat 7.94, rustc 1.70.0,
-   git 2.41.0.windows.1, diff 3.9, bash 5.2.15(1)-release
-=======
-   deno 1.36.0, deployctl 1.5.0, node v18.17.0, ncat 7.94, rustc 1.70.0,
-   git 2.41.0.windows.1, diff 3.9
->>>>>>> b3dce7d5fdd80c5a6a388a5ec48e76db5f05168a
+   deno 1.36.4, deployctl 1.5.0, node v18.17.1, ncat 7.94, rustc 1.70.0,
+   git 2.42.0.windows.1, diff 3.10, bash 5.2.15(1)-release
 Tool paths:
    C:\opt\deno\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
    C:\opt\nmap-7.94\ncat.exe
    %USERPROFILE%\.cargo\bin\rustc.exe
-   C:\opt\Git-2.41.0\bin\git.exe
-   C:\opt\Git-2.41.0\usr\bin\diff.exe
+   C:\opt\Git\bin\git.exe
+   C:\opt\Git\usr\bin\diff.exe
 Environment variables:
    "CARGO_HOME=%USERPROFILE%\.cargo"
    "DENO_HOME=C:\opt\deno"
-   "GIT_HOME=C:\opt\Git-2.41.0"
+   "GIT_HOME=C:\opt\Git"
    "NMAP_HOME=C:\opt\nmap-7.94"
    "NODE_HOME=C:\opt\node-v18.17.1-win-x64"
 
-<<<<<<< HEAD
-<b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno sh</b>
+<b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno git sh</b>
 C:\opt\deno\deno.exe
-C:\opt\Git-2.41.0\bin\sh.exe
-C:\opt\Git-2.41.0\usr\bin\sh.exe
-=======
-<b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno</b>
-C:\opt\deno\deno.exe
->>>>>>> b3dce7d5fdd80c5a6a388a5ec48e76db5f05168a
+C:\opt\Git\bin\git.exe
+C:\opt\Git\mingw64\bin\git.exe
+C:\opt\Git\bin\sh.exe
+C:\opt\Git\usr\bin\sh.exe
 </pre>
 
 > **:mag_right:** Subcommand `help` prints the following help message :
@@ -121,7 +115,7 @@ C:\opt\deno\deno.exe
 >   &nbsp;
 >     Options:
 >       -bash       start Git bash shell instead of Windows command prompt
->       -debug      show commands executed by this script
+>       -debug      display commands executed by this script
 >       -verbose    display progress messages
 >   &nbsp;
 >     Subcommands:
@@ -216,7 +210,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/September 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -229,7 +223,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.36.0
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.36.4
 [docker_examples]: https://github.com/michelou/docker-examples
 [flix_examples]: https://github.com/michelou/flix-examples
 [git_cli]: https://git-scm.com/docs/git
@@ -268,10 +262,13 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [rust_examples]: https://github.com/michelou/rust-examples
 [rustc_cli]: https://doc.rust-lang.org/rustc/command-line-arguments.html
 [scala3_examples]: https://github.com/michelou/dotty-examples
+[sh_cli]: https://www.man7.org/linux/man-pages/man1/bash.1.html
 [spark_examples]: https://github.com/michelou/spark-examples
 [spring_examples]: https://github.com/michelou/spring-examples
 [trufflesqueak_examples]: https://github.com/michelou/trufflesqueak-examples
 [typescript]: https://devblogs.microsoft.com/typescript/
+[vscode_downloads]: https://code.visualstudio.com/#alt-downloads
+[vscode_relnotes]: https://code.visualstudio.com/updates/
 [windows_limitation]: https://support.microsoft.com/en-gb/help/830473/command-prompt-cmd-exe-command-line-string-limitation
 [windows_subst]: https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/subst
 [wix_examples]: https://github.com/michelou/wix-examples

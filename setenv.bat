@@ -26,6 +26,7 @@ if %_HELP%==1 (
 set _CARGO_PATH=
 set _DENO_PATH=
 set _GIT_PATH=
+set _VSCODE_PATH=
 
 call :deno
 if not %_EXITCODE%==0 goto end
@@ -46,6 +47,11 @@ if not %_EXITCODE%==0 (
 call :git
 if not %_EXITCODE%==0 goto end
 
+call :vscode
+if not %_EXITCODE%==0 (
+    @rem optional
+    set _EXITCODE=0
+)
 goto end
 
 @rem #########################################################################
@@ -125,7 +131,7 @@ if "%__ARG:~0,1%"=="-" (
     ) else if "%__ARG%"=="-debug" ( set _DEBUG=1
     ) else if "%__ARG%"=="-verbose" ( set _VERBOSE=1
     ) else (
-        echo %_ERROR_LABEL% Unknown option %__ARG% 1>&2
+        echo %_ERROR_LABEL% Unknown option "%__ARG%" 1>&2
         set _EXITCODE=1
         goto args_done
     )
@@ -133,7 +139,7 @@ if "%__ARG:~0,1%"=="-" (
     @rem subcommand
     if "%__ARG%"=="help" ( set _HELP=1
     ) else (
-        echo %_ERROR_LABEL% Unknown subcommand %__ARG% 1>&2
+        echo %_ERROR_LABEL% Unknown subcommand "%__ARG%" 1>&2
         set _EXITCODE=1
         goto args_done
     )
@@ -145,7 +151,7 @@ goto args_loop
 call :drive_name "%_ROOT_DIR%"
 if not %_EXITCODE%==0 goto :eof
 if %_DEBUG%==1 (
-    echo %_DEBUG_LABEL% Options    : _BASH=%_BASH% _HELP=%_HELP% _VERBOSE=%_VERBOSE% 1>&2
+    echo %_DEBUG_LABEL% Options    : _BASH=%_BASH% _VERBOSE=%_VERBOSE% 1>&2
     echo %_DEBUG_LABEL% Subcommands: _HELP=%_HELP% 1>&2
     echo %_DEBUG_LABEL% Variables  : _DRIVE_NAME=%_DRIVE_NAME% 1>&2
 )
@@ -245,7 +251,7 @@ set _DENO_PATH=
 set __DENO_CMD=
 for /f "delims=" %%f in ('where deno.exe 2^>NUL') do set "__DENO_CMD=%%f"
 if defined __DENO_CMD (
-    for %%i in ("%__DENO_CMD%") do set "_DENO_HOME=%%~dpi"
+    for /f "delims=" %%i in ("%__DENO_CMD%") do set "_DENO_HOME=%%~dpi"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Deno executable found in PATH 1>&2
     goto :eof
 ) else if defined DENO_HOME (
@@ -280,7 +286,7 @@ set _NMAP_HOME=
 set __NCAT_CMD=
 for /f "delims=" %%f in ('where ncat.exe 2^>NUL') do set "__NCAT_CMD=%%f"
 if defined __NCAT_CMD (
-    for %%i in ("%__NCAT_CMD%") do set "_NMAP_HOME=%%~dpi"
+    for /f "delims=" %%i in ("%__NCAT_CMD%") do set "_NMAP_HOME=%%~dpi"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Ncat executable found in PATH 1>&2
     goto :eof
 ) else if defined NMAP_HOME (
@@ -360,8 +366,8 @@ set _CARGO_PATH=
 set __CARGO_CMD=
 for /f "delims=" %%f in ('where cargo.exe 2^>NUL') do set "__CARGO_CMD=%%f"
 if defined __CARGO_CMD (
-    for %%i in ("%__CARGO_CMD%") do set "__CARGO_BIN_DIR=%%~dpi"
-    for %%f in ("!__CARGO_BIN_DIR!\.") do set "_CARGO_HOME=%%~dpf"
+    for /f "delims=" %%i in ("%__CARGO_CMD%") do set "__CARGO_BIN_DIR=%%~dpi"
+    for /f "delims=" %%f in ("!__CARGO_BIN_DIR!\.") do set "_CARGO_HOME=%%~dpf"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Rust executable found in PATH 1>&2
     goto :eof
 ) else if defined CARGO_HOME (
@@ -425,6 +431,42 @@ if not exist "%_GIT_HOME%\bin\git.exe" (
 set "_GIT_PATH=;%_GIT_HOME%\bin;%_GIT_HOME%\usr\bin;%_GIT_HOME%\mingw64\bin"
 goto :eof
 
+@rem output parameters: _VSCODE_HOME, _VSCODE_PATH
+:vscode
+set _VSCODE_HOME=
+set _VSCODE_PATH=
+
+set __CODE_CMD=
+for /f "delims=" %%f in ('where code.exe 2^>NUL') do set "__CODE_CMD=%%f"
+if defined __CODE_CMD (
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of VSCode executable found in PATH 1>&2
+    @rem keep _VSCODE_PATH undefined since executable already in path
+    goto :eof
+) else if defined VSCODE_HOME (
+    set "_VSCODE_HOME=%VSCODE_HOME%"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using environment variable VSCODE_HOME 1>&2
+) else (
+    set __PATH=C:\opt
+    if exist "!__PATH!\VSCode\" ( set "_VSCODE_HOME=!__PATH!\VSCode"
+    ) else (
+        for /f %%f in ('dir /ad /b "!__PATH!\VSCode-1*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
+        if not defined _VSCODE_HOME (
+            set "__PATH=%ProgramFiles%"
+            for /f "delims=" %%f in ('dir /ad /b "!__PATH!\VSCode-1*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
+        )
+    )
+)
+if not exist "%_VSCODE_HOME%\code.exe" (
+    echo %_WARNING_LABEL% VSCode executable not found ^("%_VSCODE_HOME%"^) 1>&2
+    if exist "%_VSCODE_HOME%\Code - Insiders.exe" (
+        echo %_WARNING_LABEL% It looks like you've installed an Insider version of VSCode 1>&2
+    )
+    set _EXITCODE=1
+    goto :eof
+)
+set "_VSCODE_PATH=;%_VSCODE_HOME%"
+goto :eof
+
 :print_env
 set __VERBOSE=%1
 set __VERSIONS_LINE1=
@@ -482,8 +524,13 @@ if %__VERBOSE%==1 if defined __WHERE_ARGS (
     if defined GIT_HOME echo    "GIT_HOME=%GIT_HOME%" 1>&2
     if defined NMAP_HOME echo    "NMAP_HOME=%NMAP_HOME%" 1>&2
     if defined NODE_HOME echo    "NODE_HOME=%NODE_HOME%" 1>&2
+    if defined VSCODE_HOME echo    "VSCODE_HOME=%VSCODE_HOME%" 1>&2
     echo Path associations: 1>&2
-    for /f "delims=" %%i in ('subst') do echo    %%i 1>&2
+    for /f "delims=" %%i in ('subst') do (
+        set "__LINE=%%i"
+        setlocal enabledelayedexpansion
+        echo    !__LINE:%USERPROFILE%=%%USERPROFILE%%! 1>&2
+    )
 )
 goto :eof
 
@@ -498,8 +545,9 @@ endlocal & (
         if not defined GIT_HOME set "GIT_HOME=%_GIT_HOME%"
         if not defined NMAP_HOME set "NMAP_HOME=%_NMAP_HOME%"
         if not defined NODE_HOME set "NODE_HOME=%_NODE18_HOME%"
+        if not defined VSCODE_HOME set "VSCODE_HOME=%VSCODE_HOME%"
         @rem We prepend %_GIT_HOME%\bin to hide C:\Windows\System32\bash.exe
-        set "PATH=%_GIT_HOME%\bin;%PATH%%_DENO_PATH%;%_NODE14_HOME%;%_NMAP_HOME%;%_CARGO_PATH%%_GIT_PATH%;%~dp0bin"
+        set "PATH=%_GIT_HOME%\bin;%PATH%%_DENO_PATH%;%_NODE14_HOME%;%_NMAP_HOME%;%_CARGO_PATH%%_GIT_PATH%%_VSCODE_PATH%;%~dp0bin"
         call :print_env %_VERBOSE%
         if not "%CD:~0,2%"=="%_DRIVE_NAME%" (
             if %_DEBUG%==1 echo %_DEBUG_LABEL% cd /d %_DRIVE_NAME% 1>&2

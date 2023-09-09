@@ -8,7 +8,7 @@
   </tr>
 </table>
 
-Covered topics include: [Deno versus Node.js](#nodejs), [Deno subcommands](#subcommands), [Deno runtime](#runtime), [Windows specific fixes](#fixes).
+Covered topics include: [Deno versus Node.js](#nodejs), [Deno commands](#commands), [Deno runtime](#runtime), [Windows specific fixes](#fixes).
 
 ## <span id="nodejs">Deno versus Node.js</span>
 <!--
@@ -29,7 +29,7 @@ https://alanstorm.com/comparing-a-deno-and-node-js-hello-world-program/
 
    Unlike Node.js <a href="https://deno.land/">Deno</a> has a lightweight built-in runtime of around 130 methods, functions and classes. See section [Deno Runtime](#runtime) for more details.
 
-## <span id="subcommands">Deno Subcommands</span> <sup><sub>[**&#9650;**](#top)</sub></sup>
+## <span id="commands">Deno Commands</span> <sup><sub>[**&#9650;**](#top)</sub></sup>
 
 ### **`deno cache`**
 
@@ -190,7 +190,7 @@ Two types of functions are available on [Deno][deno_land] without any imports: [
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/September 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
