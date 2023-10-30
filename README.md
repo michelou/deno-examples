@@ -24,18 +24,18 @@ Optionally one may also install the following software:
 
 - [Nmap 7.94][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 18.x LTS][nodejs18_downloads] ([*change log*][nodejs18_changelog])
-- [Visual Studio Code 1.82][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.83][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (*October 2023*) <sup id="anchor_03">[3](#footnote_03)</sup>:
+For instance our development environment looks as follows (*November 2023*) <sup id="anchor_03">[3](#footnote_03)</sup>:
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
 C:\opt\deno\                   <i>( 75 MB)</i>
 C:\opt\Git\                    <i>(367 MB)</i>
 C:\opt\nmap-7.94\              <i>( 29 MB)</i>
-C:\opt\node-v18.18.0-win-x64\  <i>( 80 MB)</i>
+C:\opt\node-v18.18.2-win-x64\  <i>( 80 MB)</i>
 C:\opt\VSCode\                 <i>(341 MB)</i>
 </pre>
 
@@ -84,7 +84,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.37.1, deployctl 1.5.0, node v18.18.0, ncat 7.94, rustc 1.72.1,
+   deno 1.37.2, deployctl 1.5.0, node v18.18.2, ncat 7.94, rustc 1.72.1,
    git 2.42.0.windows.1, diff 3.10, bash 5.2.15(1)-release
 Tool paths:
    C:\opt\deno\deno.exe
@@ -98,7 +98,7 @@ Environment variables:
    "DENO_HOME=C:\opt\deno"
    "GIT_HOME=C:\opt\Git"
    "NMAP_HOME=C:\opt\nmap-7.94"
-   "NODE_HOME=C:\opt\node-v18.18.0-win-x64"
+   "NODE_HOME=C:\opt\node-v18.18.2-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno git sh</b>
 C:\opt\deno\deno.exe
@@ -132,7 +132,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.37.1 (release, x86_64-pc-windows-msvc)
+deno 1.37.2 (release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 11.8.172.6
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-2/" rel="external">5.2.2</a>
 </pre>
@@ -189,7 +189,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <pre style="font-size:80%;">
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.94-setup.zip</a>               <i>(28 MB)</i>
-<a href="https://nodejs.org/dist/latest-v18.x/">node-v18.18.0-win-x64.zip</a>         <i>(27 MB)</i>
+<a href="https://nodejs.org/dist/latest-v18.x/">node-v18.18.2-win-x64.zip</a>         <i>(27 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.42.0-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
 </dd></dl>
@@ -202,7 +202,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/October 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/November 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -215,7 +215,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.37.1
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.37.2
 [docker_examples]: https://github.com/michelou/docker-examples
 [flix_examples]: https://github.com/michelou/flix-examples
 [git_cli]: https://git-scm.com/docs/git
@@ -248,7 +248,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nodejs14_downloads]: https://nodejs.org/dist/latest-v14.x/
 [nodejs16_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md#16.19.0
 [nodejs16_downloads]: https://nodejs.org/dist/latest-v16.x/
-[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.18.0
+[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.18.2
 [nodejs18_downloads]: https://nodejs.org/dist/latest-v18.x/
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [rust_examples]: https://github.com/michelou/rust-examples

@@ -17,10 +17,10 @@ Example [`http-server.ts`](./Chapter01/http-server/http-server.ts) makes use of 
 <div class="hightlight highlight-source-js">
 <pre style="font-size:80%;">
 <span style="color:green;">// file: http-server.ts</span>
-<b>import</b> { <a href="https://deno.land/std@0.194.0/http/server.ts?s=serve" rel="external">serve</a> } <b>from</b> "https://deno.land/std@0.201.0/http/server.ts"
+<b>import</b> { <a href="https://deno.land/std@0.194.0/http/server.ts?s=serve" rel="external">serve</a> } <b>from</b> <span style="color:darkred;">"https://deno.land/std@0.201.0/http/server.ts"</span>
 &nbsp;
-<b>for await</b> (<b>const</b> req of <a href="https://deno.land/std@0.197.0/http/server.ts?s=serve" rel="external">serve</a>(":8080")) {
-  req.respond({ body: "Hello deno" })
+<b>for await</b> (<b>const</b> req of <a href="https://deno.land/std@0.197.0/http/server.ts?s=serve" rel="external">serve</a>(<span style="color:darkred;">":8080"</span>)) {
+  req.respond({ body: <span style="color:darkred;">"Hello deno"</span> })
 }
 </pre>
 </div>
@@ -65,10 +65,10 @@ In this first variant of the above example we split the code into two files:
 - we modify the file [`https-server.ts`](./Chapter01/http-server-deps/http-server.ts) which now refers to [`deps.ts`](./Chapter01/http-server-deps/deps.ts) in the import clause (thus hiding the details of the remote [`std/http`](https://deno.land/std@0.201.0/http) library):
    <pre style="font-size:80%;">
    <span style="color:green;">// file: http-server.ts</span>
-   <b>import</b> { serve } <b>from</b> "./deps.ts"
+   <b>import</b> { serve } <b>from</b> <span style="color:darkred;">"./deps.ts"</span>
    &nbsp;
-   <b>for await</b> (<b>const</b> req of serve(":8080")) {
-     req.respond({ body: "Hello deno" })
+   <b>for await</b> (<b>const</b> req of serve(<span style="color:darkred;">":8080"</span>)) {
+     req.respond({ body: <span style="color:darkred;">"Hello deno"</span> })
    }</pre>
 
 ### <span id="">`http-server-import-maps` Example</span>
@@ -89,7 +89,7 @@ Example `http-server-import-maps` is the second variant of the original example 
    <div class="hightlight highlight-source-js">
    <pre style="font-size:80%;">
    <span style="color:green;">// file: deps.ts</span>
-   <b>export</b> { serve } <b>from</b> "http/server.ts"</pre>
+   <b>export</b> { serve } <b>from</b> <span style="color:darkred;">"http/server.ts"</span></pre>
    </div>
 
 ### <span id="fetch-deno-logo">`fetch-deno-logo` Example</span> [**&#x25B4;**](#top)
@@ -118,7 +118,7 @@ Example [`fetch-deno-logo`](./Chapter01/fetch-deno-logo/fetch-deno-logo.ts) down
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/October 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/November 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
