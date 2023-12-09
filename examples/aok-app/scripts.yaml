@@ -1,0 +1,9 @@
+env:
+  PORT: 8989
+
+scripts:
+  start:
+    cmd: deno run aok-app.ts
+    allow:
+      - env
+      - net

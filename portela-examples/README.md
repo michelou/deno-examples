@@ -17,9 +17,9 @@ Example [`http-server.ts`](./Chapter01/http-server/http-server.ts) makes use of 
 <div class="hightlight highlight-source-js">
 <pre style="font-size:80%;">
 <span style="color:green;">// file: http-server.ts</span>
-<b>import</b> { <a href="https://deno.land/std@0.194.0/http/server.ts?s=serve" rel="external">serve</a> } <b>from</b> <span style="color:darkred;">"https://deno.land/std@0.201.0/http/server.ts"</span>
+<b>import</b> { <a href="https://deno.land/std@0.208.0/http/server.ts?s=serve" rel="external">serve</a> } <b>from</b> <span style="color:darkred;">"https://deno.land/std@0.208.0/http/server.ts"</span>
 &nbsp;
-<b>for await</b> (<b>const</b> req of <a href="https://deno.land/std@0.197.0/http/server.ts?s=serve" rel="external">serve</a>(<span style="color:darkred;">":8080"</span>)) {
+<b>for await</b> (<b>const</b> req of <a href="https://deno.land/std@0.208.0/http/server.ts?s=serve" rel="external">serve</a>(<span style="color:darkred;">":8080"</span>)) {
   req.respond({ body: <span style="color:darkred;">"Hello deno"</span> })
 }
 </pre>
@@ -118,7 +118,7 @@ Example [`fetch-deno-logo`](./Chapter01/fetch-deno-logo/fetch-deno-logo.ts) down
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/November 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/December 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

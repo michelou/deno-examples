@@ -203,11 +203,11 @@ set "_DRIVE_NAME=!__DRIVE_NAMES:~0,2!"
 if /i "%_DRIVE_NAME%"=="%__GIVEN_PATH:~0,2%" goto :eof
 
 if %_DEBUG%==1 ( echo %_DEBUG_LABEL% subst "%_DRIVE_NAME%" "%__GIVEN_PATH%" 1>&2
-) else if %_VERBOSE%==1 ( echo Assign drive %_DRIVE_NAME% to path "%__GIVEN_PATH%" 1>&2
+) else if %_VERBOSE%==1 ( echo Assign drive %_DRIVE_NAME% to path "!__GIVEN_PATH:%USERPROFILE%=%%USERPROFILE%%!" 1>&2
 )
 subst "%_DRIVE_NAME%" "%__GIVEN_PATH%"
 if not %ERRORLEVEL%==0 (
-    echo %_ERROR_LABEL% Failed to assign drive %_DRIVE_NAME% to path "%__GIVEN_PATH%" 1>&2
+    echo %_ERROR_LABEL% Failed to assign drive %_DRIVE_NAME% to path "!__GIVEN_PATH:%USERPROFILE%=%%USERPROFILE%%!" 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -261,11 +261,14 @@ if defined __DENO_CMD (
     set __PATH=C:\opt
     if exist "!__PATH!\deno\" ( set "_DENO_HOME=!__PATH!\deno"
     ) else (
-        for /f %%f in ('dir /ad /b "!__PATH!\deno-1*" 2^>NUL') do set "_DENO_HOME=!__PATH!\%%f"
+        for /f "delims=" %%f in ('dir /ad /b "!__PATH!\deno-1*" 2^>NUL') do set "_DENO_HOME=!__PATH!\%%f"
         if not defined _DENO_HOME (
             set "__PATH=%ProgramFiles%"
             for /f "delims=" %%f in ('dir /ad /b "!__PATH!\deno-1*" 2^>NUL') do set "_DENO_HOME=!__PATH!\%%f"
         )
+    )
+    if defined _DENO_HOME (
+        if %_DEBUG%==1 echo %_DEBUG_LABEL% Using default Deno installation directory "!_DENO_HOME!" 1>&2
     )
 )
 if not exist "%_DENO_HOME%\deno.exe" (
@@ -417,11 +420,14 @@ if defined __GIT_CMD (
     set __PATH=C:\opt
     if exist "!__PATH!\Git\" ( set "_GIT_HOME=!__PATH!\Git"
     ) else (
-        for /f %%f in ('dir /ad /b "!__PATH!\Git*" 2^>NUL') do set "_GIT_HOME=!__PATH!\%%f"
+        for /f "delims=" %%f in ('dir /ad /b "!__PATH!\Git*" 2^>NUL') do set "_GIT_HOME=!__PATH!\%%f"
         if not defined _GIT_HOME (
             set "__PATH=%ProgramFiles%"
             for /f "delims=" %%f in ('dir /ad /b "!__PATH!\Git*" 2^>NUL') do set "_GIT_HOME=!__PATH!\%%f"
         )
+    )
+    if defined _GIT_HOME (
+        if %_DEBUG%==1 echo %_DEBUG_LABEL% Using default Git installation directory "!_GIT_HOME!" 1>&2
     )
 )
 if not exist "%_GIT_HOME%\bin\git.exe" (
@@ -468,6 +474,7 @@ if not exist "%_VSCODE_HOME%\code.exe" (
 set "_VSCODE_PATH=;%_VSCODE_HOME%"
 goto :eof
 
+@rem input parameter: %1=verbose flag
 :print_env
 set __VERBOSE=%1
 set __VERSIONS_LINE1=
