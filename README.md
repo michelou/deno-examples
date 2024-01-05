@@ -11,13 +11,13 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [Dart][dart_examples], [Docker][docker_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX Toolset][wix_examples] are other trending topics we are continuously monitoring.
+[Akka][akka_examples], [C++][cpp_examples], [Dart][dart_examples], [Docker][docker_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples] and [TruffleSqueak][trufflesqueak_examples] are other trending topics we are continuously monitoring. [Ada][ada_examples], [Modula-2][m2_examples] and [WiX Toolset][wix_examples] are further topics we worked with quite many years ago.
 
 ## <span id="proj_deps">Project dependencies</span>
 
 This project depends on two external software for the **Microsoft Windows** platform:
 
-- [Deno 1.38][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
+- [Deno 1.39][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
 - [Git 2.43][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
@@ -28,11 +28,11 @@ Optionally one may also install the following software:
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (*December 2023*) <sup id="anchor_03">[3](#footnote_03)</sup>:
+For instance our development environment looks as follows (*January 2024*) <sup id="anchor_03">[3](#footnote_03)</sup>:
 
 <pre style="font-size:80%;">
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
-C:\opt\deno\                   <i>( 82 MB)</i>
+C:\opt\deno\                   <i>( 75 MB)</i>
 C:\opt\Git\                    <i>(367 MB)</i>
 C:\opt\nmap-7.94\              <i>( 29 MB)</i>
 C:\opt\node-v18.19.0-win-x64\  <i>( 80 MB)</i>
@@ -77,14 +77,14 @@ We also define a virtual drive &ndash; e.g. drive **`O:`** &ndash; in our workin
 
 ## <span id="commands">Batch commands</span> [**&#x25B4;**](#top)
 
-### **`setenv.bat`**
+### [**`setenv.bat`**](setenv.bat)
 
 We execute command [**`setenv.bat`**](setenv.bat) once to setup our development environment; it makes external tools such as [**`deno.cmd`**][deno_cli], [**`git.exe`**][git_cli], and [**`sh.exe`**][sh_cli] directly available from the command prompt.
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.38.5, deployctl 1.5.0, node v18.19.0, ncat 7.94, rustc 1.72.1,
+   deno 1.39.2, deployctl 1.5.0, node v18.19.0, ncat 7.94, rustc 1.72.1,
    git 2.43.0.windows.1, diff 3.10, bash 5.2.15(1)-release
 Tool paths:
    C:\opt\deno\deno.exe
@@ -94,7 +94,7 @@ Tool paths:
    C:\opt\Git\bin\git.exe
    C:\opt\Git\usr\bin\diff.exe
 Environment variables:
-   "CARGO_HOME=%USERPROFILE%\.cargo"
+   "CARGO_HOME=<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.cargo"
    "DENO_HOME=C:\opt\deno"
    "GIT_HOME=C:\opt\Git"
    "NMAP_HOME=C:\opt\nmap-7.94"
@@ -127,14 +127,14 @@ C:\opt\Git\usr\bin\sh.exe
 <span id="footnote_01">[1]</span> ***Deno TypeScript*** [↩](#anchor_01)
 
 <dl><dd>
-Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-2/" rel="external"><code>5.2</code></a> in our case:
+Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/" rel="external"><code>5.3</code></a> in our case:
 </dd>
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.38.5 (release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 12.0.267.1
-typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-2/" rel="external">5.2.2</a>
+deno 1.39.2 (release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 12.0.267.8
+typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/" rel="external">5.3.3</a>
 </pre>
 </dd></dl>
 <!-- deno 1.17.3: v8  9.7.106.15, typescript 4.5.2 -->
@@ -172,7 +172,8 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.35.1: v8 11.6.189.7 , typescript 5.1.6 -->
 <!-- deno 1.35.3: v8 11.6.189.7 , typescript 5.1.6 -->
 <!-- deno 1.36.3: v8 11.6.189.12, typescript 5.1.6 -->
-<!-- deno 1.71.1: -->
+<!-- deno 1.38.2: v8 11.8.172.13, typescript 5.2.2 -->
+<!-- deno 1.39.2: v8 12.0.267.8,  typescript 5.3.3 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -202,7 +203,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/December 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/January 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -215,7 +216,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.38.5
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.39.2
 [docker_examples]: https://github.com/michelou/docker-examples
 [flix_examples]: https://github.com/michelou/flix-examples
 [git_cli]: https://git-scm.com/docs/git
@@ -230,6 +231,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [kotlin_examples]: https://github.com/michelou/kotlin-examples
 [linux_opt]: https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/opt.html
 [llvm_examples]: https://github.com/michelou/llvm-examples
+[m2_examples]: https://github.com/michelou/m2-examples
 [man1_awk]: https://www.linux.org/docs/man1/awk.html
 [man1_diff]: https://www.linux.org/docs/man1/diff.html
 [man1_file]: https://www.linux.org/docs/man1/file.html
