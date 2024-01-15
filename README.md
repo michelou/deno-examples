@@ -84,7 +84,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.39.2, deployctl 1.5.0, node v18.19.0, ncat 7.94, rustc 1.72.1,
+   deno 1.39.4, deployctl 1.5.0, node v18.19.0, ncat 7.94, rustc 1.75.0,
    git 2.43.0.windows.1, diff 3.10, bash 5.2.21(1)-release
 Tool paths:
    C:\opt\deno\deno.exe
@@ -132,7 +132,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.39.2 (release, x86_64-pc-windows-msvc)
+deno 1.39.4 (release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 12.0.267.8
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/" rel="external">5.3.3</a>
 </pre>
@@ -174,6 +174,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.36.3: v8 11.6.189.12, typescript 5.1.6 -->
 <!-- deno 1.38.2: v8 11.8.172.13, typescript 5.2.2 -->
 <!-- deno 1.39.2: v8 12.0.267.8,  typescript 5.3.3 -->
+<!-- deno 1.39.4: v8 12.0.267.8,  typescript 5.3.3 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
