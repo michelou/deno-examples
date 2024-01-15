@@ -21,7 +21,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.version)"</b>
-{ deno: "1.39.2", v8: "12.0.267.8", typescript: "5.3.3" }
+{ deno: "1.39.4", v8: "12.0.267.8", typescript: "5.3.3" }
 </pre>
 
 <pre style="font-size:80%;">
