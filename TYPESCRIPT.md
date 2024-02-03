@@ -30,6 +30,7 @@
 - [LogRocket](https://blog.logrocket.com/) Blog:
   - [How to extend enums in TypeScript](https://blog.logrocket.com/extend-enums-typescript/), June 2022.
 - [Microsoft TypeScript DevBlog][blog_microsoft]
+   - [Announcing TypeScript 5.4b][blog_danielr_5_4] by Daniel Rosenwasser, January 2024.
    - [Announcing TypeScript 5.3][blog_danielr_5_3] by Daniel Rosenwasser, November 2023.
    - [Announcing TypeScript 5.2][blog_danielr_5_2] by Daniel Rosenwasser, June 2023.
    - [Announcing TypeScript 5.1][blog_danielr_5_1] by Daniel Rosenwasser, June 2023.
@@ -99,7 +100,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/January 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/February 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -129,6 +130,7 @@
 [blog_danielr_5_1]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-1/
 [blog_danielr_5_2]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-2/
 [blog_danielr_5_3]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/
+[blog_danielr_5_4]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-4-beta/
 [blog_sitepen]: https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
 [blog_sitepen_4_3]: https://www.sitepen.com/blog/update-the-definitive-typescript-guide
 [blog_therox_1]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-1/
