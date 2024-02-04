@@ -17,14 +17,14 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 
 This project depends on two external software for the **Microsoft Windows** platform:
 
-- [Deno 1.39][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
+- [Deno 1.40][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
 - [Git 2.43][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
 - [Nmap 7.94][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 18.x LTS][nodejs18_downloads] ([*change log*][nodejs18_changelog])
-- [Visual Studio Code 1.85][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.86][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
@@ -84,7 +84,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.39.4, deployctl 1.5.0, node v18.19.0, ncat 7.94, rustc 1.75.0,
+   deno 1.40.3, deployctl 1.5.0, node v18.19.0, ncat 7.94, rustc 1.75.0,
    git 2.43.0.windows.1, diff 3.10, bash 5.2.21(1)-release
 Tool paths:
    C:\opt\deno\deno.exe
@@ -132,8 +132,8 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.39.4 (release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 12.0.267.8
+deno 1.40.3 (release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 12.1.285.6
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/" rel="external">5.3.3</a>
 </pre>
 </dd></dl>
@@ -175,6 +175,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.38.2: v8 11.8.172.13, typescript 5.2.2 -->
 <!-- deno 1.39.2: v8 12.0.267.8,  typescript 5.3.3 -->
 <!-- deno 1.39.4: v8 12.0.267.8,  typescript 5.3.3 -->
+<!-- deno 1.40.3: v8 12.1.285.6,  typescript 5.3.3 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -217,7 +218,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.39.4
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.40.3
 [docker_examples]: https://github.com/michelou/docker-examples
 [flix_examples]: https://github.com/michelou/flix-examples
 [git_cli]: https://git-scm.com/docs/git

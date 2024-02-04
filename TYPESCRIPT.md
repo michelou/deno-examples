@@ -51,7 +51,9 @@
    - [Type | Treat 2021 - Day 3][blog_therox_3] by Orta Therox, October 2021.
    - [Type | Treat 2021 - Day 2][blog_therox_2] by Orta Therox, October 2021.
    - [Type | Treat 2021 - Day 1][blog_therox_1] by Orta Therox, October 2021.
-- [The Definitive TypeScript 4.3 Guide][blog_sitepen_4_3] by Sitepen, July 2021.
+- [Sitepen Blog](https://www.sitepen.com/blog) :
+   - [TypeScript 5.0 Cheat Sheet](https://www.sitepen.com/blog/typescript-cheat-sheet), June 2023.
+   - [The Definitive TypeScript 4.3 Guide][blog_sitepen_4_3], July 2021.
 - [Introduction to Mixins in TypeScript][blog_nwose] by Victor Nwose, February 2021.
 - [TypeScript 4.1: New features and improvements][blog_isaiah] by Isaiah Ayooluwa, December 2020.
 - [Advanced TypeScript 4.2 Concepts: Classes and Types][blog_sitepen] by Sitepen, September 2020.
@@ -59,9 +61,10 @@
 
 ## <span id="books">Books</span> [**&#x25B4;**](#top)
 
+- [Essential TypeScript 5][book_freeman_5] (3<sup>rd</sup> Edition) by Adam Freeman, October 2023.<br/><span style="font-size:80%;">(Manning, ISBN 978-1-6334-3731-9, 568 pages)</span>
 - [TypeScript 4 Design Patterns and Best Practices][book_despoudis] by Theo Despoudis, September 2021.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8005-6342-1, 306 pages)</span>
-- [Mastering TypeScript ][book_rozentals] (4<sup>th</sup> Ed.) by Nathan Rozentals, April 2021.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8005-6473-2, 538 pages)</span>
-- [Essential TypeScript 4][book_freeman] by Adam Freeman, April 2021.<br/><span style="font-size:80%;">(Apress, ISBN 978-1-4842-7010-3, 580 pages)</span>
+- [Mastering TypeScript ][book_rozentals] (4<sup>th</sup> Edition) by Nathan Rozentals, April 2021.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8005-6473-2, 538 pages)</span>
+- [Essential TypeScript 4][book_freeman] (2<sup>nd</sup> Edition) by Adam Freeman, April 2021.<br/><span style="font-size:80%;">(Apress, ISBN 978-1-4842-7010-3, 580 pages)</span>
 - [TypeScript Quickly][book_fain] by Yakov Fain and Anton Moiseev, February 2020.<br/><span style="font-size:80%;">([Manning](https://www.manning.com/), ISBN 978-1-6172-9594-2, 488 pages)</span>
 - [Effective TypeScript][book_vanderkam] by Dan Vanderkam, October 2019.<br/><span style="font-size:80%;">(O'Reilly Media, ISBN 978-1-4920-5374-3, 0 pages)</span>
 - [Refactoring TypeScript][book_hickey] by James Hickey, October 2019.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-8392-1804-0, 120 pages)</span>
@@ -143,6 +146,7 @@
 [book_despoudis]: https://www.packtpub.com/product/typescript-4-design-patterns-and-best-practices/9781800563421
 [book_fain]: https://www.manning.com/books/typescript-quickly
 [book_freeman]: https://www.apress.com/gp/book/9781484270103
+[book_freeman_5]: https://www.manning.com/books/essential-typescript-5-third-edition
 [book_hickey]: https://www.packtpub.com/product/refactoring-typescript/9781839218040
 [book_rozentals]: https://www.packtpub.com/product/mastering-typescript-fourth-edition/9781800564732
 [book_vanderkam]: https://www.oreilly.com/library/view/effective-typescript/9781492053736/
