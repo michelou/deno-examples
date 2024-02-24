@@ -17,8 +17,8 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 
 This project depends on two external software for the **Microsoft Windows** platform:
 
-- [Deno 1.40][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
-- [Git 2.43][git_downloads] ([*release notes*][git_relnotes])
+- [Deno 1.41][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
+- [Git 2.44][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
@@ -35,7 +35,7 @@ For instance our development environment looks as follows (*February 2024*) <sup
 C:\opt\deno\                   <i>( 75 MB)</i>
 C:\opt\Git\                    <i>(367 MB)</i>
 C:\opt\nmap-7.94\              <i>( 29 MB)</i>
-C:\opt\node-v18.19.0-win-x64\  <i>( 80 MB)</i>
+C:\opt\node-v18.19.1-win-x64\  <i>( 80 MB)</i>
 C:\opt\VSCode\                 <i>(341 MB)</i>
 </pre>
 
@@ -84,8 +84,8 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.40.3, deployctl 1.5.0, node v18.19.0, ncat 7.94, rustc 1.75.0,
-   git 2.43.0.windows.1, diff 3.10, bash 5.2.21(1)-release
+   deno 1.40.3, deployctl 1.5.0, node v18.19.1, ncat 7.94, rustc 1.75.0,
+   git 2.44.0.windows.1, diff 3.10, bash 5.2.26(1)-release
 Tool paths:
    C:\opt\deno\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
@@ -98,7 +98,7 @@ Environment variables:
    "DENO_HOME=C:\opt\deno"
    "GIT_HOME=C:\opt\Git"
    "NMAP_HOME=C:\opt\nmap-7.94"
-   "NODE_HOME=C:\opt\node-v18.19.0-win-x64"
+   "NODE_HOME=C:\opt\node-v18.19.1-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno git sh</b>
 C:\opt\deno\deno.exe
@@ -132,8 +132,8 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.40.3 (release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 12.1.285.6
+deno 1.41.0 (release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 12.1.285.27
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/" rel="external">5.3.3</a>
 </pre>
 </dd></dl>
@@ -176,6 +176,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.39.2: v8 12.0.267.8,  typescript 5.3.3 -->
 <!-- deno 1.39.4: v8 12.0.267.8,  typescript 5.3.3 -->
 <!-- deno 1.40.3: v8 12.1.285.6,  typescript 5.3.3 -->
+<!-- deno 1.41.0: v8 12.1.285.27, typescript 5.3.3 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -192,8 +193,8 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <pre style="font-size:80%;">
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.94-setup.zip</a>               <i>(28 MB)</i>
-<a href="https://nodejs.org/dist/latest-v18.x/">node-v18.19.0-win-x64.zip</a>         <i>(27 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.43.0-64-bit.7z.exe</a>  <i>(41 MB)</i>
+<a href="https://nodejs.org/dist/latest-v18.x/">node-v18.19.1-win-x64.zip</a>         <i>(27 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.44.0-64-bit.7z.exe</a>  <i>(41 MB)</i>
 </pre>
 </dd></dl>
 
@@ -224,7 +225,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.43.0.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.44.0.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples
 [graalvm_examples]: https://github.com/michelou/graalvm-examples
@@ -252,7 +253,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nodejs14_downloads]: https://nodejs.org/dist/latest-v14.x/
 [nodejs16_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md#16.19.0
 [nodejs16_downloads]: https://nodejs.org/dist/latest-v16.x/
-[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.19.0
+[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.19.1
 [nodejs18_downloads]: https://nodejs.org/dist/latest-v18.x/
 [nodejs_examples]: https://github.com/michelou/nodejs-examples
 [rust_examples]: https://github.com/michelou/rust-examples

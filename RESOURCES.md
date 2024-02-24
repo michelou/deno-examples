@@ -20,6 +20,7 @@
 
 ## <span id="blogs">Blogs</span>
 
+- [Disillusioned with Deno](https://www.baldurbjarnason.com/2024/disillusioned-with-deno/) by Baldur Bjarnason, January 2024.
 - [Deno Frameworks: Building Faster, More Secure Applications][blog_ivanovs] by Alex Ivanovsv, May 2023.
 - [Why We Added package.json Support to Deno][blog_dahl] by Ryan Dahl, March 2023.
 - [<3 Deno][blog_kladov] by Alex Kladov, February 2023.
