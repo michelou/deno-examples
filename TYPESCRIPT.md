@@ -28,9 +28,11 @@
   - [TypeScript / Use String As Enum Key](https://www.huy.rocks/everyday/typescript-use-string-as-enum-key), April 2022.
   - [TypeScript / How the compiler compiles](https://www.huy.rocks/everyday/04-01-2022-typescript-how-the-compiler-compiles), January 2022.
 - [LogRocket](https://blog.logrocket.com/) Blog:
+  - [Exploring TypeScript 5 features: Smaller, simpler, faster][blog_chigozie] by Oduah Chigozie, June 2023.
   - [How to extend enums in TypeScript](https://blog.logrocket.com/extend-enums-typescript/), June 2022.
+  - [TypeScript 4.1: New features and improvements][blog_isaiah] by Isaiah Ayooluwa, December 2020.
 - [Microsoft TypeScript DevBlog][blog_microsoft]
-   - [Announcing TypeScript 5.4b][blog_danielr_5_4] by Daniel Rosenwasser, January 2024.
+   - [Announcing TypeScript 5.4][blog_danielr_5_4] by Daniel Rosenwasser, March 2024.
    - [Announcing TypeScript 5.3][blog_danielr_5_3] by Daniel Rosenwasser, November 2023.
    - [Announcing TypeScript 5.2][blog_danielr_5_2] by Daniel Rosenwasser, June 2023.
    - [Announcing TypeScript 5.1][blog_danielr_5_1] by Daniel Rosenwasser, June 2023.
@@ -55,7 +57,6 @@
    - [TypeScript 5.0 Cheat Sheet](https://www.sitepen.com/blog/typescript-cheat-sheet), June 2023.
    - [The Definitive TypeScript 4.3 Guide][blog_sitepen_4_3], July 2021.
 - [Introduction to Mixins in TypeScript][blog_nwose] by Victor Nwose, February 2021.
-- [TypeScript 4.1: New features and improvements][blog_isaiah] by Isaiah Ayooluwa, December 2020.
 - [Advanced TypeScript 4.2 Concepts: Classes and Types][blog_sitepen] by Sitepen, September 2020.
 - [What’s New in TypeScript 4][blog_moon] by Moon, August 2020.
 
@@ -103,7 +104,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/February 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/March 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -119,6 +120,7 @@
 [blog_microsoft]: https://devblogs.microsoft.com/typescript/
 [blog_moon]: https://betterprogramming.pub/whats-new-in-typescript-4-fe8d50f08e31
 [blog_nwose]: https://www.telerik.com/blogs/introduction-mixins-typescript
+[blog_chigozie]: https://blog.logrocket.com/exploring-typescript-5-features-smaller-simpler-faster/
 [blog_danielr_4_0]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-0/
 [blog_danielr_4_1]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-1/
 [blog_danielr_4_2]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-2/
@@ -133,7 +135,7 @@
 [blog_danielr_5_1]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-1/
 [blog_danielr_5_2]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-2/
 [blog_danielr_5_3]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/
-[blog_danielr_5_4]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-4-beta/
+[blog_danielr_5_4]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-4/
 [blog_sitepen]: https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
 [blog_sitepen_4_3]: https://www.sitepen.com/blog/update-the-definitive-typescript-guide
 [blog_therox_1]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-1/
