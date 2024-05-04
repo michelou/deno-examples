@@ -47,8 +47,9 @@ C:\opt\VSCode\                 <i>(341 MB)</i>
 This project is organized as follows:
 <pre style="font-size:80%;">
 <a href="docs/">docs\</a>
+<a href="effect-examples/">effect-examples\</a>{<a href="./effect-examples/README.md">README.md</a>, <a href="./effect-examples/hello-effect/">hello-effect</a>}
 <a href="examples/">examples\</a>{<a href="examples/README.md">README.md</a>}
-<a href="portela-examples/">portela-examples\</a>{<a href="portela-examples/README.md">README.md</a>, <a href="portela-examples/Chapter01/">Chapter01</a>}
+<a href="portela-examples/">portela-examples\</a>{<a href="./portela-examples/README.md">README.md</a>, <a href="./portela-examples/Chapter01/">Chapter01</a>}
 README.md
 <a href="QUICKREF.md">QUICKREF.md</a>
 <a href="RESOURCES.md">RESOURCES.md</a>
@@ -59,6 +60,7 @@ README.md
 where
 
 - directory [**`docs\`**](docs/) contains [Deno][deno_land] related papers/articles.
+- directory [**`effect-examples\`**](effect-examples/) contains [Effect][effect_home] code examples grabbed from the project's website.
 - directory [**`examples\`**](examples/) contains [Deno][deno_land] code examples grabbed from various websites.
 - directory [**`portela-examples\`**](portela-examples/) contains [Deno][deno_land] code examples from Portela's book [*Deno Web Development*][book_portela].
 - file [**`README.md`**](README.md) is the [Markdown][github_markdown] document for this page.
@@ -223,6 +225,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_land]: https://deno.land/
 [deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.43.1
 [docker_examples]: https://github.com/michelou/docker-examples
+[effect_home]: https://effect.website/
 [flix_examples]: https://github.com/michelou/flix-examples
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
