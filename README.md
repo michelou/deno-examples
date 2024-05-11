@@ -34,7 +34,7 @@ For instance our development environment looks as follows (*May 2024*) <sup id="
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
 C:\opt\deno\                   <i>( 75 MB)</i>
 C:\opt\Git\                    <i>(367 MB)</i>
-C:\opt\nmap-7.95\              <i>( 29 MB)</i>
+C:\opt\nmap\                   <i>( 29 MB)</i>
 C:\opt\node-v18.20.2-win-x64\  <i>( 80 MB)</i>
 C:\opt\VSCode\                 <i>(341 MB)</i>
 </pre>
@@ -86,8 +86,8 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.43.1, deployctl 1.5.0, node v18.20.2, ncat 7.95, rustc 1.76.0,
-   git 2.45.0.windows.1, diff 3.10, bash 5.2.26(1)-release
+   deno 1.43.3, deployctl 1.5.0, node v18.20.2, ncat 7.95, rustc 1.77.2,
+   git 2.45.0, diff 3.10, bash 5.2.26(1)-release
 Tool paths:
    C:\opt\deno\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
@@ -134,9 +134,9 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.43.1 (release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 12.4.254.12
-typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-4/" rel="external">5.4.3</a>
+deno 1.43.3 (release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 12.4.254.13
+typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-4/" rel="external">5.4.5</a>
 </pre>
 </dd></dl>
 <!-- deno 1.17.3: v8  9.7.106.15, typescript 4.5.2 -->
@@ -214,19 +214,19 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 <!-- link refs -->
 
-[ada_examples]: https://github.com/michelou/ada-examples
-[akka_examples]: https://github.com/michelou/akka-examples
+[ada_examples]: https://github.com/michelou/ada-examples?tab=readme-ov-file#playing-with-ada-on-windows
+[akka_examples]: https://github.com/michelou/akka-examples?tab=readme-ov-file#playing-with-akka-on-windows
 [book_portela]: https://www.packtpub.com/product/deno-web-development/9781800205666
-[cobol_examples]: https://github.com/michelou/cobol-examples
-[cpp_examples]: https://github.com/michelou/cpp-examples
-[dart_examples]: https://github.com/michelou/dart-examples
+[cobol_examples]: https://github.com/michelou/cobol-examples?tab=readme-ov-file#playing-with-cobol-on-windows
+[cpp_examples]: https://github.com/michelou/cpp-examples?tab=readme-ov-file#playing-with-c-on-windows
+[dart_examples]: https://github.com/michelou/dart-examples?tab=readme-ov-file#playing-with-dart-3-on-windows
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.43.1
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.43.3
 [docker_examples]: https://github.com/michelou/docker-examples
 [effect_home]: https://effect.website/
-[flix_examples]: https://github.com/michelou/flix-examples
+[flix_examples]: https://github.com/michelou/flix-examples?tab=readme-ov-file#playing-with-flix-on-windows
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
@@ -236,10 +236,10 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [graalvm_examples]: https://github.com/michelou/graalvm-examples
 [haskell_examples]: https://github.com/michelou/haskell-examples
 [kafka_examples]: https://github.com/michelou/kafka-examples
-[kotlin_examples]: https://github.com/michelou/kotlin-examples
+[kotlin_examples]: https://github.com/michelou/kotlin-examples?tab=readme-ov-file#playing-with-kotlin-on-windows
 [linux_opt]: https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/opt.html
 [llvm_examples]: https://github.com/michelou/llvm-examples
-[m2_examples]: https://github.com/michelou/m2-examples
+[m2_examples]: https://github.com/michelou/m2-examples?tab=readme-ov-file#playing-with-modula-2-on-windows
 [man1_awk]: https://www.linux.org/docs/man1/awk.html
 [man1_diff]: https://www.linux.org/docs/man1/diff.html
 [man1_file]: https://www.linux.org/docs/man1/file.html
@@ -254,13 +254,13 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nmap_downloads]: https://nmap.org/download.html
 [node_cli]: https://nodejs.org/api/cli.html
 [nodejs]: https://nodejs.org/en/
+[nodejs_examples]: https://github.com/michelou/nodejs-examples?tab=readme-ov-file#playing-with-nodejs-on-windows
 [nodejs14_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V14.md#14.21.2
 [nodejs14_downloads]: https://nodejs.org/dist/latest-v14.x/
 [nodejs16_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md#16.19.0
 [nodejs16_downloads]: https://nodejs.org/dist/latest-v16.x/
 [nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.20.2
 [nodejs18_downloads]: https://nodejs.org/dist/latest-v18.x/
-[nodejs_examples]: https://github.com/michelou/nodejs-examples
 [rust_examples]: https://github.com/michelou/rust-examples
 [scala3_examples]: https://github.com/michelou/dotty-examples
 [sh_cli]: https://www.man7.org/linux/man-pages/man1/bash.1.html
