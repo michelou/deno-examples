@@ -11,7 +11,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Dart][dart_examples], [Docker][docker_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX Toolset][wix_examples] are other topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Dart][dart_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX Toolset][wix_examples] are other topics we are continuously monitoring.
 
 ## <span id="proj_deps">Project dependencies</span>
 
@@ -22,21 +22,23 @@ This project depends on two external software for the **Microsoft Windows** plat
 
 Optionally one may also install the following software:
 
+- [ConEmu][conemu_downloads] ([*release notes*][conemu_relnotes])
 - [Nmap 7.95][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 18.x LTS][nodejs18_downloads] ([*change log*][nodejs18_changelog])
-- [Visual Studio Code 1.88][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.89][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
 For instance our development environment looks as follows (*May 2024*) <sup id="anchor_03">[3](#footnote_03)</sup>:
 
 <pre style="font-size:80%;">
-<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
+C:\opt\ConEmu\                 <i>( 26 MB)</i>
 C:\opt\deno\                   <i>( 75 MB)</i>
 C:\opt\Git\                    <i>(367 MB)</i>
 C:\opt\nmap\                   <i>( 29 MB)</i>
 C:\opt\node-v18.20.2-win-x64\  <i>( 80 MB)</i>
 C:\opt\VSCode\                 <i>(341 MB)</i>
+<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
 </pre>
 
 > **&#9755;** ***Installation policy***<br/>
@@ -91,15 +93,15 @@ Tool versions:
 Tool paths:
    C:\opt\deno\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
-   C:\opt\nmap-7.95\ncat.exe
-   %USERPROFILE%\.cargo\bin\rustc.exe
+   C:\opt\nmap\ncat.exe
+   <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.cargo\bin\rustc.exe
    C:\opt\Git\bin\git.exe
    C:\opt\Git\usr\bin\diff.exe
 Environment variables:
    "CARGO_HOME=<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.cargo"
    "DENO_HOME=C:\opt\deno"
    "GIT_HOME=C:\opt\Git"
-   "NMAP_HOME=C:\opt\nmap-7.95"
+   "NMAP_HOME=C:\opt\nmap"
    "NODE_HOME=C:\opt\node-v18.20.2-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno git sh</b>
@@ -194,10 +196,12 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 </dd>
 <dd>
 <pre style="font-size:80%;">
-<a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>(24 MB)</i>
-<a href="https://nmap.org/download.html">nmap-7.95-setup.zip</a>               <i>(28 MB)</i>
-<a href="https://nodejs.org/dist/latest-v18.x/">node-v18.20.2-win-x64.zip</a>         <i>(27 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.45.0-64-bit.7z.exe</a>  <i>(41 MB)</i>
+<a href="https://github.com/Maximus5/ConEmu/releases/tag/v23.07.24" rel="external">ConEmuPack.230724.7z</a>              <i>(  5 MB)</i>
+<a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>( 24 MB)</i>
+<a href="https://nmap.org/download.html">nmap-7.95-setup.zip</a>               <i>( 28 MB)</i>
+<a href="https://nodejs.org/dist/latest-v18.x/">node-v18.20.2-win-x64.zip</a>         <i>( 27 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.45.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.89.1.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
@@ -214,32 +218,35 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 <!-- link refs -->
 
-[ada_examples]: https://github.com/michelou/ada-examples?tab=readme-ov-file#playing-with-ada-on-windows
-[akka_examples]: https://github.com/michelou/akka-examples?tab=readme-ov-file#playing-with-akka-on-windows
+[ada_examples]: https://github.com/michelou/ada-examples#top
+[akka_examples]: https://github.com/michelou/akka-examples#top
 [book_portela]: https://www.packtpub.com/product/deno-web-development/9781800205666
-[cobol_examples]: https://github.com/michelou/cobol-examples?tab=readme-ov-file#playing-with-cobol-on-windows
-[cpp_examples]: https://github.com/michelou/cpp-examples?tab=readme-ov-file#playing-with-c-on-windows
-[dart_examples]: https://github.com/michelou/dart-examples?tab=readme-ov-file#playing-with-dart-3-on-windows
+[cobol_examples]: https://github.com/michelou/cobol-examples#top
+[conemu_downloads]: https://github.com/Maximus5/ConEmu/releases
+[conemu_relnotes]: https://conemu.github.io/blog/2023/07/24/Build-230724.html
+[cpp_examples]: https://github.com/michelou/cpp-examples#top
+[dart_examples]: https://github.com/michelou/dart-examples#top
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
 [deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.43.3
-[docker_examples]: https://github.com/michelou/docker-examples
+[docker_examples]: https://github.com/michelou/docker-examples#top
 [effect_home]: https://effect.website/
-[flix_examples]: https://github.com/michelou/flix-examples?tab=readme-ov-file#playing-with-flix-on-windows
+[erlang_examples]: https://github.com/michelou/erlang-examples#top
+[flix_examples]: https://github.com/michelou/flix-examples#top
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
 [git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.45.0.txt
 [github_markdown]: https://github.github.com/gfm/
-[golang_examples]: https://github.com/michelou/golang-examples
-[graalvm_examples]: https://github.com/michelou/graalvm-examples
-[haskell_examples]: https://github.com/michelou/haskell-examples
-[kafka_examples]: https://github.com/michelou/kafka-examples
-[kotlin_examples]: https://github.com/michelou/kotlin-examples?tab=readme-ov-file#playing-with-kotlin-on-windows
+[golang_examples]: https://github.com/michelou/golang-examples#top
+[graalvm_examples]: https://github.com/michelou/graalvm-examples#top
+[haskell_examples]: https://github.com/michelou/haskell-examples#top
+[kafka_examples]: https://github.com/michelou/kafka-examples#top
+[kotlin_examples]: https://github.com/michelou/kotlin-examples#top
 [linux_opt]: https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/opt.html
-[llvm_examples]: https://github.com/michelou/llvm-examples
-[m2_examples]: https://github.com/michelou/m2-examples?tab=readme-ov-file#playing-with-modula-2-on-windows
+[llvm_examples]: https://github.com/michelou/llvm-examples#top
+[m2_examples]: https://github.com/michelou/m2-examples#top
 [man1_awk]: https://www.linux.org/docs/man1/awk.html
 [man1_diff]: https://www.linux.org/docs/man1/diff.html
 [man1_file]: https://www.linux.org/docs/man1/file.html
@@ -254,23 +261,23 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nmap_downloads]: https://nmap.org/download.html
 [node_cli]: https://nodejs.org/api/cli.html
 [nodejs]: https://nodejs.org/en/
-[nodejs_examples]: https://github.com/michelou/nodejs-examples?tab=readme-ov-file#playing-with-nodejs-on-windows
+[nodejs_examples]: https://github.com/michelou/nodejs-examples#top
 [nodejs14_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V14.md#14.21.2
 [nodejs14_downloads]: https://nodejs.org/dist/latest-v14.x/
 [nodejs16_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md#16.19.0
 [nodejs16_downloads]: https://nodejs.org/dist/latest-v16.x/
 [nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.20.2
 [nodejs18_downloads]: https://nodejs.org/dist/latest-v18.x/
-[rust_examples]: https://github.com/michelou/rust-examples
-[scala3_examples]: https://github.com/michelou/dotty-examples
+[rust_examples]: https://github.com/michelou/rust-examples#top
+[scala3_examples]: https://github.com/michelou/dotty-examples#top
 [sh_cli]: https://www.man7.org/linux/man-pages/man1/bash.1.html
-[spark_examples]: https://github.com/michelou/spark-examples
-[spring_examples]: https://github.com/michelou/spring-examples
-[trufflesqueak_examples]: https://github.com/michelou/trufflesqueak-examples
+[spark_examples]: https://github.com/michelou/spark-examples#top
+[spring_examples]: https://github.com/michelou/spring-examples#top
+[trufflesqueak_examples]: https://github.com/michelou/trufflesqueak-examples#top
 [typescript]: https://devblogs.microsoft.com/typescript/
 [vscode_downloads]: https://code.visualstudio.com/#alt-downloads
 [vscode_relnotes]: https://code.visualstudio.com/updates/
 [windows_limitation]: https://support.microsoft.com/en-gb/help/830473/command-prompt-cmd-exe-command-line-string-limitation
 [windows_subst]: https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/subst
-[wix_examples]: https://github.com/michelou/wix-examples
+[wix_examples]: https://github.com/michelou/wix-examples#top
 [zip_archive]: https://www.howtogeek.com/178146/htg-explains-everything-you-need-to-know-about-zipped-files/

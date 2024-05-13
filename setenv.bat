@@ -301,7 +301,7 @@ if defined __NCAT_CMD (
     set __PATH=C:\opt
     if exist "!__PATH!\nmap\" ( set "_NMAP_HOME=!__PATH!\nmap"
     ) else (
-        for /f %%f in ('dir /ad /b "!__PATH!\nmap-7*" 2^>NUL') do set "_NMAP_HOME=!__PATH!\%%f"
+        for /f "delims=" %%f in ('dir /ad /b "!__PATH!\nmap-7*" 2^>NUL') do set "_NMAP_HOME=!__PATH!\%%f"
         if not defined _NMAP_HOME (
             set "__PATH=%ProgramFiles%"
             for /f "delims=" %%f in ('dir /ad /b "!__PATH!\nmap-7*" 2^>NUL') do set "_NMAP_HOME=!__PATH!\%%f"
@@ -343,7 +343,7 @@ if defined __NODE_CMD (
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using environment variable NODE_HOME 1>&2
 ) else (
     set __PATH=C:\opt
-    for /f %%f in ('dir /ad /b "!__PATH!\node-v%__NODE_MAJOR%*" 2^>NUL') do set "_NODE_HOME=!__PATH!\%%f"
+    for /f "delims=" %%f in ('dir /ad /b "!__PATH!\node-v%__NODE_MAJOR%*" 2^>NUL') do set "_NODE_HOME=!__PATH!\%%f"
     if not defined _NODE_HOME (
         set "__PATH=%ProgramFiles%"
         for /f "delims=" %%f in ('dir /ad /b "!__PATH!\node-v%__NODE_MAJOR%*" 2^>NUL') do set "_NODE_HOME=!__PATH!\%%f"
@@ -404,7 +404,7 @@ if defined __GIT_CMD (
     set "_GIT_HOME=!_GIT_HOME:~0,-1!"
     @rem Executable git.exe is present both in bin\ and \mingw64\bin\
     if not "!_GIT_HOME:mingw=!"=="!_GIT_HOME!" (
-        for %%f in ("!_GIT_HOME!\.") do set "_GIT_HOME=%%~dpf"
+        for /f "delims=" %%f in ("!_GIT_HOME!\.") do set "_GIT_HOME=%%~dpf"
     )
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Git executable found in PATH 1>&2
     for /f "delims=" %%i in ("%__GIT_CMD%") do set "__GIT_BIN_DIR=%%~dpi"
@@ -529,7 +529,11 @@ echo   %__VERSIONS_LINE1%
 echo   %__VERSIONS_LINE2%
 if %__VERBOSE%==1 if defined __WHERE_ARGS (
     echo Tool paths: 1>&2
-    for /f "tokens=*" %%p in ('where %__WHERE_ARGS%') do echo    %%p 1>&2
+    for /f "tokens=*" %%p in ('where %__WHERE_ARGS%') do (
+        set "__LINE=%%p"
+        setlocal enabledelayedexpansion
+        echo    !__LINE:%USERPROFILE%=%%USERPROFILE%%! 1>&2
+    )
     echo Environment variables: 1>&2
     if defined CARGO_HOME echo    "CARGO_HOME=%CARGO_HOME%" 1>&2
     if defined DENO_HOME echo    "DENO_HOME=%DENO_HOME%" 1>&2
