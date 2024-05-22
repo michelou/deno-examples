@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018-2021 Stéphane Micheloud
+# Copyright (c) 2018-2024 Stéphane Micheloud
 #
 # Licensed under the MIT License.
 #
@@ -10,7 +10,7 @@
 
 getHome() {
     local source="${BASH_SOURCE[0]}"
-    while [ -h "$source" ] ; do
+    while [[ -h "$source" ]]; do
         local linked="$(readlink "$source")"
         local dir="$( cd -P $(dirname "$source") && cd -P $(dirname "$linked") && pwd )"
         source="$dir/$(basename "$linked")"
@@ -29,7 +29,7 @@ ROOT_DIR="$(getHome)"
 
 RUN_OPTS=--allow-net
 
-SCRIPT_FILE=$ROOT_DIR/${BASENAME/.sh/.ts}
+SCRIPT_FILE="$ROOT_DIR/${BASENAME/.sh/.ts}"
 SCRIPT_ARGS=
 
 deno run $RUN_OPTS "$SCRIPT_FILE" $SCRIPT_ARGS

@@ -1,5 +1,7 @@
+@set _BASENAME=%~n0
 @set "_ROOT_DIR=%~dp0"
-@set "_SCRIPT_FILE=%_ROOT_DIR%file_search.ts"
+
+@set "_SCRIPT_FILE=%_ROOT_DIR%%_BASENAME%.ts"
 @set _SCRIPT_ARGS=%*
 
 @set _RUN_OPTS=--allow-read

@@ -36,7 +36,7 @@ C:\opt\ConEmu\                 <i>( 26 MB)</i>
 C:\opt\deno\                   <i>( 75 MB)</i>
 C:\opt\Git\                    <i>(367 MB)</i>
 C:\opt\nmap\                   <i>( 29 MB)</i>
-C:\opt\node-v18.20.2-win-x64\  <i>( 80 MB)</i>
+C:\opt\node-v18.20.3-win-x64\  <i>( 80 MB)</i>
 C:\opt\VSCode\                 <i>(341 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
 </pre>
@@ -88,8 +88,8 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.43.3, deployctl 1.5.0, node v18.20.2, ncat 7.95, rustc 1.77.2,
-   git 2.45.0, diff 3.10, bash 5.2.26(1)-release
+   deno 1.43.6, deployctl 1.5.0, node v18.20.3, ncat 7.95, rustc 1.77.2,
+   git 2.45.1, diff 3.10, bash 5.2.26(1)-release
 Tool paths:
    C:\opt\deno\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
@@ -102,7 +102,7 @@ Environment variables:
    "DENO_HOME=C:\opt\deno"
    "GIT_HOME=C:\opt\Git"
    "NMAP_HOME=C:\opt\nmap"
-   "NODE_HOME=C:\opt\node-v18.20.2-win-x64"
+   "NODE_HOME=C:\opt\node-v18.20.3-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno git sh</b>
 C:\opt\deno\deno.exe
@@ -136,7 +136,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.43.3 (release, x86_64-pc-windows-msvc)
+deno 1.43.6 (release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 12.4.254.13
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-4/" rel="external">5.4.5</a>
 </pre>
@@ -199,8 +199,8 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://github.com/Maximus5/ConEmu/releases/tag/v23.07.24" rel="external">ConEmuPack.230724.7z</a>              <i>(  5 MB)</i>
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>( 24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.95-setup.zip</a>               <i>( 28 MB)</i>
-<a href="https://nodejs.org/dist/latest-v18.x/">node-v18.20.2-win-x64.zip</a>         <i>( 27 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.45.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://nodejs.org/dist/latest-v18.x/">node-v18.20.3-win-x64.zip</a>         <i>( 27 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.45.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 <a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.89.1.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
@@ -229,7 +229,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.43.3
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.43.6
 [docker_examples]: https://github.com/michelou/docker-examples#top
 [effect_home]: https://effect.website/
 [erlang_examples]: https://github.com/michelou/erlang-examples#top
@@ -237,7 +237,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.45.0.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.45.1.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples#top
 [graalvm_examples]: https://github.com/michelou/graalvm-examples#top
@@ -266,7 +266,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nodejs14_downloads]: https://nodejs.org/dist/latest-v14.x/
 [nodejs16_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md#16.19.0
 [nodejs16_downloads]: https://nodejs.org/dist/latest-v16.x/
-[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.20.2
+[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.20.3
 [nodejs18_downloads]: https://nodejs.org/dist/latest-v18.x/
 [rust_examples]: https://github.com/michelou/rust-examples#top
 [scala3_examples]: https://github.com/michelou/dotty-examples#top
