@@ -13,11 +13,13 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 
 [Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Dart][dart_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX Toolset][wix_examples] are other topics we are continuously monitoring.
 
+> **&#9755;** Read the interview <a href="https://medium.com/@HolyJSconf/ryan-dahl-d139d8a8fb07" rel="external">"I have only one learning technique: projects that I’m working on”"</a> with Ryan Dahl to learn more about the early days of [Deno][deno_land].
+
 ## <span id="proj_deps">Project dependencies</span>
 
 This project depends on two external software for the **Microsoft Windows** platform:
 
-- [Deno 1.43][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
+- [Deno 1.44][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
 - [Git 2.45][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
@@ -29,7 +31,7 @@ Optionally one may also install the following software:
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (*May 2024*) <sup id="anchor_03">[3](#footnote_03)</sup>:
+For instance our development environment looks as follows (*June 2024*) <sup id="anchor_03">[3](#footnote_03)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\ConEmu\                 <i>( 26 MB)</i>
@@ -88,7 +90,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.43.6, deployctl 1.5.0, node v18.20.3, ncat 7.95, rustc 1.77.2,
+   deno 1.44.0, deployctl 1.5.0, node v18.20.3, ncat 7.95, rustc 1.77.2,
    git 2.45.1, diff 3.10, bash 5.2.26(1)-release
 Tool paths:
    C:\opt\deno\deno.exe
@@ -136,8 +138,8 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.43.6 (release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 12.4.254.13
+deno 1.44.0 (release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 12.6.228.3
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-4/" rel="external">5.4.5</a>
 </pre>
 </dd></dl>
@@ -182,6 +184,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.40.3: v8 12.1.285.6,  typescript 5.3.3 -->
 <!-- deno 1.41.0: v8 12.1.285.27, typescript 5.3.3 -->
 <!-- deno 1.43.1: v8 12.4.254.12, typescript 5.4.3 -->
+<!-- deno 1.44.0: -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -213,7 +216,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/May 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/June 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -229,7 +232,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.43.6
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.44.0
 [docker_examples]: https://github.com/michelou/docker-examples#top
 [effect_home]: https://effect.website/
 [erlang_examples]: https://github.com/michelou/erlang-examples#top
