@@ -11,7 +11,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Dart][dart_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX Toolset][wix_examples] are other topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Dart][dart_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples], [WiX Toolset][wix_examples] and [Zig](zig_examples) are other topics we are continuously monitoring.
 
 > **&#9755;** Read the interview <a href="https://medium.com/@HolyJSconf/ryan-dahl-d139d8a8fb07" rel="external">"I have only one learning technique: projects that I’m working on”"</a> with Ryan Dahl to learn more about the early days of [Deno][deno_land].
 
@@ -27,7 +27,7 @@ Optionally one may also install the following software:
 - [ConEmu][conemu_downloads] ([*release notes*][conemu_relnotes])
 - [Nmap 7.95][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 18.x LTS][nodejs18_downloads] ([*change log*][nodejs18_changelog])
-- [Visual Studio Code 1.89][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.90][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
@@ -204,7 +204,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://nmap.org/download.html">nmap-7.95-setup.zip</a>               <i>( 28 MB)</i>
 <a href="https://nodejs.org/dist/latest-v18.x/">node-v18.20.3-win-x64.zip</a>         <i>( 27 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.45.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.89.1.zip</a>       <i>(131 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.90.1.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
 

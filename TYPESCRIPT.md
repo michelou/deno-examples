@@ -3,8 +3,7 @@
 <table style="font-family:Helvetica,Arial;line-height:1.6;">
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://www.typescriptlang.org/" rel="external"><img style="border:0;" src="./docs/images/ts-logo-round-128.png" width="100" alt="TypeScript project"/></a></td>
-  <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://www.typescriptlang.org/" rel="external">TypeScript</a> related resources that caught our attention.
-  </td>
+  <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://www.typescriptlang.org/" rel="external">TypeScript</a> related resources that caught our attention.</td>
   </tr>
 </table>
 
@@ -32,7 +31,7 @@
   - [How to extend enums in TypeScript](https://blog.logrocket.com/extend-enums-typescript/), June 2022.
   - [TypeScript 4.1: New features and improvements][blog_isaiah] by Isaiah Ayooluwa, December 2020.
 - [Microsoft TypeScript DevBlog][blog_microsoft]
-   - [Announcing TypeScript 5.5][blog_danielr_5_5] by Daniel Rosenwasser, April 2024.
+   - [Announcing TypeScript 5.5][blog_danielr_5_5] by Daniel Rosenwasser, June 2024.
    - [Announcing TypeScript 5.4][blog_danielr_5_4] by Daniel Rosenwasser, March 2024.
    - [Announcing TypeScript 5.3][blog_danielr_5_3] by Daniel Rosenwasser, November 2023.
    - [Announcing TypeScript 5.2][blog_danielr_5_2] by Daniel Rosenwasser, June 2023.
@@ -137,7 +136,7 @@
 [blog_danielr_5_2]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-2/
 [blog_danielr_5_3]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/
 [blog_danielr_5_4]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-4/
-[blog_danielr_5_5]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-5-beta/
+[blog_danielr_5_5]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-5-rc/
 [blog_sitepen]: https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
 [blog_sitepen_4_3]: https://www.sitepen.com/blog/update-the-definitive-typescript-guide
 [blog_therox_1]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-1/
