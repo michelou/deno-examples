@@ -24,14 +24,14 @@ This project depends on two external software for the **Microsoft Windows** plat
 
 Optionally one may also install the following software:
 
-- [ConEmu][conemu_downloads] ([*release notes*][conemu_relnotes])
+- [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
 - [Nmap 7.95][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 18.x LTS][nodejs18_downloads] ([*change log*][nodejs18_changelog])
 - [Visual Studio Code 1.90][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (*June 2024*) <sup id="anchor_03">[3](#footnote_03)</sup>:
+For instance our development environment looks as follows (*July 2024*) <sup id="anchor_03">[3](#footnote_03)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\ConEmu\                 <i>( 26 MB)</i>
@@ -50,6 +50,7 @@ C:\opt\VSCode\                 <i>(341 MB)</i>
 
 This project is organized as follows:
 <pre style="font-size:80%;">
+<a href="bin/">bin\</a>
 <a href="docs/">docs\</a>
 <a href="effect-examples/">effect-examples\</a>{<a href="./effect-examples/README.md">README.md</a>, <a href="./effect-examples/hello-effect/">hello-effect</a>}
 <a href="examples/">examples\</a>{<a href="examples/README.md">README.md</a>}
@@ -63,6 +64,7 @@ README.md
 
 where
 
+- directory [**`bin\`**](bin/) contains utility scripts.
 - directory [**`docs\`**](docs/) contains [Deno][deno_land] related papers/articles.
 - directory [**`effect-examples\`**](effect-examples/) contains [Effect][effect_home] code examples grabbed from the project's website.
 - directory [**`examples\`**](examples/) contains [Deno][deno_land] code examples grabbed from various websites.
@@ -90,8 +92,8 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.44.0, deployctl 1.5.0, node v18.20.3, ncat 7.95, rustc 1.77.2,
-   git 2.45.1, diff 3.10, bash 5.2.26(1)-release
+   deno 1.44.4, deployctl 1.5.0, node v18.20.3, ncat 7.95, rustc 1.77.2,
+   git 2.45.2, diff 3.10, bash 5.2.26(1)
 Tool paths:
    C:\opt\deno\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
@@ -138,8 +140,8 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.44.0 (release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 12.6.228.3
+deno 1.44.4 (release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 12.6.228.9
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-4/" rel="external">5.4.5</a>
 </pre>
 </dd></dl>
@@ -184,7 +186,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.40.3: v8 12.1.285.6,  typescript 5.3.3 -->
 <!-- deno 1.41.0: v8 12.1.285.27, typescript 5.3.3 -->
 <!-- deno 1.43.1: v8 12.4.254.12, typescript 5.4.3 -->
-<!-- deno 1.44.0: -->
+<!-- deno 1.44.4: v8 12.6.220.9,  typescript 5.4.5 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -203,8 +205,8 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>( 24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.95-setup.zip</a>               <i>( 28 MB)</i>
 <a href="https://nodejs.org/dist/latest-v18.x/">node-v18.20.3-win-x64.zip</a>         <i>( 27 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.45.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.90.1.zip</a>       <i>(131 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.45.2-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.90.2.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
@@ -216,7 +218,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/June 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/July 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -232,7 +234,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.44.0
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.44.4
 [docker_examples]: https://github.com/michelou/docker-examples#top
 [effect_home]: https://effect.website/
 [erlang_examples]: https://github.com/michelou/erlang-examples#top
@@ -240,7 +242,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.45.1.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.45.2.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples#top
 [graalvm_examples]: https://github.com/michelou/graalvm-examples#top
