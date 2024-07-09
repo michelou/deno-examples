@@ -11,7 +11,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Dart][dart_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples], [WiX Toolset][wix_examples] and [Zig](zig_examples) are other topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Dart][dart_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples], [WiX Toolset][wix_examples] and [Zig][zig_examples] are other topics we are continuously monitoring.
 
 > **&#9755;** Read the interview <a href="https://medium.com/@HolyJSconf/ryan-dahl-d139d8a8fb07" rel="external">"I have only one learning technique: projects that I’m working on”"</a> with Ryan Dahl to learn more about the early days of [Deno][deno_land].
 
@@ -27,7 +27,7 @@ Optionally one may also install the following software:
 - [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
 - [Nmap 7.95][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 18.x LTS][nodejs18_downloads] ([*change log*][nodejs18_changelog])
-- [Visual Studio Code 1.90][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.91][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
@@ -38,7 +38,7 @@ C:\opt\ConEmu\                 <i>( 26 MB)</i>
 C:\opt\deno\                   <i>( 75 MB)</i>
 C:\opt\Git\                    <i>(367 MB)</i>
 C:\opt\nmap\                   <i>( 29 MB)</i>
-C:\opt\node-v18.20.3-win-x64\  <i>( 80 MB)</i>
+C:\opt\node-v18.20.4-win-x64\  <i>( 80 MB)</i>
 C:\opt\VSCode\                 <i>(341 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
 </pre>
@@ -92,7 +92,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.44.4, deployctl 1.5.0, node v18.20.3, ncat 7.95, rustc 1.77.2,
+   deno 1.44.4, deployctl 1.5.0, node v18.20.4, ncat 7.95, rustc 1.77.2,
    git 2.45.2, diff 3.10, bash 5.2.26(1)
 Tool paths:
    C:\opt\deno\deno.exe
@@ -106,7 +106,7 @@ Environment variables:
    "DENO_HOME=C:\opt\deno"
    "GIT_HOME=C:\opt\Git"
    "NMAP_HOME=C:\opt\nmap"
-   "NODE_HOME=C:\opt\node-v18.20.3-win-x64"
+   "NODE_HOME=C:\opt\node-v18.20.4-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno git sh</b>
 C:\opt\deno\deno.exe
@@ -204,9 +204,9 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://github.com/Maximus5/ConEmu/releases/tag/v23.07.24" rel="external">ConEmuPack.230724.7z</a>              <i>(  5 MB)</i>
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>( 24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.95-setup.zip</a>               <i>( 28 MB)</i>
-<a href="https://nodejs.org/dist/latest-v18.x/">node-v18.20.3-win-x64.zip</a>         <i>( 27 MB)</i>
+<a href="https://nodejs.org/dist/latest-v18.x/">node-v18.20.4-win-x64.zip</a>         <i>( 27 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.45.2-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.90.2.zip</a>       <i>(131 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.91.0.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
@@ -271,7 +271,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nodejs14_downloads]: https://nodejs.org/dist/latest-v14.x/
 [nodejs16_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md#16.19.0
 [nodejs16_downloads]: https://nodejs.org/dist/latest-v16.x/
-[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.20.3
+[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.20.4
 [nodejs18_downloads]: https://nodejs.org/dist/latest-v18.x/
 [rust_examples]: https://github.com/michelou/rust-examples#top
 [scala3_examples]: https://github.com/michelou/dotty-examples#top

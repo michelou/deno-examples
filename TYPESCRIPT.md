@@ -10,6 +10,7 @@
 ## <span id="articles">Articles</span>
 
 - &#128077; [**fettblog.eu**](https://fettblog.eu) articles by Stefan Baumgartner :
+   - [The `never` type and error handling in TypeScript][article_baumgartner_never], March 2024.
    - [5 Inconvenient Truths about TypeScript][article_baumgartner_truths], July 2023.
    - [TypeScript: Iterating over objects][article_baumgartner_iterating], May 2022.
    - [TypeScript: The humble function overload][article_baumgartner_overload], November 2021.
@@ -113,6 +114,7 @@
 [article_baumgartner_any]: https://fettblog.eu/typescript-any-is-ok/
 [article_baumgartner_array]: https://fettblog.eu/typescript-array-includes/
 [article_baumgartner_iterating]: https://fettblog.eu/typescript-iterating-over-objects/
+[article_baumgartner_never]: https://fettblog.eu/typescript-never-and-error-handling/
 [article_baumgartner_overload]: https://fettblog.eu/typescript-function-overload/
 [article_baumgartner_truths]: https://fettblog.eu/5-truths-about-typescript/
 [article_weber]: https://engineering.tableau.com/really-advanced-typescript-types-c590eee59a12
@@ -136,7 +138,7 @@
 [blog_danielr_5_2]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-2/
 [blog_danielr_5_3]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/
 [blog_danielr_5_4]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-4/
-[blog_danielr_5_5]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-5-rc/
+[blog_danielr_5_5]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-5/
 [blog_sitepen]: https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
 [blog_sitepen_4_3]: https://www.sitepen.com/blog/update-the-definitive-typescript-guide
 [blog_therox_1]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-1/
