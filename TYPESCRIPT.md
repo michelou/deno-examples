@@ -32,6 +32,7 @@
   - [How to extend enums in TypeScript](https://blog.logrocket.com/extend-enums-typescript/), June 2022.
   - [TypeScript 4.1: New features and improvements][blog_isaiah] by Isaiah Ayooluwa, December 2020.
 - [Microsoft TypeScript DevBlog][blog_microsoft]
+   - [Announcing TypeScript 5.6][blog_danielr_5_6] by Daniel Rosenwasser, July 2024.
    - [Announcing TypeScript 5.5][blog_danielr_5_5] by Daniel Rosenwasser, June 2024.
    - [Announcing TypeScript 5.4][blog_danielr_5_4] by Daniel Rosenwasser, March 2024.
    - [Announcing TypeScript 5.3][blog_danielr_5_3] by Daniel Rosenwasser, November 2023.
@@ -139,6 +140,7 @@
 [blog_danielr_5_3]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/
 [blog_danielr_5_4]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-4/
 [blog_danielr_5_5]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-5/
+[blog_danielr_5_6]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-6-beta/
 [blog_sitepen]: https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
 [blog_sitepen_4_3]: https://www.sitepen.com/blog/update-the-definitive-typescript-guide
 [blog_therox_1]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-1/
