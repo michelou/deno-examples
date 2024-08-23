@@ -16,6 +16,10 @@ if not %_EXITCODE%==0 goto end
 @rem #########################################################################
 @rem ## Main
 
+if %_HELP%==1 (
+   call :help
+   exit /b !_EXITCODE!
+)
 @rem returns the list of all the dogs
 call :get "%_SERVER_HOST%:%_SERVER_PORT%/dogs"
 if not %_EXITCODE%==0 goto end
@@ -95,6 +99,17 @@ if "%__ARG:~0,1%"=="-" (
 shift
 goto args_loop
 :args_done
+goto :eof
+
+:help
+echo Usage: %_BASENAME% { ^<option^> ^| ^<subcommand^> }
+echo.
+echo   Options:
+echo     -debug      print commands executed by this script
+echo     -verbose    print progress messages
+echo.
+echo   Subcommands:
+echo     help        print this help message
 goto :eof
 
 @rem input paramter: %1=URL

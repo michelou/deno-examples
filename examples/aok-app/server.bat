@@ -17,6 +17,10 @@ if not %_EXITCODE%==0 goto end
 @rem #########################################################################
 @rem ## Main
 
+if %_HELP%==1 (
+   call :help
+   exit /b !_EXITCODE!
+)
 call :server_pid
 if %_SERVER_PID%==0 (
     if %_STOP%==0 (
@@ -28,10 +32,10 @@ if %_SERVER_PID%==0 (
 ) else if %_SERVER_PID%==-1 (
     echo %_WARNING_LABEL% Another process is using port %_SERVER_PORT%
 ) else if %_STOP%==1 (
-    if %_DEBUG%==1 ( echo %_DEBUG_LABEL% taskkill /pid %_SERVER_PID% 1>&2
+    if %_DEBUG%==1 ( echo %_DEBUG_LABEL% taskkill /f /pid %_SERVER_PID% 1>&2
     ) else if %_VERBOSE%==1 ( echo Stop process listening on port %_SERVER_PORT% 1>&2
     )
-    taskkill /pid %_SERVER_PID% 1>NUL
+    taskkill /f /pid %_SERVER_PID% 1>NUL
 )
 goto end
 
@@ -41,7 +45,8 @@ goto end
 :env
 set _BASENAME=%~n0
 set "_ROOT_DIR=%~dp0"
-for %%i in ("%~dp0\.") do set "_PROJECT_NAME=%%~ni"
+
+for /f "delims=" %%i in ("%~dp0\.") do set "_PROJECT_NAME=%%~ni"
 
 set _DEBUG_LABEL=[%_BASENAME%]
 set _ERROR_LABEL=Error:
@@ -73,7 +78,6 @@ set _VERBOSE=0
 :args_loop
 set "__ARG=%~1"
 if not defined __ARG (
-    if !__N!==0 set _HELP=1
     goto args_done
 )
 if "%__ARG:~0,1%"=="-" (
@@ -94,11 +98,22 @@ if "%__ARG:~0,1%"=="-" (
         set _EXITCODE=1
         goto args_done
     )
-    set /a __N+=1
 )
 shift
 goto args_loop
 :args_done
+goto :eof
+
+:help
+echo Usage: %_BASENAME% { ^<option^> ^| ^<subcommand^> }
+echo.
+echo   Options:
+echo     -debug      print commands executed by this script
+echo     -verbose    print progress messages
+echo.
+echo   Subcommands:
+echo     help        print this help message
+echo     stop        stop process listening on port %_SERVER_PORT%
 goto :eof
 
 @rem output parameter: _SERVER_PID (0=server not listening, -1=other process is listening)

@@ -78,10 +78,14 @@
 - [Ultra](https://github.com/exhibitionist-digital/ultra) - a web framework ([Deno][deno_land]+React) with no build, no bundle, all streaming.
 - [Velociraptor](https://github.com/jurassiscripts/velociraptor) - the npm-style script runner for [Deno][deno_land].
 
-## <span id="tutorials">Tutorials</span>
+## <span id="tutorials">Tutorials</span> [**&#x25B4;**](#top)
 
 - [Deno Cheat Sheet](https://droces.github.io/Deno-Cheat-Sheet/).
 - [Woolha Deno Tutorials](https://www.woolha.com/tutorials/categories/deno).
+
+## <span id="videos">Videos</span>
+
+- [Deno 2.0](https://gitnation.com/contents/deno-20) by Ryan Dahl, April 2023.
 
 <!--
 ## <span id="git">Git</span>
