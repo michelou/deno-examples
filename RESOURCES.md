@@ -19,6 +19,7 @@
 
 ## <span id="blogs">Blogs</span>
 
+- [Package.json best practices in Node.js][blog_mayank] by Mayank C., May 2024.
 - [Disillusioned with Deno](https://www.baldurbjarnason.com/2024/disillusioned-with-deno/) by Baldur Bjarnason, January 2024.
 - [Deno Frameworks: Building Faster, More Secure Applications][blog_ivanovs] by Alex Ivanovsv, May 2023.
 - [Why We Added package.json Support to Deno][blog_dahl] by Ryan Dahl, March 2023.
@@ -95,7 +96,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/September 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -119,6 +120,7 @@
 [blog_goyal]: https://blog.logrocket.com/how-to-create-a-deno-plugin-in-rust/
 [blog_ivanovs]: https://stackdiary.com/deno-frameworks/
 [blog_kladov]: https://matklad.github.io/2023/02/12/a-love-letter-to-deno.html
+[blog_mayank]: https://medium.com/deno-the-complete-reference/package-json-best-practices-in-node-js-6b5f4f8728e9
 [blog_mendy]: https://blog.travis-ci.com/2021-01-04-wasm
 [blog_olasheni]: https://www.infoq.com/articles/deno-introduction-practical-examples/
 [blog_olususi]: https://www.sanity.io/guides/server-side-rendering-deno-react

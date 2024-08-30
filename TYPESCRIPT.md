@@ -106,7 +106,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/September 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -140,7 +140,7 @@
 [blog_danielr_5_3]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/
 [blog_danielr_5_4]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-4/
 [blog_danielr_5_5]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-5/
-[blog_danielr_5_6]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-6-beta/
+[blog_danielr_5_6]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-6-rc/
 [blog_sitepen]: https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
 [blog_sitepen_4_3]: https://www.sitepen.com/blog/update-the-definitive-typescript-guide
 [blog_therox_1]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-1/

@@ -27,11 +27,11 @@ Optionally one may also install the following software:
 - [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
 - [Nmap 7.95][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 18.x LTS][nodejs18_downloads] ([*change log*][nodejs18_changelog])
-- [Visual Studio Code 1.91][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.92][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (*August 2024*) <sup id="anchor_03">[3](#footnote_03)</sup>:
+For instance our development environment looks as follows (*September 2024*) <sup id="anchor_03">[3](#footnote_03)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\ConEmu\                 <i>( 26 MB)</i>
@@ -92,7 +92,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.46.1, deployctl 1.5.0, node v18.20.4, ncat 7.95, rustc 1.77.2,
+   deno 1.46.2, deployctl 1.5.0, node v18.20.4, ncat 7.95, rustc 1.77.2,
    git 2.46.0, diff 3.10, bash 5.2.26(1)
 Tool paths:
    C:\opt\deno\deno.exe
@@ -140,8 +140,8 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.46.1 (stable, release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 12.9.202.2-rusty
+deno 1.46.2 (stable, release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 12.9.202.5-rusty
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-5/" rel="external">5.5.2</a>
 </pre>
 </dd></dl>
@@ -189,6 +189,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.44.4: v8 12.6.220.9,  typescript 5.4.5 -->
 <!-- deno 1.45.5: v8 12.7.224.13, typescript 5.5.2 -->
 <!-- deno 1.46.1: v8 12.9.202.2   typescript 5.5.2 -->
+<!-- deno 1.46.2: v8 12.9.202.5   typescript 5.5.2 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -220,7 +221,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/September 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -236,7 +237,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.46.1
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.46.2
 [docker_examples]: https://github.com/michelou/docker-examples#top
 [effect_home]: https://effect.website/
 [erlang_examples]: https://github.com/michelou/erlang-examples#top
