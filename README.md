@@ -19,23 +19,23 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 
 This project depends on two external software for the **Microsoft Windows** platform:
 
-- [Deno 1.46][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
-- [Git 2.46][git_downloads] ([*release notes*][git_relnotes])
+- [Deno 2.0][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
+- [Git 2.47][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
 - [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
 - [Nmap 7.95][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 18.x LTS][nodejs18_downloads] ([*change log*][nodejs18_changelog])
-- [Visual Studio Code 1.93][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.94][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (*September 2024*) <sup id="anchor_03">[3](#footnote_03)</sup>:
+For instance our development environment looks as follows (*October 2024*) <sup id="anchor_03">[3](#footnote_03)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\ConEmu\                 <i>( 26 MB)</i>
-C:\opt\deno\                   <i>( 98 MB)</i>
+C:\opt\deno\                   <i>(107 MB)</i>
 C:\opt\Git\                    <i>(367 MB)</i>
 C:\opt\nmap\                   <i>( 29 MB)</i>
 C:\opt\node-v18.20.4-win-x64\  <i>( 80 MB)</i>
@@ -92,8 +92,8 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 1.46.3, deployctl 1.5.0, node v18.20.4, ncat 7.95, rustc 1.77.2,
-   git 2.46.0, diff 3.10, bash 5.2.26(1)
+   deno 2.0.0, deployctl 1.5.0, node v18.20.4, ncat 7.95, rustc 1.77.2,
+   git 2.47.0, diff 3.10, bash 5.2.37(1)
 Tool paths:
    C:\opt\deno\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
@@ -140,9 +140,9 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 1.46.3 (stable, release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 12.9.202.5-rusty
-typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-5/" rel="external">5.5.2</a>
+deno 2.0.0 (stable, release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 12.9.202.13-rusty
+typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/" rel="external">5.6.2</a>
 </pre>
 </dd></dl>
 <!-- deno 1.17.3: v8  9.7.106.15, typescript 4.5.2 -->
@@ -191,6 +191,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.46.1: v8 12.9.202.2   typescript 5.5.2 -->
 <!-- deno 1.46.2: v8 12.9.202.5   typescript 5.5.2 -->
 <!-- deno 1.46.3: v8 12.9.202.5   typescript 5.5.2 -->
+<!-- deno 2.0.0:  v8 12.9.202.13  typescript 5.6.2 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -209,8 +210,8 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>( 24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.95-setup.zip</a>               <i>( 28 MB)</i>
 <a href="https://nodejs.org/dist/latest-v18.x/">node-v18.20.4-win-x64.zip</a>         <i>( 27 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.46.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.93.0.zip</a>       <i>(131 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.47.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.94.1.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
@@ -222,7 +223,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/September 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/October 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -238,7 +239,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v1.46.3
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v2.0.0
 [docker_examples]: https://github.com/michelou/docker-examples#top
 [effect_home]: https://effect.website/
 [erlang_examples]: https://github.com/michelou/erlang-examples#top
@@ -246,7 +247,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.46.0.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.47.0.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples#top
 [graalvm_examples]: https://github.com/michelou/graalvm-examples#top
