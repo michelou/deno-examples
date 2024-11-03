@@ -32,6 +32,7 @@
   - [How to extend enums in TypeScript](https://blog.logrocket.com/extend-enums-typescript/), June 2022.
   - [TypeScript 4.1: New features and improvements][blog_isaiah] by Isaiah Ayooluwa, December 2020.
 - [Microsoft TypeScript DevBlog][blog_microsoft]
+   - [Announcing TypeScript 5.7][blog_danielr_5_7] by Daniel Rosenwasser, October 2024.
    - [Announcing TypeScript 5.6][blog_danielr_5_6] by Daniel Rosenwasser, July 2024.
    - [Announcing TypeScript 5.5][blog_danielr_5_5] by Daniel Rosenwasser, June 2024.
    - [Announcing TypeScript 5.4][blog_danielr_5_4] by Daniel Rosenwasser, March 2024.
@@ -55,9 +56,11 @@
    - [Type | Treat 2021 - Day 3][blog_therox_3] by Orta Therox, October 2021.
    - [Type | Treat 2021 - Day 2][blog_therox_2] by Orta Therox, October 2021.
    - [Type | Treat 2021 - Day 1][blog_therox_1] by Orta Therox, October 2021.
-- [Sitepen Blog](https://www.sitepen.com/blog) :
+- [Sitepen](https://www.sitepen.com/blog) Blog posts :
    - [TypeScript 5.0 Cheat Sheet](https://www.sitepen.com/blog/typescript-cheat-sheet), June 2023.
    - [The Definitive TypeScript 4.3 Guide][blog_sitepen_4_3], July 2021.
+- [Susan's](https://www.susanpotter.net/software/) Blog posts :
+  - [Using Conditional Types in TypeScript](https://www.susanpotter.net/software/using-conditional-types-in-typescript/), May 2023.
 - [Introduction to Mixins in TypeScript][blog_nwose] by Victor Nwose, February 2021.
 - [Advanced TypeScript 4.2 Concepts: Classes and Types][blog_sitepen] by Sitepen, September 2020.
 - [What’s New in TypeScript 4][blog_moon] by Moon, August 2020.
@@ -106,7 +109,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/October 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/November 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -140,7 +143,8 @@
 [blog_danielr_5_3]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/
 [blog_danielr_5_4]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-4/
 [blog_danielr_5_5]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-5/
-[blog_danielr_5_6]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-6-rc/
+[blog_danielr_5_6]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/
+[blog_danielr_5_7]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7-beta/
 [blog_sitepen]: https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
 [blog_sitepen_4_3]: https://www.sitepen.com/blog/update-the-definitive-typescript-guide
 [blog_therox_1]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-1/

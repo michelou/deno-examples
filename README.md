@@ -11,7 +11,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Dart][dart_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples], [WiX Toolset][wix_examples] and [Zig][zig_examples] are other topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Dafny][dafny_examples], [Dart][dart_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples], [WiX Toolset][wix_examples] and [Zig][zig_examples] are other topics we are continuously monitoring.
 
 > **&#9755;** Read the interview <a href="https://medium.com/@HolyJSconf/ryan-dahl-d139d8a8fb07" rel="external">"I have only one learning technique: projects that I’m working on”"</a> with Ryan Dahl to learn more about the early days of [Deno][deno_land].
 
@@ -27,19 +27,19 @@ Optionally one may also install the following software:
 - [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
 - [Nmap 7.95][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 18.x LTS][nodejs18_downloads] ([*change log*][nodejs18_changelog])
-- [Visual Studio Code 1.94][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.95][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (*October 2024*) <sup id="anchor_03">[3](#footnote_03)</sup>:
+For instance our development environment looks as follows (*November 2024*) <sup id="anchor_03">[3](#footnote_03)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\ConEmu\                 <i>( 26 MB)</i>
 C:\opt\deno\                   <i>(107 MB)</i>
-C:\opt\Git\                    <i>(367 MB)</i>
+C:\opt\Git\                    <i>(391 MB)</i>
 C:\opt\nmap\                   <i>( 29 MB)</i>
 C:\opt\node-v18.20.4-win-x64\  <i>( 80 MB)</i>
-C:\opt\VSCode\                 <i>(341 MB)</i>
+C:\opt\VSCode\                 <i>(381 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
 </pre>
 
@@ -92,7 +92,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 2.0.0, deployctl 1.5.0, node v18.20.4, ncat 7.95, rustc 1.77.2,
+   deno 2.0.4, deployctl 1.12.0, node v18.20.4, ncat 7.95, rustc 1.77.2,
    git 2.47.0, diff 3.10, bash 5.2.37(1)
 Tool paths:
    C:\opt\deno\deno.exe
@@ -140,7 +140,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 2.0.0 (stable, release, x86_64-pc-windows-msvc)
+deno 4 (stable, release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 12.9.202.13-rusty
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/" rel="external">5.6.2</a>
 </pre>
@@ -192,6 +192,7 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 1.46.2: v8 12.9.202.5   typescript 5.5.2 -->
 <!-- deno 1.46.3: v8 12.9.202.5   typescript 5.5.2 -->
 <!-- deno 2.0.0:  v8 12.9.202.13  typescript 5.6.2 -->
+<!-- deno 2.0.4:  v8 12.9.202.13  typescript 5.6.2 -->
 
 <span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
 
@@ -211,7 +212,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://nmap.org/download.html">nmap-7.95-setup.zip</a>               <i>( 28 MB)</i>
 <a href="https://nodejs.org/dist/latest-v18.x/">node-v18.20.4-win-x64.zip</a>         <i>( 27 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.47.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.94.1.zip</a>       <i>(131 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.95.0.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
@@ -223,7 +224,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/October 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/November 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -235,11 +236,12 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [conemu_downloads]: https://github.com/Maximus5/ConEmu/releases
 [conemu_relnotes]: https://conemu.github.io/blog/2023/07/24/Build-230724.html
 [cpp_examples]: https://github.com/michelou/cpp-examples#top
+[dafny_examples]: https://github.com/michelou/dafny-examples#top
 [dart_examples]: https://github.com/michelou/dart-examples#top
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v2.0.0
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v2.0.4
 [docker_examples]: https://github.com/michelou/docker-examples#top
 [effect_home]: https://effect.website/
 [erlang_examples]: https://github.com/michelou/erlang-examples#top
