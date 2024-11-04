@@ -140,7 +140,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 4 (stable, release, x86_64-pc-windows-msvc)
+deno 2.0.4 (stable, release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 12.9.202.13-rusty
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/" rel="external">5.6.2</a>
 </pre>
