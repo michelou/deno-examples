@@ -60,6 +60,7 @@
    - [TypeScript 5.0 Cheat Sheet](https://www.sitepen.com/blog/typescript-cheat-sheet), June 2023.
    - [The Definitive TypeScript 4.3 Guide][blog_sitepen_4_3], July 2021.
 - [Susan's](https://www.susanpotter.net/software/) Blog posts :
+  - [TypeScript's Mapped Types](https://www.susanpotter.net/software/conjuring-typescripts-magic-with-mapped-types/), June 2023.
   - [Using Conditional Types in TypeScript](https://www.susanpotter.net/software/using-conditional-types-in-typescript/), May 2023.
 - [Introduction to Mixins in TypeScript][blog_nwose] by Victor Nwose, February 2021.
 - [Advanced TypeScript 4.2 Concepts: Classes and Types][blog_sitepen] by Sitepen, September 2020.
@@ -109,7 +110,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/November 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/December 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -144,7 +145,7 @@
 [blog_danielr_5_4]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-4/
 [blog_danielr_5_5]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-5/
 [blog_danielr_5_6]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/
-[blog_danielr_5_7]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7-beta/
+[blog_danielr_5_7]: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7/
 [blog_sitepen]: https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
 [blog_sitepen_4_3]: https://www.sitepen.com/blog/update-the-definitive-typescript-guide
 [blog_therox_1]: https://devblogs.microsoft.com/typescript/type-treat-2021-day-1/
