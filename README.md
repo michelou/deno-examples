@@ -20,18 +20,18 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 This project depends on two external software for the **Microsoft Windows** platform:
 
 - [Deno 2.1][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
-- [Git 2.47][git_downloads] ([*release notes*][git_relnotes])
+- [Git 2.48][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
-- [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
-- [Nmap 7.95][nmap_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*change log*][nmap_changelog])
+- [ConEmu 2023][conemu_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*release notes*][conemu_relnotes])
+- [Nmap 7.95][nmap_downloads] <sup id="anchor_03"><a href="#footnote_03">3</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 18.x LTS][nodejs18_downloads] ([*change log*][nodejs18_changelog])
-- [Visual Studio Code 1.96][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.97][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (*February 2025*) <sup id="anchor_03">[3](#footnote_03)</sup>:
+For instance our development environment looks as follows (*February 2025*) <sup id="anchor_04">[4](#footnote_04)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\ConEmu\                 <i>( 26 MB)</i>
@@ -39,8 +39,8 @@ C:\opt\deno\                   <i>(105 MB)</i>
 C:\opt\Git\                    <i>(391 MB)</i>
 C:\opt\nmap\                   <i>( 29 MB)</i>
 C:\opt\node-v18.20.6-win-x64\  <i>( 78 MB)</i>
-C:\opt\VSCode\                 <i>(381 MB)</i>
-<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_04"><a href="#footnote_04">4</a></sup>          <i>(&lt; 1 MB)</i>
+C:\opt\VSCode\                 <i>(404 MB)</i>
+<a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_05"><a href="#footnote_05">5</a></sup>          <i>(&lt; 1 MB)</i>
 </pre>
 
 > **&#9755;** ***Installation policy***<br/>
@@ -92,8 +92,8 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 2.1.2, deployctl 1.12.0, node v18.20.6, ncat 7.95, rustc 1.82.0,
-   git 2.47.1, diff 3.10, bash 5.2.37(1)
+   deno 2.1.10, deployctl 1.12.0, node v18.20.6, ncat 7.95, rustc 1.84.0,
+   git 2.48.1, diff 3.10, bash 5.2.37(1)
 Tool paths:
    C:\opt\deno\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
@@ -140,7 +140,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 2.1.2 (stable, release, x86_64-pc-windows-msvc)
+deno 2.1.10 (stable, release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 13.0.245.12-rusty
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/" rel="external">5.6.2</a>
 </pre>
@@ -195,13 +195,31 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 2.0.4:  v8 12.9.202.13  typescript 5.6.2 -->
 <!-- deno 2.1.2:  v8 13.0.245.12  typescript 5.6.2 -->
 
-<span id="footnote_02">[2]</span> ***Nmap tools*** [↩](#anchor_02)
+<span id="footnote_02">[2]</span> ***Terminal Programs*** [↩](#anchor_02)
+
+<dl><dd>
+Besides the long standing used <a href="https://github.com/Maximus5/ConEmu" rel="external">ConEmu</a> we are now also evaluating <a href="https://github.com/microsoft/terminal">Microsoft Windows Terminal</a> ; here is a quick comparison between the two <i>freely available</i> programs :
+<table style="font-size:90%;">
+<tr><th></th><th><a href="https://github.com/Maximus5/ConEmu/releases">ConEmu</a></th><th><a href="https://github.com/microsoft/terminal/releases/tag/v1.22.10352.0">Windows Terminal</a></th></tr>
+<tr><td>Last&nbsp;update</td><td>July 2023</td><td>February 2025</td></tr>
+<tr><td>Download&nbsp;size</td><td style="text-align:right;">5 MB</td><td>11 MB</td></tr>
+<tr><td>Installation&nbsp;size</td><td style="text-align:right;">25 MB</td><td>33 MB</td></tr>
+<tr><td>Memory&nbsp;usage&nbsp;<sup style="font-size:70%;"><b>a)</b></sup></td><td style="text-align:right;">9 MB</td><td>21 MB</td></tr>
+</table>
+<div style="font-size:70%; margin:-10px 0 10px 0;">
+<sup><b>a)</b></sup> Memory usage with 1 command prompt.
+</div>
+
+<p><img src="./docs/images/20250217_Task_Manager_Memory.png" width="90%"/></p>
+</dd></dl>
+
+<span id="footnote_03">[3]</span> ***Nmap tools*** [↩](#anchor_03)
 
 <dl><dd>
 We are mostly interested in the <a href="https://nmap.org/ncat/guide/" rel="external"><code>Ncat</code></a> tool for reading, writing, redirecting, and encrypting data across a network. <a href="https://nmap.org/ncat/guide/" rel="external"><code>Ncat</code></a> operates in one of two modes: in connect mode, <a href="https://nmap.org/ncat/guide/" rel="external"><code>Ncat</code></a> works as a client, in listen mode it is a server,
 </dd></dl>
 
-<span id="footnote_03">[3]</span> ***Downloads*** [↩](#anchor_03)
+<span id="footnote_04">[4]</span> ***Downloads*** [↩](#anchor_04)
 
 <dl><dd>
 In our case we downloaded the following installation files (see <a href="#proj_deps">section 1</a>):
@@ -212,12 +230,12 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>( 24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.95-setup.zip</a>               <i>( 28 MB)</i>
 <a href="https://nodejs.org/dist/latest-v18.x/">node-v18.20.6-win-x64.zip</a>         <i>( 27 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.47.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.96.4.zip</a>       <i>(131 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.48.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.97.2.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
-<span id="footnote_04">[4]</span> ***Deployctl*** [↩](#anchor_04)
+<span id="footnote_05">[5]</span> ***Deployctl*** [↩](#anchor_05)
 
 <dl><dd>
 <a href="https://github.com/denoland/deployctl" rel="external"><code>deployctl</code></a> is the command line tool for <a href="https://deno.com/deploy" rel="external">Deno Deploy</a>.
@@ -242,7 +260,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [deno_cli]: https://deno.land/manual/getting_started/command_line_interface
 [deno_downloads]: https://github.com/denoland/deno/releases
 [deno_land]: https://deno.land/
-[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v2.1.9
+[deno_relnotes]: https://github.com/denoland/deno/releases/tag/v2.1.10
 [docker_examples]: https://github.com/michelou/docker-examples#top
 [effect_home]: https://effect.website/
 [erlang_examples]: https://github.com/michelou/erlang-examples#top
@@ -250,7 +268,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.47.1.txt
+[git_relnotes]: https://github.com/git/git/blob/v2.48.1/Documentation/RelNotes/2.48.1.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples#top
 [graalvm_examples]: https://github.com/michelou/graalvm-examples#top

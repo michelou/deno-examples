@@ -19,10 +19,11 @@
 
 ## <span id="blogs">Blogs</span>
 
-- [Package.json best practices in Node.js][blog_mayank] by Mayank C., May 2024.
 - [Disillusioned with Deno](https://www.baldurbjarnason.com/2024/disillusioned-with-deno/) by Baldur Bjarnason, January 2024.
 - [Deno Frameworks: Building Faster, More Secure Applications][blog_ivanovs] by Alex Ivanovsv, May 2023.
-- [Why We Added package.json Support to Deno][blog_dahl] by Ryan Dahl, March 2023.
+- [Deno Blog](https://deno.com/blog) :
+  - [Intro to Wasm in Deno][blog_jiang] by Andy Jiang, January 2025.
+  - [Why We Added package.json Support to Deno][blog_dahl] by Ryan Dahl, March 2023.
 - [<3 Deno][blog_kladov] by Alex Kladov, February 2023.
 - [Mayank Choubey](https://medium.com/@choubey) blog posts :
   - [Run a child process or execute shell commands in Deno][blog_choubey6], January 2023.
@@ -119,8 +120,8 @@
 [blog_dolgio]: https://blog.bitsrc.io/publishing-your-deno-modules-using-github-f2bd86173392
 [blog_goyal]: https://blog.logrocket.com/how-to-create-a-deno-plugin-in-rust/
 [blog_ivanovs]: https://stackdiary.com/deno-frameworks/
+[blog_jiang]: https://deno.com/blog/intro-to-wasm
 [blog_kladov]: https://matklad.github.io/2023/02/12/a-love-letter-to-deno.html
-[blog_mayank]: https://medium.com/deno-the-complete-reference/package-json-best-practices-in-node-js-6b5f4f8728e9
 [blog_mendy]: https://blog.travis-ci.com/2021-01-04-wasm
 [blog_olasheni]: https://www.infoq.com/articles/deno-introduction-practical-examples/
 [blog_olususi]: https://www.sanity.io/guides/server-side-rendering-deno-react
