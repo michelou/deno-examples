@@ -21,7 +21,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.version)"</b>
-{ deno: "2.1.2", v8: "13.0.245.12-rusty", typescript: "5.6.2" }
+{ deno: "2.2.11", v8: "13.5.212.10-rusty", typescript: "5.7.3" }
 </pre>
 
 <pre style="font-size:80%;">
@@ -60,6 +60,8 @@ README.md    TYPESCRIPT.md  docs_LOCAL  examples  react-examples    setenv.sh
 > README.md    TYPESCRIPT.md  docs_LOCAL  examples  react-examples    setenv.sh
 > </pre>
 
+<!--=======================================================================-->
+
 ## <span id="cat">`cat` Example</span> [**&#x25B4;**](#top)
 
 We present three variations of the `cat` example :
@@ -83,6 +85,33 @@ Check file:///O:/examples/cat_3/cat.ts
 
 deno run %_RUN_OPTS% "%_SCRIPT_FILE%" %_SCRIPT_ARGS%
 </pre>
+
+<!--=======================================================================-->
+
+## <span id="echo_server">`echo_server` Example</span> [**&#x25B4;**](#top)
+
+This example is taken from the online Deno documentation (example "[TCP Echo Server](https://docs.deno.com/examples/tcp_echo_server/)"). The user has to open two Windows prompts in order to run it, namely :
+
+<table>
+<tr><th>Console 1</th><th>Console 2</th></tr>
+<tr>
+<td><pre style="font-size:80%;">
+<b>&gt; echo_server.bat</b>
+&nbsp;
+deno run --allow-net "G:\examples\echo_server\echo_server.ts"
+Listening on 0.0.0.0:8080
+</pre></td>
+<td style="width:50%;"><pre style="font-size:80%;">
+<b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/where">where</a> ncat</b>
+C:\opt\nmap\ncat.exe
+&nbsp;
+<b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/echo">echo</a> "Hello" | <a href="https://nmap.org/ncat/guide/ncat-usage.html">ncat</a> localhost 8080</b>
+"Hello"
+</pre></td>
+</tr>
+</table>
+
+<!--=======================================================================-->
 
 ## <span id="file_search">`file_search` Example</span> [**&#x25B4;**](#top)
 
@@ -126,7 +155,7 @@ O:\examples\file_search\file_search.ts
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/February 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/May 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

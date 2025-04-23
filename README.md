@@ -19,26 +19,26 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 
 This project depends on two external software for the **Microsoft Windows** platform:
 
-- [Deno 2.1][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
-- [Git 2.48][git_downloads] ([*release notes*][git_relnotes])
+- [Deno 2.2][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
+- [Git 2.49][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
 - [ConEmu 2023][conemu_downloads] <sup id="anchor_02"><a href="#footnote_02">2</a></sup> ([*release notes*][conemu_relnotes])
 - [Nmap 7.95][nmap_downloads] <sup id="anchor_03"><a href="#footnote_03">3</a></sup> ([*change log*][nmap_changelog])
 - [Node.js 18.x LTS][nodejs18_downloads] ([*change log*][nodejs18_changelog])
-- [Visual Studio Code 1.97][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.99][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **:mag_right:** [Git for Windows][git_downloads] provides a BASH emulation used to run [**`git`**][git_docs] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
 
-For instance our development environment looks as follows (*February 2025*) <sup id="anchor_04">[4](#footnote_04)</sup>:
+For instance our development environment looks as follows (*May 2025*) <sup id="anchor_04">[4](#footnote_04)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\ConEmu\                 <i>( 26 MB)</i>
 C:\opt\deno\                   <i>(105 MB)</i>
 C:\opt\Git\                    <i>(391 MB)</i>
 C:\opt\nmap\                   <i>( 29 MB)</i>
-C:\opt\node-v18.20.6-win-x64\  <i>( 78 MB)</i>
+C:\opt\node-v18.20.8-win-x64\  <i>( 78 MB)</i>
 C:\opt\VSCode\                 <i>(404 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_05"><a href="#footnote_05">5</a></sup>          <i>(&lt; 1 MB)</i>
 </pre>
@@ -92,8 +92,8 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 2.1.10, deployctl 1.12.0, node v18.20.6, ncat 7.95, rustc 1.84.0,
-   git 2.48.1, diff 3.10, bash 5.2.37(1)
+   deno 2.2.11 deployctl 1.12.0, node v18.20.8, ncat 7.95, rustc 1.85.1,
+   git 2.49.0, diff 3.11, bash 5.2.37(1)
 Tool paths:
    C:\opt\deno\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
@@ -106,7 +106,7 @@ Environment variables:
    "DENO_HOME=C:\opt\deno"
    "GIT_HOME=C:\opt\Git"
    "NMAP_HOME=C:\opt\nmap"
-   "NODE_HOME=C:\opt\node-v18.20.6-win-x64"
+   "NODE_HOME=C:\opt\node-v18.20.8-win-x64"
 
 <b>&gt; <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/where_1" rel="external">where</a> deno git sh</b>
 C:\opt\deno\deno.exe
@@ -135,14 +135,14 @@ C:\opt\Git\usr\bin\sh.exe
 <span id="footnote_01">[1]</span> ***Deno TypeScript*** [↩](#anchor_01)
 
 <dl><dd>
-Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/" rel="external"><code>5.6</code></a> in our case:
+Command <code><a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</code> displays the supported version of <a href="https://www.typescriptlang.org/">TypeScript</a>, namely version <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-7/" rel="external"><code>5.7</code></a> in our case:
 </dd>
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 2.1.10 (stable, release, x86_64-pc-windows-msvc)
-<a href="https://v8.dev/">v8</a> 13.0.245.12-rusty
-typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/" rel="external">5.6.2</a>
+deno 2.2.11 (stable, release, x86_64-pc-windows-msvc)
+<a href="https://v8.dev/">v8</a> 13.5.212.10-rusty
+typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/" rel="external">5.7.3</a>
 </pre>
 </dd></dl>
 <!-- deno 1.17.3: v8  9.7.106.15, typescript 4.5.2 -->
@@ -194,11 +194,12 @@ typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescr
 <!-- deno 2.0.0:  v8 12.9.202.13  typescript 5.6.2 -->
 <!-- deno 2.0.4:  v8 12.9.202.13  typescript 5.6.2 -->
 <!-- deno 2.1.2:  v8 13.0.245.12  typescript 5.6.2 -->
+<!-- deno 2.2.11: v8 13.5.212.10  typescript 5.7.3 -->
 
 <span id="footnote_02">[2]</span> ***Terminal Programs*** [↩](#anchor_02)
 
 <dl><dd>
-Besides the long standing used <a href="https://github.com/Maximus5/ConEmu" rel="external">ConEmu</a> we are now also evaluating <a href="https://github.com/microsoft/terminal">Microsoft Windows Terminal</a> ; here is a quick comparison between the two <i>freely available</i> programs :
+Besides the long standing used <a href="https://github.com/Maximus5/ConEmu" rel="external">ConEmu</a> we are now also evaluating <a href="https://github.com/microsoft/terminal">Microsoft Windows Terminal</a> (part of MS Windows 11); here is a quick comparison between the two <i>freely available</i> programs :
 <table style="font-size:90%;">
 <tr><th></th><th><a href="https://github.com/Maximus5/ConEmu/releases">ConEmu</a></th><th><a href="https://github.com/microsoft/terminal/releases/tag/v1.22.10352.0">Windows Terminal</a></th></tr>
 <tr><td>Last&nbsp;update</td><td>July 2023</td><td>February 2025</td></tr>
@@ -229,9 +230,9 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://github.com/Maximus5/ConEmu/releases/tag/v23.07.24" rel="external">ConEmuPack.230724.7z</a>              <i>(  5 MB)</i>
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>( 24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.95-setup.zip</a>               <i>( 28 MB)</i>
-<a href="https://nodejs.org/dist/latest-v18.x/">node-v18.20.6-win-x64.zip</a>         <i>( 27 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.48.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.97.2.zip</a>       <i>(131 MB)</i>
+<a href="https://nodejs.org/dist/latest-v18.x/">node-v18.20.8-win-x64.zip</a>         <i>( 27 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.49.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.99.3.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
@@ -243,7 +244,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/February 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/May 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -268,7 +269,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [git_cli]: https://git-scm.com/docs/git
 [git_docs]: https://git-scm.com/docs/git
 [git_downloads]: https://git-scm.com/download/win
-[git_relnotes]: https://github.com/git/git/blob/v2.48.1/Documentation/RelNotes/2.48.1.txt
+[git_relnotes]: https://github.com/git/git/blob/v2.49.0/Documentation/RelNotes/2.49.0.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples#top
 [graalvm_examples]: https://github.com/michelou/graalvm-examples#top
@@ -297,7 +298,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [nodejs14_downloads]: https://nodejs.org/dist/latest-v14.x/
 [nodejs16_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V16.md#16.19.0
 [nodejs16_downloads]: https://nodejs.org/dist/latest-v16.x/
-[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.20.6
+[nodejs18_changelog]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V18.md#18.20.8
 [nodejs18_downloads]: https://nodejs.org/dist/latest-v18.x/
 [rust_examples]: https://github.com/michelou/rust-examples#top
 [scala3_examples]: https://github.com/michelou/dotty-examples#top
