@@ -21,7 +21,7 @@
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.version)"</b>
-{ deno: "2.2.11", v8: "13.5.212.10-rusty", typescript: "5.7.3" }
+{ deno: "2.4.3", v8: "13.7.152.14-rusty", typescript: "5.8.3" }
 </pre>
 
 <pre style="font-size:80%;">
@@ -155,7 +155,7 @@ O:\examples\file_search\file_search.ts
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/May 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

@@ -121,7 +121,7 @@ Example [`fetch-deno-logo`](./Chapter01/fetch-deno-logo/fetch-deno-logo.ts) down
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/May 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

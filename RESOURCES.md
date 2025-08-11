@@ -22,6 +22,7 @@
 - [Disillusioned with Deno](https://www.baldurbjarnason.com/2024/disillusioned-with-deno/) by Baldur Bjarnason, January 2024.
 - [Deno Frameworks: Building Faster, More Secure Applications][blog_ivanovs] by Alex Ivanovsv, May 2023.
 - [Deno Blog](https://deno.com/blog) :
+  - [What's new in Deno 2.4](https://deno.com/blog/v2.4#whats-new-in-deno-24), July 2025.
   - [Intro to Wasm in Deno][blog_jiang] by Andy Jiang, January 2025.
   - [Why We Added package.json Support to Deno][blog_dahl] by Ryan Dahl, March 2023.
 - [<3 Deno][blog_kladov] by Alex Kladov, February 2023.
@@ -97,7 +98,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/May 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
