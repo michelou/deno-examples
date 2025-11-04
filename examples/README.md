@@ -9,19 +9,20 @@
   </tr>
 </table>
 
-> **:mag_right:** The Deno Standard Library <sup id="anchor_01"><a href="#footnote_01">1</a></sup> includes [Deno examples](https://deno.land/std/examples) which the user can execute directly from the command prompt, e.g.
+> **:mag_right:** The Deno Standard Library <sup id="anchor_01"><a href="#footnote_01">1</a></sup> includes [Deno examples](https://docs.deno.com/examples/) which the user can execute directly from the command prompt, e.g.
 >
 > <pre style="font-size:80%;">
-> <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> run https://deno.land/std/examples/welcome.ts</b>
-> Check https://deno.land/std/examples/welcome.ts
-> Welcome to Deno!
+> <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> run https://docs.deno.com/examples/scripts/deno_version.ts</b>
+> Current Deno version 2.5.6
+> Current TypeScript version 5.9.2
+> Current V8 version 14.0.365.5-rusty
 > </pre>
 
 ## <span id="basic">Basic Examples with `eval`</span> [**&#x25B4;**](#top)
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface" rel="external">deno</a> eval "console.log(Deno.version)"</b>
-{ deno: "2.4.3", v8: "13.7.152.14-rusty", typescript: "5.8.3" }
+{ deno: "2.5.6", v8: "14.0.365.5-rusty", typescript: "5.9.2" }
 </pre>
 
 <pre style="font-size:80%;">
@@ -155,7 +156,7 @@ O:\examples\file_search\file_search.ts
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/November 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

@@ -39,6 +39,9 @@ if not %_EXITCODE%==0 (
 call :node 18
 if not %_EXITCODE%==0 goto end
 
+call :node 25
+if not %_EXITCODE%==0 goto end
+
 call :rust
 if not %_EXITCODE%==0 (
     @rem optional installation
@@ -545,6 +548,7 @@ if %__VERBOSE%==1 if defined __WHERE_ARGS (
     if defined GIT_HOME echo    "GIT_HOME=%GIT_HOME%" 1>&2
     if defined NMAP_HOME echo    "NMAP_HOME=%NMAP_HOME%" 1>&2
     if defined NODE_HOME echo    "NODE_HOME=%NODE_HOME%" 1>&2
+    if defined NODE18_HOME echo    "NODE18_HOME=%NODE18_HOME%" 1>&2
     if defined VSCODE_HOME echo    "VSCODE_HOME=%VSCODE_HOME%" 1>&2
     echo Path associations: 1>&2
     for /f "delims=" %%i in ('subst') do (
@@ -565,7 +569,8 @@ endlocal & (
         if not defined DENO_HOME set "DENO_HOME=%_DENO_HOME%"
         if not defined GIT_HOME set "GIT_HOME=%_GIT_HOME%"
         if not defined NMAP_HOME set "NMAP_HOME=%_NMAP_HOME%"
-        if not defined NODE_HOME set "NODE_HOME=%_NODE18_HOME%"
+        if not defined NODE_HOME set "NODE_HOME=%_NODE25_HOME%"
+        if not defined NODE18_HOME set "NODE18_HOME=%_NODE18_HOME%"
         if not defined VSCODE_HOME set "VSCODE_HOME=%VSCODE_HOME%"
         @rem We prepend %_GIT_HOME%\bin to hide C:\Windows\System32\bash.exe
         set "PATH=%_GIT_HOME%\bin;%PATH%%_DENO_PATH%;%_NODE14_HOME%;%_NMAP_HOME%;%_CARGO_PATH%%_GIT_PATH%%_VSCODE_PATH%;%~dp0bin"
