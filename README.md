@@ -11,7 +11,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Component Pascal][component_pascal_examples], [Dafny][dafny_examples], [Dart][dart_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Go][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [Standard ML][sml_examples], [TruffleSqueak][trufflesqueak_examples], [WiX Toolset][wix_examples] and [Zig][zig_examples] are other topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Component Pascal][component_pascal_examples], [Dafny][dafny_examples], [Dart][dart_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Go][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [MySQL][mysql_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [Standard ML][sml_examples], [TruffleSqueak][trufflesqueak_examples], [WiX Toolset][wix_examples] and [Zig][zig_examples] are other topics we are continuously monitoring.
 
 > **&#9755;** Read the interview <a href="https://medium.com/@HolyJSconf/ryan-dahl-d139d8a8fb07" rel="external">"I have only one learning technique: projects that I’m working on”"</a> with Ryan Dahl to learn more about the early days of [Deno][deno_land].
 
@@ -20,7 +20,7 @@ Deno is is a simple, modern and secure runtime for JavaScript and TypeScript tha
 This project depends on two external software for the **Microsoft Windows** platform:
 
 - [Deno 2.5][deno_downloads] <sup id="anchor_01">[1](#footnote_01)</sup> ([*release notes*][deno_relnotes])
-- [Git 2.51][git_downloads] ([*release notes*][git_relnotes])
+- [Git 2.52][git_downloads] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
@@ -38,7 +38,7 @@ C:\opt\ConEmu\                 <i>( 26 MB)</i>
 C:\opt\deno\                   <i>(105 MB)</i>
 C:\opt\Git\                    <i>(394 MB)</i>
 C:\opt\nmap\                   <i>( 29 MB)</i>
-C:\opt\node-v25.1.0-win-x64\   <i>( 99 MB)</i>
+C:\opt\node-v25.2.1-win-x64\   <i>( 99 MB)</i>
 C:\opt\VSCode\                 <i>(404 MB)</i>
 <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values" rel="external">%USERPROFILE%</a>\.deno\<sup id="anchor_05"><a href="#footnote_05">5</a></sup>          <i>(&lt; 1 MB)</i>
 </pre>
@@ -92,8 +92,8 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
 <pre style="font-size:80%;">
 <b>&gt; <a href="setenv.bat">setenv</a> -verbose</b>
 Tool versions:
-   deno 2.5.6, deployctl 1.12.0, node v25.1.0, ncat 7.95, rustc 1.90.0,
-   git 2.51.2, diff 3.12, bash 5.2.37(1)
+   deno 2.5.6, deployctl 1.12.0, node v25.2.1, ncat 7.95, rustc 1.90.0,
+   git 2.52.0, diff 3.12, bash 5.2.37(1)
 Tool paths:
    C:\opt\deno\deno.exe
    <a href="https://en.wikipedia.org/wiki/Environment_variable#Default_values">%USERPROFILE%</a>\.deno\bin\deployctl.cmd
@@ -140,7 +140,7 @@ Command <code><a href="https://deno.land/manual/getting_started/command_line_int
 <dd>
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://deno.land/manual/getting_started/command_line_interface">deno</a> --version</b>
-deno 2.5.5 (stable, release, x86_64-pc-windows-msvc)
+deno 2.5.6 (stable, release, x86_64-pc-windows-msvc)
 <a href="https://v8.dev/">v8</a> 14.0.365.5-rusty
 typescript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-9/" rel="external">5.9.2</a>
 </pre>
@@ -233,9 +233,9 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 <a href="https://github.com/Maximus5/ConEmu/releases/tag/v23.07.24" rel="external">ConEmuPack.230724.7z</a>              <i>(  5 MB)</i>
 <a href="https://github.com/denoland/deno/releases">deno-x86_64-pc-windows-msvc.zip</a>   <i>( 24 MB)</i>
 <a href="https://nmap.org/download.html">nmap-7.95-setup.zip</a>               <i>( 28 MB)</i>
-<a href="https://nodejs.org/dist/latest-v25.x/">node-v25.1.0-win-x64.zip</a>          <i>( 27 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.51.2-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.105.1.zip</a>      <i>(131 MB)</i>
+<a href="https://nodejs.org/dist/latest-v25.x/">node-v25.2.1-win-x64.zip</a>          <i>( 27 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.52.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.106.0.zip</a>      <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
@@ -293,6 +293,7 @@ In our case we downloaded the following installation files (see <a href="#proj_d
 [man1_sed]: https://www.linux.org/docs/man1/sed.html
 [man1_wc]: https://www.linux.org/docs/man1/wc.html
 [microsoft_ts]: https://devblogs.microsoft.com/typescript/
+[mysql_examples]: https://github.com/michelou/mysql-examples#top
 [nmap_changelog]: https://nmap.org/changelog
 [nmap_downloads]: https://nmap.org/download.html
 [node_cli]: https://nodejs.org/api/cli.html
